@@ -42,8 +42,8 @@
   .scene .ring:nth-child(2){ animation-delay:.94s; }
   .scene .ring:nth-child(3){ animation-delay:2.64s; }
   .scene .drop { position:absolute; left:50%; top:0; width:11px; height:11px;
-    background:radial-gradient(circle at 32% 28%, var(--opal-hi) 0%, var(--opal-mid) 48%, var(--opal-lo) 100%);
-    box-shadow:0 1px 4px rgba(58,56,52,.22), inset 0 -1px 2px rgba(210,200,183,.6);
+    background:var(--opal-lo);
+    box-shadow:0 1px 3px rgba(58,56,52,.20);
     border-radius:50% 50% 52% 52% / 46% 46% 56% 56%; transform:translateX(-50%);
     animation:fall 1.7s cubic-bezier(.5,0,.9,.4) infinite; }
   @keyframes fall { 0%{top:6%;opacity:0} 10%{opacity:1} 55%{top:60%;opacity:1} 60%{top:62%;opacity:0} 100%{top:62%;opacity:0} }
@@ -203,8 +203,7 @@
           </radialGradient>
         </defs>
         <g class="v1-drop">
-          <circle cx="150" cy="180" r="6" fill="url(#pearl)" stroke="var(--opal-lo)" stroke-width="0.8"/>
-          <ellipse cx="148" cy="177.6" rx="1.6" ry="1" fill="#FCF9F2" opacity="0.8"/>
+          <circle cx="150" cy="180" r="6" fill="var(--opal-lo)"/>
         </g>
         <g>
           <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d1"/>
