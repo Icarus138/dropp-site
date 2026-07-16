@@ -42,7 +42,7 @@
   .scene .ring:nth-child(2){ animation-delay:.94s; }
   .scene .ring:nth-child(3){ animation-delay:2.64s; }
   .scene .drop { position:absolute; left:50%; top:0; width:11px; height:11px;
-    background:radial-gradient(circle at 32% 28%, #FFFFFF 0%, var(--opal-hi) 28%, var(--opal-mid) 62%, var(--opal-lo) 100%);
+    background:radial-gradient(circle at 32% 28%, var(--opal-hi) 0%, var(--opal-mid) 48%, var(--opal-lo) 100%);
     box-shadow:0 1px 4px rgba(58,56,52,.22), inset 0 -1px 2px rgba(210,200,183,.6);
     border-radius:50% 50% 52% 52% / 46% 46% 56% 56%; transform:translateX(-50%);
     animation:fall 1.7s cubic-bezier(.5,0,.9,.4) infinite; }
@@ -197,15 +197,14 @@
         <text x="150" y="146" text-anchor="middle" class="soft" font-size="11">reste 3h 12m · fin 22:12</text>
         <defs>
           <radialGradient id="pearl" cx="35%" cy="30%" r="85%">
-            <stop offset="0%" stop-color="#FFFFFF"/>
-            <stop offset="30%" stop-color="var(--opal-hi)"/>
-            <stop offset="65%" stop-color="var(--opal-mid)"/>
+            <stop offset="0%" stop-color="var(--opal-hi)"/>
+            <stop offset="48%" stop-color="var(--opal-mid)"/>
             <stop offset="100%" stop-color="var(--opal-lo)"/>
           </radialGradient>
         </defs>
         <g class="v1-drop">
           <circle cx="150" cy="180" r="6" fill="url(#pearl)" stroke="var(--opal-lo)" stroke-width="0.8"/>
-          <ellipse cx="148" cy="177.6" rx="1.7" ry="1.1" fill="#FFFFFF" opacity="0.9"/>
+          <ellipse cx="148" cy="177.6" rx="1.6" ry="1" fill="#FCF9F2" opacity="0.8"/>
         </g>
         <g>
           <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d1"/>
@@ -367,7 +366,7 @@
   <section class="closing">
     <p class="eyebrow">Été 2026</p>
     <h2>Bientôt sur l'App Store.</h2>
-    <p class="muted" style="margin:0 auto; max-width:44ch;">Conçu de nuit, en poste, par un soignant — pour toutes celles et ceux qui comptent les gouttes.</p>
+    <p class="muted" style="margin:0 auto; max-width:44ch;">Conçu par un soignant de nuit, testé en poste — pour toutes celles et ceux qui comptent les gouttes.</p>
   </section>
 
   <footer>
