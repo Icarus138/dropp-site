@@ -38,16 +38,17 @@
     border:2px solid var(--opal-lo); border-radius:50%;
     transform:translate(-50%,-50%) scale(.18); opacity:0;
     animation:ripple 3.4s cubic-bezier(.16,.7,.3,1) infinite; }
-  .scene .ring:nth-child(2){ animation-delay:.14s; }
-  .scene .ring:nth-child(3){ animation-delay:.28s; }
+  /* une onde par goutte : impacts a t=0.94s puis toutes les 1.7s (42/min ~ le produit) */
+  .scene .ring:nth-child(2){ animation-delay:.94s; }
+  .scene .ring:nth-child(3){ animation-delay:2.64s; }
   .scene .drop { position:absolute; left:50%; top:0; width:11px; height:11px;
     background:radial-gradient(circle at 32% 28%, #FFFFFF 0%, var(--opal-hi) 28%, var(--opal-mid) 62%, var(--opal-lo) 100%);
     box-shadow:0 1px 4px rgba(58,56,52,.22), inset 0 -1px 2px rgba(210,200,183,.6);
     border-radius:50% 50% 52% 52% / 46% 46% 56% 56%; transform:translateX(-50%);
-    animation:fall 3.4s cubic-bezier(.5,0,.9,.4) infinite; }
-  @keyframes fall { 0%{top:6%;opacity:0} 6%{opacity:1} 30%{top:60%;opacity:1} 33%{top:62%;opacity:0} 100%{top:62%;opacity:0} }
-  @keyframes ripple { 0%,30%{transform:translate(-50%,-50%) scale(.18);opacity:0}
-    34%{opacity:.75} 88%,100%{transform:translate(-50%,-50%) scale(3.1);opacity:0} }
+    animation:fall 1.7s cubic-bezier(.5,0,.9,.4) infinite; }
+  @keyframes fall { 0%{top:6%;opacity:0} 10%{opacity:1} 55%{top:60%;opacity:1} 60%{top:62%;opacity:0} 100%{top:62%;opacity:0} }
+  @keyframes ripple { 0%{transform:translate(-50%,-50%) scale(.18);opacity:.8}
+    90%,100%{transform:translate(-50%,-50%) scale(3.1);opacity:0} }
 
   .plist { display:grid; gap:14px; padding:0; margin:24px 0 0; list-style:none; max-width:640px; }
   .plist li { padding-left:24px; position:relative; font-size:15.5px; }
@@ -78,12 +79,12 @@
   /* V1 — scène iPhone */
   .v1-ring { transform-box:fill-box; transform-origin:center;
     transform:scale(.15); opacity:0; animation:v1r 3.4s cubic-bezier(.16,.7,.3,1) infinite; }
-  .v1-ring.d2 { animation-delay:.14s; } .v1-ring.d3 { animation-delay:.28s; }
-  @keyframes v1r { 0%,30%{transform:scale(.15);opacity:0} 34%{opacity:.8}
-    88%,100%{transform:scale(2.6);opacity:0} }
-  .v1-drop { animation:v1d 3.4s cubic-bezier(.5,0,.9,.4) infinite; }
-  @keyframes v1d { 0%{transform:translateY(0);opacity:0} 6%{opacity:1}
-    30%{transform:translateY(150px);opacity:1} 33%{transform:translateY(158px);opacity:0}
+  .v1-ring.d1 { animation-delay:.94s; } .v1-ring.d2 { animation-delay:2.64s; }
+  @keyframes v1r { 0%{transform:scale(.15);opacity:.8}
+    90%,100%{transform:scale(2.6);opacity:0} }
+  .v1-drop { animation:v1d 1.7s cubic-bezier(.5,0,.9,.4) infinite; }
+  @keyframes v1d { 0%{transform:translateY(0);opacity:0} 10%{opacity:1}
+    55%{transform:translateY(150px);opacity:1} 60%{transform:translateY(158px);opacity:0}
     100%{transform:translateY(158px);opacity:0} }
 
   /* V2 — roulette */
@@ -164,7 +165,7 @@
     <p class="mark">Dropp</p>
     <span class="soon">Bientôt sur l'App Store</span>
     <div class="scene" aria-hidden="true">
-      <span class="drop"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+      <span class="drop"></span><span class="ring" style="animation-delay:.94s"></span><span class="ring"></span><span class="ring"></span>
     </div>
     <h1>Pendant que vous faites votre travail, Dropp s'occupe du rythme.</h1>
     <p class="sub">L'assistant de cadence des perfusions gravitaires — natif iPhone et Apple Watch, conçu au plus près du terrain.</p>
@@ -207,9 +208,8 @@
           <ellipse cx="148" cy="177.6" rx="1.7" ry="1.1" fill="#FFFFFF" opacity="0.9"/>
         </g>
         <g>
-          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring"/>
+          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d1"/>
           <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d2"/>
-          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d3"/>
         </g>
         <rect x="24" y="432" width="120" height="42" rx="14" fill="var(--bg)"/>
         <text x="84" y="452" text-anchor="middle" class="ink" font-size="13" font-weight="600">1.43 s</text>
