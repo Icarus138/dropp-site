@@ -87,6 +87,20 @@
     55%{transform:translateY(150px);opacity:1} 60%{transform:translateY(158px);opacity:0}
     100%{transform:translateY(158px);opacity:0} }
 
+  /* V6 — calage multi-sensoriel : pulse a l'impact de chaque goutte */
+  .v6-drop { animation:v6d 1.7s cubic-bezier(.5,0,.9,.4) infinite; }
+  @keyframes v6d { 0%{transform:translateY(0);opacity:0} 10%{opacity:1}
+    55%{transform:translateY(96px);opacity:1} 60%{transform:translateY(102px);opacity:0}
+    100%{transform:translateY(102px);opacity:0} }
+  .v6-ring { transform-box:fill-box; transform-origin:center;
+    transform:scale(.2); opacity:0; animation:v6r 1.7s cubic-bezier(.16,.7,.3,1) infinite;
+    animation-delay:.94s; }
+  @keyframes v6r { 0%{transform:scale(.2);opacity:.7} 80%,100%{transform:scale(2.2);opacity:0} }
+  .v6-pulse { opacity:0; transform-box:fill-box; transform-origin:center;
+    animation:v6p 1.7s ease-out infinite; animation-delay:.94s; }
+  .v6-pulse.p2 { animation-delay:1.02s; }
+  @keyframes v6p { 0%{opacity:.85;transform:scale(.9)} 35%{opacity:0;transform:scale(1.25)} 100%{opacity:0} }
+
   /* V2 — roulette */
   .v2-ticks { animation:v2t 3.6s linear infinite; }
   @keyframes v2t { from{transform:translateX(0)} to{transform:translateX(-88px)} }
@@ -128,7 +142,8 @@
 
   @media (prefers-reduced-motion:reduce){
     .scene .ring,.scene .drop,.v1-ring,.v1-drop,.v2-ticks,.v2-finger,.v2-val,
-    .v3-pulse,.v3-dot,.v3-st,.v4-crown line,.v4-num,.v5-banner,.v5-halo { animation:none !important; }
+    .v3-pulse,.v3-dot,.v3-st,.v4-crown line,.v4-num,.v5-banner,.v5-halo,.v6-drop,.v6-ring,.v6-pulse { animation:none !important; }
+    .v6-pulse{opacity:.5} .v6-ring{opacity:.4;transform:scale(1.4)} .v6-drop{opacity:0}
     .scene .ring{opacity:.4;transform:translate(-50%,-50%) scale(1.8)}
     .v1-ring{opacity:.5;transform:scale(1.2)} .v1-drop{opacity:0}
     .v2-val.s1{opacity:1} .v3-st.c{opacity:1} .v4-num.s1{opacity:1}
@@ -219,6 +234,30 @@
     </div>
     <div class="feature flip">
       <div class="txt">
+        <h3>Calez au tempo — à l'œil, au poignet, à l'oreille</h3>
+        <p>Pendant le réglage, chaque goutte se voit — l'onde —, se sent — une vibration légère, sur l'iPhone comme sur l'Apple Watch — et peut s'entendre : un tick discret, pas plus fort qu'un cliquetis mécanique, optionnel et respectueux du mode silencieux. Quand la goutte du perfuseur tombe avec celle de Dropp, vous y êtes.</p>
+      </div>
+      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 220">
+        <rect x="42" y="58" width="66" height="116" rx="15" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <rect x="66" y="66" width="18" height="4" rx="2" class="faint"/>
+        <rect x="238" y="76" width="60" height="80" rx="16" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <rect x="298" y="98" width="5" height="18" rx="2.5" class="surf" stroke="var(--soft)" stroke-width="1"/>
+        <circle cx="170" cy="46" r="5" fill="var(--opal-lo)" class="v6-drop"/>
+        <ellipse cx="170" cy="152" rx="42" ry="16" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v6-ring"/>
+        <g fill="none" stroke="var(--soft)" stroke-width="2" stroke-linecap="round">
+          <path d="M 120 100 q 8 16 0 32" class="v6-pulse"/>
+          <path d="M 129 94 q 12 22 0 44" class="v6-pulse p2"/>
+          <path d="M 226 100 q -8 16 0 32" class="v6-pulse"/>
+          <path d="M 217 94 q -12 22 0 44" class="v6-pulse p2"/>
+        </g>
+        <text x="75" y="196" text-anchor="middle" class="soft" font-size="10">vibration légère</text>
+        <text x="268" y="196" text-anchor="middle" class="soft" font-size="10">au poignet aussi</text>
+        <text x="170" y="214" text-anchor="middle" class="faint" font-size="10">+ un tick discret, si vous le souhaitez</text>
+      </svg></div>
+    </div>
+
+    <div class="feature">
+      <div class="txt">
         <h3>Réglé au pouce, même les mains prises</h3>
         <p>Pas de clavier, pas de pavé numérique : un glissement de pouce sur le cadran à crans, chaque cran vibre, la valeur suit. Trois secondes entre l'entrée dans la chambre et le tempo qui bat. Au poignet, la couronne fait le même travail.</p>
       </div>
@@ -249,7 +288,7 @@
         <circle cx="170" cy="112" r="14" fill="var(--ink)" opacity="0" class="v2-finger"/>
       </svg></div>
     </div>
-    <div class="feature">
+    <div class="feature flip">
       <div class="txt">
         <h3>Un doute sur un débit ? Tapez-le.</h3>
         <p>Au tour de quatre heures, une perfusion vous semble filer trop vite. Tapez son rythme sur l'écran : en quelques gouttes, la valeur se stabilise et vous lisez le débit réel — gouttes par minute, millilitres par heure — pour recaler la molette en confiance. Fonctionne aussi en simple compteur de tempo, en BPM.</p>
@@ -274,7 +313,7 @@
         <circle cx="170" cy="192" r="13" class="ink v3-dot" opacity=".85"/>
       </svg></div>
     </div>
-    <div class="feature flip">
+    <div class="feature">
       <div class="txt">
         <h3>Les mains dans le soin, l'iPhone dans la poche</h3>
         <p>Depuis l'Apple Watch : lancez une perfusion à la couronne, suivez-la, mettez-la en pause. Le repère de chambre se règle en deux taps et un tour de couronne — jamais de texte à saisir. Et les alarmes du poignet sonnent même si l'iPhone est resté au vestiaire.</p>
@@ -301,7 +340,7 @@
         <text x="120" y="223" text-anchor="middle" class="ink" font-size="12" font-weight="600">Lancer</text>
       </svg></div>
     </div>
-    <div class="feature">
+    <div class="feature flip">
       <div class="txt">
         <h3>La fin vous trouve — pas l'inverse</h3>
         <p>Fin de perfusion, pré-alerte cinq minutes avant, jalons sur les longues : les signaux arrivent en couches — dans l'app, en notification, au poignet. Où que vous soyez dans le service, la fin ne repose plus sur votre mémoire. Et l'alarme de fin est gratuite, pour toujours.</p>
