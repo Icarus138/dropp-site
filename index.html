@@ -9,6 +9,7 @@
   :root {
     --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
     --faint:#C6BFB2; --amber:#D9A44A; --amber-ink:#1A1A1C; --rule:rgba(58,56,52,.10);
+    --opal-hi:#FCF9F2; --opal-mid:#EFE9DC; --opal-lo:#D2C8B7;
   }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink);
@@ -34,12 +35,14 @@
   .hero .sub { font-size:17px; color:var(--soft); max-width:46ch; margin:0 auto; }
   .scene { position:relative; height:200px; width:min(560px,100%); margin:8px auto 0; overflow:hidden; }
   .scene .ring { position:absolute; left:50%; top:64%; width:130px; height:55px;
-    border:1.5px solid var(--soft); border-radius:50%;
+    border:2px solid var(--opal-lo); border-radius:50%;
     transform:translate(-50%,-50%) scale(.18); opacity:0;
     animation:ripple 3.4s cubic-bezier(.16,.7,.3,1) infinite; }
   .scene .ring:nth-child(2){ animation-delay:.14s; }
   .scene .ring:nth-child(3){ animation-delay:.28s; }
-  .scene .drop { position:absolute; left:50%; top:0; width:9px; height:9px; background:var(--ink);
+  .scene .drop { position:absolute; left:50%; top:0; width:11px; height:11px;
+    background:radial-gradient(circle at 32% 28%, #FFFFFF 0%, var(--opal-hi) 28%, var(--opal-mid) 62%, var(--opal-lo) 100%);
+    box-shadow:0 1px 4px rgba(58,56,52,.22), inset 0 -1px 2px rgba(210,200,183,.6);
     border-radius:50% 50% 52% 52% / 46% 46% 56% 56%; transform:translateX(-50%);
     animation:fall 3.4s cubic-bezier(.5,0,.9,.4) infinite; }
   @keyframes fall { 0%{top:6%;opacity:0} 6%{opacity:1} 30%{top:60%;opacity:1} 33%{top:62%;opacity:0} 100%{top:62%;opacity:0} }
@@ -191,11 +194,22 @@
         <text x="150" y="108" text-anchor="middle" class="soft" font-size="12">gtt / min</text>
         <text x="150" y="128" text-anchor="middle" class="lbl soft">Box 3</text>
         <text x="150" y="146" text-anchor="middle" class="soft" font-size="11">reste 3h 12m · fin 22:12</text>
-        <circle cx="150" cy="180" r="5" class="ink v1-drop"/>
+        <defs>
+          <radialGradient id="pearl" cx="35%" cy="30%" r="85%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="30%" stop-color="var(--opal-hi)"/>
+            <stop offset="65%" stop-color="var(--opal-mid)"/>
+            <stop offset="100%" stop-color="var(--opal-lo)"/>
+          </radialGradient>
+        </defs>
+        <g class="v1-drop">
+          <circle cx="150" cy="180" r="6" fill="url(#pearl)" stroke="var(--opal-lo)" stroke-width="0.8"/>
+          <ellipse cx="148" cy="177.6" rx="1.7" ry="1.1" fill="#FFFFFF" opacity="0.9"/>
+        </g>
         <g>
-          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--soft)" stroke-width="1.5" class="v1-ring"/>
-          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--soft)" stroke-width="1.5" class="v1-ring d2"/>
-          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--soft)" stroke-width="1.5" class="v1-ring d3"/>
+          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring"/>
+          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d2"/>
+          <ellipse cx="150" cy="345" rx="95" ry="40" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="v1-ring d3"/>
         </g>
         <rect x="24" y="432" width="120" height="42" rx="14" fill="var(--bg)"/>
         <text x="84" y="452" text-anchor="middle" class="ink" font-size="13" font-weight="600">1.43 s</text>
