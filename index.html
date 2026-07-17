@@ -6,6 +6,8 @@
 <meta name="color-scheme" content="only light">
 <title>DROPP — Le rythme au poignet. La tête au soin.</title>
 <meta name="description" content="Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   :root {
     --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
@@ -54,8 +56,15 @@
   .hero .tag { font-size:clamp(19px,3.2vw,26px); font-weight:300; line-height:1.28;
     margin:12px auto 0; max-width:24ch; text-wrap:balance;
     animation:rise 1s .3s cubic-bezier(.2,.7,.2,1) both; }
-  .hero .sub { font-size:14px; color:var(--soft); max-width:52ch; margin:8px auto 26px;
+  .hero .sub { font-size:14px; color:var(--soft); max-width:52ch; margin:8px auto 0;
     animation:rise 1s .45s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub2 { font-size:12px; color:var(--soft); margin:8px auto 26px;
+    animation:rise 1s .55s cubic-bezier(.2,.7,.2,1) both; }
+  /* Accent haptique : de fines ondes de vibration encadrent les deux
+     appareils, calées sur le battement */
+  .hap { opacity:0; animation:hap 2s ease-out infinite; }
+  .hap.h2 { animation-delay:.12s; }
+  @keyframes hap { 0%,56%{opacity:0} 62%{opacity:.8} 80%,100%{opacity:0} }
   .ctas { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; }
   @keyframes rise { from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none} }
   .btn { display:inline-block; text-decoration:none; font-size:13px; font-weight:600;
@@ -282,6 +291,8 @@
     margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
     padding:34px 0 28px; margin-top:22px; }
   .darkin { max-width:920px; margin:0 auto; padding:0 22px; }
+  .dmark { font-size:11px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; color:#E9E2D6; margin:0 0 20px; }
   .dgrid { display:grid; grid-template-columns:1fr 1fr; gap:24px 26px; }
   @media (max-width:700px){ .dgrid { grid-template-columns:1fr; } }
   .dcell h4 { font-size:14.5px; font-weight:600; margin:12px 0 4px; color:#E9E2D6; }
@@ -351,6 +362,8 @@
   /* Closing / footer */
   .closing { text-align:center; padding-bottom:20px; }
   .closing h2 { margin-bottom:8px; }
+  .appicon { display:block; margin:0 auto 18px; width:88px; height:88px;
+    border-radius:22.5%; box-shadow:0 12px 32px rgba(58,56,52,.16); }
   footer { margin-top:56px; padding:26px 0 42px; border-top:1px solid var(--rule);
     font-size:12px; color:var(--faint); text-align:center; line-height:1.8; }
   footer a { color:var(--soft); margin:0 8px; }
@@ -379,16 +392,26 @@
     <h1 class="markx">Dropp</h1>
     <p class="tag">Le rythme au poignet. La tête au soin.</p>
     <p class="sub">Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch.</p>
+    <p class="sub2">La cadence se sent — vibration subtile au poignet ou sur iPhone.</p>
     <div class="hero-scene" aria-hidden="true">
-      <div class="hero-phone"><svg viewBox="0 0 100 200">
+      <div class="hero-phone"><svg viewBox="-18 0 136 200">
+        <path d="M -5 84 q -7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+        <path d="M -13 76 q -11 24 0 48" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+        <path d="M 105 84 q 7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+        <path d="M 113 76 q 11 24 0 48" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
         <rect x="4" y="3" width="92" height="194" rx="22" fill="#1A1A1C" stroke="var(--soft)" stroke-width="1.8"/>
         <rect x="34" y="12" width="32" height="7" rx="3.5" fill="#0F0F10"/>
+        <text x="50" y="34" text-anchor="middle" fill="#8F897D" font-size="6.5" letter-spacing="2.5">DROPP</text>
         <text x="50" y="92" text-anchor="middle" class="num" fill="#E9E2D6" font-size="26">42</text>
         <text x="50" y="110" text-anchor="middle" fill="#8F897D" font-size="8">gtt / min</text>
         <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="#5A564E" stroke-width="2"/>
         <ellipse cx="50" cy="150" rx="38" ry="13" fill="none" stroke="#3E3E40" stroke-width="1.4"/>
       </svg></div>
-      <div class="hero-watch"><svg viewBox="0 0 120 140">
+      <div class="hero-watch"><svg viewBox="-18 0 156 140">
+        <path d="M -5 55 q -7 15 0 30" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+        <path d="M -13 47 q -11 23 0 46" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+        <path d="M 125 55 q 7 15 0 30" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+        <path d="M 133 47 q 11 23 0 46" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
         <rect x="44" y="2" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
         <rect x="44" y="124" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
         <rect x="10" y="14" width="100" height="112" rx="26" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
@@ -399,10 +422,9 @@
     </div>
   </div>
   <div class="trust">
-    <span>Conçu par un soignant</span>
     <span>Aucune donnée collectée</span>
-    <span>Sans compte</span>
     <span>Sans publicité</span>
+    <span>Conçu par un soignant</span>
   </div>
 </header>
 <div class="page">
@@ -622,6 +644,7 @@
     <h2>Le thème Graphite — et tout ce qui veille avec.</h2>
     <div class="dark" role="img" aria-label="Fonctions Pro présentées dans le thème sombre Graphite : pré-alerte et jalons, alarmes au poignet, historique local, scène 3D Premium">
       <div class="darkin">
+      <p class="dmark">Dropp Pro</p>
       <div class="dgrid">
         <div class="dcell">
           <svg viewBox="0 0 300 120" aria-hidden="true">
@@ -758,6 +781,7 @@
   </section>
 
   <section class="closing" id="fin">
+    <img class="appicon" src="icon.png" alt="Icône de l'app Dropp" width="88" height="88">
     <p class="eyebrow">Été 2026</p>
     <h2>Bientôt sur l'App Store.</h2>
     <p class="muted" style="margin:0 auto 18px; max-width:44ch;">Conçu par un soignant, testé en poste — pour toutes celles et ceux qui comptent les gouttes.</p>
