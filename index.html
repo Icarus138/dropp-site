@@ -26,6 +26,16 @@
   .page { max-width:920px; margin:0 auto; padding:0 22px; }
   .eyebrow { font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
     color:var(--soft); margin:0 0 14px; }
+  /* Glyphe de marque : les ondes concentriques de l'icone, en masque —
+     il prend la couleur du contexte (ivoire ou Graphite) */
+  .eyebrow::before, .try::before, .dmark::before, .fbrand::before {
+    content:""; display:inline-block; width:13px; height:13px; margin-right:9px;
+    vertical-align:-2px; background:currentColor; opacity:.85; border-radius:0;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4'%3E%3Ccircle cx='12' cy='12' r='9.4'/%3E%3Ccircle cx='12' cy='12' r='4.8'/%3E%3Ccircle cx='12' cy='12' r='1.6' fill='%23000' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4'%3E%3Ccircle cx='12' cy='12' r='9.4'/%3E%3Ccircle cx='12' cy='12' r='4.8'/%3E%3Ccircle cx='12' cy='12' r='1.6' fill='%23000' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .fbrand { font-size:12px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; color:var(--soft); margin:0 0 16px; }
+  .fbrand::before { display:block; width:20px; height:20px; margin:0 auto 10px; }
   section { padding:64px 0 10px; }
   section + section { border-top:1px solid var(--rule); margin-top:52px; }
   h2 { font-size:clamp(22px,3.6vw,30px); font-weight:300; margin:0 0 12px; text-wrap:balance; }
@@ -156,8 +166,7 @@
   /* Interactif : affordance commune */
   .try { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
     color:var(--soft); margin:0 0 10px; }
-  .try::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%;
-    background:var(--faint); margin-right:8px; vertical-align:1px; }
+  /* (puce remplacée par le glyphe de marque défini plus haut) */
 
   /* Calculez : le vrai calcul, regle aux molettes-rouleaux (parite app) */
   .calc { background:var(--surface); border-radius:22px; padding:16px 20px 20px; }
@@ -416,6 +425,7 @@
         <rect x="44" y="124" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
         <rect x="10" y="14" width="100" height="112" rx="26" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
         <rect x="110" y="54" width="6" height="18" rx="3" class="surf" stroke="var(--soft)"/>
+        <text x="60" y="36" text-anchor="middle" class="soft" font-size="6" letter-spacing="2.2">DROPP</text>
         <text x="60" y="72" text-anchor="middle" class="num ink" font-size="27">42</text>
         <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
       </svg></div>
@@ -553,6 +563,7 @@
         <rect x="222" y="23" width="86" height="114" rx="20" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
         <rect x="308" y="56" width="5" height="16" rx="2.5" class="surf" stroke="var(--soft)"/>
         <clipPath id="wclip"><rect x="228" y="29" width="74" height="102" rx="15"/></clipPath>
+        <text x="265" y="42" text-anchor="middle" class="soft" font-size="6" letter-spacing="2">DROPP</text>
         <ellipse cx="265" cy="88" rx="24" ry="8" fill="none" stroke="var(--opal-lo)" stroke-width="1.5" class="wpring"/>
         <ellipse cx="265" cy="88" rx="24" ry="8" fill="none" stroke="var(--opal-lo)" stroke-width="1.2" class="wpring p2"/>
         <text x="265" y="122" text-anchor="middle" class="soft" font-size="8">fin 22:12</text>
@@ -790,6 +801,7 @@
   </section>
 
   <footer>
+    <p class="fbrand">Dropp</p>
     <nav>
       <a href="confidentialite.html">Confidentialité</a>
       <a href="assistance.html">Assistance</a>
