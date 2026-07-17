@@ -56,9 +56,10 @@
   .hero .tag { font-size:clamp(19px,3.2vw,26px); font-weight:300; line-height:1.28;
     margin:12px auto 0; max-width:24ch; text-wrap:balance;
     animation:rise 1s .3s cubic-bezier(.2,.7,.2,1) both; }
-  .hero .sub { font-size:14px; color:var(--soft); max-width:52ch; margin:8px auto 0;
+  .hero .sub { font-size:14px; color:var(--soft); max-width:52ch; margin:8px auto 26px;
     animation:rise 1s .45s cubic-bezier(.2,.7,.2,1) both; }
-  .hero .sub2 { font-size:12px; color:var(--soft); margin:8px auto 26px;
+  /* Sous les deux appareils : la phrase haptique conclut la scene */
+  .hero .sub2 { font-size:12px; color:var(--soft); margin:6px auto 10px;
     animation:rise 1s .55s cubic-bezier(.2,.7,.2,1) both; }
   /* Accent haptique : de fines ondes de vibration encadrent les deux
      appareils, calées sur le battement */
@@ -392,7 +393,6 @@
     <h1 class="markx">Dropp</h1>
     <p class="tag">Le rythme au poignet. La tête au soin.</p>
     <p class="sub">Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch.</p>
-    <p class="sub2">La cadence se sent — vibration subtile au poignet ou sur iPhone.</p>
     <div class="hero-scene" aria-hidden="true">
       <div class="hero-phone"><svg viewBox="-18 0 136 200">
         <path d="M -5 84 q -7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
@@ -420,6 +420,7 @@
         <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
       </svg></div>
     </div>
+    <p class="sub2">La cadence se sent — vibration subtile au poignet ou sur iPhone.</p>
   </div>
   <div class="trust">
     <span>Aucune donnée collectée</span>
