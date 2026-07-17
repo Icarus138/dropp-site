@@ -183,11 +183,6 @@
     margin-left:-1px; background:var(--ink); border-radius:1px; z-index:2; }
   .roller::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
     background:linear-gradient(90deg, var(--surface), rgba(239,233,222,0) 24%, rgba(239,233,222,0) 76%, var(--surface)); }
-  .fpills { display:flex; gap:6px; }
-  .fpill { min-width:40px; height:34px; padding:0 10px; border-radius:999px;
-    border:1.5px solid var(--rule); background:transparent; color:var(--soft);
-    font-size:12.5px; font-weight:600; cursor:pointer; -webkit-tap-highlight-color:transparent; }
-  .fpill.on { border-color:var(--amber); color:var(--ink); background:rgba(244,239,230,.6); }
   .chint { font-size:11px; color:var(--soft); margin:10px 0 0; }
   .cres { border-top:1px solid var(--rule); margin-top:10px; padding-top:16px;
     display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
@@ -514,21 +509,13 @@
           <div class="crow"><span class="clab">Durée</span><span class="cval" id="cDur">4 h</span></div>
           <div class="roller" id="rDur" tabindex="0" role="slider" aria-label="Durée"
             aria-valuemin="15" aria-valuemax="720" aria-valuenow="240" aria-valuetext="4 heures"><div class="ticks"></div></div>
-          <div class="crow" style="padding-top:14px;"><span class="clab">Facteur</span>
-            <div class="fpills" role="group" aria-label="Facteur de goutte">
-              <button type="button" class="fpill" data-f="10">10</button>
-              <button type="button" class="fpill" data-f="15">15</button>
-              <button type="button" class="fpill on" data-f="20">20</button>
-              <button type="button" class="fpill" data-f="60">60</button>
-            </div>
-          </div>
           <div class="cres" aria-live="polite">
             <div><span class="big num" id="cRate">42</span><span class="cu">gtt / min</span></div>
             <div><span class="sec" id="cInt">1,43</span><span class="cu">s / goutte</span></div>
             <div><span class="sec" id="cMlh">125</span><span class="cu">mL / h</span></div>
           </div>
           <p class="cwarn">Hors plage plausible — l'app refuse de battre un tempo absurde.</p>
-          <p class="chint">Molettes à glisser — comme dans l'app.</p>
+          <p class="chint">Molettes à glisser — comme dans l'app. Démo réglée sur un perfuseur 20 gtt/mL.</p>
         </div>
       </div>
     </div>
@@ -942,8 +929,9 @@
   function $(id){ return document.getElementById(id); }
 
   /* Calculez — le calcul exact de l'app, réglé aux molettes-rouleaux
-     (parité app : glisser pour ajuster, un cran = un pas). */
-  var vol=500, dur=240, FACS=[10,15,20,60], fi=2, calc=$('calc');
+     (parité app : glisser pour ajuster, un cran = un pas).
+     Facteur fixé à 20 gtt/mL pour la démo (note affichée dans la carte). */
+  var vol=500, dur=240, FACTOR=20, calc=$('calc');
   function fmtDur(m){ var h=Math.floor(m/60), r=m%60;
     return h ? (r ? h+' h '+(r<10?'0':'')+r : h+' h') : r+' min'; }
   function render(){
@@ -953,7 +941,7 @@
     $('rVol').setAttribute('aria-valuetext', vol+' millilitres');
     $('rDur').setAttribute('aria-valuenow', dur);
     $('rDur').setAttribute('aria-valuetext', fmtDur(dur));
-    var rate = Math.max(1, Math.round(vol*FACS[fi]/dur));
+    var rate = Math.max(1, Math.round(vol*FACTOR/dur));
     var ok = rate <= 400;
     calc.classList.toggle('oob', !ok);
     $('cRate').textContent = ok ? rate : '—';
@@ -993,12 +981,6 @@
   }
   roller($('rVol'), {get:function(){return vol;}, set:function(v){vol=v;}, step:10, min:50, max:1500});
   roller($('rDur'), {get:function(){return dur;}, set:function(v){dur=v;}, step:5,  min:15, max:720});
-  calc.addEventListener('click', function(e){
-    var b = e.target.closest('.fpill'); if(!b) return;
-    fi = Math.max(0, FACS.indexOf(+b.dataset.f));
-    [].forEach.call(calc.querySelectorAll('.fpill'), function(p){ p.classList.toggle('on', p===b); });
-    render();
-  });
   render();
 
   /* Calez — la molette jusqu'à l'unisson (tempo Dropp fixe : 42).
