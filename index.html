@@ -53,8 +53,10 @@
   .hero .tag { font-size:clamp(19px,3.2vw,26px); font-weight:300; line-height:1.28;
     margin:12px auto 0; max-width:24ch; text-wrap:balance;
     animation:rise 1s .3s cubic-bezier(.2,.7,.2,1) both; }
-  .hero .sub { font-size:14px; color:var(--soft); max-width:40ch; margin:10px auto 20px;
+  .hero .sub { font-size:14px; color:var(--soft); max-width:52ch; margin:8px auto 18px;
     animation:rise 1s .45s cubic-bezier(.2,.7,.2,1) both; }
+  .linkq { font-size:12.5px; font-weight:600; color:var(--ink); text-decoration:underline;
+    text-underline-offset:4px; text-decoration-color:var(--faint); padding:8px 4px; }
   .ctas { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; }
   .hero .ctas { animation:rise 1s .6s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes rise { from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none} }
@@ -71,8 +73,10 @@
     .hero-watch { right:5%; bottom:16%; width:70px; }
     .hero-phone { left:5%; bottom:14%; width:60px; }
   }
+  /* Pulsation d'accueil apaisée : 30 bpm (< 33), le produit bat son vrai
+     tempo plus bas dans la page. */
   .hero-watch svg, .hero-phone svg { width:100%; height:auto;
-    animation:wpulse 1.7s ease-out infinite; transform-origin:center; }
+    animation:wpulse 2s ease-out infinite; transform-origin:center; }
   @keyframes wpulse { 0%,100%{transform:scale(1)} 56%{transform:scale(1)} 60%{transform:scale(.975)} 70%{transform:scale(1)} }
   .trust { position:relative; z-index:2; display:flex; gap:8px 24px; flex-wrap:wrap;
     justify-content:center; padding:0 22px 26px; font-size:12px; color:var(--soft); }
@@ -226,17 +230,21 @@
     margin-top:12px; text-decoration:underline; text-underline-offset:3px; visibility:hidden; }
   .tapreset.on { visibility:visible; }
 
-  /* Continuez : timeline (largeurs en px : les % se resolvent sur le
-     viewBox 340, pas sur la piste de 300 — la barre debordait). */
+  /* Continuez : timeline a gauche (largeurs en px — les % se resolvent
+     sur le viewBox, pas sur la piste), notifications DANS le cadran de
+     l'Apple Watch a droite : pre-alerte a T-5, puis fin. */
   .t-fill { animation:tfill 12s linear infinite; }
-  @keyframes tfill { from{width:24px} to{width:294px} }
+  @keyframes tfill { from{width:16px} to{width:172px} }
   .t-pre { opacity:.25; animation:tpre 12s infinite; }
   @keyframes tpre { 0%,62%{opacity:.25} 66%,100%{opacity:1} }
   .t-end { opacity:.25; animation:tend 12s infinite; }
   @keyframes tend { 0%,90%{opacity:.25} 94%,100%{opacity:1} }
-  .t-banner { transform:translateY(-58px); animation:tban 12s ease-out infinite; }
-  @keyframes tban { 0%,90%{transform:translateY(-58px)} 95%,99%{transform:translateY(0)}
-    100%{transform:translateY(-58px)} }
+  .t-preban { transform:translateY(-72px); animation:tpban 12s ease-out infinite; }
+  @keyframes tpban { 0%,62%{transform:translateY(-72px)} 66%,80%{transform:translateY(0)}
+    84%,100%{transform:translateY(-72px)} }
+  .t-endban { transform:translateY(-72px); animation:tban 12s ease-out infinite; }
+  @keyframes tban { 0%,90%{transform:translateY(-72px)} 95%,99%{transform:translateY(0)}
+    100%{transform:translateY(-72px)} }
 
   /* Watch heroique */
   .v4-crown line { animation:v4c 1.6s linear infinite; }
@@ -263,6 +271,40 @@
   .mdot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--amber);
     margin-left:6px; animation:mdot 2.4s ease-in-out infinite; vertical-align:1px; }
   @keyframes mdot { 0%,100%{opacity:.35} 50%{opacity:1} }
+
+  /* ============ APERCU PRO EN GRAPHITE ============ */
+  /* Panneau fidele aux tokens sombres de l'app : bg #0F0F10, surface
+     #1A1A1C, ink #E9E2D6, inkSoft #A69F92 — la section EST la demo du
+     theme Graphite. */
+  .dark { background:#141415; color:#E9E2D6; border-radius:26px;
+    padding:26px 24px 22px; margin-top:22px; }
+  .dgrid { display:grid; grid-template-columns:1fr 1fr; gap:24px 26px; }
+  @media (max-width:700px){ .dgrid { grid-template-columns:1fr; } }
+  .dcell h4 { font-size:14.5px; font-weight:600; margin:12px 0 4px; color:#E9E2D6; }
+  .dcell p { font-size:12.5px; color:#8F897D; margin:0; max-width:none; }
+  .dcell svg { width:100%; height:auto; display:block; background:#1A1A1C; border-radius:16px; }
+  .dnote { font-size:11.5px; color:#8F897D; margin:20px 0 0; }
+  /* Jalons : les reperes s'allument tour a tour, la pre-alerte veille */
+  .dj { animation:dj 9s infinite; }
+  .dj.j2 { animation-delay:1.1s; } .dj.j3 { animation-delay:2.2s; }
+  @keyframes dj { 0%,8%{fill:#3A3A3C} 16%,78%{fill:#E9E2D6} 88%,100%{fill:#3A3A3C} }
+  .dpre { animation:dpre 2.4s ease-in-out infinite; }
+  @keyframes dpre { 0%,100%{opacity:.35} 50%{opacity:1} }
+  /* Alarme poignet : l'onde part du cadran */
+  .dring { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:dring 2.4s ease-out infinite; }
+  .dring.r2 { animation-delay:1.2s; }
+  @keyframes dring { 0%{transform:scale(.72); opacity:.5} 75%{transform:scale(1.12); opacity:0} 100%{opacity:0} }
+  /* Historique : les lignes se posent une a une */
+  .dh { opacity:.14; animation:dh 9s infinite; }
+  .dh.h2 { animation-delay:1s; } .dh.h3 { animation-delay:2s; }
+  @keyframes dh { 0%,6%{opacity:.14; transform:translateY(4px)} 14%,80%{opacity:1; transform:none} 90%,100%{opacity:.14} }
+  /* Scene 3D : la profondeur suggeree par strates, la goutte la traverse */
+  .d3f { transform-box:fill-box; transform-origin:center; animation:d3f 5s ease-in-out infinite; }
+  @keyframes d3f { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-2.5px)} }
+  .d3drop { opacity:0; animation:d3d 2s cubic-bezier(.5,0,.9,.5) infinite; }
+  @keyframes d3d { 0%,6%{opacity:0; transform:translateY(-30px)} 8%{opacity:1}
+    24%{opacity:1; transform:translateY(0)} 28%,100%{opacity:0; transform:translateY(0)} }
 
   /* Pricing */
   .tiers { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px; }
@@ -305,9 +347,12 @@
     *,*::before,*::after { animation:none !important; }
     .step { opacity:0; } .step.s2 { opacity:1; }
     .cdrop { display:none; }
+    .d3drop { display:none; }
+    .dj { fill:#E9E2D6; }
+    .dh { opacity:1; }
     html { scroll-behavior:auto; }
     .v4-num.s1{opacity:1}
-    .t-fill{width:200px} .t-pre{opacity:1} .t-end{opacity:1} .t-banner{transform:translateY(0)}
+    .t-fill{width:120px} .t-pre{opacity:1} .t-end{opacity:1} .t-endban{transform:translateY(0)}
     .demo-dots i:nth-child(2){background:var(--ink)}
   }
 </style>
@@ -320,15 +365,15 @@
     <p class="soon">Bientôt sur l'App Store</p>
     <h1 class="markx">Dropp</h1>
     <p class="tag">Le rythme au poignet. La tête au soin.</p>
-    <p class="sub">Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch.</p>
+    <p class="sub">DROPP calcule le débit, bat la cadence et vous prévient à la fin.</p>
     <div class="ctas">
       <a class="btn primary" href="#fin">Être prévenu du lancement</a>
-      <a class="btn ghost" href="#pro">Gratuit et Pro</a>
+      <a class="linkq" href="#pro">Gratuit et Pro</a>
     </div>
     <div class="hero-scene" aria-hidden="true">
       <div class="hero-phone"><svg viewBox="0 0 100 200">
-        <rect x="4" y="3" width="92" height="194" rx="22" class="surf" stroke="var(--ink)" stroke-width="2.2"/>
-        <rect x="34" y="12" width="32" height="7" rx="3.5" fill="var(--ink)" opacity=".85"/>
+        <rect x="4" y="3" width="92" height="194" rx="22" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
+        <rect x="34" y="12" width="32" height="7" rx="3.5" fill="var(--faint)"/>
         <text x="50" y="92" text-anchor="middle" class="num ink" font-size="26">42</text>
         <text x="50" y="110" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
         <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="var(--opal-lo)" stroke-width="2"/>
@@ -468,22 +513,34 @@
     <div class="feature">
       <div class="txt">
         <h3>Continuez</h3>
-        <p>Le temps restant se suit tout seul. Une pré-alerte prévient cinq minutes avant la fin, des rappels s'adaptent à la durée — un point à mi-parcours pour une perf d'une heure, des repères réguliers pour celle qui court sur la nuit. La fin ne repose plus sur votre mémoire.</p>
+        <p>Le temps restant se suit tout seul. Une pré-alerte prévient cinq minutes avant la fin, des rappels s'adaptent à la durée — un point à mi-parcours pour une perf d'une heure, des repères réguliers pour celle qui court sur la nuit. La fin ne repose plus seulement sur votre mémoire.</p>
       </div>
       <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 190">
-        <clipPath id="tclip"><rect x="20" y="16" width="300" height="70" rx="16"/></clipPath>
-        <rect x="20" y="16" width="300" height="70" rx="16" class="surf" stroke="var(--faint)" stroke-width="1"/>
-        <g clip-path="url(#tclip)"><g class="t-banner">
-          <rect x="34" y="28" width="272" height="46" rx="13" fill="var(--bg)" stroke="var(--rule)"/>
-          <text x="52" y="48" class="ink" font-size="11.5" font-weight="600">Perfusion terminée</text>
-          <text x="52" y="64" class="soft" font-size="10.5">Box 3 — terminée.</text>
-        </g></g>
-        <rect x="20" y="122" width="300" height="6" rx="3" fill="var(--rule)"/>
-        <rect x="20" y="122" width="24" height="6" rx="3" fill="var(--faint)" class="t-fill"/>
-        <circle cx="215" cy="125" r="5" class="ink t-pre"/>
-        <text x="215" y="148" text-anchor="middle" class="soft" font-size="10" >pré-alerte −5 min</text>
-        <circle cx="314" cy="125" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
-        <text x="298" y="148" text-anchor="middle" class="soft" font-size="10">fin</text>
+        <rect x="252" y="14" width="26" height="10" rx="4" class="surf" stroke="var(--faint)"/>
+        <rect x="252" y="136" width="26" height="10" rx="4" class="surf" stroke="var(--faint)"/>
+        <rect x="222" y="23" width="86" height="114" rx="20" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <rect x="308" y="56" width="5" height="16" rx="2.5" class="surf" stroke="var(--soft)"/>
+        <clipPath id="wclip"><rect x="228" y="29" width="74" height="102" rx="15"/></clipPath>
+        <text x="265" y="122" text-anchor="middle" class="soft" font-size="8">fin 22:12</text>
+        <g clip-path="url(#wclip)">
+          <g class="t-preban">
+            <rect x="232" y="36" width="66" height="36" rx="9" fill="var(--bg)" stroke="var(--rule)"/>
+            <circle cx="241" cy="48" r="3" fill="var(--amber)"/>
+            <text x="248" y="51" class="ink" font-size="8" font-weight="600">Pré-alerte</text>
+            <text x="238" y="64" class="soft" font-size="7.5">fin dans 5 min</text>
+          </g>
+          <g class="t-endban">
+            <rect x="232" y="36" width="66" height="36" rx="9" fill="var(--bg)" stroke="var(--rule)"/>
+            <text x="238" y="50" class="ink" font-size="8" font-weight="600">Perfusion</text>
+            <text x="238" y="61" class="ink" font-size="8" font-weight="600">terminée</text>
+          </g>
+        </g>
+        <rect x="20" y="86" width="180" height="6" rx="3" fill="var(--rule)"/>
+        <rect x="20" y="86" width="16" height="6" rx="3" fill="var(--faint)" class="t-fill"/>
+        <circle cx="152" cy="89" r="5" class="ink t-pre"/>
+        <text x="140" y="112" text-anchor="middle" class="soft" font-size="10">pré-alerte −5 min</text>
+        <circle cx="194" cy="89" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
+        <text x="194" y="70" text-anchor="middle" class="soft" font-size="10">fin</text>
       </svg></div>
     </div>
   </section>
@@ -548,6 +605,73 @@
       <div class="mrow" style="border-bottom:none;"><span class="name">Perfusion A</span><span class="mbar m3"><i></i></span><span class="left">1 h 05</span></div>
     </div>
     <p class="muted" style="font-size:13px; margin-top:16px;">Des repères de lieux, jamais de noms — Box 3, Fauteuil 5, Passage 2. Le repère est optionnel.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Aperçu Pro</p>
+    <h2>Le thème Graphite — et tout ce qui veille avec.</h2>
+    <div class="dark" role="img" aria-label="Fonctions Pro présentées dans le thème sombre Graphite : pré-alerte et jalons, alarmes au poignet, historique local, scène 3D Premium">
+      <div class="dgrid">
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <rect x="20" y="56" width="260" height="5" rx="2.5" fill="#2A2A2C"/>
+            <circle cx="85" cy="58.5" r="5" fill="#3A3A3C" class="dj"/>
+            <circle cx="150" cy="58.5" r="5" fill="#3A3A3C" class="dj j2"/>
+            <circle cx="215" cy="58.5" r="5" fill="#3A3A3C" class="dj j3"/>
+            <circle cx="262" cy="58.5" r="5" fill="var(--amber)" class="dpre"/>
+            <text x="150" y="94" text-anchor="middle" fill="#8F897D" font-size="9.5">mi-parcours · quarts · pré-alerte</text>
+          </svg>
+          <h4>Pré-alerte et jalons</h4>
+          <p>Un signal cinq minutes avant la fin, des repères adaptés à la durée.</p>
+        </div>
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <rect x="134" y="8" width="32" height="9" rx="4" fill="#242426"/>
+            <rect x="134" y="103" width="32" height="9" rx="4" fill="#242426"/>
+            <rect x="114" y="15" width="72" height="90" rx="17" fill="#242426" stroke="#3E3E40" stroke-width="1.5"/>
+            <ellipse cx="150" cy="60" rx="52" ry="40" fill="none" stroke="#3E3E40" stroke-width="1.2" class="dring"/>
+            <ellipse cx="150" cy="60" rx="52" ry="40" fill="none" stroke="#3E3E40" stroke-width="1.2" class="dring r2"/>
+            <text x="150" y="55" text-anchor="middle" fill="#E9E2D6" font-size="15" class="num">22:12</text>
+            <text x="150" y="72" text-anchor="middle" fill="#8F897D" font-size="7.5">Perfusion terminée</text>
+          </svg>
+          <h4>Alarmes au poignet</h4>
+          <p>L'Apple Watch prévient, même si l'iPhone est resté au vestiaire.</p>
+        </div>
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <g class="dh">
+              <rect x="20" y="12" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="29" fill="#E9E2D6" font-size="10" font-weight="600">Box 3</text>
+              <text x="266" y="29" text-anchor="end" fill="#8F897D" font-size="9.5">42 gtt/min · 4 h</text>
+            </g>
+            <g class="dh h2">
+              <rect x="20" y="47" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="64" fill="#E9E2D6" font-size="10" font-weight="600">Fauteuil 5</text>
+              <text x="266" y="64" text-anchor="end" fill="#8F897D" font-size="9.5">28 gtt/min · 1 h 30</text>
+            </g>
+            <g class="dh h3">
+              <rect x="20" y="82" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="99" fill="#E9E2D6" font-size="10" font-weight="600">Relevé tempo</text>
+              <text x="266" y="99" text-anchor="end" fill="#8F897D" font-size="9.5">58 / min</text>
+            </g>
+          </svg>
+          <h4>Historique local</h4>
+          <p>Perfusions et relevés restent sur votre appareil — nulle part ailleurs.</p>
+        </div>
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <g class="d3f">
+              <ellipse cx="150" cy="82" rx="95" ry="24" fill="none" stroke="#3E3E40" stroke-width="1.5"/>
+              <ellipse cx="150" cy="74" rx="68" ry="17" fill="none" stroke="#5A564E" stroke-width="1.5"/>
+              <ellipse cx="150" cy="66" rx="42" ry="10.5" fill="none" stroke="#8F897D" stroke-width="1.5"/>
+            </g>
+            <circle cx="150" cy="62" r="4.5" fill="#CFC6B7" class="d3drop"/>
+          </svg>
+          <h4>Scène 3D Premium</h4>
+          <p>La même goutte, avec de la profondeur — sans jamais quitter ce langage.</p>
+        </div>
+      </div>
+      <p class="dnote">Ce panneau reprend le thème Graphite de l'app, inclus avec Dropp Pro.</p>
+    </div>
   </section>
   <section id="pro">
     <p class="eyebrow">Gratuit et Pro</p>
@@ -689,7 +813,9 @@
     imp:gl.getUniformLocation(pr,'u_imp')};
 
   var impacts=new Float32Array([-1000,-1000,-1000,-1000,-1000,-1000]);
-  var idx=0, t0=performance.now(), lastBeat=-10, PERIOD=1.7, FALL=0.42, visible=true;
+  // 2 s = 30 bpm : accueil apaisé (< 33 bpm), le vrai tempo produit bat
+  // dans les démonstrations plus bas.
+  var idx=0, t0=performance.now(), lastBeat=-10, PERIOD=2.0, FALL=0.42, visible=true;
 
   function size(){
     var d=Math.min(devicePixelRatio||1,1.5);
