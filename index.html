@@ -1,1213 +1,890 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f4f0e8">
-  <meta name="color-scheme" content="only light">
-  <title>DROPP — Le rythme au poignet. La tête au soin.</title>
-  <meta name="description" content="Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.">
-  <style>
-    :root{
-      --ink:#171714;
-      --muted:#77736b;
-      --soft:#aaa398;
-      --ivory:#f5f1e9;
-      --paper:#fbf8f1;
-      --pearl:#efe9df;
-      --line:rgba(23,23,20,.10);
-      --line-dark:rgba(255,255,255,.12);
-      --graphite:#111110;
-      --graphite-2:#1a1917;
-      --amber:#d7a23c;
-      --amber-soft:#f2d99d;
-      --radius-xl:42px;
-      --radius-lg:30px;
-      --radius-md:22px;
-      --shadow:0 30px 90px rgba(47,42,32,.10);
-      --max:1180px;
-      --ease:cubic-bezier(.2,.75,.2,1);
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>DROPP — Le rythme au poignet. La tête au soin.</title>
+<meta name="description" content="Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.">
+<style>
+  :root {
+    --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
+    --faint:#C6BFB2; --amber:#D9A44A; --amber-ink:#1A1A1C; --rule:rgba(58,56,52,.10);
+    --opal-hi:#FCF9F2; --opal-mid:#EFE9DC; --opal-lo:#D2C8B7;
+  }
+  * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  html { scroll-behavior:smooth; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+    outline:2px solid var(--ink); outline-offset:3px; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .page { max-width:920px; margin:0 auto; padding:0 22px; }
+  .eyebrow { font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--soft); margin:0 0 14px; }
+  section { padding:64px 0 10px; }
+  section + section { border-top:1px solid var(--rule); margin-top:52px; }
+  h2 { font-size:clamp(22px,3.6vw,30px); font-weight:300; margin:0 0 12px; text-wrap:balance; }
+  p { max-width:58ch; }
+  .muted { color:var(--soft); }
+  .ink { fill:var(--ink); } .soft { fill:var(--soft); } .faint { fill:var(--faint); }
+  .surf { fill:var(--surface); }
+  svg text { font-family:inherit; }
+  .num { font-weight:200; letter-spacing:-.01em; }
+  .lbl { font-size:9px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
 
-    *{box-sizing:border-box}
-    [hidden]{display:none!important}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 15% 4%,rgba(255,255,255,.92),transparent 28rem),
-        linear-gradient(180deg,#f6f2ea 0%,#f2ede4 100%);
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
-    }
-    button,input{font:inherit}
-    a{color:inherit;text-decoration:none}
-    a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
-      outline:2px solid var(--ink);outline-offset:3px}
-    .dark-section a:focus-visible,.dark-section button:focus-visible{outline-color:#f6f1e8}
-    .shell{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
-    .eyebrow{
-      margin:0 0 18px;
-      font-size:.74rem;
-      letter-spacing:.30em;
-      text-transform:uppercase;
-      color:var(--soft);
-      font-weight:650;
-    }
-    h1,h2,h3,p{margin-top:0}
-    h1{
-      margin-bottom:26px;
-      max-width:11ch;
-      font-size:clamp(3.25rem,7.4vw,7.25rem);
-      letter-spacing:-.065em;
-      line-height:.92;
-      font-weight:390;
-    }
-    h2{
-      margin-bottom:22px;
-      font-size:clamp(2.35rem,5vw,5rem);
-      letter-spacing:-.055em;
-      line-height:.98;
-      font-weight:430;
-    }
-    h3{
-      margin-bottom:12px;
-      font-size:clamp(1.3rem,2vw,1.75rem);
-      letter-spacing:-.03em;
-    }
-    .lede{
-      max-width:650px;
-      font-size:clamp(1.05rem,1.7vw,1.32rem);
-      line-height:1.55;
-      color:var(--muted);
-    }
-    .button-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-    .btn{
-      min-height:54px;
-      padding:0 24px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      background:rgba(255,255,255,.48);
-      color:var(--ink);
-      font-weight:700;
-      letter-spacing:.015em;
-      backdrop-filter:blur(16px);
-      transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease);
-    }
-    .btn:hover{transform:translateY(-2px);background:#fff}
-    .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
-    .btn.primary:hover{background:#2b2b28}
-    .site-nav{
-      height:86px;
-      position:absolute;
-      z-index:10;
-      inset:0 0 auto;
-      display:flex;
-      align-items:center;
-    }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between}
-    .brand{font-size:.9rem;letter-spacing:.55em;text-indent:.1em;font-weight:600}
-    .nav-links{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:.9rem}
-    .nav-link:hover{color:var(--ink)}
+  /* ============ HERO ============ */
+  .hero { position:relative; min-height:92vh; overflow:hidden;
+    display:flex; flex-direction:column; }
+  #liquid { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .hero-fallback { position:absolute; inset:0;
+    background:radial-gradient(90% 55% at 50% 62%, var(--opal-hi) 0%, var(--opal-mid) 45%, var(--opal-lo) 78%, var(--bg) 100%); }
+  .hero-inner { position:relative; z-index:2; flex:1; display:flex; flex-direction:column;
+    align-items:center; text-align:center; padding:52px 22px 20px; }
+  .soon { display:block; font-size:10.5px; font-weight:600; letter-spacing:.26em;
+    text-transform:uppercase; color:var(--soft);
+    animation:rise 1s cubic-bezier(.2,.7,.2,1) both; }
+  .markx { font-size:clamp(30px,7vw,58px); font-weight:350; line-height:1.06;
+    letter-spacing:.55em; text-indent:.55em; text-transform:uppercase; margin:16px 0 0;
+    animation:markin 1.6s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes markin { from{opacity:0; letter-spacing:.75em; text-indent:.75em}
+    to{opacity:1; letter-spacing:.55em; text-indent:.55em} }
+  .hero .tag { font-size:clamp(19px,3.2vw,26px); font-weight:300; line-height:1.28;
+    margin:12px auto 0; max-width:24ch; text-wrap:balance;
+    animation:rise 1s .3s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { font-size:14px; color:var(--soft); max-width:40ch; margin:10px auto 20px;
+    animation:rise 1s .45s cubic-bezier(.2,.7,.2,1) both; }
+  .ctas { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; }
+  .hero .ctas { animation:rise 1s .6s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none} }
+  .btn { display:inline-block; text-decoration:none; font-size:13px; font-weight:600;
+    letter-spacing:.04em; border-radius:999px; padding:13px 22px; }
+  .btn.primary { background:var(--ink); color:var(--bg); }
+  .btn.ghost { color:var(--ink); border:1.5px solid var(--rule); background:rgba(244,239,230,.55); }
+  /* Page 1 aeree : CTAs compacts, l'info vit sur les cotes */
+  .hero .btn { font-size:11.5px; padding:10px 16px; }
+  .hero-scene { position:relative; flex:1; min-height:300px; width:100%; }
+  .hero-watch { position:absolute; right:9%; bottom:24%; width:84px; }
+  .hero-phone { position:absolute; left:9%; bottom:20%; width:74px; }
+  @media (max-width:640px){
+    .hero-watch { right:5%; bottom:16%; width:70px; }
+    .hero-phone { left:5%; bottom:14%; width:60px; }
+  }
+  .hero-watch svg, .hero-phone svg { width:100%; height:auto;
+    animation:wpulse 1.7s ease-out infinite; transform-origin:center; }
+  @keyframes wpulse { 0%,100%{transform:scale(1)} 56%{transform:scale(1)} 60%{transform:scale(.975)} 70%{transform:scale(1)} }
+  .trust { position:relative; z-index:2; display:flex; gap:8px 24px; flex-wrap:wrap;
+    justify-content:center; padding:0 22px 26px; font-size:12px; color:var(--soft); }
+  .trust span::before { content:""; display:inline-block; width:6px; height:6px;
+    border-radius:50%; background:var(--faint); margin-right:8px; vertical-align:2px; }
 
-    /* Scene liquide (shader de l'app) : le canvas remplit son conteneur,
-       les degrades CSS restent en repli si WebGL manque. */
-    .scene-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  /* ============ DEMO CONDENSEE ============ */
+  .demo-stage { position:relative; height:280px; margin:24px auto 0; max-width:560px; }
+  .step { position:absolute; inset:0; opacity:0; animation:step 15s infinite;
+    animation-delay:var(--d);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
+  .step svg { width:min(320px,86%); height:auto; }
+  .step .cap { font-size:14px; color:var(--ink); font-weight:500; text-align:center; }
+  .s1{--d:0s} .s2{--d:2.5s} .s3{--d:5s}
+  .s4{--d:7.5s} .s5{--d:10s} .s6{--d:12.5s}
+  @keyframes step { 0%{opacity:0} 2%,15%{opacity:1} 17.5%,100%{opacity:0} }
+  /* Vie interne des vignettes : chaque element .kf rejoue sur le meme cycle
+     de 15 s, decale par la variable --d heritee de sa vignette. */
+  .demo-stage .kf { animation-duration:15s; animation-iteration-count:infinite;
+    animation-delay:var(--d); animation-timing-function:ease-out; }
+  .demo-stage .tb { transform-box:fill-box; transform-origin:center; }
+  .kfa{animation-name:kfa} .kfb{animation-name:kfb} .knum{animation-name:knum}
+  .kdrop{animation-name:kdrop} .kr1{animation-name:kr1} .kr2{animation-name:kr2}
+  .kdA{animation-name:kdA} .kdB{animation-name:kdB}
+  .kbar{animation-name:kbar; transform-box:fill-box; transform-origin:left center; }
+  .kban{animation-name:kban}
+  /* Timing des chutes : prefixe .demo-stage pour battre la specificite
+     de « .demo-stage .kf » (sinon ease-out ecrase tout). */
+  .demo-stage .kdrop { animation-timing-function:cubic-bezier(.5,0,.9,.5); }
+  .demo-stage .kdA, .demo-stage .kdB, .demo-stage .kbar { animation-timing-function:linear; }
+  @keyframes kfa { 0%,2.8%{opacity:0; transform:translateY(7px)} 4.4%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  @keyframes kfb { 0%,4.4%{opacity:0; transform:translateY(7px)} 6%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  @keyframes knum { 0%,3.2%{opacity:0; transform:scale(.93)} 4.8%,16%{opacity:1; transform:scale(1)} 17%,100%{opacity:0} }
+  @keyframes kdrop { 0%,3.4%{opacity:0; transform:translateY(-58px)} 3.5%{opacity:1} 5.3%{opacity:1; transform:translateY(0)} 5.5%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kr1 { 0%,5.2%{opacity:0; transform:scale(.55)} 5.9%{opacity:.9} 11%,100%{opacity:0; transform:scale(1.18)} }
+  @keyframes kr2 { 0%,5.6%{opacity:0; transform:scale(.5)} 6.3%{opacity:.55} 12.5%,100%{opacity:0; transform:scale(1.3)} }
+  @keyframes kdA { 0%,3.2%{opacity:0; transform:translateY(-44px)} 3.3%{opacity:1} 4.9%{opacity:1; transform:translateY(0)} 5.1%{opacity:0; transform:translateY(0)}
+    8.3%{opacity:0; transform:translateY(-44px)} 8.4%{opacity:1} 10%{opacity:1; transform:translateY(0)} 10.2%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kdB { 0%,4.3%{opacity:0; transform:translateY(-44px)} 4.4%{opacity:1} 6%{opacity:1; transform:translateY(0)} 6.2%{opacity:0; transform:translateY(0)}
+    8.3%{opacity:0; transform:translateY(-44px)} 8.4%{opacity:1} 10%{opacity:1; transform:translateY(0)} 10.2%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kbar { 0%,2.5%{transform:scaleX(.7)} 15.5%{transform:scaleX(1)} 100%{transform:scaleX(1)} }
+  @keyframes kban { 0%,3.6%{opacity:0; transform:translateY(-10px)} 5.2%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  .demo-dots { display:flex; gap:8px; justify-content:center; margin-top:10px; }
+  .demo-dots i { width:6px; height:6px; border-radius:50%; background:var(--faint);
+    animation:ddot 15s infinite; }
+  .demo-dots i:nth-child(2){animation-delay:2.5s} .demo-dots i:nth-child(3){animation-delay:5s}
+  .demo-dots i:nth-child(4){animation-delay:7.5s} .demo-dots i:nth-child(5){animation-delay:10s}
+  .demo-dots i:nth-child(6){animation-delay:12.5s}
+  @keyframes ddot { 0%{background:var(--faint)} 2%,15%{background:var(--ink)} 17.5%,100%{background:var(--faint)} }
 
-    /* HERO */
-    .hero{
-      min-height:100svh;
-      padding:150px 0 80px;
-      position:relative;
-      display:grid;
-      align-items:center;
-      overflow:hidden;
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      width:72vw;height:72vw;
-      max-width:960px;max-height:960px;
-      right:-18vw;top:-22vw;
-      border-radius:50%;
-      background:radial-gradient(circle at 42% 42%,rgba(255,255,255,.88),rgba(255,255,255,.24) 40%,transparent 68%);
-      filter:blur(8px);
-      pointer-events:none;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(390px,.9fr);
-      gap:clamp(50px,8vw,110px);
-      align-items:center;
-    }
-    .hero-copy{position:relative;z-index:2}
-    .hero-copy .lede{max-width:590px}
-    .microproof{
-      margin-top:28px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px 20px;
-      font-size:.84rem;
-      color:var(--muted);
-    }
-    .microproof span{display:flex;align-items:center;gap:8px}
-    .microproof i{width:5px;height:5px;border-radius:50%;background:var(--soft)}
-    .hero-stage{
-      min-height:640px;
-      position:relative;
-      display:grid;
-      place-items:center;
-    }
-    .liquid-stage{
-      position:absolute;inset:5% -18% -12% -14%;
-      border-radius:50%;
-      background:
-        radial-gradient(circle at 50% 48%,rgba(255,255,255,.98) 0 2%,rgba(255,255,255,.55) 2.5% 3.2%,transparent 4%),
-        repeating-radial-gradient(circle at 50% 48%,transparent 0 8%,rgba(255,255,255,.65) 9%,rgba(198,190,177,.12) 10.4%,transparent 12.5%),
-        radial-gradient(circle at 50% 48%,rgba(255,255,255,.88),rgba(226,218,204,.74) 48%,rgba(255,255,255,.18) 70%,transparent 73%);
-      filter:drop-shadow(0 30px 70px rgba(65,56,39,.15));
-      transform:perspective(900px) rotateX(66deg);
-      opacity:.86;
-      animation:liquidPulse 3.4s ease-in-out infinite;
-    }
-    @keyframes liquidPulse{
-      0%,100%{transform:perspective(900px) rotateX(66deg) scale(.98)}
-      50%{transform:perspective(900px) rotateX(66deg) scale(1.02)}
-    }
-    .phone{
-      width:285px;height:590px;
-      border-radius:52px;
-      background:#121210;
-      padding:11px;
-      box-shadow:0 45px 100px rgba(38,33,25,.28),0 0 0 1px rgba(255,255,255,.5) inset;
-      position:relative;z-index:3;
-      transform:rotate(-4deg) translate(-45px,4px);
-    }
-    .phone-screen{
-      height:100%;
-      border-radius:43px;
-      overflow:hidden;
-      background:linear-gradient(180deg,#f8f5ed,#eee8dd);
-      position:relative;
-      padding:38px 22px 24px;
-    }
-    .phone-screen .app-top,.phone-screen .big-rate,.phone-screen .unit,
-    .phone-screen .time-row{position:relative;z-index:2}
-    .dynamic-island{
-      position:absolute;top:12px;left:50%;transform:translateX(-50%);
-      width:86px;height:24px;border-radius:999px;background:#111;z-index:3;
-    }
-    .app-top{display:flex;justify-content:space-between;align-items:center;color:#5e5b55;font-size:.72rem}
-    .app-word{letter-spacing:.32em;font-weight:650;color:#24231f}
-    .app-wave{
-      margin:54px auto 26px;width:188px;height:188px;border-radius:50%;
-      background:
-        radial-gradient(circle at center,rgba(255,255,255,.98) 0 5%,rgba(255,255,255,.45) 6%,transparent 8%),
-        repeating-radial-gradient(circle at center,transparent 0 16px,rgba(255,255,255,.78) 17px 20px,rgba(171,162,148,.18) 21px 23px,transparent 25px 35px),
-        radial-gradient(circle,#f9f6ef,#ddd4c5);
-      box-shadow:inset 0 0 30px rgba(255,255,255,.9),0 15px 35px rgba(77,66,46,.10);
-      animation:ripple 1.7s var(--ease) infinite;
-    }
-    @keyframes ripple{0%,100%{transform:scale(.95)}50%{transform:scale(1.03)}}
-    /* Shader actif : la scene occupe tout l'ecran du telephone, le cercle
-       CSS s'efface, le readout garde sa place au meme endroit. */
-    .phone-screen.live .app-wave{visibility:hidden}
-    .big-rate{text-align:center;font-size:3.2rem;font-weight:350;letter-spacing:-.06em}
-    .unit{text-align:center;margin-top:-3px;font-size:.72rem;color:var(--soft);letter-spacing:.12em}
-    .time-row{
-      margin-top:44px;
-      display:grid;grid-template-columns:1fr 1fr;gap:10px;
-    }
-    .metric{
-      border:1px solid rgba(20,20,18,.07);
-      background:rgba(255,255,255,.34);
-      border-radius:17px;padding:13px 10px;text-align:center
-    }
-    .metric strong{display:block;font-size:.95rem}
-    .metric span{font-size:.65rem;color:var(--soft)}
-    .watch{
-      position:absolute;z-index:4;
-      width:164px;height:192px;
-      right:0;bottom:58px;
-      display:grid;place-items:center;
-      filter:drop-shadow(0 28px 35px rgba(35,31,25,.25));
-      transform:rotate(4deg);
-    }
-    .strap{
-      position:absolute;width:72px;height:192px;border-radius:34px;background:linear-gradient(90deg,#c9c4b9,#eeeae2 50%,#bbb6aa);
-    }
-    .watch-case{
-      width:138px;height:158px;border-radius:42px;
-      background:linear-gradient(145deg,#dbd7ce,#9e998e);
-      padding:7px;position:relative;
-    }
-    .watch-case::after{
-      content:"";position:absolute;right:-7px;top:64px;width:8px;height:22px;border-radius:0 6px 6px 0;background:#999489
-    }
-    .watch-screen{
-      height:100%;border-radius:35px;background:#151513;color:#f6f1e8;
-      display:grid;place-items:center;text-align:center;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.09);
-    }
-    .watch-screen strong{display:block;font-size:2.4rem;font-weight:360;letter-spacing:-.06em}
-    .watch-screen span{font-size:.62rem;color:#aaa69e;letter-spacing:.08em}
-    .watch-ring{
-      position:absolute;inset:23px;border-radius:50%;
-      border:1px solid rgba(255,255,255,.09);
-      animation:watchPulse 1.7s ease-in-out infinite;
-    }
-    @keyframes watchPulse{50%{transform:scale(1.08);opacity:.35}}
+  /* ============ TERRAIN ============ */
+  .plist { display:grid; gap:12px; padding:0; margin:20px 0 0; list-style:none; max-width:620px; }
+  .plist li { padding-left:22px; position:relative; font-size:15px; }
+  .plist li::before { content:""; position:absolute; left:0; top:.6em; width:6px; height:6px;
+    border-radius:50%; background:var(--faint); }
 
-    /* GENERAL SECTIONS */
-    .section{padding:clamp(100px,12vw,170px) 0}
-    .section.compact{padding:clamp(72px,8vw,110px) 0}
-    .section-head{max-width:760px;margin-bottom:clamp(48px,7vw,88px)}
-    .section-head.center{margin-inline:auto;text-align:center}
-    .section-head.center h2{margin-inline:auto}
-    .section-head.center .lede{margin-inline:auto}
-    .surface{
-      border:1px solid rgba(23,23,20,.08);
-      background:rgba(255,255,255,.42);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(16px);
-    }
+  /* ============ GESTES ============ */
+  .feature { display:grid; grid-template-columns:1fr 320px; gap:40px; align-items:center; padding:30px 0; }
+  .feature.flip { grid-template-columns:320px 1fr; }
+  .feature.flip .txt { order:2; }
+  .feature h3 { font-size:20px; font-weight:500; margin:0 0 8px; text-wrap:balance; }
+  .feature p { font-size:14.5px; color:var(--soft); margin:0; }
+  .viz { width:100%; }
+  .viz svg { width:100%; height:auto; display:block; }
+  @media (max-width:700px){
+    .feature, .feature.flip { grid-template-columns:1fr; gap:16px; }
+    .feature.flip .txt { order:0; }
+    .viz { max-width:320px; margin:0 auto; }
+  }
 
-    /* DEMO */
-    .demo-card{
-      border-radius:var(--radius-xl);
-      padding:clamp(24px,4vw,54px);
-      display:grid;
-      grid-template-columns:.9fr 1.15fr;
-      gap:clamp(30px,5vw,72px);
-      align-items:center;
-    }
-    .demo-controls{display:grid;gap:16px}
-    .control-row{
-      display:grid;grid-template-columns:1fr 118px;gap:14px;align-items:center;
-      padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.5);border:1px solid var(--line)
-    }
-    .control-row span{color:var(--muted)}
-    .control-row input{
-      width:100%;border:0;background:transparent;text-align:right;outline:none;color:var(--ink);font-weight:700
-    }
-    .factor-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:3px}
-    .factor{
-      border:1px solid var(--line);background:transparent;color:var(--muted);
-      border-radius:999px;padding:10px 14px;cursor:pointer;transition:.2s;min-height:44px;min-width:44px
-    }
-    .factor.active{border-color:var(--amber);box-shadow:0 0 0 2px rgba(215,162,60,.18);color:var(--ink);background:rgba(255,255,255,.52)}
-    .demo-output{
-      min-height:390px;border-radius:34px;
-      background:linear-gradient(145deg,#f7f3ea,#e5ddd0);
-      position:relative;overflow:hidden;
-      display:grid;place-items:center;
-      text-align:center;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);
-    }
-    .demo-output::before{
-      content:"";position:absolute;inset:-30%;
-      background:repeating-radial-gradient(circle at center,transparent 0 34px,rgba(255,255,255,.9) 36px 40px,rgba(150,140,124,.12) 42px 44px,transparent 48px 65px);
-      transform:perspective(700px) rotateX(66deg);
-      animation:demoRipple var(--tempo,1.5s) linear infinite;
-    }
-    .demo-output.live::before{display:none}
-    @keyframes demoRipple{to{transform:perspective(700px) rotateX(66deg) scale(1.11)}}
-    .output-content{position:relative;z-index:2;padding:28px}
-    .output-content strong{
-      display:block;font-size:clamp(4rem,8vw,7rem);letter-spacing:-.075em;font-weight:350;line-height:.9
-    }
-    .output-content .unit{font-size:.82rem;margin-top:10px}
-    .output-metrics{display:flex;justify-content:center;gap:8px;margin-top:28px;flex-wrap:wrap}
-    .output-metrics span{
-      padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.65);
-      font-size:.77rem;color:#5d584f
-    }
+  /* Interactif : affordance commune */
+  .try { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--soft); margin:0 0 10px; }
+  .try::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%;
+    background:var(--faint); margin-right:8px; vertical-align:1px; }
 
-    /* EDITORIAL */
-    .editorial{padding:clamp(120px,16vw,220px) 0;text-align:center}
-    .editorial blockquote{
-      margin:0 auto;max-width:920px;font-size:clamp(2.2rem,5vw,5.2rem);
-      line-height:1.04;letter-spacing:-.055em;font-weight:390
-    }
-    .editorial p{margin:34px auto 0;max-width:700px;color:var(--muted);font-size:1.12rem;line-height:1.65}
+  /* Calculez : le vrai calcul, regle aux molettes-rouleaux (parite app) */
+  .calc { background:var(--surface); border-radius:22px; padding:16px 20px 20px; }
+  .crow { display:flex; align-items:baseline; justify-content:space-between; padding:8px 0 4px; }
+  .crow .clab { font-size:12.5px; color:var(--soft); }
+  .crow .cval { font-size:15px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .roller { position:relative; height:40px; border-radius:12px; overflow:hidden;
+    background:var(--bg); cursor:grab; touch-action:pan-y;
+    -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none; }
+  .roller:active { cursor:grabbing; }
+  .roller .ticks { position:absolute; left:0; right:0; top:9px; bottom:9px;
+    background-image:repeating-linear-gradient(90deg, var(--faint) 0 1.5px, transparent 1.5px 16px); }
+  .roller::before { content:""; position:absolute; left:50%; top:6px; bottom:6px; width:2px;
+    margin-left:-1px; background:var(--ink); border-radius:1px; z-index:2; }
+  .roller::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(90deg, var(--surface), rgba(239,233,222,0) 24%, rgba(239,233,222,0) 76%, var(--surface)); }
+  .fpills { display:flex; gap:6px; }
+  .fpill { min-width:40px; height:34px; padding:0 10px; border-radius:999px;
+    border:1.5px solid var(--rule); background:transparent; color:var(--soft);
+    font-size:12.5px; font-weight:600; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  .fpill.on { border-color:var(--amber); color:var(--ink); background:rgba(244,239,230,.6); }
+  .chint { font-size:11px; color:var(--soft); margin:10px 0 0; }
+  .cres { border-top:1px solid var(--rule); margin-top:10px; padding-top:16px;
+    display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
+  .cres > div { transition:opacity .18s; }
+  .cres .big { font-size:40px; font-weight:200; line-height:1; letter-spacing:-.01em; }
+  .cres .sec { font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; }
+  .cres .cu { font-size:10px; color:var(--soft); display:block; margin-top:4px;
+    letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+  .calc.oob .cres > div { opacity:.28; }
+  .cwarn { font-size:11.5px; color:var(--soft); margin:10px 0 0; display:none; }
+  .calc.oob .cwarn { display:block; }
 
-    /* STICKY STEPS */
-    .steps-grid{
-      display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(44px,7vw,96px);align-items:start
-    }
-    .step-list{padding-top:40px}
-    .step-item{
-      padding:28px 0;border-top:1px solid var(--line);opacity:.45;transition:opacity .3s
-    }
-    .step-item:first-child{border-top:0}
-    .step-item.active{opacity:1}
-    .step-number{font-size:.72rem;letter-spacing:.22em;color:var(--soft);font-weight:800}
-    .step-item.active .step-number{color:var(--amber)}
-    .step-item h3{margin:8px 0 9px;font-size:2rem}
-    .step-item p{margin:0;color:var(--muted);line-height:1.55}
-    .sticky-stage{
-      position:sticky;top:90px;min-height:650px;border-radius:var(--radius-xl);
-      background:linear-gradient(145deg,#fbf8f1,#e6ded1);
-      overflow:hidden;border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
-    .scene{position:absolute;inset:0;padding:clamp(28px,5vw,58px);opacity:0;transform:translateY(22px) scale(.985);transition:.55s var(--ease);visibility:hidden}
-    .scene.active{opacity:1;transform:none;visibility:visible}
-    .scene-label{font-size:.72rem;letter-spacing:.26em;color:var(--soft);text-transform:uppercase}
-    .scene h3{font-size:clamp(2.3rem,4vw,4.5rem);max-width:9ch;margin-top:18px}
-    .scene p{max-width:520px;color:var(--muted);line-height:1.6}
-    .mini-ui{
-      position:absolute;left:8%;right:8%;bottom:8%;
-      border-radius:30px;padding:26px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);
-      box-shadow:0 25px 60px rgba(57,48,34,.12)
-    }
-    .mini-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-    .mini-cell{padding:18px;border-radius:20px;background:rgba(250,248,242,.75);text-align:center}
-    .mini-cell strong{display:block;font-size:1.8rem;font-weight:430}
-    .mini-cell span{font-size:.7rem;color:var(--soft)}
+  /* Calez : la molette, interactive */
+  .cal { background:var(--surface); border-radius:22px; padding:16px 20px 18px; }
+  .calcols { display:grid; grid-template-columns:1fr 1fr; gap:12px; text-align:center; }
+  .colhead { font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--soft); margin:0; min-height:2.6em; display:flex;
+    align-items:flex-end; justify-content:center; line-height:1.3; }
+  .ctrack { position:relative; height:84px; margin:8px auto 4px; }
+  .ctrack::after { content:""; position:absolute; left:24%; right:24%; bottom:9px;
+    height:1.5px; background:var(--faint); }
+  .cdrop { position:absolute; left:50%; top:8px; width:10px; height:10px; margin-left:-5px;
+    border-radius:50%; background:var(--opal-lo); opacity:0; }
+  .cring { position:absolute; left:50%; bottom:2px; width:58px; height:18px; margin-left:-29px;
+    border:1.5px solid var(--opal-lo); border-radius:50%; opacity:0; transform:scale(.4); }
+  .crate { font-size:12px; color:var(--soft); font-variant-numeric:tabular-nums; }
+  .molette { -webkit-appearance:none; appearance:none; display:block; width:100%; height:30px;
+    margin:12px 0 0; background:transparent; cursor:pointer; }
+  .molette::-webkit-slider-runnable-track { height:2px; background:var(--faint); border-radius:1px; }
+  .molette::-webkit-slider-thumb { -webkit-appearance:none; width:24px; height:24px; margin-top:-11px;
+    border-radius:50%; background:var(--bg); border:1.5px solid var(--soft);
+    box-shadow:0 2px 6px rgba(58,56,52,.16); }
+  .molette::-moz-range-track { height:2px; background:var(--faint); }
+  .molette::-moz-range-thumb { width:22px; height:22px; border-radius:50%;
+    background:var(--bg); border:1.5px solid var(--soft); }
+  .mlab { display:flex; justify-content:center; font-size:9.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); font-weight:600; margin-top:2px; }
+  .calmsg { text-align:center; font-size:12.5px; color:var(--soft); margin:10px 0 0; min-height:1.5em; }
+  .calmsg.on { color:var(--ink); font-weight:600; }
 
-    /* Calage interactif (scene 2) : la molette jusqu'a l'unisson */
-    .cal2cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}
-    .cal2h{display:block;font-size:.62rem;font-weight:650;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
-    .cal2track{position:relative;height:64px;margin:8px auto 2px}
-    .cal2track::after{content:"";position:absolute;left:26%;right:26%;bottom:7px;height:1px;background:rgba(23,23,20,.18)}
-    .cal2drop{position:absolute;left:50%;top:4px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#cfc6b7;opacity:0}
-    .cal2ring{position:absolute;left:50%;bottom:1px;width:52px;height:15px;margin-left:-26px;border:1px solid #cfc6b7;border-radius:50%;opacity:0;transform:scale(.4)}
-    .cal2r{font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
-    .molette{-webkit-appearance:none;appearance:none;display:block;width:100%;height:30px;margin:10px 0 0;background:transparent;cursor:pointer}
-    .molette::-webkit-slider-runnable-track{height:2px;background:rgba(23,23,20,.16);border-radius:1px}
-    .molette::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-11px;border-radius:50%;background:#fff;border:1px solid rgba(23,23,20,.25);box-shadow:0 2px 8px rgba(23,23,20,.18)}
-    .molette::-moz-range-track{height:2px;background:rgba(23,23,20,.16)}
-    .molette::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid rgba(23,23,20,.25)}
-    .cal2msg{text-align:center;font-size:.8rem;color:var(--muted);margin:8px 0 0;min-height:1.4em}
-    .cal2msg.on{color:var(--ink);font-weight:650}
+  /* Tap : le pad, interactif */
+  .tapdemo { background:var(--surface); border-radius:22px; padding:22px 20px 18px; text-align:center; }
+  .tapdemo .tv { font-size:44px; font-weight:200; line-height:1; min-height:44px; }
+  .tapdemo .tu { font-size:11.5px; color:var(--soft); margin-top:6px; min-height:1.4em; }
+  .tappad { position:relative; width:118px; height:118px; border-radius:50%; margin:16px auto 0;
+    display:block; border:1.5px solid var(--soft); background:var(--bg); color:var(--ink);
+    font-size:13px; font-weight:600; cursor:pointer; -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation; user-select:none; -webkit-user-select:none; }
+  .tappad:active { transform:scale(.97); }
+  .tring { position:absolute; inset:-2px; border-radius:50%; border:1.5px solid var(--soft);
+    opacity:0; pointer-events:none; }
+  .tring.go { animation:tring .7s ease-out; }
+  @keyframes tring { 0%{opacity:.7; transform:scale(1)} 100%{opacity:0; transform:scale(1.5)} }
+  .tapreset { border:none; background:none; color:var(--soft); font-size:11.5px; cursor:pointer;
+    margin-top:12px; text-decoration:underline; text-underline-offset:3px; visibility:hidden; }
+  .tapreset.on { visibility:visible; }
 
-    .timeline{display:grid;gap:12px}
-    .timeline-row{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.58);display:flex;justify-content:space-between;align-items:center}
-    .timeline-row span{color:var(--muted)}
-    .progress{height:6px;border-radius:999px;background:rgba(20,20,18,.08);overflow:hidden;margin-top:9px;min-width:150px}
-    .progress i{display:block;height:100%;border-radius:inherit;background:#c9c0b0}
-    .predot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-left:7px;vertical-align:1px;animation:predot 2.4s ease-in-out infinite}
-    @keyframes predot{0%,100%{opacity:.35}50%{opacity:1}}
+  /* Continuez : timeline (largeurs en px : les % se resolvent sur le
+     viewBox 340, pas sur la piste de 300 — la barre debordait). */
+  .t-fill { animation:tfill 12s linear infinite; }
+  @keyframes tfill { from{width:24px} to{width:294px} }
+  .t-pre { opacity:.25; animation:tpre 12s infinite; }
+  @keyframes tpre { 0%,62%{opacity:.25} 66%,100%{opacity:1} }
+  .t-end { opacity:.25; animation:tend 12s infinite; }
+  @keyframes tend { 0%,90%{opacity:.25} 94%,100%{opacity:1} }
+  .t-banner { transform:translateY(-58px); animation:tban 12s ease-out infinite; }
+  @keyframes tban { 0%,90%{transform:translateY(-58px)} 95%,99%{transform:translateY(0)}
+    100%{transform:translateY(-58px)} }
 
-    /* WATCH DARK */
-    .dark-section{
-      background:
-        radial-gradient(circle at 70% 45%,rgba(255,255,255,.07),transparent 32rem),
-        linear-gradient(180deg,#121211,#0c0c0b);
-      color:#f6f1e8;
-      position:relative;overflow:hidden
-    }
-    .dark-section .eyebrow,.dark-section .lede{color:#aaa59c}
-    .dark-section h2{max-width:12ch}
-    .watch-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
-    .big-watch-stage{min-height:650px;display:grid;place-items:center;position:relative}
-    .big-watch-stage::before{
-      content:"";position:absolute;width:520px;height:520px;border-radius:50%;
-      background:repeating-radial-gradient(circle,transparent 0 42px,rgba(255,255,255,.05) 44px 46px,transparent 48px 76px);
-      animation:darkPulse 3.4s ease-in-out infinite
-    }
-    @keyframes darkPulse{50%{transform:scale(1.08);opacity:.5}}
-    .watch.big{position:relative;right:auto;bottom:auto;width:320px;height:410px;transform:none}
-    .watch.big .strap{width:135px;height:410px;border-radius:64px;background:linear-gradient(90deg,#272725,#3b3a37 50%,#171716)}
-    .watch.big .watch-case{width:290px;height:330px;border-radius:78px;background:linear-gradient(145deg,#44433f,#121211);padding:10px}
-    .watch.big .watch-screen{border-radius:68px}
-    .watch.big .watch-screen strong{font-size:5.3rem}
-    .watch.big .watch-screen span{font-size:.8rem}
-    .watch.big .watch-ring{inset:45px}
-    .watch-features{display:grid;gap:1px;margin-top:38px;border-top:1px solid var(--line-dark)}
-    .watch-feature{display:grid;grid-template-columns:36px 1fr;padding:20px 0;border-bottom:1px solid var(--line-dark);align-items:start}
-    .watch-feature b{font-size:1.25rem}
-    .watch-feature p{margin:5px 0 0;color:#aaa59c;line-height:1.5}
+  /* Watch heroique */
+  .v4-crown line { animation:v4c 1.6s linear infinite; }
+  @keyframes v4c { from{transform:translateY(0)} to{transform:translateY(9px)} }
+  .v4-num { opacity:0; animation:v4n 4.8s infinite; }
+  .v4-num.s1{animation-delay:0s} .v4-num.s2{animation-delay:1.6s} .v4-num.s3{animation-delay:3.2s}
+  @keyframes v4n { 0%{opacity:0} 4%,29%{opacity:1} 33%,100%{opacity:0} }
+  .wbody { transform-box:fill-box; transform-origin:center; animation:wbody 1.7s ease-out infinite; }
+  @keyframes wbody { 0%,54%{transform:scale(1)} 58%{transform:scale(.985)} 68%,100%{transform:scale(1)} }
 
-    /* FEATURE SPLIT */
-    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .feature-card{
-      min-height:590px;border-radius:var(--radius-xl);padding:clamp(28px,4vw,48px);
-      position:relative;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.42)
-    }
-    .feature-card .lede{font-size:1rem}
-    .tap-stage{
-      position:absolute;left:9%;right:9%;bottom:9%;height:280px;border-radius:30px;
-      background:linear-gradient(145deg,#f6f1e8,#e2dacd);
-      display:grid;place-items:center;text-align:center;
-      border:1px solid rgba(255,255,255,.7)
-    }
-    .tap-value{font-size:4.7rem;letter-spacing:-.07em;font-weight:360;min-height:1em}
-    .tap-sub{font-size:.75rem;letter-spacing:.15em;color:var(--soft);text-transform:uppercase;min-height:1.3em}
-    .tap-button{
-      margin-top:22px;width:72px;height:72px;border-radius:50%;border:0;background:var(--ink);color:white;cursor:pointer;
-      box-shadow:0 12px 28px rgba(20,20,18,.2);transition:transform .12s;
-      -webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;-webkit-user-select:none
-    }
-    .tap-button:active{transform:scale(.92)}
-    .multi-list{position:absolute;left:8%;right:8%;bottom:8%;display:grid;gap:12px}
-    .infusion{
-      padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.72);
-      display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center
-    }
-    .infusion strong{font-size:1rem}.infusion small{display:block;color:var(--soft);margin-top:5px}
-    .time{font-size:1.15rem;font-variant-numeric:tabular-nums}
+  /* Multi-perfusions */
+  .mrow { display:grid; grid-template-columns:92px 1fr 74px; gap:12px; align-items:center;
+    padding:13px 0; border-bottom:1px solid var(--rule); font-size:13.5px; }
+  .mrow .name { font-weight:600; }
+  .mbar { height:5px; border-radius:3px; background:var(--rule); overflow:hidden; }
+  .mbar i { display:block; height:100%; background:var(--faint); border-radius:3px; }
+  .m1 i { width:38%; animation:m1 40s linear infinite; }
+  .m2 i { width:72%; animation:m2 40s linear infinite; }
+  .m3 i { width:55%; animation:m3 40s linear infinite; }
+  @keyframes m1 { from{width:34%} to{width:52%} }
+  @keyframes m2 { from{width:68%} to{width:88%} }
+  @keyframes m3 { from{width:51%} to{width:69%} }
+  .mrow .left { text-align:right; color:var(--soft); font-size:12px; font-variant-numeric:tabular-nums; }
+  .mdot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--amber);
+    margin-left:6px; animation:mdot 2.4s ease-in-out infinite; vertical-align:1px; }
+  @keyframes mdot { 0%,100%{opacity:.35} 50%{opacity:1} }
 
-    /* PRICING */
-    .pricing-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
-    .free-card,.pro-card{border-radius:var(--radius-xl);padding:clamp(30px,4vw,52px);border:1px solid var(--line)}
-    .free-card{background:rgba(255,255,255,.40)}
-    .pro-card{background:var(--graphite);color:#f7f2e9;position:relative;overflow:hidden}
-    .pro-card::after{
-      content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-100px;top:-120px;
-      background:radial-gradient(circle,rgba(215,162,60,.22),transparent 66%)
-    }
-    .price-list{display:grid;gap:1px;margin:32px 0;border-top:1px solid currentColor;border-color:rgba(120,115,105,.18)}
-    .price-line{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid rgba(120,115,105,.18)}
-    .pro-card .price-line{border-color:rgba(255,255,255,.12)}
-    .price-line b{font-size:1.05rem}
-    .price-line span{color:var(--muted)}
-    .pro-card .price-line span{color:#aaa59c}
-    .pricing-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px;position:relative;z-index:2}
-    .plan{padding:18px;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
-    .plan.featured{border-color:var(--amber);background:rgba(215,162,60,.08)}
-    .plan small{display:block;color:#aaa59c;margin-bottom:6px}.plan strong{font-size:1.35rem}
-    .plan em{display:block;color:#aaa59c;font-size:.72rem;margin-top:5px;font-style:normal}
-    .pro-note{margin:18px 0 0;color:#aaa59c;font-size:.82rem;position:relative;z-index:2}
+  /* Pricing */
+  .tiers { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px; }
+  @media (max-width:700px){ .tiers{ grid-template-columns:1fr; } }
+  .tier { background:var(--surface); border-radius:22px; padding:24px; }
+  .tier.pro { border:1.5px solid var(--amber); }
+  .tier .name { font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--soft); margin-bottom:12px; }
+  .tier ol, .tier ul { margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.75; }
+  .tier .prices { margin-top:16px; font-size:13.5px; }
+  .tier .prices b { font-weight:600; }
+  .tier .note { font-size:12px; color:var(--soft); margin-top:10px; }
 
-    /* TRUST + FAQ */
-    .trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .trust-item{padding:28px;border-top:1px solid var(--line)}
-    .trust-item b{display:block;font-size:1.12rem;margin-bottom:8px}
-    .trust-item p{margin:0;color:var(--muted);line-height:1.55}
-    .faq{max-width:900px;margin-inline:auto}
-    details{border-top:1px solid var(--line);padding:24px 0}
-    details:last-child{border-bottom:1px solid var(--line)}
-    summary{cursor:pointer;font-size:1.13rem;font-weight:680;list-style:none;display:flex;justify-content:space-between;gap:20px}
-    summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";font-size:1.5rem;font-weight:400;color:var(--soft)}
-    details[open] summary::after{content:"–"}
-    details p{color:var(--muted);line-height:1.65;max-width:760px;margin:18px 0 0}
+  /* Confiance */
+  .dna { display:grid; gap:14px; margin-top:22px; max-width:640px; }
+  .tenet { display:grid; grid-template-columns:24px 1fr; gap:14px; font-size:15px; align-items:baseline; }
+  .tenet .dot { width:9px; height:9px; border-radius:50%; border:1.5px solid var(--soft);
+    position:relative; top:1px; justify-self:center; }
+  .tenet b { font-weight:600; }
+  .tenet span { color:var(--soft); }
+  .clinic { font-size:12px; color:var(--soft); border-left:2px solid var(--rule);
+    padding-left:14px; margin-top:24px; max-width:56ch; }
 
-    /* FINAL */
-    .final{
-      min-height:78svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden
-    }
-    .final::before{
-      content:"";position:absolute;width:900px;height:900px;border-radius:50%;
-      background:repeating-radial-gradient(circle,transparent 0 58px,rgba(255,255,255,.75) 60px 63px,rgba(163,151,133,.08) 65px 68px,transparent 72px 105px);
-      transform:perspective(800px) rotateX(68deg);opacity:.7
-    }
-    .final-inner{position:relative;z-index:2}
-    .final h2{max-width:12ch;margin-inline:auto}
-    footer{padding:28px 0 46px;color:var(--soft);font-size:.8rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-inner a{text-decoration:underline;text-underline-offset:3px}
-    .footer-legal{margin:16px 0 0;color:var(--soft)}
+  /* FAQ */
+  details { border-bottom:1px solid var(--rule); padding:4px 0; max-width:680px; }
+  summary { cursor:pointer; font-size:15px; font-weight:500; padding:12px 0; list-style:none; display:flex; justify-content:space-between; gap:14px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:"+"; color:var(--soft); font-weight:300; font-size:19px; }
+  details[open] summary::after { content:"–"; }
+  details p { font-size:14px; color:var(--soft); margin:0 0 14px; }
 
-    /* Reveal */
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-    .reveal.visible{opacity:1;transform:none}
+  /* Closing / footer */
+  .closing { text-align:center; padding-bottom:20px; }
+  .closing h2 { margin-bottom:8px; }
+  footer { margin-top:56px; padding:26px 0 42px; border-top:1px solid var(--rule);
+    font-size:12px; color:var(--faint); text-align:center; line-height:1.8; }
+  footer a { color:var(--soft); margin:0 8px; }
 
-    @media (max-width:920px){
-      .nav-links{display:none}
-      .hero{padding-top:120px}
-      .hero-grid,.demo-card,.steps-grid,.watch-layout,.pricing-grid{grid-template-columns:1fr}
-      .hero-copy{text-align:center}
-      .hero-copy h1,.hero-copy .lede{margin-inline:auto}
-      .button-row,.microproof{justify-content:center}
-      .hero-stage{min-height:560px;margin-top:-20px}
-      .phone{transform:rotate(-3deg) translate(-24px,5px);width:250px;height:520px}
-      .watch{right:4%;bottom:62px;transform:scale(.88) rotate(4deg)}
-      .demo-output{min-height:360px}
-      .sticky-stage{position:relative;top:auto;height:620px;min-height:0}
-      .step-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0}
-      .step-item{padding:20px 0;border-top:1px solid var(--line)}
-      .step-item h3{font-size:1.35rem}
-      .step-item p{font-size:.9rem}
-      .watch-layout .section-head{margin-bottom:0}
-      .feature-grid{grid-template-columns:1fr}
-      .pricing-options{grid-template-columns:1fr}
-      .trust-strip{grid-template-columns:1fr}
-    }
-
-    @media (max-width:640px){
-      .shell{width:min(calc(100% - 28px),var(--max))}
-      .site-nav{height:72px}
-      .brand{font-size:.8rem}
-      .hero{min-height:auto;padding:112px 0 42px}
-      .hero-grid{gap:28px}
-      h1{font-size:clamp(3rem,16vw,4.8rem);max-width:10ch}
-      .hero-copy .lede{font-size:1rem;max-width:34ch}
-      .button-row{display:grid;grid-template-columns:1fr 1fr;width:100%}
-      .btn{padding:0 16px;min-height:50px;font-size:.88rem}
-      .microproof{font-size:.72rem;gap:8px 12px}
-      .hero-stage{min-height:480px}
-      .liquid-stage{inset:8% -55% -5% -55%}
-      .phone{width:222px;height:462px;border-radius:43px;padding:9px;transform:rotate(-3deg) translate(-18px,2px)}
-      .phone-screen{border-radius:35px;padding:34px 18px 20px}
-      .dynamic-island{width:74px;height:20px;top:10px}
-      .app-wave{width:145px;height:145px;margin-top:45px}
-      .big-rate{font-size:2.65rem}
-      .time-row{margin-top:30px}
-      .watch{width:132px;height:168px;right:-2%;bottom:42px;transform:scale(.78) rotate(4deg)}
-      .section{padding:86px 0}
-      .section.compact{padding:64px 0}
-      h2{font-size:clamp(2.45rem,13vw,4rem)}
-      .demo-card{padding:18px;border-radius:30px}
-      .demo-output{min-height:320px}
-      .output-content strong{font-size:4.8rem}
-      .control-row{grid-template-columns:1fr 96px;padding:16px}
-      .editorial{padding:110px 0}
-      .editorial blockquote{font-size:clamp(2.35rem,12vw,4rem)}
-      .step-list{grid-template-columns:1fr}
-      .step-item{display:grid;grid-template-columns:48px 1fr;gap:8px 12px}
-      .step-item .step-number{grid-row:1 / span 2}
-      .step-item h3{margin:0}
-      .sticky-stage{height:560px;border-radius:30px}
-      .scene{padding:28px 24px}
-      .scene h3{font-size:2.7rem}
-      .mini-ui{left:5%;right:5%;bottom:5%;padding:16px}
-      .mini-grid{grid-template-columns:1fr}
-      .mini-cell{padding:12px}
-      .watch-layout{gap:24px}
-      .big-watch-stage{min-height:520px}
-      .watch.big{transform:scale(.76)}
-      .feature-card{min-height:540px;border-radius:30px}
-      .tap-stage{left:6%;right:6%}
-      .free-card,.pro-card{border-radius:30px}
-      .trust-item{padding-inline:0}
-      .final{min-height:70svh}
-      .footer-inner{justify-content:center;text-align:center}
-      .footer-legal{text-align:center}
-    }
-
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-      .reveal{opacity:1;transform:none}
-      .cal2drop{display:none}
-    }
-  </style>
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after { animation:none !important; }
+    .step { opacity:0; } .step.s2 { opacity:1; }
+    .cdrop { display:none; }
+    html { scroll-behavior:auto; }
+    .v4-num.s1{opacity:1}
+    .t-fill{width:200px} .t-pre{opacity:1} .t-end{opacity:1} .t-banner{transform:translateY(0)}
+    .demo-dots i:nth-child(2){background:var(--ink)}
+  }
+</style>
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="shell nav-inner">
-      <a class="brand" href="#top">DROPP</a>
-      <div class="nav-links">
-        <a class="nav-link" href="#demo">Fonctionnement</a>
-        <a class="nav-link" href="#watch">Apple Watch</a>
-        <a class="nav-link" href="#pricing">Gratuit & Pro</a>
+<header class="hero">
+  <canvas id="liquid" aria-hidden="true"></canvas>
+  <div class="hero-fallback" id="fallback" aria-hidden="true" hidden></div>
+  <div class="hero-inner">
+    <p class="soon">Bientôt sur l'App Store</p>
+    <h1 class="markx">Dropp</h1>
+    <p class="tag">Le rythme au poignet. La tête au soin.</p>
+    <p class="sub">Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch.</p>
+    <div class="ctas">
+      <a class="btn primary" href="#fin">Être prévenu du lancement</a>
+      <a class="btn ghost" href="#pro">Gratuit et Pro</a>
+    </div>
+    <div class="hero-scene" aria-hidden="true">
+      <div class="hero-phone"><svg viewBox="0 0 100 200">
+        <rect x="4" y="3" width="92" height="194" rx="22" class="surf" stroke="var(--ink)" stroke-width="2.2"/>
+        <rect x="34" y="12" width="32" height="7" rx="3.5" fill="var(--ink)" opacity=".85"/>
+        <text x="50" y="92" text-anchor="middle" class="num ink" font-size="26">42</text>
+        <text x="50" y="110" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
+        <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="var(--opal-lo)" stroke-width="2"/>
+        <ellipse cx="50" cy="150" rx="38" ry="13" fill="none" stroke="var(--opal-lo)" stroke-width="1.4" opacity=".5"/>
+      </svg></div>
+      <div class="hero-watch"><svg viewBox="0 0 120 140">
+        <rect x="44" y="2" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
+        <rect x="44" y="124" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
+        <rect x="10" y="14" width="100" height="112" rx="26" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
+        <rect x="110" y="54" width="6" height="18" rx="3" class="surf" stroke="var(--soft)"/>
+        <text x="60" y="72" text-anchor="middle" class="num ink" font-size="27">42</text>
+        <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
+      </svg></div>
+    </div>
+  </div>
+  <div class="trust">
+    <span>Conçu par un soignant</span>
+    <span>Aucune donnée collectée</span>
+    <span>Sans compte</span>
+    <span>Sans publicité</span>
+  </div>
+</header>
+<div class="page">
+  <section id="demo">
+    <p class="eyebrow">En quinze secondes</p>
+    <h2>Tout le geste, d'un regard.</h2>
+    <div class="demo-stage" role="img" aria-label="Démonstration : saisir, calculer, caler, suivre, être prévenu">
+      <div class="step s1"><svg viewBox="0 0 320 150">
+        <g class="kf kfa">
+          <rect x="10" y="20" width="300" height="46" rx="15" class="surf"/>
+          <text x="30" y="48" class="soft" font-size="13">Volume</text><text x="290" y="48" text-anchor="end" class="ink" font-size="15" font-weight="600">500 mL</text>
+        </g>
+        <g class="kf kfb">
+          <rect x="10" y="78" width="300" height="46" rx="15" class="surf"/>
+          <text x="30" y="106" class="soft" font-size="13">Durée</text><text x="290" y="106" text-anchor="end" class="ink" font-size="15" font-weight="600">4 h</text>
+        </g>
+      </svg><p class="cap">1 · Saisissez volume et durée</p></div>
+      <div class="step s2"><svg viewBox="0 0 320 150">
+        <g class="kf knum tb">
+          <text x="160" y="76" text-anchor="middle" class="num ink" font-size="54">42</text>
+          <text x="160" y="98" text-anchor="middle" class="soft" font-size="12">gtt / min</text>
+        </g>
+        <text x="160" y="122" text-anchor="middle" class="faint kf kfb" font-size="11">1,43 s / goutte — 125 mL/h</text>
+      </svg><p class="cap">2 · DROPP calcule le débit</p></div>
+      <div class="step s3"><svg viewBox="0 0 320 150">
+        <circle cx="160" cy="96" r="5" fill="var(--opal-lo)" class="kf kdrop"/>
+        <ellipse cx="160" cy="100" rx="60" ry="22" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="kf kr1 tb"/>
+        <ellipse cx="160" cy="100" rx="96" ry="35" fill="none" stroke="var(--opal-lo)" stroke-width="1.5" opacity=".5" class="kf kr2 tb"/>
+      </svg><p class="cap">3 · L'écran et l'Apple Watch battent le rythme</p></div>
+      <div class="step s4"><svg viewBox="0 0 320 150">
+        <circle cx="120" cy="104" r="5" fill="var(--opal-lo)" class="kf kdA"/>
+        <circle cx="200" cy="104" r="5" fill="var(--opal-lo)" class="kf kdB"/>
+        <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
+        <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
+        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">calez la molette sur le tempo</text>
+      </svg><p class="cap">4 · Calez, puis lancez le suivi</p></div>
+      <div class="step s5"><svg viewBox="0 0 320 150">
+        <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
+        <rect x="30" y="66" width="150" height="6" rx="3" fill="var(--faint)" class="kf kbar"/>
+        <text x="160" y="108" text-anchor="middle" class="soft kf kfb" font-size="12">reste 1 h 52 · fin 22:12</text>
+      </svg><p class="cap">5 · Le temps restant se suit tout seul</p></div>
+      <div class="step s6"><svg viewBox="0 0 320 150">
+        <rect x="86" y="30" width="148" height="96" rx="22" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <g class="kf kban">
+          <rect x="100" y="46" width="120" height="34" rx="10" fill="var(--bg)"/>
+          <text x="160" y="67" text-anchor="middle" class="ink" font-size="10.5" font-weight="600">Perfusion terminée</text>
+        </g>
+        <text x="160" y="106" text-anchor="middle" class="soft kf kfb" font-size="10">au poignet aussi</text>
+      </svg><p class="cap">6 · La fin vous prévient — où que vous soyez</p></div>
+    </div>
+    <div class="demo-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
+  <section>
+    <p class="eyebrow">Vous connaissez ce moment</p>
+    <ul class="plist">
+      <li>La formule, connue par cœur — à refaire entre deux sonnettes.</li>
+      <li>La molette réglée à l'œil, recomptée au moindre doute.</li>
+      <li>Plusieurs heures de fin à garder en tête, toute la garde.</li>
+    </ul>
+    <p class="muted" style="font-size:14px; margin-top:20px;">Ce n'est pas une question de compétence. C'est une charge — et DROPP la porte.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Trois gestes</p>
+
+    <div class="feature">
+      <div class="txt">
+        <h3>Calculez</h3>
+        <p>Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL. Rien à retenir, rien à refaire.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="calc" id="calc">
+          <div class="crow"><span class="clab">Volume</span><span class="cval" id="cVol">500 mL</span></div>
+          <div class="roller" id="rVol" tabindex="0" role="slider" aria-label="Volume"
+            aria-valuemin="50" aria-valuemax="1500" aria-valuenow="500" aria-valuetext="500 millilitres"><div class="ticks"></div></div>
+          <div class="crow"><span class="clab">Durée</span><span class="cval" id="cDur">4 h</span></div>
+          <div class="roller" id="rDur" tabindex="0" role="slider" aria-label="Durée"
+            aria-valuemin="15" aria-valuemax="720" aria-valuenow="240" aria-valuetext="4 heures"><div class="ticks"></div></div>
+          <div class="crow" style="padding-top:14px;"><span class="clab">Facteur</span>
+            <div class="fpills" role="group" aria-label="Facteur de goutte">
+              <button type="button" class="fpill" data-f="10">10</button>
+              <button type="button" class="fpill" data-f="15">15</button>
+              <button type="button" class="fpill on" data-f="20">20</button>
+              <button type="button" class="fpill" data-f="60">60</button>
+            </div>
+          </div>
+          <div class="cres" aria-live="polite">
+            <div><span class="big num" id="cRate">42</span><span class="cu">gtt / min</span></div>
+            <div><span class="sec" id="cInt">1,43</span><span class="cu">s / goutte</span></div>
+            <div><span class="sec" id="cMlh">125</span><span class="cu">mL / h</span></div>
+          </div>
+          <p class="cwarn">Hors plage plausible — l'app refuse de battre un tempo absurde.</p>
+          <p class="chint">Molettes à glisser — comme dans l'app.</p>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <main id="top">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Bientôt sur l’App Store</p>
-          <h1>Le rythme au poignet. La tête au soin.</h1>
-          <p class="lede">Volume, durée&nbsp;: DROPP calcule le débit, transforme le résultat en cadence et vous prévient à la fin. Sur iPhone et Apple&nbsp;Watch.</p>
-          <div class="button-row">
-            <a class="btn primary" href="#demo">Voir DROPP en action</a>
-            <a class="btn" href="#pricing">Gratuit et Pro</a>
+    <div class="feature flip">
+      <div class="txt">
+        <h3>Calez</h3>
+        <p>La scène bat la cadence calculée — visible, perceptible au poignet, audible si vous l'activez (un tick discret, pas plus fort qu'un cliquetis, qui respecte le mode silencieux). Réglez la molette jusqu'à l'unisson : quand la goutte du perfuseur tombe avec celle de DROPP, vous y êtes.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="cal">
+          <div class="calcols">
+            <div><p class="colhead">La perfusion</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
+            <div><p class="colhead">Le tempo Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate">42 gtt/min</span></div>
           </div>
-          <div class="microproof">
-            <span><i></i>Conçu par un soignant de nuit</span>
-            <span><i></i>Sans compte</span>
-            <span><i></i>Sans publicité</span>
-          </div>
-        </div>
-
-        <div class="hero-stage reveal" aria-label="Aperçu de DROPP sur iPhone et Apple Watch">
-          <div class="liquid-stage"></div>
-          <div class="phone">
-            <div class="phone-screen" id="phoneScreen">
-              <div class="dynamic-island"></div>
-              <div class="app-top"><span>09:42</span><span class="app-word">DROPP</span><span>•••</span></div>
-              <div class="app-wave"></div>
-              <div class="big-rate">42</div>
-              <div class="unit">GTT / MIN</div>
-              <div class="time-row">
-                <div class="metric"><strong>1,43 s</strong><span>PAR GOUTTE</span></div>
-                <div class="metric"><strong>125</strong><span>ML / H</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="watch">
-            <div class="strap"></div>
-            <div class="watch-case">
-              <div class="watch-screen">
-                <div class="watch-ring"></div>
-                <div><strong>42</strong><span>GTT / MIN</span></div>
-              </div>
-            </div>
-          </div>
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Molette de la perfusion — réglez jusqu'à l'unisson">
+          <div class="mlab"><span>la molette</span></div>
+          <p class="calmsg" id="calMsg" aria-live="polite">réglez la molette jusqu'à l'unisson</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section" id="demo">
-      <div class="shell">
-        <header class="section-head reveal">
-          <p class="eyebrow">La formule, sans la friction</p>
-          <h2>Deux valeurs. Un rythme immédiatement lisible.</h2>
-          <p class="lede">Modifiez le volume, la durée ou le facteur. Le calcul, le tempo et les repères se mettent à jour dans la même scène — celle de l’app.</p>
-        </header>
-
-        <div class="demo-card surface reveal">
-          <div class="demo-controls">
-            <div class="control-row"><span>Volume</span><input id="volume" type="number" inputmode="numeric" min="1" value="500" aria-label="Volume en millilitres"></div>
-            <div class="control-row"><span>Durée en heures</span><input id="duration" type="number" inputmode="decimal" min=".1" step=".25" value="4" aria-label="Durée en heures"></div>
-            <div>
-              <p class="eyebrow" style="margin:4px 0 12px">Facteur de goutte</p>
-              <div class="factor-row" role="group" aria-label="Facteur de goutte">
-                <button class="factor" data-factor="10">10</button>
-                <button class="factor" data-factor="15">15</button>
-                <button class="factor active" data-factor="20">20</button>
-                <button class="factor" data-factor="60">60</button>
-              </div>
-            </div>
-            <p style="margin:12px 0 0;color:var(--muted);line-height:1.6">Le résultat devient un tempo visuel et haptique. Vous réglez la molette jusqu’à l’unisson, puis lancez le suivi.</p>
+    <div class="feature">
+      <div class="txt">
+        <h3>Continuez</h3>
+        <p>Le temps restant se suit tout seul. Une pré-alerte prévient cinq minutes avant la fin, des rappels s'adaptent à la durée — un point à mi-parcours pour une perf d'une heure, des repères réguliers pour celle qui court sur la nuit. La fin ne repose plus sur votre mémoire.</p>
+      </div>
+      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 190">
+        <clipPath id="tclip"><rect x="20" y="16" width="300" height="70" rx="16"/></clipPath>
+        <rect x="20" y="16" width="300" height="70" rx="16" class="surf" stroke="var(--faint)" stroke-width="1"/>
+        <g clip-path="url(#tclip)"><g class="t-banner">
+          <rect x="34" y="28" width="272" height="46" rx="13" fill="var(--bg)" stroke="var(--rule)"/>
+          <text x="52" y="48" class="ink" font-size="11.5" font-weight="600">Perfusion terminée</text>
+          <text x="52" y="64" class="soft" font-size="10.5">Box 3 — terminée.</text>
+        </g></g>
+        <rect x="20" y="122" width="300" height="6" rx="3" fill="var(--rule)"/>
+        <rect x="20" y="122" width="24" height="6" rx="3" fill="var(--faint)" class="t-fill"/>
+        <circle cx="215" cy="125" r="5" class="ink t-pre"/>
+        <text x="215" y="148" text-anchor="middle" class="soft" font-size="10" >pré-alerte −5 min</text>
+        <circle cx="314" cy="125" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
+        <text x="298" y="148" text-anchor="middle" class="soft" font-size="10">fin</text>
+      </svg></div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow">Apple Watch</p>
+    <h2>Tout, sans sortir l'iPhone.</h2>
+    <div class="feature flip" style="border:none;">
+      <div class="txt">
+        <p>Lancez une perfusion à la couronne. Suivez-la, mettez-la en pause, retrouvez son repère — Box 3, Fauteuil 5, Perfusion A — sans jamais taper de texte. Le poignet bat la cadence pendant le calage, et ses alarmes sonnent même si l'iPhone est resté au vestiaire.</p>
+      </div>
+      <div class="viz" style="max-width:250px;margin:0 auto;" aria-hidden="true"><svg viewBox="0 0 240 280">
+        <rect x="88" y="4" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="88" y="250" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <g class="wbody">
+          <rect x="20" y="26" width="200" height="228" rx="52" class="surf" stroke="var(--soft)" stroke-width="2"/>
+        </g>
+        <clipPath id="v4crown"><rect x="221" y="106" width="12" height="34" rx="5"/></clipPath>
+        <rect x="221" y="106" width="12" height="34" rx="5" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <g clip-path="url(#v4crown)" class="v4-crown" stroke="var(--soft)" stroke-width="1.4">
+          <line x1="223" y1="104" x2="231" y2="104"/><line x1="223" y1="113" x2="231" y2="113"/>
+          <line x1="223" y1="122" x2="231" y2="122"/><line x1="223" y1="131" x2="231" y2="131"/>
+          <line x1="223" y1="95" x2="231" y2="95"/>
+        </g>
+        <text x="120" y="96" text-anchor="middle" class="lbl soft">Repère optionnel</text>
+        <g font-size="28" class="num">
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s1">Chambre 12</text>
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s2">Box 3</text>
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s3">Fauteuil 5</text>
+        </g>
+        <text x="120" y="182" text-anchor="middle" class="soft" font-size="11">réglé à la couronne</text>
+        <rect x="76" y="204" width="88" height="30" rx="15" fill="var(--bg)"/>
+        <text x="120" y="223" text-anchor="middle" class="ink" font-size="12" font-weight="600">Lancer</text>
+      </svg></div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow">Mode Tap</p>
+    <div class="feature">
+      <div class="txt">
+        <h3>Observez une cadence. Tapez-la. Lisez-la.</h3>
+        <p>Reproduisez une cadence observée en touchant l'écran : DROPP affiche sa fréquence par minute — sans chronomètre ni calcul mental. Pour un débit de perfusion, la lecture donne aussi les mL/h, de quoi recaler la molette en confiance. Sur iPhone et au poignet.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="tapdemo">
+          <div aria-live="polite">
+            <div class="tv num" id="tapN">—</div>
+            <div class="tu" id="tapU">tapez au rythme observé</div>
           </div>
-
-          <div class="demo-output" id="demoOutput">
-            <div class="output-content" aria-live="polite">
-              <strong id="gtt">42</strong>
-              <div class="unit">GTT / MIN</div>
-              <div class="output-metrics">
-                <span id="secDrop">1,43 s / goutte</span>
-                <span id="mlHour">125 mL / h</span>
-              </div>
-            </div>
-          </div>
+          <button type="button" class="tappad" id="tapPad" aria-label="Zone de tap — touchez au rythme observé">Taper<span class="tring" id="tapRing"></span></button>
+          <button type="button" class="tapreset" id="tapReset">recommencer</button>
         </div>
       </div>
-    </section>
-
-    <section class="editorial">
-      <div class="shell reveal">
-        <blockquote>La formule, vous la connaissez déjà.</blockquote>
-        <p>Ce qui pèse, c’est de la refaire entre deux interruptions, de recompter au moindre doute et de conserver plusieurs horaires en tête. DROPP retire une partie de cette charge, sans jamais décider à votre place.</p>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow">Plusieurs perfusions simultanées</p>
+    <h2>Chaque perfusion : son repère, son temps, son alarme.</h2>
+    <div style="max-width:560px; margin-top:10px;">
+      <div class="mrow"><span class="name">Box 3</span><span class="mbar m1"><i></i></span><span class="left">2 h 41</span></div>
+      <div class="mrow"><span class="name">Fauteuil 5</span><span class="mbar m2"><i></i></span><span class="left">0 h 12<span class="mdot" title="pré-alerte"></span></span></div>
+      <div class="mrow" style="border-bottom:none;"><span class="name">Perfusion A</span><span class="mbar m3"><i></i></span><span class="left">1 h 05</span></div>
+    </div>
+    <p class="muted" style="font-size:13px; margin-top:16px;">Des repères de lieux, jamais de noms — Box 3, Fauteuil 5, Passage 2. Le repère est optionnel.</p>
+  </section>
+  <section id="pro">
+    <p class="eyebrow">Gratuit et Pro</p>
+    <h2>L'essentiel est gratuit. Le Pro suit votre garde.</h2>
+    <div class="tiers">
+      <div class="tier pro">
+        <div class="name">Dropp Pro</div>
+        <ol>
+          <li>L'app Apple Watch complète</li>
+          <li>Plusieurs perfusions simultanées</li>
+          <li>Pré-alerte 5 min avant la fin</li>
+          <li>Rappels adaptés à la durée</li>
+          <li>Mode Tap</li>
+          <li>Historique local</li>
+          <li>Thèmes et scènes premium</li>
+        </ol>
+        <div class="prices"><b>19,99 €/an</b> — prix de lancement, 7 jours d'essai · 2,99 €/mois · <b>49,99 € à vie</b></div>
+        <div class="note">L'achat à vie : tout, pour toujours, sans abonnement.</div>
       </div>
-    </section>
-
-    <section class="section compact">
-      <div class="shell">
-        <div class="steps-grid">
-          <div class="step-list">
-            <article class="step-item active" data-scene="0">
-              <span class="step-number">01</span>
-              <div><h3>Calculez</h3><p>Volume et durée deviennent gouttes/minute, secondes/goutte et mL/h.</p></div>
-            </article>
-            <article class="step-item" data-scene="1">
-              <span class="step-number">02</span>
-              <div><h3>Calez</h3><p>La scène et l’Apple Watch battent la cadence calculée. Réglez jusqu’à l’unisson.</p></div>
-            </article>
-            <article class="step-item" data-scene="2">
-              <span class="step-number">03</span>
-              <div><h3>Continuez</h3><p>Le temps restant, les pré-alertes et la fin restent suivis pendant le soin suivant.</p></div>
-            </article>
-          </div>
-
-          <div class="sticky-stage reveal">
-            <article class="scene active">
-              <span class="scene-label">Calcul immédiat</span>
-              <h3>Tout le débit, d’un regard.</h3>
-              <p>Une seule saisie, trois repères lisibles. Rien à retenir, rien à refaire.</p>
-              <div class="mini-ui">
-                <div class="mini-grid">
-                  <div class="mini-cell"><strong>42</strong><span>GTT / MIN</span></div>
-                  <div class="mini-cell"><strong>1,43</strong><span>S / GOUTTE</span></div>
-                  <div class="mini-cell"><strong>125</strong><span>ML / H</span></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="scene">
-              <span class="scene-label">Tempo synchronisé</span>
-              <h3>Le rythme devient perceptible.</h3>
-              <p>À l’écran, au poignet ou par un son discret lorsque vous l’activez. Essayez la molette&nbsp;:</p>
-              <div class="mini-ui">
-                <div class="cal2cols">
-                  <div><span class="cal2h">La perfusion</span><div class="cal2track"><i class="cal2drop" id="dropA"></i><b class="cal2ring" id="ringA"></b></div><span class="cal2r" id="rateA">34 gtt/min</span></div>
-                  <div><span class="cal2h">Le tempo Dropp</span><div class="cal2track"><i class="cal2drop" id="dropB"></i><b class="cal2ring" id="ringB"></b></div><span class="cal2r">42 gtt/min</span></div>
-                </div>
-                <input type="range" class="molette" id="molette" min="28" max="56" step="1" value="34" aria-label="Molette de la perfusion — réglez jusqu'à l'unisson">
-                <p class="cal2msg" id="calMsg" aria-live="polite">réglez la molette jusqu’à l’unisson</p>
-              </div>
-            </article>
-
-            <article class="scene">
-              <span class="scene-label">Suivi en cours</span>
-              <h3>Le temps ne repose plus seulement sur votre mémoire.</h3>
-              <p>Un repère, un temps restant et une alerte pour chaque perfusion.</p>
-              <div class="mini-ui timeline">
-                <div class="timeline-row"><div><strong>Box 3</strong><div class="progress"><i style="width:67%"></i></div></div><span>1 h 52</span></div>
-                <div class="timeline-row"><div><strong>Fauteuil 5</strong><div class="progress"><i style="width:88%"></i></div></div><span>0 h 12<span class="predot" role="img" aria-label="pré-alerte"></span></span></div>
-                <div class="timeline-row"><div><strong>Perfusion A</strong><div class="progress"><i style="width:38%"></i></div></div><span>2 h 41</span></div>
-              </div>
-            </article>
-          </div>
-        </div>
+      <div class="tier">
+        <div class="name">Gratuit — un vrai outil</div>
+        <ul>
+          <li>Calculs illimités</li>
+          <li>Le tempo visuel</li>
+          <li>Une perfusion suivie</li>
+          <li>L'alarme de fin — pour toujours</li>
+          <li>Aucune publicité, aucun compte</li>
+        </ul>
+        <div class="note">L'alarme de fin est un signal de sécurité : elle ne sera jamais payante.</div>
       </div>
-    </section>
+    </div>
+    <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
+      <a class="btn primary" href="#fin">Être prévenu du lancement</a>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow">Confiance</p>
+    <div class="dna">
+      <div class="tenet"><span class="dot"></span><div><b>Aucune donnée transmise.</b> <span>Ce que vous saisissez reste sur vos appareils. DROPP n'a aucun moyen technique d'y accéder.</span></div></div>
+      <div class="tenet"><span class="dot"></span><div><b>Aucun compte, aucun serveur.</b> <span>Rien à créer, rien à héberger, rien à pirater.</span></div></div>
+      <div class="tenet"><span class="dot"></span><div><b>Local et hors ligne.</b> <span>Sous-sol, chambre blindée, tournée à domicile : DROPP fonctionne sans réseau.</span></div></div>
+    </div>
+    <p class="clinic">Outil d'aide au calcul, au rythme et au suivi. Ne remplace ni le jugement clinique, ni les protocoles locaux, ni les dispositifs de contrôle.</p>
+  </section>
 
-    <section class="section dark-section" id="watch">
-      <div class="shell watch-layout">
-        <div class="section-head reveal">
-          <p class="eyebrow">Apple Watch</p>
-          <h2>Le tempo sous les yeux. Les alertes au poignet.</h2>
-          <p class="lede">Lancez, ajustez et suivez une perfusion sans ressortir l’iPhone. La couronne remplace le clavier, les impulsions rendent le rythme discret et immédiat.</p>
-          <div class="watch-features">
-            <div class="watch-feature"><span>01</span><div><b>Calage haptique</b><p>Le rythme calculé devient une impulsion régulière au poignet.</p></div></div>
-            <div class="watch-feature"><span>02</span><div><b>Réglage à la couronne</b><p>Volume, durée et repère se parcourent sans taper de texte.</p></div></div>
-            <div class="watch-feature"><span>03</span><div><b>Alertes locales</b><p>Pré-alerte et fin arrivent là où votre attention se trouve déjà.</p></div></div>
-          </div>
-        </div>
+  <section>
+    <p class="eyebrow">Questions directes</p>
+    <details><summary>Qu'est-ce qui reste gratuit ?</summary><p>Les calculs illimités, le tempo visuel, le suivi d'une perfusion et l'alarme de fin — sans publicité, sans compte, sans limite de temps.</p></details>
+    <details><summary>DROPP fonctionne-t-il hors ligne ?</summary><p>Oui, entièrement. Tout est calculé et stocké sur l'appareil ; aucune connexion n'est nécessaire, jamais.</p></details>
+    <details><summary>L'iPhone est-il nécessaire avec l'Apple Watch ?</summary><p>Oui — l'app Watch accompagne l'app iPhone et s'installe par elle. Ensuite, les alarmes du poignet sonnent même si l'iPhone est éteint ou hors de portée.</p></details>
+    <details><summary>Quels facteurs de goutte sont disponibles ?</summary><p>10, 15, 20 et 60 gouttes par millilitre — le facteur se change à tout moment dans les réglages.</p></details>
+    <details><summary>À quoi sert le mode Tap ?</summary><p>À reproduire une cadence observée en touchant l'écran pour lire sa fréquence par minute — et, pour un débit de perfusion, ses mL/h. Sans chronomètre ni calcul mental.</p></details>
+    <details><summary>DROPP remplace-t-il une pompe ou un dispositif de contrôle ?</summary><p>Non. DROPP est un outil d'aide au calcul, au rythme et au suivi. Il ne mesure rien, ne décide rien, et ne se substitue à aucun dispositif ni protocole.</p></details>
+    <details><summary>Quelles versions sont compatibles ?</summary><p>iOS 17 ou ultérieur, watchOS 10 ou ultérieur.</p></details>
+  </section>
 
-        <div class="big-watch-stage reveal">
-          <div class="watch big">
-            <div class="strap"></div>
-            <div class="watch-case">
-              <div class="watch-screen">
-                <div class="watch-ring"></div>
-                <div><strong>42</strong><span>GTT / MIN</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        <header class="section-head center reveal">
-          <p class="eyebrow">Deux raccourcis utiles</p>
-          <h2>Moins à garder en tête.</h2>
-          <p class="lede">Deux gestes simples, pensés pour la garde plutôt que pour la fiche technique.</p>
-        </header>
-
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <p class="eyebrow">Mode Tap</p>
-            <h3>Observez. Tapez. Lisez la cadence.</h3>
-            <p class="lede">Reproduisez une cadence observée. DROPP affiche sa fréquence par minute, sans chronomètre ni multiplication mentale.</p>
-            <div class="tap-stage">
-              <div>
-                <div class="tap-value" id="tapValue">—</div>
-                <div class="tap-sub" id="tapSub">par minute</div>
-                <button class="tap-button" id="tapButton" aria-label="Taper au rythme observé">TAP</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature-card reveal">
-            <p class="eyebrow">Perfusions simultanées</p>
-            <h3>Chaque perfusion&nbsp;: son repère, son temps, son alerte.</h3>
-            <p class="lede">Une vue calme pour savoir ce qui est en cours, ce qui approche de la fin et ce qui peut attendre.</p>
-            <div class="multi-list">
-              <div class="infusion"><div><strong>Box 3</strong><small>500 mL · 4 h</small></div><span class="time">2 h 41</span></div>
-              <div class="infusion"><div><strong>Fauteuil 5</strong><small>100 mL · 1 h</small></div><span class="time">0 h 12</span></div>
-              <div class="infusion"><div><strong>Perfusion A</strong><small>Repère optionnel</small></div><span class="time">1 h 05</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pricing">
-      <div class="shell">
-        <header class="section-head reveal">
-          <p class="eyebrow">Gratuit et Pro</p>
-          <h2>L’essentiel reste gratuit. Le Pro suit votre garde.</h2>
-          <p class="lede">Commencez sans compte, sans publicité et sans limite de temps. Passez à Pro lorsque l’Apple Watch ou le suivi multiple deviennent utiles.</p>
-        </header>
-
-        <div class="pricing-grid">
-          <article class="free-card reveal">
-            <p class="eyebrow">DROPP gratuit</p>
-            <h3>Un vrai outil, pas une démo.</h3>
-            <div class="price-list">
-              <div class="price-line"><b>Calculs illimités</b><span>Inclus</span></div>
-              <div class="price-line"><b>Tempo visuel</b><span>Inclus</span></div>
-              <div class="price-line"><b>Une perfusion suivie</b><span>Inclus</span></div>
-              <div class="price-line"><b>Alarme de fin</b><span>Toujours gratuite</span></div>
-              <div class="price-line"><b>Compte et publicité</b><span>Aucun</span></div>
-            </div>
-            <a class="btn" href="#launch">Être prévenu du lancement</a>
-          </article>
-
-          <article class="pro-card reveal">
-            <p class="eyebrow" style="color:var(--amber-soft)">DROPP Pro</p>
-            <h3>Le rythme complet, sur tous vos appareils.</h3>
-            <div class="price-list">
-              <div class="price-line"><b>Apple Watch complète</b><span>Tempo, couronne, alertes</span></div>
-              <div class="price-line"><b>Perfusions simultanées</b><span>Plusieurs suivis actifs</span></div>
-              <div class="price-line"><b>Pré-alertes et rappels</b><span>Adaptés à la durée</span></div>
-              <div class="price-line"><b>Mode Tap et historique</b><span>Sur l’appareil</span></div>
-              <div class="price-line"><b>Graphite et scènes premium</b><span>Inclus</span></div>
-            </div>
-            <div class="pricing-options">
-              <div class="plan"><small>Mensuel</small><strong>2,99 €</strong><em>par mois</em></div>
-              <div class="plan featured"><small>Annuel — prix de lancement</small><strong>19,99 €</strong><em>essai 7 jours</em></div>
-              <div class="plan"><small>À vie</small><strong>49,99 €</strong><em>un seul achat</em></div>
-            </div>
-            <p class="pro-note">L’achat à vie débloque tout, pour toujours, sans abonnement.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section compact">
-      <div class="shell">
-        <div class="trust-strip reveal">
-          <div class="trust-item"><b>Aucune donnée transmise</b><p>Les informations saisies restent sur vos appareils.</p></div>
-          <div class="trust-item"><b>Aucun compte, aucun serveur</b><p>Rien à créer et aucune infrastructure distante nécessaire.</p></div>
-          <div class="trust-item"><b>Local et hors ligne</b><p>DROPP reste utilisable là où le réseau ne suit pas.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section compact">
-      <div class="shell faq">
-        <header class="section-head center reveal">
-          <p class="eyebrow">Questions directes</p>
-          <h2>Ce qu’il faut savoir.</h2>
-        </header>
-
-        <details>
-          <summary>Qu’est-ce qui reste gratuit&nbsp;?</summary>
-          <p>Les calculs illimités, le tempo visuel, le suivi d’une perfusion et l’alarme de fin — sans publicité, sans compte et sans limite de temps.</p>
-        </details>
-        <details>
-          <summary>DROPP fonctionne-t-il hors ligne&nbsp;?</summary>
-          <p>Oui. Les calculs et les suivis restent sur l’appareil et ne nécessitent pas de connexion réseau.</p>
-        </details>
-        <details>
-          <summary>L’iPhone est-il nécessaire avec l’Apple Watch&nbsp;?</summary>
-          <p>Oui — l’app Apple Watch accompagne l’app iPhone et s’installe par elle. Ensuite, les alertes du poignet restent locales à la montre.</p>
-        </details>
-        <details>
-          <summary>Quels facteurs de goutte sont disponibles&nbsp;?</summary>
-          <p>10, 15, 20 et 60 gouttes par millilitre — le facteur se change à tout moment dans les réglages.</p>
-        </details>
-        <details>
-          <summary>À quoi sert le mode Tap&nbsp;?</summary>
-          <p>À reproduire une cadence observée en touchant l’écran afin d’en lire la fréquence par minute, sans chronomètre ni calcul mental.</p>
-        </details>
-        <details>
-          <summary>DROPP remplace-t-il un dispositif de contrôle&nbsp;?</summary>
-          <p>Non. DROPP est un outil d’aide au calcul, au rythme et au suivi. Il ne remplace ni le jugement clinique, ni les protocoles locaux, ni les dispositifs de contrôle.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="final" id="launch">
-      <div class="shell final-inner reveal">
-        <p class="eyebrow">Été 2026</p>
-        <h2>Bientôt sur l’App Store.</h2>
-        <p class="lede" style="margin-inline:auto">Conçu par un soignant de nuit, testé en poste — pour toutes celles et ceux qui comptent les gouttes.</p>
-        <div class="button-row" style="justify-content:center">
-          <a class="btn" href="#demo">Revoir DROPP en action</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="closing" id="fin">
+    <p class="eyebrow">Été 2026</p>
+    <h2>Bientôt sur l'App Store.</h2>
+    <p class="muted" style="margin:0 auto 18px; max-width:44ch;">Conçu par un soignant, testé en poste — pour toutes celles et ceux qui comptent les gouttes.</p>
+    <a class="btn primary" href="#demo" style="pointer-events:auto;">Revoir DROPP en action</a>
+  </section>
 
   <footer>
-    <div class="shell footer-inner">
-      <span>© 2026 Dropp</span>
-      <span><a href="confidentialite.html">Confidentialité</a> · <a href="assistance.html">Assistance</a></span>
-    </div>
-    <p class="shell footer-legal">Outil d’aide au rythme. Ne remplace ni le jugement clinique, ni les dispositifs de contrôle de perfusion.</p>
+    <nav>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="assistance.html">Assistance</a>
+    </nav>
+    <p>Outil d'aide au rythme. Ne remplace ni le jugement clinique, ni les dispositifs de contrôle de perfusion.<br>
+    © 2026 Dropp — Dropp</p>
   </footer>
+</div>
+<script>
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv = document.getElementById('liquid');
+  var fb = document.getElementById('fallback');
+  var gl = !rm && cv.getContext('webgl', {antialias:false, alpha:false});
+  if(!gl){ cv.hidden = true; fb.hidden = false; return; }
 
-  <script>
-    const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SQ = 0.42, CY = 0.56;
+  var VSH = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+  var FSH =
+    'precision highp float;' +
+    'uniform vec2 u_res;uniform float u_time;uniform float u_dark;uniform vec3 u_bg;' +
+    'uniform float u_imp[6];' +
+    'const float SQ=' + SQ + ';' +
+    'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}' +
+    'float height(vec2 p){' +
+    '  float r=length(p);' +
+    '  float h=0.14*exp(-r*r*130.0)*(1.0+0.05*sin(u_time*1.1));' +
+    '  for(int i=0;i<6;i++){' +
+    '    float t=u_time-u_imp[i];' +
+    '    if(t<0.0||t>3.6)continue;' +
+    '    if(t<0.45){h-=0.085*exp(-r*r*240.0)*sin(3.14159*t/0.45);}' +
+    '    float nt=t/3.6;' +
+    '    float R=0.74*(1.0-pow(1.0-nt,3.0));' +
+    '    float d=r-R;' +
+    '    float dec=1.0-nt;' +
+    '    h+=0.05*exp(-d*d*700.0)*cos(d*70.0)*dec;' +
+    '    h+=0.024*exp(-d*d*150.0)*cos(d*22.0)*dec;' +
+    '  }' +
+    '  return h;' +
+    '}' +
+    'void main(){' +
+    '  vec2 uv=gl_FragCoord.xy/u_res;' +
+    '  vec2 c=vec2(0.5,' + (1-CY) + ');' +
+    '  vec2 p=uv-c;p.x*=u_res.x/u_res.y;p.y/=SQ;' +
+    '  float e=0.004;' +
+    '  float h0=height(p);' +
+    '  float hx=height(p+vec2(e,0.0));' +
+    '  float hy=height(p+vec2(0.0,e));' +
+    '  vec3 n=normalize(vec3(-(hx-h0)/e,-(hy-h0)/e,2.2));' +
+    '  vec3 l=normalize(vec3(-0.28,0.55,0.78));' +
+    '  float dif=clamp(dot(n,l),0.0,1.0);' +
+    '  vec3 hv=normalize(l+vec3(0.0,0.0,1.0));' +
+    '  float spec=pow(clamp(dot(n,hv),0.0,1.0),70.0);' +
+    '  vec3 bl=mix(vec3(0.815,0.775,0.705),vec3(0.985,0.975,0.945),dif);' +
+    '  vec3 bd=mix(vec3(0.050,0.050,0.055),vec3(0.170,0.168,0.175),dif);' +
+    '  vec3 col=mix(bl,bd,u_dark);' +
+    '  col+=spec*mix(0.30,0.28,u_dark)*mix(vec3(1.0),vec3(1.0,0.94,0.82),u_dark);' +
+    '  float vg=smoothstep(1.35,0.35,length((uv-vec2(0.5,0.55))*vec2(1.3,1.5)));' +
+    '  col*=mix(mix(0.93,0.72,u_dark),1.0,vg);' +
+    '  col+=(hash(gl_FragCoord.xy)-0.5)*0.018;' +
+    '  col=mix(u_bg,col,smoothstep(1.0,0.90,uv.y));' +
+    '  gl_FragColor=vec4(col,1.0);' +
+    '}';
 
-    /* ============ Scene liquide : le shader d'origine de l'app ============ */
-    (function(){
-      if(rm) return;
-      const SQ = 0.42, CY = 0.56;
-      const VSH = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
-      const FSH =
-        'precision highp float;' +
-        'uniform vec2 u_res;uniform float u_time;uniform float u_dark;uniform vec3 u_bg;' +
-        'uniform float u_imp[6];' +
-        'const float SQ=' + SQ + ';' +
-        'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}' +
-        'float height(vec2 p){' +
-        '  float r=length(p);' +
-        '  float h=0.14*exp(-r*r*130.0)*(1.0+0.05*sin(u_time*1.1));' +
-        '  for(int i=0;i<6;i++){' +
-        '    float t=u_time-u_imp[i];' +
-        '    if(t<0.0||t>3.6)continue;' +
-        '    if(t<0.45){h-=0.085*exp(-r*r*240.0)*sin(3.14159*t/0.45);}' +
-        '    float nt=t/3.6;' +
-        '    float R=0.74*(1.0-pow(1.0-nt,3.0));' +
-        '    float d=r-R;' +
-        '    float dec=1.0-nt;' +
-        '    h+=0.05*exp(-d*d*700.0)*cos(d*70.0)*dec;' +
-        '    h+=0.024*exp(-d*d*150.0)*cos(d*22.0)*dec;' +
-        '  }' +
-        '  return h;' +
-        '}' +
-        'void main(){' +
-        '  vec2 uv=gl_FragCoord.xy/u_res;' +
-        '  vec2 c=vec2(0.5,' + (1-CY) + ');' +
-        '  vec2 p=uv-c;p.x*=u_res.x/u_res.y;p.y/=SQ;' +
-        '  float e=0.004;' +
-        '  float h0=height(p);' +
-        '  float hx=height(p+vec2(e,0.0));' +
-        '  float hy=height(p+vec2(0.0,e));' +
-        '  vec3 n=normalize(vec3(-(hx-h0)/e,-(hy-h0)/e,2.2));' +
-        '  vec3 l=normalize(vec3(-0.28,0.55,0.78));' +
-        '  float dif=clamp(dot(n,l),0.0,1.0);' +
-        '  vec3 hv=normalize(l+vec3(0.0,0.0,1.0));' +
-        '  float spec=pow(clamp(dot(n,hv),0.0,1.0),70.0);' +
-        '  vec3 bl=mix(vec3(0.815,0.775,0.705),vec3(0.985,0.975,0.945),dif);' +
-        '  vec3 bd=mix(vec3(0.050,0.050,0.055),vec3(0.170,0.168,0.175),dif);' +
-        '  vec3 col=mix(bl,bd,u_dark);' +
-        '  col+=spec*mix(0.30,0.28,u_dark)*mix(vec3(1.0),vec3(1.0,0.94,0.82),u_dark);' +
-        '  float vg=smoothstep(1.35,0.35,length((uv-vec2(0.5,0.55))*vec2(1.3,1.5)));' +
-        '  col*=mix(mix(0.93,0.72,u_dark),1.0,vg);' +
-        '  col+=(hash(gl_FragCoord.xy)-0.5)*0.018;' +
-        '  col=mix(u_bg,col,smoothstep(1.0,0.90,uv.y));' +
-        '  gl_FragColor=vec4(col,1.0);' +
-        '}';
-      const FALL = 0.42, scenes = [];
+  function sh(t,s){var x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);
+    if(!gl.getShaderParameter(x,gl.COMPILE_STATUS)){return null;}return x;}
+  var vs=sh(gl.VERTEX_SHADER,VSH), fs=sh(gl.FRAGMENT_SHADER,FSH);
+  if(!vs||!fs){ cv.hidden=true; fb.hidden=false; return; }
+  var pr=gl.createProgram();gl.attachShader(pr,vs);gl.attachShader(pr,fs);gl.linkProgram(pr);gl.useProgram(pr);
+  var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var loc=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  var U={res:gl.getUniformLocation(pr,'u_res'),time:gl.getUniformLocation(pr,'u_time'),
+    dark:gl.getUniformLocation(pr,'u_dark'),bg:gl.getUniformLocation(pr,'u_bg'),
+    imp:gl.getUniformLocation(pr,'u_imp')};
 
-      function attach(host, getPeriod, liveClassHost){
-        const cv = document.createElement('canvas');
-        cv.className = 'scene-canvas';
-        cv.setAttribute('aria-hidden','true');
-        host.prepend(cv);
-        const gl = cv.getContext('webgl', {antialias:false, alpha:false});
-        if(!gl){ cv.remove(); return; }
-        function sh(t,s){ const x=gl.createShader(t); gl.shaderSource(x,s); gl.compileShader(x);
-          return gl.getShaderParameter(x,gl.COMPILE_STATUS) ? x : null; }
-        const vs=sh(gl.VERTEX_SHADER,VSH), fs=sh(gl.FRAGMENT_SHADER,FSH);
-        if(!vs||!fs){ cv.remove(); return; }
-        const pr=gl.createProgram();
-        gl.attachShader(pr,vs); gl.attachShader(pr,fs); gl.linkProgram(pr); gl.useProgram(pr);
-        const buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
-        const loc=gl.getAttribLocation(pr,'a');
-        gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-        const st = {
-          cv, gl, getPeriod, visible:true, dead:false, lastBeat:-10, idx:0,
-          imp:new Float32Array([-1000,-1000,-1000,-1000,-1000,-1000]),
-          U:{res:gl.getUniformLocation(pr,'u_res'), time:gl.getUniformLocation(pr,'u_time'),
-             dark:gl.getUniformLocation(pr,'u_dark'), bg:gl.getUniformLocation(pr,'u_bg'),
-             imp:gl.getUniformLocation(pr,'u_imp')}
-        };
-        cv.addEventListener('webglcontextlost', function(ev){
-          ev.preventDefault(); st.dead=true; cv.remove();
-          (liveClassHost||host).classList.remove('live');
-        });
-        new IntersectionObserver(function(e){ st.visible=e[e.length-1].isIntersecting; },{threshold:0}).observe(cv);
-        (liveClassHost||host).classList.add('live');
-        scenes.push(st);
-      }
+  var impacts=new Float32Array([-1000,-1000,-1000,-1000,-1000,-1000]);
+  var idx=0, t0=performance.now(), lastBeat=-10, PERIOD=1.7, FALL=0.42, visible=true;
 
-      const phone = document.getElementById('phoneScreen');
-      if(phone) attach(phone, function(){ return 1.7; });
-      const demo = document.getElementById('demoOutput');
-      if(demo) attach(demo, function(){ return window.__demoPeriod || 1.43; });
+  function size(){
+    var d=Math.min(devicePixelRatio||1,1.5);
+    // Arrondi obligatoire : cv.width est entier, une cible fractionnaire
+    // (ex. 375 x 1.5 = 562,5) forcerait une réallocation à chaque frame.
+    var w=Math.round(cv.clientWidth*d), h=Math.round(cv.clientHeight*d);
+    if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;gl.viewport(0,0,w,h);}
+  }
+  window.addEventListener('resize',size);
 
-      if(!scenes.length) return;
-      const t0 = performance.now();
-      function frame(now){
-        requestAnimationFrame(frame);
-        if(document.hidden) return;
-        const t=(now-t0)/1000;
-        for(let i=0;i<scenes.length;i++){
-          const s=scenes[i];
-          if(s.dead||!s.visible) continue;
-          const d=Math.min(devicePixelRatio||1,1.5);
-          const w=Math.round(s.cv.clientWidth*d), h=Math.round(s.cv.clientHeight*d);
-          if(!w||!h) continue;
-          if(s.cv.width!==w||s.cv.height!==h){ s.cv.width=w; s.cv.height=h; }
-          const gl=s.gl;
-          gl.viewport(0,0,w,h);
-          const P=Math.max(.6, s.getPeriod());
-          if(t-s.lastBeat>=P){ s.lastBeat=Math.floor(t/P)*P; s.imp[s.idx%6]=s.lastBeat+FALL; s.idx++; }
-          gl.uniform2f(s.U.res,w,h);
-          gl.uniform1f(s.U.time,t);
-          gl.uniform1f(s.U.dark,0);
-          gl.uniform3f(s.U.bg,0.965,0.952,0.922);
-          gl.uniform1fv(s.U.imp,s.imp);
-          gl.drawArrays(gl.TRIANGLES,0,3);
-        }
-      }
-      requestAnimationFrame(frame);
-    })();
+  cv.addEventListener('webglcontextlost',function(ev){
+    ev.preventDefault(); cv.hidden=true; fb.hidden=false;
+  });
 
-    /* ============ Calculateur (le calcul exact de l'app) ============ */
-    const volume = document.querySelector('#volume');
-    const duration = document.querySelector('#duration');
-    const factors = [...document.querySelectorAll('.factor')];
-    const gtt = document.querySelector('#gtt');
-    const secDrop = document.querySelector('#secDrop');
-    const mlHour = document.querySelector('#mlHour');
-    const demoOutput = document.querySelector('#demoOutput');
-    let factor = 20;
+  new IntersectionObserver(function(e){visible=e[e.length-1].isIntersecting;},{threshold:0}).observe(cv);
 
-    function fr(value, digits = 0){
-      return new Intl.NumberFormat('fr-FR', {maximumFractionDigits:digits, minimumFractionDigits:digits}).format(value);
+  function frame(now){
+    requestAnimationFrame(frame);
+    if(!visible||document.hidden)return;
+    size();
+    var t=(now-t0)/1000;
+    if(t-lastBeat>=PERIOD){lastBeat=Math.floor(t/PERIOD)*PERIOD;
+      impacts[idx%6]=lastBeat+FALL;idx++;}
+    gl.uniform2f(U.res,cv.width,cv.height);
+    gl.uniform1f(U.time,t);
+    gl.uniform1f(U.dark,0);
+    gl.uniform3f(U.bg,0.957,0.937,0.902);
+    gl.uniform1fv(U.imp,impacts);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* Démos interactives : calcul, calage, tap */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){ return document.getElementById(id); }
+
+  /* Calculez — le calcul exact de l'app, réglé aux molettes-rouleaux
+     (parité app : glisser pour ajuster, un cran = un pas). */
+  var vol=500, dur=240, FACS=[10,15,20,60], fi=2, calc=$('calc');
+  function fmtDur(m){ var h=Math.floor(m/60), r=m%60;
+    return h ? (r ? h+' h '+(r<10?'0':'')+r : h+' h') : r+' min'; }
+  function render(){
+    $('cVol').textContent = vol+' mL';
+    $('cDur').textContent = fmtDur(dur);
+    $('rVol').setAttribute('aria-valuenow', vol);
+    $('rVol').setAttribute('aria-valuetext', vol+' millilitres');
+    $('rDur').setAttribute('aria-valuenow', dur);
+    $('rDur').setAttribute('aria-valuetext', fmtDur(dur));
+    var rate = Math.max(1, Math.round(vol*FACS[fi]/dur));
+    var ok = rate <= 400;
+    calc.classList.toggle('oob', !ok);
+    $('cRate').textContent = ok ? rate : '—';
+    $('cInt').textContent  = ok ? (60/rate).toFixed(2).replace('.',',') : '—';
+    $('cMlh').textContent  = ok ? Math.round(vol/dur*60) : '—';
+  }
+  function roller(el, cfg){
+    var PX=16, ticks=el.querySelector('.ticks'), sx=0, sv=0, drag=false;
+    function clamp(v){ return Math.min(cfg.max, Math.max(cfg.min, v)); }
+    function paint(){ ticks.style.backgroundPositionX = (-(cfg.get()/cfg.step)*PX)+'px'; }
+    el.addEventListener('pointerdown', function(e){
+      drag=true; sx=e.clientX; sv=cfg.get();
+      if(el.setPointerCapture) el.setPointerCapture(e.pointerId);
+    });
+    el.addEventListener('pointermove', function(e){
+      if(!drag) return;
+      var v = clamp(sv + Math.round((sx-e.clientX)/PX)*cfg.step);
+      if(v!==cfg.get()){ cfg.set(v); paint(); render(); }
+    });
+    ['pointerup','pointercancel'].forEach(function(t){
+      el.addEventListener(t, function(){ drag=false; }); });
+    el.addEventListener('keydown', function(e){
+      var d = (e.key==='ArrowRight'||e.key==='ArrowUp') ? 1
+            : (e.key==='ArrowLeft'||e.key==='ArrowDown') ? -1 : 0;
+      if(!d) return; e.preventDefault();
+      cfg.set(clamp(cfg.get()+d*cfg.step)); paint(); render();
+    });
+    el.addEventListener('wheel', function(e){
+      // Seul un geste horizontal délibéré actionne le rouleau — le
+      // défilement vertical de la page passe sans détourner la valeur.
+      if(Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      var d = e.deltaX > 0 ? 1 : -1;
+      cfg.set(clamp(cfg.get()+d*cfg.step)); paint(); render();
+    }, {passive:false});
+    paint();
+  }
+  roller($('rVol'), {get:function(){return vol;}, set:function(v){vol=v;}, step:10, min:50, max:1500});
+  roller($('rDur'), {get:function(){return dur;}, set:function(v){dur=v;}, step:5,  min:15, max:720});
+  calc.addEventListener('click', function(e){
+    var b = e.target.closest('.fpill'); if(!b) return;
+    fi = Math.max(0, FACS.indexOf(+b.dataset.f));
+    [].forEach.call(calc.querySelectorAll('.fpill'), function(p){ p.classList.toggle('on', p===b); });
+    render();
+  });
+  render();
+
+  /* Calez — la molette jusqu'à l'unisson (tempo Dropp fixe : 42).
+     À l'unisson, les DEUX gouttes repartent en phase et tombent ensemble
+     battement après battement ; les anneaux marquent 4 impacts communs. */
+  var TARGET=42, dropA=$('dropA'), dropB=$('dropB'), mol=$('molette'), msg=$('calMsg');
+  var animA=null, animB=null, ringAnims=[], synced=false, lastV=null;
+  function fall(el, rate){
+    if(rm || !el.animate) return null;
+    var period = 60000/rate, f = Math.min(.55, 420/period);
+    return el.animate(
+      [{transform:'translateY(0)',    opacity:1, offset:0},
+       {transform:'translateY(58px)', opacity:1, offset:f},
+       {transform:'translateY(58px)', opacity:0, offset:Math.min(.62, f+.06)},
+       {transform:'translateY(58px)', opacity:0, offset:1}],
+      {duration:period, iterations:Infinity});
+  }
+  function ringFlash(el, period, f){
+    if(rm || !el.animate) return null;
+    return el.animate(
+      [{opacity:.85, transform:'scale(.4)', offset:0},
+       {opacity:0,   transform:'scale(2)',  offset:.55},
+       {opacity:0,   transform:'scale(2)',  offset:1}],
+      {duration:period, iterations:4, delay:f*period});
+  }
+  function setRate(v){
+    $('rateA').textContent = v+' gtt/min';
+    var on = v === TARGET;
+    if(animA) animA.cancel();
+    if(animB) animB.cancel();
+    ringAnims.forEach(function(a){ a.cancel(); }); ringAnims=[];
+    // Les deux gouttes repartent ensemble : en phase à l'unisson, elles
+    // tombent ensemble battement après battement ; sinon la divergence
+    // se voit d'elle-même.
+    animA = fall(dropA, v);
+    animB = fall(dropB, TARGET);
+    // Sujet explicite : c'est LA PERFUSION qui est lente ou rapide par
+    // rapport au tempo Dropp.
+    msg.textContent = on ? 'à l’unisson — vous y êtes'
+      : (v < TARGET ? 'la perfusion goutte trop lentement — ouvrez la molette'
+                    : 'la perfusion goutte trop vite — fermez la molette');
+    msg.classList.toggle('on', on);
+    if(on && !synced){
+      var period = 60000/TARGET, f = Math.min(.55, 420/period);
+      var ra = ringFlash($('ringA'), period, f), rb = ringFlash($('ringB'), period, f);
+      if(ra) ringAnims.push(ra); if(rb) ringAnims.push(rb);
     }
-    function updateCalc(){
-      const v = Math.max(0, parseFloat(volume.value) || 0);
-      const h = Math.max(.01, parseFloat(duration.value) || 0);
-      const rate = (v * factor) / (h * 60);
-      const rounded = Math.max(1, Math.round(rate));
-      // Garde de plausibilite (parite app) : hors 1..400 gtt/min, pas de tempo.
-      if(!v || rate > 400){
-        gtt.textContent = '—';
-        secDrop.textContent = 'hors plage plausible';
-        mlHour.textContent = 'vérifiez les entrées';
+    synced = on;
+  }
+  mol.addEventListener('input', function(){
+    var v = +mol.value;
+    // Zone aimantée : à 1 cran de l'unisson, la molette s'y cale — le
+    // « clic » du bon réglage, sans rendre le geste trivial.
+    if(Math.abs(v - TARGET) <= 1){ v = TARGET; mol.value = TARGET; }
+    if(v === lastV) return;
+    lastV = v;
+    setRate(v);
+  });
+  lastV = +mol.value;
+  setRate(lastV);
+
+  /* Tap — cadence observée, en fréquence par minute */
+  var taps=[], pad=$('tapPad'), ring=$('tapRing');
+  function tap(){
+    var now = performance.now();
+    if(taps.length && now-taps[taps.length-1] > 4000) taps=[];
+    taps.push(now); if(taps.length>7) taps.shift();
+    ring.classList.remove('go'); void ring.offsetWidth; ring.classList.add('go');
+    if(taps.length < 2){
+      $('tapN').textContent='·'; $('tapU').textContent='continuez au même rythme';
+    } else {
+      var iv = (taps[taps.length-1]-taps[0]) / (taps.length-1);
+      var freq = iv > 0 ? Math.round(60000/iv) : Infinity;
+      // Garde de plausibilité (parité app) : pas de cadence absurde.
+      if(!isFinite(freq) || freq > 400){
+        $('tapN').textContent='—'; $('tapU').textContent='trop rapide — reprenez';
+        taps=[taps[taps.length-1]];
         return;
       }
-      const seconds = 60 / rounded;
-      const mlh = v / h;
-      gtt.textContent = fr(rounded);
-      secDrop.textContent = `${fr(seconds,2)} s / goutte`;
-      mlHour.textContent = `${fr(mlh,0)} mL / h`;
-      const tempo = Math.min(4, Math.max(.6, seconds));
-      window.__demoPeriod = tempo;
-      demoOutput.style.setProperty('--tempo', `${tempo}s`);
+      $('tapN').textContent = freq;
+      $('tapU').textContent = taps.length<4 ? 'par minute · la valeur se resserre' : 'par minute · stabilisée';
+      $('tapReset').classList.add('on');
     }
-    volume.addEventListener('input', updateCalc);
-    duration.addEventListener('input', updateCalc);
-    factors.forEach(btn => btn.addEventListener('click', () => {
-      factors.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      factor = Number(btn.dataset.factor);
-      updateCalc();
-    }));
-    updateCalc();
-
-    /* ============ Calage : la molette jusqu'a l'unisson ============ */
-    (function(){
-      const TARGET = 42;
-      const dropA = document.getElementById('dropA'), dropB = document.getElementById('dropB');
-      const mol = document.getElementById('molette'), msg = document.getElementById('calMsg');
-      if(!mol) return;
-      let animA=null, animB=null, ringAnims=[], synced=false, lastV=null;
-      function fall(el, rate){
-        if(rm || !el.animate) return null;
-        const period = 60000/rate, f = Math.min(.55, 420/period);
-        return el.animate(
-          [{transform:'translateY(0)',    opacity:1, offset:0},
-           {transform:'translateY(44px)', opacity:1, offset:f},
-           {transform:'translateY(44px)', opacity:0, offset:Math.min(.62, f+.06)},
-           {transform:'translateY(44px)', opacity:0, offset:1}],
-          {duration:period, iterations:Infinity});
-      }
-      function ringFlash(el, period, f){
-        if(rm || !el.animate) return null;
-        return el.animate(
-          [{opacity:.85, transform:'scale(.4)', offset:0},
-           {opacity:0,   transform:'scale(2)',  offset:.55},
-           {opacity:0,   transform:'scale(2)',  offset:1}],
-          {duration:period, iterations:4, delay:f*period});
-      }
-      function setRate(v){
-        document.getElementById('rateA').textContent = v+' gtt/min';
-        const on = Math.abs(v-TARGET) <= 1;
-        if(animA) animA.cancel();
-        if(animB) animB.cancel();
-        ringAnims.forEach(a => a.cancel()); ringAnims=[];
-        // Les deux gouttes repartent ensemble : en phase a l'unisson
-        // (elles tombent ensemble battement apres battement), divergence
-        // visible sinon.
-        animA = fall(dropA, on ? TARGET : v);
-        animB = fall(dropB, TARGET);
-        msg.textContent = on ? 'à l’unisson — vous y êtes'
-          : (v < TARGET ? 'un peu lent — ouvrez la molette' : 'un peu rapide — fermez la molette');
-        msg.classList.toggle('on', on);
-        if(on && !synced){
-          const period = 60000/TARGET, f = Math.min(.55, 420/period);
-          const ra = ringFlash(document.getElementById('ringA'), period, f);
-          const rb = ringFlash(document.getElementById('ringB'), period, f);
-          if(ra) ringAnims.push(ra); if(rb) ringAnims.push(rb);
-        }
-        synced = on;
-      }
-      mol.addEventListener('input', function(){
-        let v = +mol.value;
-        // Zone aimantee : a moins de 2 gtt/min de l'unisson, la molette
-        // s'y cale d'elle-meme.
-        if(Math.abs(v - TARGET) <= 2){ v = TARGET; mol.value = TARGET; }
-        if(v === lastV) return;
-        lastV = v;
-        setRate(v);
-      });
-      lastV = +mol.value;
-      setRate(lastV);
-    })();
-
-    /* ============ Mode Tap : cadence observee ============ */
-    (function(){
-      const tapButton = document.querySelector('#tapButton');
-      const tapValue = document.querySelector('#tapValue');
-      const tapSub = document.querySelector('#tapSub');
-      if(!tapButton) return;
-      let taps = [], lastTap = 0, resetTimer = null;
-      tapButton.addEventListener('keydown', e => { if(e.repeat) e.preventDefault(); });
-      tapButton.addEventListener('click', () => {
-        const now = performance.now();
-        if(now - lastTap < 100) return;
-        lastTap = now;
-        taps.push(now);
-        taps = taps.filter(t => now - t < 8000).slice(-10);
-        if(taps.length >= 2){
-          const intervals = taps.slice(1).map((t,i) => t - taps[i]);
-          const avg = intervals.reduce((a,b)=>a+b,0) / intervals.length;
-          const freq = Math.round(60000 / avg);
-          // Garde de plausibilite (parite app) : pas de cadence absurde.
-          if(freq > 400){
-            tapValue.textContent = '—';
-            tapSub.textContent = 'trop rapide — reprenez';
-            taps = [now];
-          } else {
-            tapValue.textContent = freq;
-            tapSub.textContent = taps.length < 4 ? 'par minute · continuez' : 'par minute · stabilisée';
-          }
-        } else {
-          tapValue.textContent = '…';
-          tapSub.textContent = 'continuez au même rythme';
-        }
-        clearTimeout(resetTimer);
-        resetTimer = setTimeout(() => { taps=[]; tapValue.textContent='—'; tapSub.textContent='par minute'; }, 5000);
-      });
-    })();
-
-    /* ============ Reveal au scroll ============ */
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, {threshold:.14});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    /* ============ Scenes sticky pilotees par le scroll ============ */
-    const stepItems = [...document.querySelectorAll('.step-item')];
-    const stepScenes = [...document.querySelectorAll('.scene')];
-    const stepObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const idx = Number(entry.target.dataset.scene);
-          stepItems.forEach((item,i)=>item.classList.toggle('active',i===idx));
-          stepScenes.forEach((scene,i)=>scene.classList.toggle('active',i===idx));
-        }
-      });
-    }, {rootMargin:'-35% 0px -45% 0px',threshold:0});
-    stepItems.forEach(item=>stepObserver.observe(item));
-  </script>
+  }
+  var lastPtr=0;
+  pad.addEventListener('pointerdown', function(e){
+    e.preventDefault(); lastPtr=performance.now(); tap(); });
+  // Filet pour les activations sans événement pointeur (VoiceOver et
+  // autres technologies d'assistance).
+  pad.addEventListener('click', function(){
+    if(performance.now()-lastPtr > 400) tap(); });
+  pad.addEventListener('keydown', function(e){
+    if(e.repeat) return;
+    if(e.key===' '||e.key==='Enter'){ e.preventDefault(); tap(); } });
+  $('tapReset').addEventListener('click', function(){
+    taps=[]; $('tapN').textContent='—'; $('tapU').textContent='tapez au rythme observé';
+    this.classList.remove('on');
+  });
+})();
+</script>
 </body>
 </html>
