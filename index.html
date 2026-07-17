@@ -89,10 +89,10 @@
   .btn.ghost { color:var(--ink); border:1.5px solid var(--rule); background:rgba(244,239,230,.55); }
   .hero-scene { position:relative; flex:1; min-height:300px; width:100%; }
   .hero-watch { position:absolute; right:9%; bottom:24%; width:84px; }
-  .hero-phone { position:absolute; left:9%; bottom:20%; width:74px; }
+  .hero-phone { position:absolute; left:9%; bottom:24%; width:74px; }
   @media (max-width:640px){
     .hero-watch { right:5%; bottom:16%; width:70px; }
-    .hero-phone { left:5%; bottom:14%; width:60px; }
+    .hero-phone { left:5%; bottom:16%; width:60px; }
   }
   /* Pulsation d'accueil apaisée : 30 bpm (< 33), le produit bat son vrai
      tempo plus bas dans la page. */
@@ -330,9 +330,10 @@
   @keyframes dwb2 { 0%,48%{transform:translateY(-70px)} 52%,88%{transform:translateY(0)}
     92%,100%{transform:translateY(-70px)} }
   /* Historique : les lignes se posent une a une */
-  .dh { opacity:.14; animation:dh 9s infinite; }
+  /* Plancher a .45 : la liste reste lisible a tout instant du cycle */
+  .dh { opacity:.45; animation:dh 9s infinite; }
   .dh.h2 { animation-delay:1s; } .dh.h3 { animation-delay:2s; }
-  @keyframes dh { 0%,6%{opacity:.14; transform:translateY(4px)} 14%,80%{opacity:1; transform:none} 90%,100%{opacity:.14} }
+  @keyframes dh { 0%,4%{opacity:.45; transform:translateY(3px)} 12%,90%{opacity:1; transform:none} 98%,100%{opacity:.45} }
   /* Scene 3D : la profondeur suggeree par strates, la goutte la traverse */
   .d3f { transform-box:fill-box; transform-origin:center; animation:d3f 5s ease-in-out infinite; }
   @keyframes d3f { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-2.5px)} }
@@ -348,8 +349,8 @@
   .tier .name { font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
     color:var(--soft); margin-bottom:12px; }
   .tier ol, .tier ul { margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.75; }
-  .tier .prices { margin-top:16px; font-size:13.5px; }
-  .tier .prices b { font-weight:600; }
+  .tier .prices { margin-top:16px; font-size:14.5px; }
+  .tier .prices b { font-weight:650; font-size:16.5px; }
   .tier .note { font-size:12px; color:var(--body); margin-top:10px; }
 
   /* Confiance */
