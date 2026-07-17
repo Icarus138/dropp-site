@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
 <title>DROPP — Le rythme au poignet. La tête au soin.</title>
 <meta name="description" content="Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.">
 <style>
@@ -40,26 +41,19 @@
     align-items:center; text-align:center; padding:52px 22px 20px; }
   .mark { font-size:15px; font-weight:600; letter-spacing:.55em; text-indent:.55em;
     text-transform:uppercase; margin:0 0 12px; }
-  .soon { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.14em;
-    text-transform:uppercase; color:var(--amber-ink); background:var(--amber);
-    border-radius:999px; padding:5px 13px; }
+  .soon { display:block; font-size:10.5px; font-weight:600; letter-spacing:.26em;
+    text-transform:uppercase; color:var(--soft); }
   .hero h1 { font-size:clamp(30px,6vw,50px); font-weight:250; line-height:1.14;
-    margin:20px auto 12px; max-width:16ch; text-wrap:balance; }
-  .hero .sub { font-size:16px; color:var(--soft); max-width:44ch; margin:0 auto 20px; }
+    margin:26px auto 14px; max-width:16ch; text-wrap:balance; }
+  .hero .sub { font-size:16px; color:var(--soft); max-width:44ch; margin:0 auto 24px; }
   .ctas { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
   .btn { display:inline-block; text-decoration:none; font-size:13px; font-weight:600;
     letter-spacing:.04em; border-radius:999px; padding:13px 22px; }
   .btn.primary { background:var(--ink); color:var(--bg); }
   .btn.ghost { color:var(--ink); border:1.5px solid var(--rule); background:rgba(244,239,230,.55); }
-  .hero-scene { position:relative; flex:1; min-height:270px; width:100%; }
-  .readout { position:absolute; left:50%; top:16%; transform:translateX(-50%);
-    text-align:center; }
-  .readout .n { font-size:clamp(44px,7vw,60px); font-weight:200; line-height:1; }
-  .readout .u { font-size:12px; color:var(--soft); margin-top:2px; }
-  .readout .r { font-size:11px; color:var(--soft); margin-top:6px;
-    letter-spacing:.14em; text-transform:uppercase; font-weight:600; }
-  .hero-watch { position:absolute; right:6%; bottom:16%; width:88px; }
-  @media (max-width:640px){ .hero-watch { right:4%; bottom:10%; width:72px; } }
+  .hero-scene { position:relative; flex:1; min-height:280px; width:100%; }
+  .hero-watch { position:absolute; right:8%; bottom:22%; width:92px; }
+  @media (max-width:640px){ .hero-watch { right:6%; bottom:14%; width:74px; } }
   .hero-watch svg { width:100%; height:auto; animation:wpulse 1.7s ease-out infinite; transform-origin:center; }
   @keyframes wpulse { 0%,100%{transform:scale(1)} 56%{transform:scale(1)} 60%{transform:scale(.975)} 70%{transform:scale(1)} }
   .trust { position:relative; z-index:2; display:flex; gap:8px 26px; flex-wrap:wrap;
@@ -104,37 +98,80 @@
     .viz { max-width:320px; margin:0 auto; }
   }
 
-  /* Calculez : composition des valeurs */
-  .c1-in { opacity:0; animation:c1in 6s infinite; }
-  @keyframes c1in { 0%{opacity:0} 5%,90%{opacity:1} 97%,100%{opacity:0} }
-  .c1-out { opacity:0; animation:c1out 6s infinite; }
-  .c1-out.o1{animation-delay:.9s} .c1-out.o2{animation-delay:1.5s} .c1-out.o3{animation-delay:2.1s}
-  @keyframes c1out { 0%{opacity:0; transform:translateY(5px)} 6%,72%{opacity:1; transform:translateY(0)} 80%,100%{opacity:0} }
+  /* Interactif : affordance commune */
+  .try { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--soft); margin:0 0 10px; }
+  .try::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%;
+    background:var(--faint); margin-right:8px; vertical-align:1px; }
 
-  /* Calez : deux rythmes qui convergent (cycle 8.5s = 5 battements Dropp) */
-  .calA { animation:calA 8.5s linear infinite; opacity:0; }
-  @keyframes calA {
-    0%{transform:translateY(0);opacity:1} 4.5%{transform:translateY(56px);opacity:1} 5%{opacity:0}
-    19.9%{opacity:0;transform:translateY(0)} 20%{opacity:1} 24.5%{transform:translateY(56px)} 25%{opacity:0}
-    39.9%{opacity:0;transform:translateY(0)} 40%{opacity:1} 44.5%{transform:translateY(56px)} 45%{opacity:0}
-    59.9%{opacity:0;transform:translateY(0)} 60%{opacity:1} 64.5%{transform:translateY(56px)} 65%{opacity:0}
-    79.9%{opacity:0;transform:translateY(0)} 80%{opacity:1} 84.5%{transform:translateY(56px)} 85%{opacity:0}
-    100%{opacity:0} }
-  .calB { animation:calB 8.5s linear infinite; opacity:0; }
-  @keyframes calB {
-    4.6%{opacity:0;transform:translateY(0)} 4.7%{opacity:1} 9.2%{transform:translateY(56px)} 9.7%{opacity:0}
-    18.7%{opacity:0;transform:translateY(0)} 18.8%{opacity:1} 23.3%{transform:translateY(56px)} 23.8%{opacity:0}
-    32.8%{opacity:0;transform:translateY(0)} 32.9%{opacity:1} 37.4%{transform:translateY(56px)} 37.9%{opacity:0}
-    48.1%{opacity:0;transform:translateY(0)} 48.2%{opacity:1} 52.7%{transform:translateY(56px)} 53.2%{opacity:0}
-    64.0%{opacity:0;transform:translateY(0)} 64.1%{opacity:1} 68.6%{transform:translateY(56px)} 69.1%{opacity:0}
-    79.9%{opacity:0;transform:translateY(0)} 80%{opacity:1} 84.5%{transform:translateY(56px)} 85%{opacity:0}
-    100%{opacity:0} }
-  .calSync { transform-box:fill-box; transform-origin:center; transform:scale(.3);
-    opacity:0; animation:calS 8.5s ease-out infinite; }
-  @keyframes calS { 0%,84.5%{transform:scale(.3);opacity:0} 85%{opacity:.85}
-    97%,100%{transform:scale(2.4);opacity:0} }
-  .calCap { opacity:0; animation:calC 8.5s infinite; }
-  @keyframes calC { 0%,84%{opacity:0} 86%,98%{opacity:1} 100%{opacity:0} }
+  /* Calculez : le vrai calcul, interactif */
+  .calc { background:var(--surface); border-radius:22px; padding:16px 20px 20px; }
+  .crow { display:flex; align-items:center; justify-content:space-between; padding:6px 0; }
+  .crow .clab { font-size:12.5px; color:var(--soft); }
+  .cctl { display:flex; align-items:center; gap:2px; }
+  .cctl button { width:36px; height:36px; border-radius:50%; border:1.5px solid var(--rule);
+    background:transparent; color:var(--ink); font-size:19px; font-weight:300; line-height:1;
+    cursor:pointer; -webkit-tap-highlight-color:transparent; padding:0; }
+  .cctl button:active { background:var(--rule); }
+  .cctl .cval { min-width:88px; text-align:center; font-size:14.5px; font-weight:600;
+    font-variant-numeric:tabular-nums; }
+  .cres { border-top:1px solid var(--rule); margin-top:10px; padding-top:16px;
+    display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
+  .cres > div { transition:opacity .18s; }
+  .cres .big { font-size:40px; font-weight:200; line-height:1; letter-spacing:-.01em; }
+  .cres .sec { font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; }
+  .cres .cu { font-size:10px; color:var(--soft); display:block; margin-top:4px;
+    letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+  .calc.oob .cres > div { opacity:.28; }
+  .cwarn { font-size:11.5px; color:var(--soft); margin:10px 0 0; display:none; }
+  .calc.oob .cwarn { display:block; }
+
+  /* Calez : la molette, interactive */
+  .cal { background:var(--surface); border-radius:22px; padding:16px 20px 18px; }
+  .calcols { display:grid; grid-template-columns:1fr 1fr; gap:12px; text-align:center; }
+  .colhead { font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--soft); margin:0; min-height:2.6em; display:flex;
+    align-items:flex-end; justify-content:center; line-height:1.3; }
+  .ctrack { position:relative; height:84px; margin:8px auto 4px; }
+  .ctrack::after { content:""; position:absolute; left:24%; right:24%; bottom:9px;
+    height:1.5px; background:var(--faint); }
+  .cdrop { position:absolute; left:50%; top:8px; width:10px; height:10px; margin-left:-5px;
+    border-radius:50%; background:var(--opal-lo); opacity:0; }
+  .cring { position:absolute; left:50%; bottom:2px; width:58px; height:18px; margin-left:-29px;
+    border:1.5px solid var(--opal-lo); border-radius:50%; opacity:0; transform:scale(.4); }
+  .cring.go { animation:cring .9s ease-out; }
+  @keyframes cring { 0%{opacity:.85; transform:scale(.4)} 100%{opacity:0; transform:scale(2)} }
+  .crate { font-size:12px; color:var(--soft); font-variant-numeric:tabular-nums; }
+  .molette { -webkit-appearance:none; appearance:none; display:block; width:100%; height:30px;
+    margin:12px 0 0; background:transparent; cursor:pointer; }
+  .molette::-webkit-slider-runnable-track { height:2px; background:var(--faint); border-radius:1px; }
+  .molette::-webkit-slider-thumb { -webkit-appearance:none; width:24px; height:24px; margin-top:-11px;
+    border-radius:50%; background:var(--bg); border:1.5px solid var(--soft);
+    box-shadow:0 2px 6px rgba(58,56,52,.16); }
+  .molette::-moz-range-track { height:2px; background:var(--faint); }
+  .molette::-moz-range-thumb { width:22px; height:22px; border-radius:50%;
+    background:var(--bg); border:1.5px solid var(--soft); }
+  .mlab { display:flex; justify-content:center; font-size:9.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); font-weight:600; margin-top:2px; }
+  .calmsg { text-align:center; font-size:12.5px; color:var(--soft); margin:10px 0 0; min-height:1.5em; }
+  .calmsg.on { color:var(--ink); font-weight:600; }
+
+  /* Tap : le pad, interactif */
+  .tapdemo { background:var(--surface); border-radius:22px; padding:22px 20px 18px; text-align:center; }
+  .tapdemo .tv { font-size:44px; font-weight:200; line-height:1; min-height:44px; }
+  .tapdemo .tu { font-size:11.5px; color:var(--soft); margin-top:6px; min-height:1.4em; }
+  .tappad { position:relative; width:118px; height:118px; border-radius:50%; margin:16px auto 0;
+    display:block; border:1.5px solid var(--soft); background:var(--bg); color:var(--ink);
+    font-size:13px; font-weight:600; cursor:pointer; -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation; user-select:none; -webkit-user-select:none; }
+  .tappad:active { transform:scale(.97); }
+  .tring { position:absolute; inset:-2px; border-radius:50%; border:1.5px solid var(--soft);
+    opacity:0; pointer-events:none; }
+  .tring.go { animation:tring .7s ease-out; }
+  @keyframes tring { 0%{opacity:.7; transform:scale(1)} 100%{opacity:0; transform:scale(1.5)} }
+  .tapreset { border:none; background:none; color:var(--soft); font-size:11.5px; cursor:pointer;
+    margin-top:12px; text-decoration:underline; text-underline-offset:3px; visibility:hidden; }
+  .tapreset.on { visibility:visible; }
 
   /* Continuez : timeline */
   .t-fill { animation:tfill 12s linear infinite; }
@@ -154,19 +191,6 @@
   @keyframes v4n { 0%{opacity:0} 4%,29%{opacity:1} 33%,100%{opacity:0} }
   .wbody { transform-box:fill-box; transform-origin:center; animation:wbody 1.7s ease-out infinite; }
   @keyframes wbody { 0%,54%{transform:scale(1)} 58%{transform:scale(.985)} 68%,100%{transform:scale(1)} }
-
-  /* Tap */
-  .v3-pulse { transform-box:fill-box; transform-origin:center; transform:scale(.4);
-    opacity:0; animation:v3p 1.7s ease-out infinite; }
-  .v3-pulse.d2 { animation-delay:.85s; }
-  @keyframes v3p { 0%{transform:scale(.4);opacity:.55} 70%{transform:scale(1.5);opacity:0} 100%{opacity:0} }
-  .v3-dot { transform-box:fill-box; transform-origin:center; animation:v3d .85s ease-in-out infinite; }
-  @keyframes v3d { 0%,100%{transform:scale(1)} 12%{transform:scale(.82)} 30%{transform:scale(1)} }
-  .v3-st { opacity:0; animation:v3s 6.8s infinite; }
-  .v3-st.a { animation-delay:0s; } .v3-st.b { animation-delay:1.7s; }
-  @keyframes v3s { 0%{opacity:0} 2%,23%{opacity:1} 26%,100%{opacity:0} }
-  .v3-st.c { animation:v3sc 6.8s infinite; animation-delay:3.4s; }
-  @keyframes v3sc { 0%{opacity:0} 2%,47%{opacity:1} 50%,100%{opacity:0} }
 
   /* Multi-perfusions */
   .mrow { display:grid; grid-template-columns:92px 1fr 74px; gap:12px; align-items:center;
@@ -225,8 +249,8 @@
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after { animation:none !important; }
     .step { opacity:0; } .step.s2 { opacity:1; }
-    .calA,.calB{opacity:1;transform:translateY(56px)} .calSync{opacity:.4;transform:scale(1.6)} .calCap{opacity:1}
-    .c1-in,.c1-out{opacity:1} .v3-st.c{opacity:1} .v4-num.s1{opacity:1}
+    .cdrop { display:none; }
+    .v4-num.s1{opacity:1}
     .t-fill{width:64%} .t-pre{opacity:1} .t-banner{transform:translateY(0)}
     .demo-dots i:nth-child(2){background:var(--ink)}
   }
@@ -246,19 +270,13 @@
       <a class="btn ghost" href="#pro">Gratuit et Pro</a>
     </div>
     <div class="hero-scene" aria-hidden="true">
-      <div class="readout">
-        <div class="n">42</div>
-        <div class="u">gtt / min</div>
-        <div class="r">Box 3 · fin 22:12</div>
-      </div>
       <div class="hero-watch"><svg viewBox="0 0 120 140">
         <rect x="44" y="2" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
         <rect x="44" y="124" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
         <rect x="10" y="14" width="100" height="112" rx="26" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
         <rect x="110" y="54" width="6" height="18" rx="3" class="surf" stroke="var(--soft)"/>
-        <text x="60" y="58" text-anchor="middle" class="num ink" font-size="26">42</text>
-        <text x="60" y="74" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
-        <text x="60" y="92" text-anchor="middle" class="soft" font-size="7.5">reste 3h 10m</text>
+        <text x="60" y="72" text-anchor="middle" class="num ink" font-size="27">42</text>
+        <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
       </svg></div>
     </div>
   </div>
@@ -325,15 +343,23 @@
         <h3>Calculez</h3>
         <p>Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL. Rien à retenir, rien à refaire.</p>
       </div>
-      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 190">
-        <g class="c1-in">
-          <rect x="20" y="18" width="300" height="40" rx="13" class="surf"/>
-          <text x="38" y="43" class="soft" font-size="12">500 mL · 4 h · 20 gtt/mL</text>
-        </g>
-        <g class="c1-out o1"><text x="38" y="102" class="num ink" font-size="34">42</text><text x="86" y="102" class="soft" font-size="11">gtt/min</text></g>
-        <g class="c1-out o2"><text x="150" y="102" class="num ink" font-size="34">1.43</text><text x="216" y="102" class="soft" font-size="11">s/goutte</text></g>
-        <g class="c1-out o3"><text x="38" y="156" class="num ink" font-size="34">125</text><text x="100" y="156" class="soft" font-size="11">mL/h</text></g>
-      </svg></div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="calc" id="calc">
+          <div class="crow"><span class="clab">Volume</span>
+            <div class="cctl"><button type="button" data-k="vol" data-d="-1" aria-label="Diminuer le volume">−</button><span class="cval" id="cVol">500 mL</span><button type="button" data-k="vol" data-d="1" aria-label="Augmenter le volume">+</button></div></div>
+          <div class="crow"><span class="clab">Durée</span>
+            <div class="cctl"><button type="button" data-k="dur" data-d="-1" aria-label="Diminuer la durée">−</button><span class="cval" id="cDur">4 h</span><button type="button" data-k="dur" data-d="1" aria-label="Augmenter la durée">+</button></div></div>
+          <div class="crow"><span class="clab">Facteur</span>
+            <div class="cctl"><button type="button" data-k="fac" data-d="-1" aria-label="Facteur précédent">−</button><span class="cval" id="cFac">20 gtt/mL</span><button type="button" data-k="fac" data-d="1" aria-label="Facteur suivant">+</button></div></div>
+          <div class="cres" aria-live="polite">
+            <div><span class="big num" id="cRate">42</span><span class="cu">gtt / min</span></div>
+            <div><span class="sec" id="cInt">1,43</span><span class="cu">s / goutte</span></div>
+            <div><span class="sec" id="cMlh">125</span><span class="cu">mL / h</span></div>
+          </div>
+          <p class="cwarn">Hors plage plausible — l'app refuse de battre un tempo absurde.</p>
+        </div>
+      </div>
     </div>
 
     <div class="feature flip">
@@ -341,16 +367,18 @@
         <h3>Calez</h3>
         <p>La scène bat la cadence calculée — visible, perceptible au poignet, audible si vous l'activez (un tick discret, pas plus fort qu'un cliquetis, qui respecte le mode silencieux). Réglez la molette jusqu'à l'unisson : quand la goutte du perfuseur tombe avec celle de DROPP, vous y êtes.</p>
       </div>
-      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 190">
-        <text x="100" y="24" text-anchor="middle" class="lbl soft">La perfusion</text>
-        <text x="240" y="24" text-anchor="middle" class="lbl soft">Le tempo Dropp</text>
-        <circle cx="100" cy="44" r="5" fill="var(--opal-lo)" class="calB"/>
-        <circle cx="240" cy="44" r="5" fill="var(--opal-lo)" class="calA"/>
-        <ellipse cx="170" cy="118" rx="120" ry="34" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="calSync"/>
-        <line x1="60" y1="112" x2="140" y2="112" stroke="var(--faint)" stroke-width="1.5"/>
-        <line x1="200" y1="112" x2="280" y2="112" stroke="var(--faint)" stroke-width="1.5"/>
-        <text x="170" y="168" text-anchor="middle" class="soft calCap" font-size="12">à l'unisson — vous y êtes</text>
-      </svg></div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="cal">
+          <div class="calcols">
+            <div><p class="colhead">La perfusion</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
+            <div><p class="colhead">Le tempo Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate">42 gtt/min</span></div>
+          </div>
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Molette de la perfusion — réglez jusqu'à l'unisson">
+          <div class="mlab"><span>la molette</span></div>
+          <p class="calmsg" id="calMsg" aria-live="polite">réglez la molette jusqu'à l'unisson</p>
+        </div>
+      </div>
     </div>
 
     <div class="feature">
@@ -414,25 +442,17 @@
         <h3>Observez une cadence. Tapez-la. Lisez-la.</h3>
         <p>Reproduisez une cadence observée en touchant l'écran : DROPP affiche sa fréquence par minute — sans chronomètre ni calcul mental. Pour un débit de perfusion, la lecture donne aussi les mL/h, de quoi recaler la molette en confiance. Sur iPhone et au poignet.</p>
       </div>
-      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 250">
-        <g class="v3-st a">
-          <text x="170" y="52" text-anchor="middle" class="num faint" font-size="40">—</text>
-          <text x="170" y="76" text-anchor="middle" class="soft" font-size="11">tapez au rythme observé</text>
-        </g>
-        <g class="v3-st b">
-          <text x="170" y="52" text-anchor="middle" class="num ink" font-size="40">61</text>
-          <text x="170" y="76" text-anchor="middle" class="soft" font-size="11">par minute · la valeur se resserre</text>
-        </g>
-        <g class="v3-st c">
-          <text x="170" y="52" text-anchor="middle" class="num ink" font-size="40">58</text>
-          <text x="170" y="76" text-anchor="middle" class="soft" font-size="11">par minute · stabilisée</text>
-        </g>
-        <rect x="24" y="96" width="292" height="130" rx="20" class="surf" stroke="var(--faint)" stroke-width="1.5"/>
-        <text x="170" y="138" text-anchor="middle" class="ink" font-size="14" font-weight="600">Taper</text>
-        <circle cx="170" cy="178" r="30" fill="none" stroke="var(--soft)" stroke-width="1.5" class="v3-pulse"/>
-        <circle cx="170" cy="178" r="30" fill="none" stroke="var(--soft)" stroke-width="1.5" class="v3-pulse d2"/>
-        <circle cx="170" cy="178" r="12" class="ink v3-dot" opacity=".85"/>
-      </svg></div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="tapdemo">
+          <div aria-live="polite">
+            <div class="tv num" id="tapN">—</div>
+            <div class="tu" id="tapU">tapez au rythme observé</div>
+          </div>
+          <button type="button" class="tappad" id="tapPad" aria-label="Zone de tap — touchez au rythme observé">Taper<span class="tring" id="tapRing"></span></button>
+          <button type="button" class="tapreset" id="tapReset">recommencer</button>
+        </div>
+      </div>
     </div>
   </section>
   <section>
@@ -611,6 +631,93 @@
     gl.drawArrays(gl.TRIANGLES,0,3);
   }
   requestAnimationFrame(frame);
+})();
+
+/* Démos interactives : calcul, calage, tap */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){ return document.getElementById(id); }
+
+  /* Calculez — le calcul exact de l'app (gtt/min = volume × facteur / minutes) */
+  var vol=500, dur=240, FACS=[10,15,20,60], fi=2, calc=$('calc');
+  function fmtDur(m){ var h=Math.floor(m/60), r=m%60;
+    return h ? (r ? h+' h '+(r<10?'0':'')+r : h+' h') : r+' min'; }
+  function render(){
+    $('cVol').textContent = vol+' mL';
+    $('cDur').textContent = fmtDur(dur);
+    $('cFac').textContent = FACS[fi]+' gtt/mL';
+    var rate = Math.max(1, Math.round(vol*FACS[fi]/dur));
+    var ok = rate <= 400;
+    calc.classList.toggle('oob', !ok);
+    $('cRate').textContent = ok ? rate : '—';
+    $('cInt').textContent  = ok ? (60/rate).toFixed(2).replace('.',',') : '—';
+    $('cMlh').textContent  = ok ? Math.round(vol/dur*60) : '—';
+  }
+  calc.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    var d = +b.dataset.d;
+    if(b.dataset.k==='vol')      vol = Math.min(1000, Math.max(50, vol+50*d));
+    else if(b.dataset.k==='dur') dur = Math.min(720, Math.max(30, dur+30*d));
+    else                         fi  = Math.min(3, Math.max(0, fi+d));
+    render();
+  });
+  render();
+
+  /* Calez — la molette jusqu'à l'unisson (tempo Dropp fixe : 42) */
+  var TARGET=42, dropA=$('dropA'), dropB=$('dropB'), mol=$('molette'), msg=$('calMsg');
+  var animA=null, synced=false;
+  function fall(el, rate){
+    if(rm || !el.animate) return null;
+    var period = 60000/rate, f = Math.min(.55, 420/period);
+    return el.animate(
+      [{transform:'translateY(0)',    opacity:1, offset:0},
+       {transform:'translateY(58px)', opacity:1, offset:f},
+       {transform:'translateY(58px)', opacity:0, offset:Math.min(.62, f+.06)},
+       {transform:'translateY(58px)', opacity:0, offset:1}],
+      {duration:period, iterations:Infinity});
+  }
+  fall(dropB, TARGET);
+  function setRate(v){
+    $('rateA').textContent = v+' gtt/min';
+    if(animA) animA.cancel();
+    animA = fall(dropA, v);
+    var on = Math.abs(v-TARGET) <= 1;
+    msg.textContent = on ? 'à l’unisson — vous y êtes'
+      : (v < TARGET ? 'un peu lent — ouvrez la molette' : 'un peu rapide — fermez la molette');
+    msg.classList.toggle('on', on);
+    if(on && !synced){
+      ['ringA','ringB'].forEach(function(id){
+        var r=$(id); r.classList.remove('go'); void r.offsetWidth; r.classList.add('go');
+      });
+    }
+    synced = on;
+  }
+  mol.addEventListener('input', function(){ setRate(+mol.value); });
+  setRate(+mol.value);
+
+  /* Tap — cadence observée, en fréquence par minute */
+  var taps=[], pad=$('tapPad'), ring=$('tapRing');
+  function tap(){
+    var now = performance.now();
+    if(taps.length && now-taps[taps.length-1] > 4000) taps=[];
+    taps.push(now); if(taps.length>7) taps.shift();
+    ring.classList.remove('go'); void ring.offsetWidth; ring.classList.add('go');
+    if(taps.length < 2){
+      $('tapN').textContent='·'; $('tapU').textContent='continuez au même rythme';
+    } else {
+      var iv = (taps[taps.length-1]-taps[0]) / (taps.length-1);
+      $('tapN').textContent = Math.round(60000/iv);
+      $('tapU').textContent = taps.length<4 ? 'par minute · la valeur se resserre' : 'par minute · stabilisée';
+      $('tapReset').classList.add('on');
+    }
+  }
+  pad.addEventListener('pointerdown', function(e){ e.preventDefault(); tap(); });
+  pad.addEventListener('keydown', function(e){
+    if(e.key===' '||e.key==='Enter'){ e.preventDefault(); tap(); } });
+  $('tapReset').addEventListener('click', function(){
+    taps=[]; $('tapN').textContent='—'; $('tapU').textContent='tapez au rythme observé';
+    this.classList.remove('on');
+  });
 })();
 </script>
 </body>
