@@ -83,8 +83,9 @@
 
   .hs-soon { font-size:10.5px; font-weight:600; letter-spacing:.26em;
     text-transform:uppercase; color:var(--soft); }
+  /* Gris doux : le wordmark habite le liquide sans le dominer */
   .hs-title { font-size:clamp(42px,10.5vw,100px); font-weight:350; line-height:1.02;
-    letter-spacing:.5em; text-indent:.5em; text-transform:uppercase; }
+    letter-spacing:.5em; text-indent:.5em; text-transform:uppercase; color:var(--body); }
   .hs-sign { font-size:11px; font-weight:600; letter-spacing:.34em; text-indent:.34em;
     text-transform:uppercase; color:var(--soft); }
   .hs-tag { font-size:clamp(19px,3.4vw,27px); font-weight:300; line-height:1.28; text-wrap:balance; }
@@ -102,6 +103,14 @@
   .hs-hint i { display:block; width:1px; height:22px; margin:8px auto 0; background:var(--faint);
     animation:hintbob 1.9s ease-in-out infinite; transform-origin:top; }
   @keyframes hintbob { 0%,100%{transform:scaleY(.5); opacity:.4} 50%{transform:scaleY(1); opacity:1} }
+
+  /* Vie intérieure de l'iPhone : ses ondes ondulent au calme du hero
+     (30 bpm), échos décalés — la scène de l'app en miniature */
+  .pring { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:pring 2s ease-out infinite; }
+  .pring.p2 { animation-delay:1s; }
+  @keyframes pring { 0%{transform:scale(.55); opacity:.9}
+    70%{transform:scale(1.22); opacity:0} 100%{transform:scale(1.22); opacity:0} }
 
   /* Ondes haptiques : gelées par défaut, animées en scène 4-5 uniquement */
   .hap { opacity:0; }
@@ -139,6 +148,8 @@
   @media (prefers-reduced-motion:reduce){
     .hs-hint i { animation:none; }
     .hs-phone svg, .hs-watch svg { animation:none; }
+    /* Les ondes de l'iPhone restent visibles, statiques */
+    .pring { animation:none; opacity:.7; }
   }
 
   /* ============ DEMO CONDENSEE ============ */
@@ -457,8 +468,8 @@
           <text x="50" y="34" text-anchor="middle" fill="#8F897D" font-size="6.5" letter-spacing="2.5">DROPP</text>
           <text x="50" y="92" text-anchor="middle" class="num" fill="#E9E2D6" font-size="26">42</text>
           <text x="50" y="110" text-anchor="middle" fill="#8F897D" font-size="8">gtt / min</text>
-          <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="#5A564E" stroke-width="2"/>
-          <ellipse cx="50" cy="150" rx="38" ry="13" fill="none" stroke="#3E3E40" stroke-width="1.4"/>
+          <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="#5A564E" stroke-width="2" class="pring"/>
+          <ellipse cx="50" cy="150" rx="38" ry="13" fill="none" stroke="#3E3E40" stroke-width="1.4" class="pring p2"/>
         </svg></div>
         <div class="hs-watch"><svg viewBox="-18 0 156 140">
           <path d="M -5 55 q -7 15 0 30" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
@@ -1013,7 +1024,8 @@
     // la promesse arrive (sc.2, évite toute collision), puis finit en
     // ancre de marque discrète (sc.3→). Entrée par espacement des lettres.
     var d1=R(p,0.13,0.24), d2=R(p,0.32,0.48);
-    el.title.style.opacity=L(1,0.55,d2).toFixed(3);
+    // Dès que la promesse s'installe (sc.2), DROPP s'efface en filigrane
+    el.title.style.opacity=L(1,0.30,Math.max(d1,d2)).toFixed(3);
     el.title.style.letterSpacing=(0.72-0.17*R(p,0,0.06)).toFixed(3)+'em';
     el.title.style.transform='translate(-50%,-50%) translateY('+
       L(L(-H*0.02,-H*0.27,d1),-H*0.42,d2).toFixed(1)+'px) scale('+
