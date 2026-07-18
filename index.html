@@ -335,7 +335,8 @@
     color:var(--soft); font-weight:600; margin:12px 0 0; }
   /* Glyphe de pincement pouce + index : les deux doigts se rejoignent
      deux fois (double tap), synchronisés avec la bascule du cadran. */
-  .pinch { width:46px; height:auto; display:block; margin:10px auto 0; }
+  /* spécificité .viz svg.pinch : bat la règle globale .viz svg { width:100% } */
+  .viz svg.pinch { width:46px; height:auto; display:block; margin:10px auto 0; }
   .pf-idx, .pf-thb { transform-box:fill-box; transform-origin:center; }
   .pf-idx { animation:pfIdx 4s ease-in-out infinite; }
   .pf-thb { animation:pfThb 4s ease-in-out infinite; }
