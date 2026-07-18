@@ -1017,15 +1017,15 @@
   function apply(p){
     var H=vh, spread=Math.min(vw*0.30, 210);
 
-    // Scène 1 — « Bientôt sur l'App Store »
-    setT(el.soon, band(p,0,0.02,0.28,0.36), -H*0.20);
+    // Scène 1 — « Bientôt sur l'App Store » : s'éclipse dès le premier scroll
+    setT(el.soon, band(p,0,0.02,0.05,0.11), -H*0.20);
 
     // Titre DROPP : centré grand (sc.1) ; remonte un premier cran dès que
     // la promesse arrive (sc.2, évite toute collision), puis finit en
     // ancre de marque discrète (sc.3→). Entrée par espacement des lettres.
     var d1=R(p,0.13,0.24), d2=R(p,0.32,0.48);
-    // Dès que la promesse s'installe (sc.2), DROPP s'efface en filigrane
-    el.title.style.opacity=L(1,0.30,Math.max(d1,d2)).toFixed(3);
+    // Le gris doux suffit : DROPP garde sa pleine présence, sans fondu
+    el.title.style.opacity='1';
     el.title.style.letterSpacing=(0.72-0.17*R(p,0,0.06)).toFixed(3)+'em';
     el.title.style.transform='translate(-50%,-50%) translateY('+
       L(L(-H*0.02,-H*0.27,d1),-H*0.42,d2).toFixed(1)+'px) scale('+
