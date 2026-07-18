@@ -333,19 +333,24 @@
      (deux pincements), cycle 4 s. */
   .dt-cap { text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
     color:var(--soft); font-weight:600; margin:12px 0 0; }
-  /* Bulle geste : dans la bulle en haut à droite, l'index tape le pouce
-     deux fois (double tap), synchronisé avec la bascule du cadran. */
-  .h-idx { transform-box:fill-box; transform-origin:center; animation:hIdx 4s ease-in-out infinite; }
-  @keyframes hIdx { 0%,6%{transform:translateY(0)} 10%,18%{transform:translateY(6px)}
+  /* Bulle geste : deux pads (pouce + index) se rejoignent deux fois
+     (double tap) sous une onde de contact, synchro avec le cadran. */
+  .dt-pad-t, .dt-pad-b { transform-box:fill-box; transform-origin:center; }
+  .dt-pad-t { animation:dtPadT 4s ease-in-out infinite; }
+  .dt-pad-b { animation:dtPadB 4s ease-in-out infinite; }
+  @keyframes dtPadT { 0%,6%{transform:translateY(0)} 10%,18%{transform:translateY(5px)}
     14%{transform:translateY(0)} 22%,56%{transform:translateY(0)}
-    60%,68%{transform:translateY(6px)} 64%{transform:translateY(0)} 72%,100%{transform:translateY(0)} }
-  .h-spark { transform-box:fill-box; transform-origin:center; opacity:0;
-    animation:hSpark 4s ease-out infinite; }
-  @keyframes hSpark { 0%,9%{opacity:0; transform:scale(.3)}
-    11%{opacity:.9; transform:scale(1)} 16%{opacity:0; transform:scale(1.5)}
-    17%{opacity:0; transform:scale(.3)} 19%{opacity:.9; transform:scale(1)} 24%{opacity:0; transform:scale(1.5)}
-    59%{opacity:0; transform:scale(.3)} 61%{opacity:.9; transform:scale(1)} 66%{opacity:0; transform:scale(1.5)}
-    67%{opacity:0; transform:scale(.3)} 69%{opacity:.9; transform:scale(1)} 74%,100%{opacity:0; transform:scale(1.5)} }
+    60%,68%{transform:translateY(5px)} 64%{transform:translateY(0)} 72%,100%{transform:translateY(0)} }
+  @keyframes dtPadB { 0%,6%{transform:translateY(0)} 10%,18%{transform:translateY(-5px)}
+    14%{transform:translateY(0)} 22%,56%{transform:translateY(0)}
+    60%,68%{transform:translateY(-5px)} 64%{transform:translateY(0)} 72%,100%{transform:translateY(0)} }
+  .dt-ring2 { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:dtRing2 4s ease-out infinite; }
+  @keyframes dtRing2 { 0%,9%{opacity:0; transform:scale(.35)}
+    11%{opacity:.75; transform:scale(.5)} 17%{opacity:0; transform:scale(1.3)}
+    18%{opacity:0; transform:scale(.35)} 20%{opacity:.75; transform:scale(.5)} 26%{opacity:0; transform:scale(1.3)}
+    59%{opacity:0; transform:scale(.35)} 61%{opacity:.75; transform:scale(.5)} 67%{opacity:0; transform:scale(1.3)}
+    68%{opacity:0; transform:scale(.35)} 70%{opacity:.75; transform:scale(.5)} 76%,100%{opacity:0; transform:scale(1.3)} }
   .dt-run { animation:dtrun 4s infinite; }
   @keyframes dtrun { 0%,21%{opacity:1} 25%,72%{opacity:0} 76%,100%{opacity:1} }
   .dt-pause { opacity:0; animation:dtpause 4s infinite; }
@@ -469,7 +474,7 @@
     .dj { fill:#E9E2D6; }
     .dh { opacity:1; }
     .dwb.b2 { transform:translateY(0); }
-    .h-spark { display:none; } .dt-run { opacity:1; } .dt-pause { opacity:0; }
+    .dt-ring2 { display:none; } .dt-run { opacity:1; } .dt-pause { opacity:0; }
     html { scroll-behavior:auto; }
     .v4-num.s1{opacity:1}
     .t-fill{width:120px} .t-pre{opacity:1} .t-end{opacity:1} .t-endban{transform:translateY(0)}
@@ -724,12 +729,9 @@
         </g>
         <!-- Bulle « geste » en haut a droite : main de profil qui pince -->
         <circle cx="197" cy="43" r="30" fill="var(--bg)" stroke="var(--soft)" stroke-width="1.5"/>
-        <g transform="translate(197,43)" class="dt-hand" fill="none" stroke="var(--ink)" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 13 -8 Q 18 0 13 8" stroke-width="2.2" opacity=".5"/>
-          <path d="M 13 8 C 5 8 -6 6 -11 3" stroke-width="2.6"/>
-          <g class="h-idx"><path d="M 13 -8 C 5 -8 -7 -6 -11 -3" stroke-width="2.6"/></g>
-          <circle class="h-spark" cx="-11" cy="1" r="2.4" fill="var(--ink)" stroke="none"/>
-        </g>
+        <circle class="dt-ring2" cx="197" cy="43" r="13" fill="none" stroke="var(--faint)" stroke-width="1.6"/>
+        <g class="dt-pad-t"><rect x="190.5" y="25" width="13" height="14" rx="6.5" class="surf" stroke="var(--ink)" stroke-width="1.7"/></g>
+        <g class="dt-pad-b"><rect x="190.5" y="47" width="13" height="14" rx="6.5" class="surf" stroke="var(--ink)" stroke-width="1.7"/></g>
       </svg>
       <p class="dt-cap">Lancer · Pause · Reprendre · Acquitter</p>
       </div>
