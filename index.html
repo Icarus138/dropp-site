@@ -330,6 +330,25 @@
   .wbody { transform-box:fill-box; transform-origin:center; animation:wbody 1.7s ease-out infinite; }
   @keyframes wbody { 0%,54%{transform:scale(1)} 58%{transform:scale(.985)} 68%,100%{transform:scale(1)} }
 
+  /* Double Tap : le cadran bascule pause<->reprise sous une double onde
+     (deux pincements), cycle 4 s. */
+  .dt-cap { text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--soft); font-weight:600; margin:12px 0 0; }
+  .dt-ring { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:dtring 4s ease-out infinite; }
+  .dt-ring.r2 { animation-delay:.12s; }
+  @keyframes dtring {
+    0%{opacity:.75; transform:scale(.4)} 9%{opacity:0; transform:scale(1.15)}
+    13%{opacity:.75; transform:scale(.4)} 22%{opacity:0; transform:scale(1.15)}
+    50%{opacity:0; transform:scale(1.15)}
+    53%{opacity:.75; transform:scale(.4)} 62%{opacity:0; transform:scale(1.15)}
+    66%{opacity:.75; transform:scale(.4)} 75%{opacity:0; transform:scale(1.15)}
+    100%{opacity:0; transform:scale(1.15)} }
+  .dt-run { animation:dtrun 4s infinite; }
+  @keyframes dtrun { 0%,21%{opacity:1} 25%,72%{opacity:0} 76%,100%{opacity:1} }
+  .dt-pause { opacity:0; animation:dtpause 4s infinite; }
+  @keyframes dtpause { 0%,21%{opacity:0} 25%,72%{opacity:1} 76%,100%{opacity:0} }
+
   /* Multi-perfusions */
   .mrow { display:grid; grid-template-columns:92px 1fr 74px; gap:12px; align-items:center;
     padding:13px 0; border-bottom:1px solid var(--rule); font-size:13.5px; }
@@ -442,6 +461,7 @@
     .dj { fill:#E9E2D6; }
     .dh { opacity:1; }
     .dwb.b2 { transform:translateY(0); }
+    .dt-ring { display:none; } .dt-run { opacity:1; } .dt-pause { opacity:0; }
     html { scroll-behavior:auto; }
     .v4-num.s1{opacity:1}
     .t-fill{width:120px} .t-pre{opacity:1} .t-end{opacity:1} .t-endban{transform:translateY(0)}
@@ -669,6 +689,37 @@
         <rect x="76" y="204" width="88" height="30" rx="15" fill="var(--bg)"/>
         <text x="120" y="223" text-anchor="middle" class="ink" font-size="12" font-weight="600">Lancer</text>
       </svg></div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow"><b class="probdg">Dropp Pro</b> · Double Tap</p>
+    <h2>Un geste, sans toucher l'écran.</h2>
+    <div class="feature flip" style="border:none;">
+      <div class="txt">
+        <p>Pincez deux fois le pouce et l'index : DROPP met la perfusion en pause, ou la relance. Mains prises, mains gantées — le geste natif de l'Apple Watch répond au poignet, sans contact.</p>
+        <p class="muted" style="font-size:12.5px; margin-top:12px;">Apple Watch Series 9 et ultérieures.</p>
+      </div>
+      <div class="viz" style="max-width:230px;margin:0 auto;" aria-hidden="true"><svg viewBox="0 0 240 262">
+        <rect x="88" y="4" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="88" y="232" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="20" y="26" width="200" height="210" rx="50" class="surf" stroke="var(--soft)" stroke-width="2"/>
+        <rect x="221" y="98" width="12" height="30" rx="5" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <clipPath id="dtclip"><rect x="34" y="40" width="172" height="182" rx="40"/></clipPath>
+        <g clip-path="url(#dtclip)">
+          <circle cx="120" cy="131" r="34" fill="none" stroke="var(--faint)" stroke-width="2" class="dt-ring"/>
+          <circle cx="120" cy="131" r="34" fill="none" stroke="var(--faint)" stroke-width="1.6" class="dt-ring r2"/>
+          <g class="dt-run">
+            <text x="120" y="128" text-anchor="middle" class="num ink" font-size="48">42</text>
+            <text x="120" y="152" text-anchor="middle" class="soft" font-size="11">gtt / min</text>
+          </g>
+          <g class="dt-pause">
+            <path d="M 110 114 v 34 l 26 -17 z" class="ink"/>
+            <text x="120" y="172" text-anchor="middle" class="soft" font-size="11">en pause</text>
+          </g>
+        </g>
+      </svg>
+      <p class="dt-cap">Pincez deux fois — pause, puis reprise.</p>
+      </div>
     </div>
   </section>
   <section>
