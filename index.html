@@ -242,7 +242,6 @@
     margin-left:-1px; background:var(--ink); border-radius:1px; z-index:2; }
   .roller::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
     background:linear-gradient(90deg, var(--surface), rgba(239,233,222,0) 24%, rgba(239,233,222,0) 76%, var(--surface)); }
-  .chint { font-size:11px; color:var(--body); margin:10px 0 0; }
   .cres { border-top:1px solid var(--rule); margin-top:10px; padding-top:16px;
     display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
   .cres > div { transition:opacity .18s; }
@@ -581,7 +580,7 @@
     <div class="feature">
       <div class="txt">
         <h3>Calculez</h3>
-        <p>Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL. Rien à retenir, rien à refaire.</p>
+        <p>Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL — la démo est calée sur 20. Rien à retenir, rien à refaire.</p>
       </div>
       <div class="viz">
         <p class="try">Essayez</p>
@@ -598,7 +597,6 @@
             <div><span class="sec" id="cMlh">125</span><span class="cu">mL / h</span></div>
           </div>
           <p class="cwarn">Hors plage plausible — l'app refuse de battre un tempo absurde.</p>
-          <p class="chint">Molettes à glisser — comme dans l'app. Démo réglée sur un perfuseur 20 gtt/mL.</p>
         </div>
       </div>
     </div>
@@ -696,7 +694,7 @@
     <h2>Un geste, sans toucher l'écran.</h2>
     <div class="feature flip" style="border:none;">
       <div class="txt">
-        <p>Pincez deux fois le pouce et l'index : DROPP met la perfusion en pause, ou la relance. Mains prises, mains gantées — le geste natif de l'Apple Watch répond au poignet, sans contact.</p>
+        <p>Pincez deux fois le pouce et l'index : selon l'écran, DROPP lance la perfusion, la met en pause, la reprend, ou acquitte une alerte. Mains prises, mains gantées — le geste natif de l'Apple Watch répond au poignet, sans contact.</p>
         <p class="muted" style="font-size:12.5px; margin-top:12px;">Apple Watch Series 9 et ultérieures.</p>
       </div>
       <div class="viz" style="max-width:230px;margin:0 auto;" aria-hidden="true"><svg viewBox="0 0 240 262">
@@ -718,7 +716,7 @@
           </g>
         </g>
       </svg>
-      <p class="dt-cap">Pincez deux fois — pause, puis reprise.</p>
+      <p class="dt-cap">Lancer · Pause · Reprendre · Acquitter</p>
       </div>
     </div>
   </section>
