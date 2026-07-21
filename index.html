@@ -480,6 +480,15 @@
     .t-fill{width:120px} .t-pre{opacity:1} .t-end{opacity:1} .t-endban{transform:translateY(0)}
     .demo-dots i:nth-child(2){background:var(--ink)}
   }
+  #film .eyebrow, #film h2 { text-align:center; max-width:none; }
+  .film { position:relative; max-width:840px; margin:26px auto 0; border-radius:22px; overflow:hidden; background:var(--surface); box-shadow:0 12px 44px rgba(58,56,52,.16); }
+  .film-v { display:block; width:100%; height:auto; }
+  .film-snd { position:absolute; right:14px; bottom:14px; z-index:2; font:600 12px/1 inherit; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); background:rgba(255,253,248,.82); border:1px solid rgba(58,56,52,.14); border-radius:999px; padding:9px 16px; cursor:pointer; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .2s, color .2s; }
+  .film-snd:hover { background:rgba(255,253,248,.96); }
+  .film-snd[aria-pressed="true"] { color:var(--bg); background:var(--ink); border-color:var(--ink); }
+  .film-snd.muted { animation:filmpulse 2.4s ease-in-out infinite; }
+  @keyframes filmpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(58,56,52,0); } 50%{ box-shadow:0 0 0 5px rgba(58,56,52,.10); } }
+  @media (prefers-reduced-motion:reduce){ .film-snd.muted { animation:none; } }
 </style>
 </head>
 <body>
@@ -625,7 +634,7 @@
         <div class="cal">
           <div class="calcols">
             <div><p class="colhead">La perfusion</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
-            <div><p class="colhead">Le tempo Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate">42 gtt/min</span></div>
+            <div><p class="colhead">Le tempo Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate" id="calTarget">42 gtt/min</span></div>
           </div>
           <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Molette de la perfusion — réglez jusqu'à l'unisson">
           <div class="mlab"><span>la molette</span></div>
@@ -852,6 +861,49 @@
       <p class="dnote">Ce panneau reprend le thème Graphite de l'app, inclus avec Dropp Pro.</p>
       </div>
     </div>
+  </section>
+  <section id="film">
+    <p class="eyebrow">Le film</p>
+    <h2>Le rythme, en mouvement.</h2>
+    <div class="film">
+      <video id="filmVid" class="film-v" loop playsinline preload="metadata" poster="dropp-film-poster.jpg" aria-label="Film de présentation DROPP">
+        <source src="dropp-film.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="film-snd" id="filmSnd" aria-pressed="false" aria-label="Activer le son">Son</button>
+    </div>
+    <script>
+    (function(){
+      var v=document.getElementById('filmVid'), b=document.getElementById('filmSnd'), userSet=false;
+      if(!v||!b){return;}
+      function sync(){
+        var on=!v.muted;
+        b.setAttribute('aria-pressed',String(on));
+        b.setAttribute('aria-label',on?'Couper le son':'Activer le son');
+        b.classList.toggle('muted', v.muted);
+      }
+      function enter(){
+        if(userSet){ v.play().catch(function(){}); sync(); return; }
+        // On tente le son d'office ; si le navigateur bloque (aucune
+        // interaction encore), repli en muet, le bouton Son reste offert.
+        v.muted=false;
+        var p=v.play();
+        if(p&&p.catch){ p.catch(function(){ v.muted=true; v.play().catch(function(){}); sync(); }); }
+        sync();
+      }
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){es.forEach(function(e){
+          if(e.isIntersecting){enter();}else{v.pause();}
+        });},{threshold:.4}).observe(v);
+      }else{enter();}
+      b.addEventListener('click',function(){
+        userSet=true;
+        v.muted=!v.muted;
+        if(!v.muted){v.play().catch(function(){});}
+        sync();
+      });
+      sync();
+    })();
+    </script>
   </section>
   <section id="pro">
     <p class="eyebrow">Gratuit et Pro</p>
@@ -1162,7 +1214,7 @@
   /* Calculez — le calcul exact de l'app, réglé aux molettes-rouleaux
      (parité app : glisser pour ajuster, un cran = un pas).
      Facteur fixé à 20 gtt/mL pour la démo (note affichée dans la carte). */
-  var vol=500, dur=240, FACTOR=20, calc=$('calc');
+  var vol=500, dur=240, FACTOR=20, calc=$('calc'), onCalcChange=null;
   function fmtDur(m){ var h=Math.floor(m/60), r=m%60;
     return h ? (r ? h+' h '+(r<10?'0':'')+r : h+' h') : r+' min'; }
   function render(){
@@ -1178,6 +1230,7 @@
     $('cRate').textContent = ok ? rate : '—';
     $('cInt').textContent  = ok ? (60/rate).toFixed(2).replace('.',',') : '—';
     $('cMlh').textContent  = ok ? Math.round(vol/dur*60) : '—';
+    if(onCalcChange && ok) onCalcChange(rate);
   }
   function roller(el, cfg){
     var PX=16, ticks=el.querySelector('.ticks'), sx=0, sv=0, drag=false;
@@ -1272,6 +1325,21 @@
   });
   lastV = +mol.value;
   setRate(lastV);
+
+  /* Lien immersif : le tempo Dropp de « Calez » = le débit calculé dans
+     « Calculez ». Ajuster Volume/Durée déplace la cible du comparateur et
+     son battement ; la molette s'adapte pour rester atteignable. */
+  var calTarget = $('calTarget');
+  onCalcChange = function(rate){
+    TARGET = rate;
+    if(calTarget) calTarget.textContent = rate + ' gtt/min';
+    var lo = Math.max(1, rate-18), hi = rate+18;
+    mol.min = lo; mol.max = hi;
+    var start = Math.max(lo, rate-8);
+    mol.value = start; lastV = start;
+    setRate(start);
+  };
+  onCalcChange(Math.max(1, Math.round(vol*FACTOR/dur)));
 
   /* Tap — cadence observée, en fréquence par minute */
   var taps=[], pad=$('tapPad'), ring=$('tapRing');
