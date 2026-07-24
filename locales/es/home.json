@@ -175,7 +175,9 @@
     "freeItem4": "La alarma de fin — para siempre",
     "freeItem5": "Sin anuncios, sin cuenta",
     "freeNote": "La alarma de fin es una señal de seguridad: nunca será de pago.",
-    "cta": "Descargar en el App Store"
+    "cta": "Descargar en el App Store",
+    "subscriptionTerms": "Suscripción de renovación automática, cancelable en cualquier momento en los ajustes de tu cuenta de Apple al menos 24 h antes de la renovación. La prueba de 7 días continúa como suscripción anual salvo que la canceles antes de que termine. La compra de por vida es un pago único, sin suscripción.",
+    "eulaLabel": "Condiciones de uso (EULA)"
   },
   "trust": {
     "eyebrow": "Confianza",
@@ -240,5 +242,15 @@
     "tapTooFast": "demasiado rápido — repite",
     "soundOn": "Activar el sonido",
     "soundOff": "Silenciar"
+  },
+  "creator": {
+    "eyebrow": "Por qué Dropp",
+    "title": "Hecho por un sanitario, junto a la cama.",
+    "body": "Dropp nació junto a la cama del paciente, no delante de una hoja de cálculo. Como enfermero, recalculé la misma fórmula una vez de más entre dos timbres — así que hice la herramienta que me habría gustado tener. Sin cuenta, sin publicidad, sin reventa de datos."
+  },
+  "formula": {
+    "eyebrow": "Cómo se calcula",
+    "title": "Nada de magia. La fórmula que ya conoces.",
+    "body": "Ritmo (gtt/min) = volumen (mL) × factor (gtt/mL) ÷ duración (min). El factor sigue tu equipo de perfusión: 10, 15, 20 o 60. Dropp redondea a la gota más cercana y rechaza cualquier valor fuera del rango plausible."
   }
 }

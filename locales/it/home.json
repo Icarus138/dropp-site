@@ -175,7 +175,9 @@
     "freeItem4": "La sveglia di fine — per sempre",
     "freeItem5": "Nessuna pubblicità, nessun account",
     "freeNote": "La sveglia di fine è un segnale di sicurezza: non sarà mai a pagamento.",
-    "cta": "Scarica su App Store"
+    "cta": "Scarica su App Store",
+    "subscriptionTerms": "Abbonamento con rinnovo automatico, disdicibile in qualsiasi momento nelle impostazioni del tuo account Apple almeno 24 ore prima della scadenza. La prova di 7 giorni prosegue come abbonamento annuale salvo disdetta prima del suo termine. L'acquisto a vita è un pagamento unico, senza abbonamento.",
+    "eulaLabel": "Condizioni d'uso (EULA)"
   },
   "trust": {
     "eyebrow": "Fiducia",
@@ -240,5 +242,15 @@
     "tapTooFast": "troppo veloce — riprova",
     "soundOn": "Attiva l'audio",
     "soundOff": "Disattiva l'audio"
+  },
+  "creator": {
+    "eyebrow": "Perché Dropp",
+    "title": "Creato da un infermiere, al letto del paziente.",
+    "body": "Dropp è nato al letto del paziente, non davanti a un foglio di calcolo. Da infermiere, ho ricalcolato una volta di troppo la stessa formula tra due chiamate — così ho creato lo strumento che avrei voluto avere. Senza account, senza pubblicità, senza rivendita dei dati."
+  },
+  "formula": {
+    "eyebrow": "Come calcola",
+    "title": "Niente di magico. La formula che conosci.",
+    "body": "Flusso (gtt/min) = volume (mL) × fattore (gtt/mL) ÷ durata (min). Il fattore segue il tuo deflussore: 10, 15, 20 o 60. Dropp arrotonda alla goccia e rifiuta qualsiasi valore fuori dall'intervallo plausibile."
   }
 }

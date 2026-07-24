@@ -483,6 +483,9 @@
   .tenet span { color:var(--body); }
   .clinic { font-size:12px; color:var(--body); border-inline-start:2px solid var(--rule);
     padding-inline-start:14px; margin-top:24px; max-width:56ch; }
+  /* Conditions d'abonnement sous les tarifs : petit, lisible (AA). */
+  .submeta { font-size:11.5px; line-height:1.7; color:var(--body); margin-top:16px; max-width:60ch; }
+  .submeta a { color:var(--ink); text-underline-offset:2px; }
 
   /* FAQ */
   details { border-bottom:1px solid var(--rule); padding:4px 0; max-width:680px; }
@@ -1145,6 +1148,11 @@ window.I18N = (function(){
     })();
     </script>
   </section>
+  <section>
+    <p class="eyebrow">Warum Dropp</p>
+    <h2>Von einer Pflegekraft entwickelt, am Krankenbett.</h2>
+    <p class="muted" style="font-size:15px; max-width:56ch;">Dropp ist am Krankenbett entstanden, nicht vor einer Tabellenkalkulation. Als Krankenpfleger habe ich einmal zu oft dieselbe Formel zwischen zwei Klingelrufen neu berechnet – also habe ich das Werkzeug gebaut, das ich mir gewünscht hätte. Ohne Konto, ohne Werbung, ohne Weiterverkauf von Daten.</p>
+  </section>
   <section id="pro">
     <p class="eyebrow">Gratis und Pro</p>
     <h2>Das Wesentliche ist gratis. Pro hält mit Ihrer Schicht mit.</h2>
@@ -1178,6 +1186,12 @@ window.I18N = (function(){
     <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
       <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_pricing" target="_blank" rel="noopener">Im App Store laden</a>
     </div>
+    <p class="submeta">Automatisch verlängerndes Abonnement, jederzeit in den Einstellungen Ihres Apple-Kontos kündbar, mindestens 24 Stunden vor der Verlängerung. Die 7-tägige Testphase geht in ein Jahresabonnement über, sofern sie nicht vor ihrem Ende gekündigt wird. Der lebenslange Kauf ist eine einmalige Zahlung, ohne Abonnement. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Nutzungsbedingungen (EULA)</a>.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Wie es rechnet</p>
+    <h2>Nichts Magisches. Die Formel, die Sie kennen.</h2>
+    <p class="muted" style="font-size:14.5px; max-width:56ch;">Durchflussrate (gtt/min) = Volumen (mL) × Faktor (gtt/mL) ÷ Dauer (min). Der Faktor richtet sich nach Ihrem Infusionsbesteck: 10, 15, 20 oder 60. Dropp rundet auf den Tropfen genau und weist jeden Wert außerhalb des plausiblen Bereichs zurück.</p>
   </section>
   <section>
     <p class="eyebrow">Vertrauen</p>

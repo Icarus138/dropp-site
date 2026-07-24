@@ -175,7 +175,9 @@
     "freeItem4": "Der End-Alarm — für immer",
     "freeItem5": "Keine Werbung, kein Konto",
     "freeNote": "Der End-Alarm ist ein Sicherheitssignal: Er wird nie kostenpflichtig.",
-    "cta": "Im App Store laden"
+    "cta": "Im App Store laden",
+    "subscriptionTerms": "Automatisch verlängerndes Abonnement, jederzeit in den Einstellungen Ihres Apple-Kontos kündbar, mindestens 24 Stunden vor der Verlängerung. Die 7-tägige Testphase geht in ein Jahresabonnement über, sofern sie nicht vor ihrem Ende gekündigt wird. Der lebenslange Kauf ist eine einmalige Zahlung, ohne Abonnement.",
+    "eulaLabel": "Nutzungsbedingungen (EULA)"
   },
   "trust": {
     "eyebrow": "Vertrauen",
@@ -240,5 +242,15 @@
     "tapTooFast": "zu schnell — neu beginnen",
     "soundOn": "Ton einschalten",
     "soundOff": "Ton ausschalten"
+  },
+  "creator": {
+    "eyebrow": "Warum Dropp",
+    "title": "Von einer Pflegekraft entwickelt, am Krankenbett.",
+    "body": "Dropp ist am Krankenbett entstanden, nicht vor einer Tabellenkalkulation. Als Krankenpfleger habe ich einmal zu oft dieselbe Formel zwischen zwei Klingelrufen neu berechnet – also habe ich das Werkzeug gebaut, das ich mir gewünscht hätte. Ohne Konto, ohne Werbung, ohne Weiterverkauf von Daten."
+  },
+  "formula": {
+    "eyebrow": "Wie es rechnet",
+    "title": "Nichts Magisches. Die Formel, die Sie kennen.",
+    "body": "Durchflussrate (gtt/min) = Volumen (mL) × Faktor (gtt/mL) ÷ Dauer (min). Der Faktor richtet sich nach Ihrem Infusionsbesteck: 10, 15, 20 oder 60. Dropp rundet auf den Tropfen genau und weist jeden Wert außerhalb des plausiblen Bereichs zurück."
   }
 }

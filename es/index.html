@@ -483,6 +483,9 @@
   .tenet span { color:var(--body); }
   .clinic { font-size:12px; color:var(--body); border-inline-start:2px solid var(--rule);
     padding-inline-start:14px; margin-top:24px; max-width:56ch; }
+  /* Conditions d'abonnement sous les tarifs : petit, lisible (AA). */
+  .submeta { font-size:11.5px; line-height:1.7; color:var(--body); margin-top:16px; max-width:60ch; }
+  .submeta a { color:var(--ink); text-underline-offset:2px; }
 
   /* FAQ */
   details { border-bottom:1px solid var(--rule); padding:4px 0; max-width:680px; }
@@ -1145,6 +1148,11 @@ window.I18N = (function(){
     })();
     </script>
   </section>
+  <section>
+    <p class="eyebrow">Por qué Dropp</p>
+    <h2>Hecho por un sanitario, junto a la cama.</h2>
+    <p class="muted" style="font-size:15px; max-width:56ch;">Dropp nació junto a la cama del paciente, no delante de una hoja de cálculo. Como enfermero, recalculé la misma fórmula una vez de más entre dos timbres — así que hice la herramienta que me habría gustado tener. Sin cuenta, sin publicidad, sin reventa de datos.</p>
+  </section>
   <section id="pro">
     <p class="eyebrow">Gratis y Pro</p>
     <h2>Lo esencial es gratis. Pro sigue tu turno.</h2>
@@ -1178,6 +1186,12 @@ window.I18N = (function(){
     <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
       <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_pricing" target="_blank" rel="noopener">Descargar en el App Store</a>
     </div>
+    <p class="submeta">Suscripción de renovación automática, cancelable en cualquier momento en los ajustes de tu cuenta de Apple al menos 24 h antes de la renovación. La prueba de 7 días continúa como suscripción anual salvo que la canceles antes de que termine. La compra de por vida es un pago único, sin suscripción. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Condiciones de uso (EULA)</a>.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Cómo se calcula</p>
+    <h2>Nada de magia. La fórmula que ya conoces.</h2>
+    <p class="muted" style="font-size:14.5px; max-width:56ch;">Ritmo (gtt/min) = volumen (mL) × factor (gtt/mL) ÷ duración (min). El factor sigue tu equipo de perfusión: 10, 15, 20 o 60. Dropp redondea a la gota más cercana y rechaza cualquier valor fuera del rango plausible.</p>
   </section>
   <section>
     <p class="eyebrow">Confianza</p>

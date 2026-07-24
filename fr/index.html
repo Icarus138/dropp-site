@@ -483,6 +483,9 @@
   .tenet span { color:var(--body); }
   .clinic { font-size:12px; color:var(--body); border-inline-start:2px solid var(--rule);
     padding-inline-start:14px; margin-top:24px; max-width:56ch; }
+  /* Conditions d'abonnement sous les tarifs : petit, lisible (AA). */
+  .submeta { font-size:11.5px; line-height:1.7; color:var(--body); margin-top:16px; max-width:60ch; }
+  .submeta a { color:var(--ink); text-underline-offset:2px; }
 
   /* FAQ */
   details { border-bottom:1px solid var(--rule); padding:4px 0; max-width:680px; }
@@ -1145,6 +1148,11 @@ window.I18N = (function(){
     })();
     </script>
   </section>
+  <section>
+    <p class="eyebrow">Pourquoi Dropp</p>
+    <h2>Conçu par un soignant, au chevet.</h2>
+    <p class="muted" style="font-size:15px; max-width:56ch;">Dropp est né au chevet, pas devant un tableur. Infirmier, j'ai recalculé une fois de trop la même formule entre deux sonnettes — alors j'ai fait l'outil que j'aurais voulu avoir. Sans compte, sans publicité, sans revente de données.</p>
+  </section>
   <section id="pro">
     <p class="eyebrow">Gratuit et Pro</p>
     <h2>L'essentiel est gratuit. Le Pro suit votre garde.</h2>
@@ -1178,6 +1186,12 @@ window.I18N = (function(){
     <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
       <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_pricing" target="_blank" rel="noopener">Télécharger sur l'App Store</a>
     </div>
+    <p class="submeta">Abonnement à renouvellement automatique, résiliable à tout moment dans les réglages de votre compte Apple au moins 24 h avant l'échéance. L'essai de 7 jours se poursuit en abonnement annuel sauf résiliation avant son terme. L'achat à vie est un paiement unique, sans abonnement. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Conditions d'utilisation (EULA)</a>.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Comment ça calcule</p>
+    <h2>Rien de magique. La formule que vous connaissez.</h2>
+    <p class="muted" style="font-size:14.5px; max-width:56ch;">Débit (gtt/min) = volume (mL) × facteur (gtt/mL) ÷ durée (min). Le facteur suit votre perfuseur : 10, 15, 20 ou 60. Dropp arrondit à la goutte près et refuse toute valeur hors plage plausible.</p>
   </section>
   <section>
     <p class="eyebrow">Confiance</p>

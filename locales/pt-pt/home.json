@@ -175,7 +175,9 @@
     "freeItem4": "O alarme de fim — para sempre",
     "freeItem5": "Sem publicidade, sem conta",
     "freeNote": "O alarme de fim é um sinal de segurança: nunca será pago.",
-    "cta": "Transferir na App Store"
+    "cta": "Transferir na App Store",
+    "subscriptionTerms": "Subscrição de renovação automática, cancelável a qualquer momento nas definições da sua Conta Apple até 24 h antes da renovação. O período experimental de 7 dias prossegue como subscrição anual, salvo cancelamento antes do seu termo. A compra vitalícia é um pagamento único, sem subscrição.",
+    "eulaLabel": "Condições de Utilização (EULA)"
   },
   "trust": {
     "eyebrow": "Confiança",
@@ -240,5 +242,15 @@
     "tapTooFast": "demasiado depressa — recomece",
     "soundOn": "Ativar o som",
     "soundOff": "Desativar o som"
+  },
+  "creator": {
+    "eyebrow": "Porquê o Dropp",
+    "title": "Feito por um cuidador, à cabeceira.",
+    "body": "O Dropp nasceu à cabeceira, não em frente a uma folha de cálculo. Enfermeiro, recalculei uma vez a mais a mesma fórmula entre duas campainhas — por isso criei a ferramenta que gostaria de ter tido. Sem conta, sem publicidade, sem revenda de dados."
+  },
+  "formula": {
+    "eyebrow": "Como calcula",
+    "title": "Nada de mágico. A fórmula que conhece.",
+    "body": "Débito (gtt/min) = volume (mL) × fator (gtt/mL) ÷ duração (min). O fator segue o seu perfusor: 10, 15, 20 ou 60. O Dropp arredonda à gota mais próxima e recusa qualquer valor fora do intervalo plausível."
   }
 }

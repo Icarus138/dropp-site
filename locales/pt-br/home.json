@@ -175,7 +175,9 @@
     "freeItem4": "O alarme de fim — para sempre",
     "freeItem5": "Sem anúncios, sem conta",
     "freeNote": "O alarme de fim é um sinal de segurança: nunca será pago.",
-    "cta": "Baixar na App Store"
+    "cta": "Baixar na App Store",
+    "subscriptionTerms": "Assinatura com renovação automática, cancelável a qualquer momento nos ajustes da sua Conta Apple até pelo menos 24 h antes da renovação. O teste de 7 dias continua como assinatura anual, salvo cancelamento antes do término. A compra vitalícia é um pagamento único, sem assinatura.",
+    "eulaLabel": "Termos de Uso (EULA)"
   },
   "trust": {
     "eyebrow": "Confiança",
@@ -240,5 +242,15 @@
     "tapTooFast": "rápido demais — recomece",
     "soundOn": "Ativar o som",
     "soundOff": "Desativar o som"
+  },
+  "creator": {
+    "eyebrow": "Por que o Dropp",
+    "title": "Feito por um profissional de saúde, à beira do leito.",
+    "body": "O Dropp nasceu à beira do leito, não na frente de uma planilha. Como enfermeiro, recalculei a mesma fórmula uma vez a mais entre duas campainhas — então criei a ferramenta que eu queria ter tido. Sem conta, sem anúncios, sem revenda de dados."
+  },
+  "formula": {
+    "eyebrow": "Como o cálculo funciona",
+    "title": "Nada de mágica. A fórmula que você conhece.",
+    "body": "Vazão (gtt/min) = volume (mL) × fator (gtt/mL) ÷ duração (min). O fator segue o seu equipo: 10, 15, 20 ou 60. O Dropp arredonda para a gota mais próxima e recusa qualquer valor fora da faixa plausível."
   }
 }

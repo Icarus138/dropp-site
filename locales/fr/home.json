@@ -175,7 +175,19 @@
     "freeItem4": "L'alarme de fin — pour toujours",
     "freeItem5": "Aucune publicité, aucun compte",
     "freeNote": "L'alarme de fin est un repère essentiel : elle ne sera jamais payante.",
-    "cta": "Télécharger sur l'App Store"
+    "cta": "Télécharger sur l'App Store",
+    "subscriptionTerms": "Abonnement à renouvellement automatique, résiliable à tout moment dans les réglages de votre compte Apple au moins 24 h avant l'échéance. L'essai de 7 jours se poursuit en abonnement annuel sauf résiliation avant son terme. L'achat à vie est un paiement unique, sans abonnement.",
+    "eulaLabel": "Conditions d'utilisation (EULA)"
+  },
+  "creator": {
+    "eyebrow": "Pourquoi Dropp",
+    "title": "Conçu par un soignant, au chevet.",
+    "body": "Dropp est né au chevet, pas devant un tableur. Infirmier, j'ai recalculé une fois de trop la même formule entre deux sonnettes — alors j'ai fait l'outil que j'aurais voulu avoir. Sans compte, sans publicité, sans revente de données."
+  },
+  "formula": {
+    "eyebrow": "Comment ça calcule",
+    "title": "Rien de magique. La formule que vous connaissez.",
+    "body": "Débit (gtt/min) = volume (mL) × facteur (gtt/mL) ÷ durée (min). Le facteur suit votre perfuseur : 10, 15, 20 ou 60. Dropp arrondit à la goutte près et refuse toute valeur hors plage plausible."
   },
   "trust": {
     "eyebrow": "Confiance",

@@ -175,7 +175,9 @@
     "freeItem4": "Het eindalarm — voor altijd",
     "freeItem5": "Geen advertenties, geen account",
     "freeNote": "Het eindalarm is een veiligheidssignaal: het wordt nooit betaald.",
-    "cta": "Download in de App Store"
+    "cta": "Download in de App Store",
+    "subscriptionTerms": "Automatisch verlengend abonnement, op elk moment opzegbaar in de instellingen van uw Apple-account, ten minste 24 uur vóór de verlenging. De proefperiode van 7 dagen loopt automatisch door als jaarabonnement, tenzij u vóór het einde opzegt. De levenslange aankoop is een eenmalige betaling, zonder abonnement.",
+    "eulaLabel": "Gebruiksvoorwaarden (EULA)"
   },
   "trust": {
     "eyebrow": "Vertrouwen",
@@ -240,5 +242,15 @@
     "tapTooFast": "te snel — begin opnieuw",
     "soundOn": "Geluid inschakelen",
     "soundOff": "Geluid uitschakelen"
+  },
+  "creator": {
+    "eyebrow": "Waarom Dropp",
+    "title": "Gemaakt door een zorgverlener, aan het bed.",
+    "body": "Dropp is ontstaan aan het bed, niet achter een spreadsheet. Als verpleegkundige heb ik één keer te vaak dezelfde formule herberekend tussen twee bellen door — dus maakte ik het hulpmiddel dat ik zelf had willen hebben. Geen account, geen advertenties, geen doorverkoop van gegevens."
+  },
+  "formula": {
+    "eyebrow": "Hoe het rekent",
+    "title": "Niets magisch. De formule die u kent.",
+    "body": "Snelheid (gtt/min) = volume (mL) × factor (gtt/mL) ÷ duur (min). De factor volgt uw infuussysteem: 10, 15, 20 of 60. Dropp rondt af tot op de druppel nauwkeurig en weigert elke waarde buiten het aannemelijke bereik."
   }
 }

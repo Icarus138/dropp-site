@@ -175,7 +175,19 @@
     "freeItem4": "The end alarm — forever",
     "freeItem5": "No ads, no account",
     "freeNote": "The end alarm is a safety signal: it will never be paywalled.",
-    "cta": "Download on the App Store"
+    "cta": "Download on the App Store",
+    "subscriptionTerms": "Auto-renewing subscription, cancellable anytime in your Apple Account settings at least 24 h before renewal. The 7-day trial continues as an annual subscription unless cancelled before it ends. The lifetime purchase is a one-time payment, no subscription.",
+    "eulaLabel": "Terms of Use (EULA)"
+  },
+  "creator": {
+    "eyebrow": "Why Dropp",
+    "title": "Made by a caregiver, at the bedside.",
+    "body": "Dropp was born at the bedside, not in front of a spreadsheet. As a nurse, I recalculated the same formula one time too many between two call bells — so I built the tool I wished I had. No account, no ads, no data resold."
+  },
+  "formula": {
+    "eyebrow": "How it computes",
+    "title": "No magic. The formula you know.",
+    "body": "Rate (gtt/min) = volume (mL) × factor (gtt/mL) ÷ duration (min). The factor matches your infusion set: 10, 15, 20 or 60. Dropp rounds to the nearest drop and refuses any value outside the plausible range."
   },
   "trust": {
     "eyebrow": "Trust",
