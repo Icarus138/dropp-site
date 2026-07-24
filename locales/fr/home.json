@@ -17,7 +17,8 @@
     "finalTitle": "Continuez le soin.",
     "finalSub": "DROPP garde le rythme et suit le temps.",
     "trust": "Sans compte · Sans publicité · Données locales",
-    "hint": "Découvrir DROPP"
+    "hint": "Découvrir DROPP",
+    "getFree": "Télécharger gratuitement"
   },
   "units": {
     "gttMin": "gtt / min",

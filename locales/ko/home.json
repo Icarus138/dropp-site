@@ -17,7 +17,8 @@
     "finalTitle": "케어를 이어 가세요.",
     "finalSub": "DROPP이 리듬을 지키고 시간을 살핍니다.",
     "trust": "계정 없음 · 광고 없음 · 데이터는 기기에",
-    "hint": "DROPP 살펴보기"
+    "hint": "DROPP 살펴보기",
+    "getFree": "무료로 다운로드"
   },
   "units": {
     "gttMin": "gtt / min",

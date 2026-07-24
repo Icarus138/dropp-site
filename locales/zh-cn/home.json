@@ -17,7 +17,8 @@
     "finalTitle": "继续护理。",
     "finalSub": "DROPP 稳住节奏，替你看着时间。",
     "trust": "无需账户 · 无广告 · 数据留在本机",
-    "hint": "了解 DROPP"
+    "hint": "了解 DROPP",
+    "getFree": "免费下载"
   },
   "units": {
     "gttMin": "滴 / 分",
