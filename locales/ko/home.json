@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — 리듬은 손목에. 마음은 케어에.",
-    "description": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 눈앞과 손목에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이. 곧 App Store에.",
-    "ogDescription": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 템포를 짚어 주며, 끝날 때 알려 줍니다. iPhone과 Apple Watch에서. 곧 App Store에.",
+    "description": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 눈앞과 손목에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이. App Store에서 이용 가능.",
+    "ogDescription": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 템포를 짚어 주며, 끝날 때 알려 줍니다. iPhone과 Apple Watch에서. App Store에서 이용 가능.",
     "jsonLdDescription": "용량과 시간만 입력하면 Dropp이 수액의 방울 속도를 계산하고, iPhone과 Apple Watch에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이."
   },
   "hero": {
-    "soon": "곧 App Store에",
+    "soon": "App Store에서 이용 가능",
     "sign": "리듬 · 정밀 · 케어",
     "tagline": "리듬은 손목에.<br>마음은 케어에.",
     "sub": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 템포를 짚어 주며, 끝날 때 알려 줍니다.",
@@ -174,7 +174,7 @@
     "freeItem4": "종료 알람 — 영원히",
     "freeItem5": "광고 없음, 계정 없음",
     "freeNote": "종료 알람은 안전 신호입니다: 결코 유료가 되지 않습니다.",
-    "cta": "App Store에서 사전 주문"
+    "cta": "App Store에서 다운로드"
   },
   "trust": {
     "eyebrow": "신뢰",
@@ -206,18 +206,24 @@
   "closing": {
     "iconAlt": "Dropp 앱 아이콘",
     "eyebrow": "2026년 여름",
-    "title": "곧 App Store에.",
+    "title": "App Store에서 이용 가능.",
     "byline": "의료인이 설계하고 현장에서 검증했습니다 — 주의를 중요한 곳에 두기 위해.",
     "cta": "DROPP의 작동을 다시 보기"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "other": "{v}밀리리터" },
+    "mlLong": {
+      "other": "{v}밀리리터"
+    },
     "durH": "{h}시간",
     "durHM": "{h}시간 {mm}분",
     "durM": "{m}분",
-    "durHLong": { "other": "{h}시간" },
-    "durMLong": { "other": "{m}분" },
+    "durHLong": {
+      "other": "{h}시간"
+    },
+    "durMLong": {
+      "other": "{m}분"
+    },
     "durJoin": "{hPart} {mPart}",
     "rate": "{v} gtt/min",
     "unison": "하나가 됨 — 바로 그곳",

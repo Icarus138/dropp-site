@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — Het ritme om je pols. Je aandacht bij de zorg.",
-    "description": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan — voor je ogen en om je pols — en waarschuwt je aan het eind. Zonder account, zonder gegevensverzameling. Binnenkort in de App Store.",
-    "ogDescription": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan en waarschuwt je aan het eind. Op iPhone en Apple Watch. Binnenkort in de App Store.",
+    "description": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan — voor je ogen en om je pols — en waarschuwt je aan het eind. Zonder account, zonder gegevensverzameling. Beschikbaar in de App Store.",
+    "ogDescription": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan en waarschuwt je aan het eind. Op iPhone en Apple Watch. Beschikbaar in de App Store.",
     "jsonLdDescription": "Volume, duur: Dropp berekent de druppelsnelheid van het infuus, geeft het tempo aan op iPhone en Apple Watch en waarschuwt je aan het eind. Zonder account, zonder gegevensverzameling."
   },
   "hero": {
-    "soon": "Binnenkort in de App Store",
+    "soon": "Beschikbaar in de App Store",
     "sign": "Ritme · Precisie · Zorg",
     "tagline": "Het ritme om je pols.<br>Je aandacht bij de zorg.",
     "sub": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan en waarschuwt je aan het eind.",
@@ -174,7 +174,7 @@
     "freeItem4": "Het eindalarm — voor altijd",
     "freeItem5": "Geen advertenties, geen account",
     "freeNote": "Het eindalarm is een veiligheidssignaal: het wordt nooit betaald.",
-    "cta": "Vooraf bestellen in de App Store"
+    "cta": "Download in de App Store"
   },
   "trust": {
     "eyebrow": "Vertrouwen",
@@ -206,18 +206,27 @@
   "closing": {
     "iconAlt": "Pictogram van de Dropp-app",
     "eyebrow": "Zomer 2026",
-    "title": "Binnenkort in de App Store.",
+    "title": "Beschikbaar in de App Store.",
     "byline": "Ontworpen door een zorgverlener, beproefd in de praktijk — om de aandacht te houden waar die telt.",
     "cta": "Bekijk DROPP opnieuw in actie"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "one": "{v} milliliter", "other": "{v} milliliter" },
+    "mlLong": {
+      "one": "{v} milliliter",
+      "other": "{v} milliliter"
+    },
     "durH": "{h} h",
     "durHM": "{h} h {mm}",
     "durM": "{m} min",
-    "durHLong": { "one": "{h} uur", "other": "{h} uur" },
-    "durMLong": { "one": "{m} minuut", "other": "{m} minuten" },
+    "durHLong": {
+      "one": "{h} uur",
+      "other": "{h} uur"
+    },
+    "durMLong": {
+      "one": "{m} minuut",
+      "other": "{m} minuten"
+    },
     "durJoin": "{hPart} {mPart}",
     "rate": "{v} gtt/min",
     "unison": "gelijk — je zit goed",

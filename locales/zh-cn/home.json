@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — 节奏在腕间，专注在护理。",
-    "description": "输入容量和时长，DROPP 便算出滴速，在眼前和腕上打出节拍，并在结束时提醒你。无需账户，不收集数据。即将登陆 App Store。",
-    "ogDescription": "输入容量和时长，DROPP 便算出滴速，打出节拍，并在结束时提醒你。支持 iPhone 和 Apple Watch。即将登陆 App Store。",
+    "description": "输入容量和时长，DROPP 便算出滴速，在眼前和腕上打出节拍，并在结束时提醒你。无需账户，不收集数据。现已上架 App Store。",
+    "ogDescription": "输入容量和时长，DROPP 便算出滴速，打出节拍，并在结束时提醒你。支持 iPhone 和 Apple Watch。现已上架 App Store。",
     "jsonLdDescription": "输入容量和时长，Dropp 便算出输液滴速，在 iPhone 和 Apple Watch 上打出节拍，并在结束时提醒你。无需账户，不收集数据。"
   },
   "hero": {
-    "soon": "即将登陆 App Store",
+    "soon": "现已上架 App Store",
     "sign": "节奏 · 精准 · 护理",
     "tagline": "节奏在腕间，<br>专注在护理。",
     "sub": "输入容量和时长，DROPP 便算出滴速，打出节拍，并在结束时提醒你。",
@@ -174,7 +174,7 @@
     "freeItem4": "结束闹铃 — 永久保留",
     "freeItem5": "无广告，无账户",
     "freeNote": "结束闹铃是一道安全信号：永远不会收费。",
-    "cta": "在 App Store 预订"
+    "cta": "在 App Store 下载"
   },
   "trust": {
     "eyebrow": "信任",
@@ -206,18 +206,24 @@
   "closing": {
     "iconAlt": "Dropp 应用图标",
     "eyebrow": "2026 年夏",
-    "title": "即将登陆 App Store。",
+    "title": "现已上架 App Store。",
     "byline": "由一线护理者设计，在实践中检验 — 让注意力留在真正要紧的地方。",
     "cta": "再看一遍 DROPP 的运作"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "other": "{v} 毫升" },
+    "mlLong": {
+      "other": "{v} 毫升"
+    },
     "durH": "{h} 小时",
     "durHM": "{h} 小时 {mm} 分",
     "durM": "{m} 分钟",
-    "durHLong": { "other": "{h} 小时" },
-    "durMLong": { "other": "{m} 分钟" },
+    "durHLong": {
+      "other": "{h} 小时"
+    },
+    "durMLong": {
+      "other": "{m} 分钟"
+    },
     "durJoin": "{hPart} {mPart}",
     "rate": "{v} 滴/分",
     "unison": "合拍了 — 就对了",

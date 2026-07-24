@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — リズムは手首に。心はケアに。",
-    "description": "量と時間を入れれば、DROPPが滴下速度を計算し、目の前と手首でテンポを刻み、終了時に知らせます。アカウント不要、データ収集なし。まもなくApp Storeに。",
-    "ogDescription": "量と時間を入れれば、DROPPが滴下速度を計算し、テンポを刻み、終了時に知らせます。iPhoneとApple Watchで。まもなくApp Storeに。",
+    "description": "量と時間を入れれば、DROPPが滴下速度を計算し、目の前と手首でテンポを刻み、終了時に知らせます。アカウント不要、データ収集なし。App Storeで配信中。",
+    "ogDescription": "量と時間を入れれば、DROPPが滴下速度を計算し、テンポを刻み、終了時に知らせます。iPhoneとApple Watchで。App Storeで配信中。",
     "jsonLdDescription": "量と時間を入れれば、Droppが輸液の滴下速度を計算し、iPhoneとApple Watchでテンポを刻み、終了時に知らせます。アカウント不要、データ収集なし。"
   },
   "hero": {
-    "soon": "まもなくApp Storeに",
+    "soon": "App Storeで配信中",
     "sign": "リズム · 精度 · ケア",
     "tagline": "リズムは手首に。<br>心はケアに。",
     "sub": "量と時間を入れれば、DROPPが滴下速度を計算し、テンポを刻み、終了時に知らせます。",
@@ -174,7 +174,7 @@
     "freeItem4": "終了アラーム — ずっと",
     "freeItem5": "広告なし、アカウントなし",
     "freeNote": "終了アラームは安全のための合図です：有料になることは決してありません。",
-    "cta": "App Storeで予約注文"
+    "cta": "App Storeでダウンロード"
   },
   "trust": {
     "eyebrow": "信頼",
@@ -206,18 +206,24 @@
   "closing": {
     "iconAlt": "Droppアプリのアイコン",
     "eyebrow": "2026年夏",
-    "title": "まもなくApp Storeに。",
+    "title": "App Storeで配信中。",
     "byline": "医療者が設計し、現場で確かめた — 大切なところに注意を保つために。",
     "cta": "DROPPの動きをもう一度見る"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "other": "{v}ミリリットル" },
+    "mlLong": {
+      "other": "{v}ミリリットル"
+    },
     "durH": "{h}時間",
     "durHM": "{h}時間{mm}分",
     "durM": "{m}分",
-    "durHLong": { "other": "{h}時間" },
-    "durMLong": { "other": "{m}分" },
+    "durHLong": {
+      "other": "{h}時間"
+    },
+    "durMLong": {
+      "other": "{m}分"
+    },
     "durJoin": "{hPart}{mPart}",
     "rate": "{v} 滴/分",
     "unison": "一致 — そこです",

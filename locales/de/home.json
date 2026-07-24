@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — Der Rhythmus am Handgelenk. Der Kopf bei der Pflege.",
-    "description": "Volumen, Dauer: DROPP berechnet die Tropfrate, gibt den Takt vor – vor Ihren Augen und am Handgelenk – und meldet sich am Ende. Ohne Konto, ohne Datenerfassung. Bald im App Store.",
-    "ogDescription": "Volumen, Dauer: DROPP berechnet die Tropfrate, gibt den Takt vor und meldet sich am Ende. Auf iPhone und Apple Watch. Bald im App Store.",
+    "description": "Volumen, Dauer: DROPP berechnet die Tropfrate, gibt den Takt vor – vor Ihren Augen und am Handgelenk – und meldet sich am Ende. Ohne Konto, ohne Datenerfassung. Verfügbar im App Store.",
+    "ogDescription": "Volumen, Dauer: DROPP berechnet die Tropfrate, gibt den Takt vor und meldet sich am Ende. Auf iPhone und Apple Watch. Verfügbar im App Store.",
     "jsonLdDescription": "Volumen, Dauer: Dropp berechnet die Tropfrate der Infusion, gibt den Takt auf iPhone und Apple Watch vor und meldet sich am Ende. Ohne Konto, ohne Datenerfassung."
   },
   "hero": {
-    "soon": "Bald im App Store",
+    "soon": "Verfügbar im App Store",
     "sign": "Rhythmus · Präzision · Pflege",
     "tagline": "Der Rhythmus am Handgelenk.<br>Der Kopf bei der Pflege.",
     "sub": "Volumen, Dauer: DROPP berechnet die Tropfrate, gibt den Takt vor und meldet sich am Ende.",
@@ -174,7 +174,7 @@
     "freeItem4": "Der End-Alarm — für immer",
     "freeItem5": "Keine Werbung, kein Konto",
     "freeNote": "Der End-Alarm ist ein Sicherheitssignal: Er wird nie kostenpflichtig.",
-    "cta": "Im App Store vorbestellen"
+    "cta": "Im App Store laden"
   },
   "trust": {
     "eyebrow": "Vertrauen",
@@ -206,18 +206,27 @@
   "closing": {
     "iconAlt": "Symbol der Dropp App",
     "eyebrow": "Sommer 2026",
-    "title": "Bald im App Store.",
+    "title": "Verfügbar im App Store.",
     "byline": "Von einer Pflegekraft entwickelt, im Alltag erprobt – damit die Aufmerksamkeit dort bleibt, wo sie zählt.",
     "cta": "DROPP noch einmal in Aktion sehen"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "one": "{v} Milliliter", "other": "{v} Milliliter" },
+    "mlLong": {
+      "one": "{v} Milliliter",
+      "other": "{v} Milliliter"
+    },
     "durH": "{h} h",
     "durHM": "{h} h {mm}",
     "durM": "{m} min",
-    "durHLong": { "one": "{h} Stunde", "other": "{h} Stunden" },
-    "durMLong": { "one": "{m} Minute", "other": "{m} Minuten" },
+    "durHLong": {
+      "one": "{h} Stunde",
+      "other": "{h} Stunden"
+    },
+    "durMLong": {
+      "one": "{m} Minute",
+      "other": "{m} Minuten"
+    },
     "durJoin": "{hPart} {mPart}",
     "rate": "{v} gtt/min",
     "unison": "im Gleichklang — genau richtig",

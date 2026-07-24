@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "DROPP — The rhythm on your wrist. Your mind on care.",
-    "description": "Volume, duration: DROPP computes the drip rate, beats the tempo — before your eyes and on your wrist — and alerts you at the end. No account, no data collected. Coming soon to the App Store.",
-    "ogDescription": "Volume, duration: DROPP computes the drip rate, beats the tempo, and alerts you at the end. On iPhone and Apple Watch. Coming soon to the App Store.",
+    "description": "Volume, duration: DROPP computes the drip rate, beats the tempo — before your eyes and on your wrist — and alerts you at the end. No account, no data collected. Available on the App Store.",
+    "ogDescription": "Volume, duration: DROPP computes the drip rate, beats the tempo, and alerts you at the end. On iPhone and Apple Watch. Available on the App Store.",
     "jsonLdDescription": "Volume, duration: Dropp computes the infusion drip rate, beats the tempo on iPhone and Apple Watch, and alerts you at the end. No account, no data collected."
   },
   "hero": {
-    "soon": "Coming soon to the App Store",
+    "soon": "Available on the App Store",
     "sign": "Rhythm · Precision · Care",
     "tagline": "The rhythm on your wrist.<br>Your mind on care.",
     "sub": "Volume, duration: DROPP computes the drip rate, beats the tempo, and alerts you at the end.",
@@ -174,7 +174,7 @@
     "freeItem4": "The end alarm — forever",
     "freeItem5": "No ads, no account",
     "freeNote": "The end alarm is a safety signal: it will never be paywalled.",
-    "cta": "Pre-order on the App Store"
+    "cta": "Download on the App Store"
   },
   "trust": {
     "eyebrow": "Trust",
@@ -206,18 +206,27 @@
   "closing": {
     "iconAlt": "Dropp app icon",
     "eyebrow": "Summer 2026",
-    "title": "Coming soon to the App Store.",
+    "title": "Available on the App Store.",
     "byline": "Designed by a caregiver, proven on the floor — to keep attention where it matters.",
     "cta": "See DROPP in action again"
   },
   "js": {
     "ml": "{v} mL",
-    "mlLong": { "one": "{v} milliliter", "other": "{v} milliliters" },
+    "mlLong": {
+      "one": "{v} milliliter",
+      "other": "{v} milliliters"
+    },
     "durH": "{h} h",
     "durHM": "{h} h {mm}",
     "durM": "{m} min",
-    "durHLong": { "one": "{h} hour", "other": "{h} hours" },
-    "durMLong": { "one": "{m} minute", "other": "{m} minutes" },
+    "durHLong": {
+      "one": "{h} hour",
+      "other": "{h} hours"
+    },
+    "durMLong": {
+      "one": "{m} minute",
+      "other": "{m} minutes"
+    },
     "durJoin": "{hPart} {mPart}",
     "rate": "{v} gtt/min",
     "unison": "in unison — you're there",
