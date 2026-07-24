@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<!-- Page générée — ne pas éditer à la main. Sources : src/templates + locales/. Build : npm run build -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>DROPP — Le rythme au poignet. La tête au soin.</title>
+<meta name="description" content="Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DROPP — Le rythme au poignet. La tête au soin.">
+<meta property="og:description" content="Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch. Bientôt sur l'App Store.">
+<meta property="og:url" content="https://dropp.care/fr/">
+<meta property="og:image" content="https://dropp.care/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DROPP — Le rythme au poignet. La tête au soin.">
+<meta name="twitter:description" content="Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch. Bientôt sur l'App Store.">
+<meta name="twitter:image" content="https://dropp.care/og-image.png">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="canonical" href="https://dropp.care/fr/">
+<link rel="alternate" hreflang="fr" href="https://dropp.care/fr/">
+<link rel="alternate" hreflang="en" href="https://dropp.care/en/">
+<link rel="alternate" hreflang="es" href="https://dropp.care/es/">
+<link rel="alternate" hreflang="de" href="https://dropp.care/de/">
+<link rel="alternate" hreflang="it" href="https://dropp.care/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/">
+<link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/">
+<link rel="alternate" hreflang="nl" href="https://dropp.care/nl/">
+<link rel="alternate" hreflang="ru" href="https://dropp.care/ru/">
+<link rel="alternate" hreflang="ar" href="https://dropp.care/ar/">
+<link rel="alternate" hreflang="ja" href="https://dropp.care/ja/">
+<link rel="alternate" hreflang="ko" href="https://dropp.care/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://dropp.care/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"Volume, durée : Dropp calcule le débit de perfusion, bat la cadence sur iPhone et Apple Watch et vous prévient à la fin. Sans compte, sans donnée collectée.","url":"https://dropp.care/fr/","image":"https://dropp.care/og-image.png","inLanguage":"fr","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
+</script>
+<style>
+  :root {
+    --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
+    /* --body : texte de LECTURE (4,75:1 sur --bg, AA) ; --soft reste
+       reserve aux micro-libelles et unites decoratives (2,3:1). */
+    --body:#6F695E;
+    --faint:#C6BFB2; --amber:#D9A44A; --amber-ink:#1A1A1C; --rule:rgba(58,56,52,.10);
+    --opal-hi:#FCF9F2; --opal-mid:#EFE9DC; --opal-lo:#D2C8B7;
+  }
+  * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  html { scroll-behavior:smooth; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+    outline:2px solid var(--ink); outline-offset:3px; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden; }
+  .page { max-width:920px; margin:0 auto; padding:0 22px; }
+  .eyebrow { font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--soft); margin:0 0 14px; }
+  /* Glyphe de marque : les ondes concentriques de l'icone, en masque —
+     il prend la couleur du contexte (ivoire ou Graphite) */
+  .eyebrow::before, .try::before, .dmark::before, .fbrand::before {
+    content:""; display:inline-block; width:13px; height:13px; margin-right:9px;
+    vertical-align:-2px; background:currentColor; opacity:.85; border-radius:0;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4'%3E%3Ccircle cx='12' cy='12' r='9.4'/%3E%3Ccircle cx='12' cy='12' r='4.8'/%3E%3Ccircle cx='12' cy='12' r='1.6' fill='%23000' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4'%3E%3Ccircle cx='12' cy='12' r='9.4'/%3E%3Ccircle cx='12' cy='12' r='4.8'/%3E%3Ccircle cx='12' cy='12' r='1.6' fill='%23000' stroke='none'/%3E%3C/svg%3E") center / contain no-repeat; }
+  /* Ces blocs centrés sont des <p> : sans max-width:none ils héritent du
+     58ch global, la boîte part à gauche et le texte « se balade ». */
+  .closing .eyebrow, .fbrand, footer p { max-width:none; }
+  .fbrand { font-size:12px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; color:var(--soft); margin:0 0 16px; }
+  /* Badge Pro dans les eyebrows : encre pleine, la graisse suffit */
+  .eyebrow .probdg { color:var(--ink); font-weight:700; }
+  .fbrand::before { display:block; width:20px; height:20px; margin:0 auto 10px; }
+  section { padding:64px 0 10px; }
+  section + section { border-top:1px solid var(--rule); margin-top:52px; }
+  h2 { font-size:clamp(22px,3.6vw,30px); font-weight:300; margin:0 0 12px; text-wrap:balance; }
+  p { max-width:58ch; }
+  .muted { color:var(--body); }
+  .ink { fill:var(--ink); } .soft { fill:var(--soft); } .faint { fill:var(--faint); }
+  .surf { fill:var(--surface); }
+  svg text { font-family:inherit; }
+  .num { font-weight:200; letter-spacing:-.01em; }
+  .lbl { font-size:9px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+
+  /* ============ HERO — SCROLLYTELLING ============ */
+  /* Deux régimes :
+     - DÉFAUT (sans JS, ou prefers-reduced-motion) : composition « poster »
+       propre et lisible en flux, 100svh, tout visible.
+     - .on (ajouté par JS si mouvement autorisé) : story haute, scène
+       collante 100svh, éléments absolus pilotés au scroll. */
+  .hero-story { position:relative; }
+  .hs-sticky { position:relative; min-height:100svh; overflow:hidden; }
+  #liquid { position:absolute; inset:0; width:100%; height:100%; display:block; z-index:0; }
+  .hero-fallback { position:absolute; inset:0; z-index:0;
+    background:radial-gradient(90% 55% at 50% 62%, var(--opal-hi) 0%, var(--opal-mid) 45%, var(--opal-lo) 78%, var(--bg) 100%); }
+
+  .hs-stage { position:relative; z-index:2; min-height:100svh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap:16px;
+    padding:calc(72px + env(safe-area-inset-top)) 22px calc(40px + env(safe-area-inset-bottom)); }
+  .hs-el { max-width:min(92vw,640px); margin:0; }
+  /* Éléments propres à la narration défilante : cachés dans le poster */
+  .hs-sign, .hs-cap, .hs-final, .hs-hint { display:none; }
+
+  .hs-soon { font-size:10.5px; font-weight:600; letter-spacing:.26em;
+    text-transform:uppercase; color:var(--soft); }
+  /* Gris doux : le wordmark habite le liquide sans le dominer */
+  .hs-title { font-size:clamp(42px,10.5vw,100px); font-weight:350; line-height:1.02;
+    letter-spacing:.5em; text-indent:.5em; text-transform:uppercase; color:var(--body); }
+  .hs-sign { font-size:11px; font-weight:600; letter-spacing:.34em; text-indent:.34em;
+    text-transform:uppercase; color:var(--soft); }
+  .hs-tag { font-size:clamp(19px,3.4vw,27px); font-weight:300; line-height:1.28; text-wrap:balance; }
+  .hs-sub { font-size:14px; color:var(--body); line-height:1.5; }
+  .hs-devices { display:flex; gap:clamp(24px,6vw,60px); align-items:center; justify-content:center; margin-top:6px; }
+  .hs-phone { width:88px; } .hs-watch { width:104px; }
+  .hs-phone svg, .hs-watch svg { width:100%; height:auto; display:block;
+    animation:wpulse 2s ease-out infinite; transform-origin:center; }
+  @keyframes wpulse { 0%,100%{transform:scale(1)} 56%{transform:scale(1)} 60%{transform:scale(.975)} 70%{transform:scale(1)} }
+  .hs-trust { font-size:12px; color:var(--body); letter-spacing:.02em; margin-top:4px; }
+  .hs-cap b, .hs-final b { display:block; font-size:clamp(20px,3.4vw,26px); font-weight:400;
+    color:var(--ink); letter-spacing:-.01em; line-height:1.2; }
+  .hs-cap span, .hs-final span { display:block; font-size:14px; color:var(--body); margin-top:7px; }
+  .hs-hint { font-size:10.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--soft); }
+  .hs-hint i { display:block; width:1px; height:22px; margin:8px auto 0; background:var(--faint);
+    animation:hintbob 1.9s ease-in-out infinite; transform-origin:top; }
+  @keyframes hintbob { 0%,100%{transform:scaleY(.5); opacity:.4} 50%{transform:scaleY(1); opacity:1} }
+
+  /* Vie intérieure de l'iPhone : ses ondes ondulent au calme du hero
+     (30 bpm), échos décalés — la scène de l'app en miniature */
+  .pring { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:pring 2s ease-out infinite; }
+  .pring.p2 { animation-delay:1s; }
+  @keyframes pring { 0%{transform:scale(.55); opacity:.9}
+    70%{transform:scale(1.22); opacity:0} 100%{transform:scale(1.22); opacity:0} }
+
+  /* Ondes haptiques : gelées par défaut, animées en scène 4-5 uniquement */
+  .hap { opacity:0; }
+  .hs-hap-on .hap { animation:hap 2s ease-out infinite; }
+  .hs-hap-on .hap.h2 { animation-delay:.12s; }
+  @keyframes hap { 0%,56%{opacity:0} 62%{opacity:.8} 80%,100%{opacity:0} }
+
+  /* CTAs et boutons — réutilisés par le pricing et le closing sous le hero */
+  .ctas { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; }
+  .btn { display:inline-block; text-decoration:none; font-size:13px; font-weight:600;
+    letter-spacing:.04em; border-radius:999px; padding:13px 22px; }
+  .btn.primary { background:var(--ink); color:var(--bg); }
+  .btn.ghost { color:var(--ink); border:1.5px solid var(--rule); background:rgba(244,239,230,.55); }
+
+  /* ===== RÉGIME DÉFILANT (.on, JS actif, mouvement autorisé) ===== */
+  .hero-story.on { height:420svh; }
+  .hero-story.on .hs-sticky { position:sticky; top:0; height:100svh; }
+  .hero-story.on .hs-stage { position:absolute; inset:0; display:block;
+    min-height:0; padding:0; gap:0; }
+  .hero-story.on .hs-el { position:absolute; left:50%; top:50%; max-width:min(92vw,560px);
+    transform:translate(-50%,-50%); opacity:0; }
+  .hero-story.on .hs-sign, .hero-story.on .hs-cap,
+  .hero-story.on .hs-final, .hero-story.on .hs-hint { display:block; }
+  .hero-story.on .hs-title { white-space:nowrap; max-width:none; will-change:transform,opacity; }
+  .hero-story.on .hs-devices { position:static; display:block; margin:0; }
+  .hero-story.on .hs-phone, .hero-story.on .hs-watch {
+    position:absolute; left:50%; top:50%; margin:0; opacity:0;
+    transform:translate(-50%,-50%); will-change:transform,opacity; }
+  /* Borne par la hauteur : en paysage court, les appareils laissent la
+     place au titre docke et aux legendes */
+  .hero-story.on .hs-phone { width:min(clamp(150px,48vw,224px),30vh); }
+  .hero-story.on .hs-watch { width:min(clamp(140px,46vw,210px),34vh); }
+  @media (max-width:640px){ .hero-story.on { height:430svh; } }
+
+  @media (prefers-reduced-motion:reduce){
+    .hs-hint i { animation:none; }
+    .hs-phone svg, .hs-watch svg { animation:none; }
+    /* Les ondes de l'iPhone restent visibles, statiques */
+    .pring { animation:none; opacity:.7; }
+  }
+
+  /* ============ DEMO CONDENSEE ============ */
+  /* Moment « poster » : titre centre pour s'accorder a la demo centree
+     (le reste de la page garde ses titres cales a gauche). */
+  #demo .eyebrow, #demo h2 { text-align:center; max-width:none; }
+  .demo-stage { position:relative; height:280px; margin:24px auto 0; max-width:560px; }
+  .step { position:absolute; inset:0; opacity:0; animation:step 15s infinite;
+    animation-delay:var(--d);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
+  .step svg { width:min(320px,86%); height:auto; }
+  .step .cap { font-size:14px; color:var(--ink); font-weight:500; text-align:center; }
+  .s1{--d:0s} .s2{--d:2.5s} .s3{--d:5s}
+  .s4{--d:7.5s} .s5{--d:10s} .s6{--d:12.5s}
+  @keyframes step { 0%{opacity:0} 2%,15%{opacity:1} 17.5%,100%{opacity:0} }
+  /* Vie interne des vignettes : chaque element .kf rejoue sur le meme cycle
+     de 15 s, decale par la variable --d heritee de sa vignette. */
+  .demo-stage .kf { animation-duration:15s; animation-iteration-count:infinite;
+    animation-delay:var(--d); animation-timing-function:ease-out; }
+  .demo-stage .tb { transform-box:fill-box; transform-origin:center; }
+  .kfa{animation-name:kfa} .kfb{animation-name:kfb} .knum{animation-name:knum}
+  .kdrop{animation-name:kdrop} .kr1{animation-name:kr1} .kr2{animation-name:kr2}
+  .kdA{animation-name:kdA} .kdB{animation-name:kdB}
+  .kbar{animation-name:kbar; transform-box:fill-box; transform-origin:left center; }
+  .kban{animation-name:kban}
+  /* Timing des chutes : prefixe .demo-stage pour battre la specificite
+     de « .demo-stage .kf » (sinon ease-out ecrase tout). */
+  .demo-stage .kdrop { animation-timing-function:cubic-bezier(.5,0,.9,.5); }
+  .demo-stage .kdA, .demo-stage .kdB, .demo-stage .kbar { animation-timing-function:linear; }
+  @keyframes kfa { 0%,2.8%{opacity:0; transform:translateY(7px)} 4.4%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  @keyframes kfb { 0%,4.4%{opacity:0; transform:translateY(7px)} 6%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  @keyframes knum { 0%,3.2%{opacity:0; transform:scale(.93)} 4.8%,16%{opacity:1; transform:scale(1)} 17%,100%{opacity:0} }
+  @keyframes kdrop { 0%,3.4%{opacity:0; transform:translateY(-58px)} 3.5%{opacity:1} 5.3%{opacity:1; transform:translateY(0)} 5.5%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kr1 { 0%,5.2%{opacity:0; transform:scale(.55)} 5.9%{opacity:.9} 11%,100%{opacity:0; transform:scale(1.18)} }
+  @keyframes kr2 { 0%,5.6%{opacity:0; transform:scale(.5)} 6.3%{opacity:.55} 12.5%,100%{opacity:0; transform:scale(1.3)} }
+  @keyframes kdA { 0%,3.2%{opacity:0; transform:translateY(-44px)} 3.3%{opacity:1} 4.9%{opacity:1; transform:translateY(0)} 5.1%{opacity:0; transform:translateY(0)}
+    8.3%{opacity:0; transform:translateY(-44px)} 8.4%{opacity:1} 10%{opacity:1; transform:translateY(0)} 10.2%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kdB { 0%,4.3%{opacity:0; transform:translateY(-44px)} 4.4%{opacity:1} 6%{opacity:1; transform:translateY(0)} 6.2%{opacity:0; transform:translateY(0)}
+    8.3%{opacity:0; transform:translateY(-44px)} 8.4%{opacity:1} 10%{opacity:1; transform:translateY(0)} 10.2%,100%{opacity:0; transform:translateY(0)} }
+  @keyframes kbar { 0%,2.5%{transform:scaleX(.7)} 15.5%{transform:scaleX(1)} 100%{transform:scaleX(1)} }
+  @keyframes kban { 0%,3.6%{opacity:0; transform:translateY(-10px)} 5.2%,16%{opacity:1; transform:none} 17%,100%{opacity:0} }
+  .demo-dots { display:flex; gap:8px; justify-content:center; margin-top:10px; }
+  .demo-dots i { width:6px; height:6px; border-radius:50%; background:var(--faint);
+    animation:ddot 15s infinite; }
+  .demo-dots i:nth-child(2){animation-delay:2.5s} .demo-dots i:nth-child(3){animation-delay:5s}
+  .demo-dots i:nth-child(4){animation-delay:7.5s} .demo-dots i:nth-child(5){animation-delay:10s}
+  .demo-dots i:nth-child(6){animation-delay:12.5s}
+  @keyframes ddot { 0%{background:var(--faint)} 2%,15%{background:var(--ink)} 17.5%,100%{background:var(--faint)} }
+
+  /* ============ TERRAIN ============ */
+  .plist { display:grid; gap:12px; padding:0; margin:20px 0 0; list-style:none; max-width:620px; }
+  .plist li { padding-inline-start:22px; position:relative; font-size:15px; }
+  .plist li::before { content:""; position:absolute; inset-inline-start:0; top:.6em; width:6px; height:6px;
+    border-radius:50%; background:var(--faint); }
+
+  /* ============ GESTES ============ */
+  .feature { display:grid; grid-template-columns:1fr 320px; gap:40px; align-items:center; padding:30px 0; }
+  .feature.flip { grid-template-columns:320px 1fr; }
+  .feature.flip .txt { order:2; }
+  .feature h3 { font-size:20px; font-weight:500; margin:0 0 8px; text-wrap:balance; }
+  .feature p { font-size:14.5px; color:var(--body); margin:0; }
+  .viz { width:100%; }
+  .viz svg { width:100%; height:auto; display:block; }
+  @media (max-width:700px){
+    .feature, .feature.flip { grid-template-columns:1fr; gap:16px; }
+    .feature.flip .txt { order:0; }
+    .viz { max-width:320px; margin:0 auto; }
+  }
+
+  /* Interactif : affordance commune */
+  .try { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--soft); margin:0 0 10px; }
+  /* (puce remplacée par le glyphe de marque défini plus haut) */
+
+  /* Calculez : le vrai calcul, regle aux molettes-rouleaux (parite app) */
+  .calc { background:var(--surface); border-radius:22px; padding:16px 20px 20px; }
+  .crow { display:flex; align-items:baseline; justify-content:space-between; padding:8px 0 4px; }
+  .crow .clab { font-size:12.5px; color:var(--soft); }
+  .crow .cval { font-size:15px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .roller { position:relative; height:44px; border-radius:12px; overflow:hidden;
+    background:var(--bg); cursor:grab; touch-action:pan-y;
+    -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none; }
+  .roller:active { cursor:grabbing; }
+  .roller .ticks { position:absolute; left:0; right:0; top:11px; bottom:11px;
+    background-image:repeating-linear-gradient(90deg, var(--faint) 0 1.5px, transparent 1.5px 16px); }
+  .roller::before { content:""; position:absolute; left:50%; top:6px; bottom:6px; width:2px;
+    margin-left:-1px; background:var(--ink); border-radius:1px; z-index:2; }
+  .roller::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(90deg, var(--surface), rgba(239,233,222,0) 24%, rgba(239,233,222,0) 76%, var(--surface)); }
+  .cres { border-top:1px solid var(--rule); margin-top:10px; padding-top:16px;
+    display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
+  .cres > div { transition:opacity .18s; }
+  .cres .big { font-size:40px; font-weight:200; line-height:1; letter-spacing:-.01em; }
+  .cres .sec { font-size:15px; font-weight:500; font-variant-numeric:tabular-nums; }
+  .cres .cu { font-size:10px; color:var(--soft); display:block; margin-top:4px;
+    letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+  .calc.oob .cres > div { opacity:.28; }
+  .cwarn { font-size:11.5px; color:var(--body); margin:10px 0 0; display:none; }
+  .calc.oob .cwarn { display:block; }
+
+  /* Calez : la molette, interactive */
+  .cal { background:var(--surface); border-radius:22px; padding:16px 20px 18px; }
+  .calcols { display:grid; grid-template-columns:1fr 1fr; gap:12px; text-align:center; }
+  .colhead { font-size:9.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--soft); margin:0; min-height:2.6em; display:flex;
+    align-items:flex-end; justify-content:center; line-height:1.3; }
+  .ctrack { position:relative; height:84px; margin:8px auto 4px; }
+  .ctrack::after { content:""; position:absolute; left:24%; right:24%; bottom:9px;
+    height:1.5px; background:var(--faint); }
+  .cdrop { position:absolute; left:50%; top:8px; width:10px; height:10px; margin-left:-5px;
+    border-radius:50%; background:var(--opal-lo); opacity:0; }
+  .cring { position:absolute; left:50%; bottom:2px; width:58px; height:18px; margin-left:-29px;
+    border:1.5px solid var(--opal-lo); border-radius:50%; opacity:0; transform:scale(.4); }
+  .crate { font-size:12px; color:var(--body); font-variant-numeric:tabular-nums; }
+  .molette { -webkit-appearance:none; appearance:none; display:block; width:100%; height:44px;
+    margin:12px 0 0; background:transparent; cursor:pointer; }
+  .molette::-webkit-slider-runnable-track { height:2px; background:var(--faint); border-radius:1px; }
+  .molette::-webkit-slider-thumb { -webkit-appearance:none; width:26px; height:26px; margin-top:-12px;
+    border-radius:50%; background:var(--bg); border:1.5px solid var(--soft);
+    box-shadow:0 2px 6px rgba(58,56,52,.16); }
+  .molette::-moz-range-track { height:2px; background:var(--faint); }
+  .molette::-moz-range-thumb { width:22px; height:22px; border-radius:50%;
+    background:var(--bg); border:1.5px solid var(--soft); }
+  .mlab { display:flex; justify-content:center; font-size:9.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); font-weight:600; margin-top:2px; }
+  .calmsg { text-align:center; font-size:12.5px; color:var(--body); margin:10px 0 0; min-height:1.5em; }
+  .calmsg.on { color:var(--ink); font-weight:600; }
+
+  /* Tap : le pad, interactif */
+  .tapdemo { background:var(--surface); border-radius:22px; padding:22px 20px 18px; text-align:center; }
+  .tapdemo .tv { font-size:44px; font-weight:200; line-height:1; min-height:44px; }
+  .tapdemo .tu { font-size:11.5px; color:var(--soft); margin-top:6px; min-height:1.4em; }
+  .tappad { position:relative; width:118px; height:118px; border-radius:50%; margin:16px auto 0;
+    display:block; border:1.5px solid var(--soft); background:var(--bg); color:var(--ink);
+    font-size:13px; font-weight:600; cursor:pointer; -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation; user-select:none; -webkit-user-select:none; }
+  .tappad:active { transform:scale(.97); }
+  .tring { position:absolute; inset:-2px; border-radius:50%; border:1.5px solid var(--soft);
+    opacity:0; pointer-events:none; }
+  .tring.go { animation:tring .7s ease-out; }
+  @keyframes tring { 0%{opacity:.7; transform:scale(1)} 100%{opacity:0; transform:scale(1.5)} }
+  .tapreset { border:none; background:none; color:var(--body); font-size:11.5px; cursor:pointer;
+    margin-top:4px; padding:14px 12px; min-height:44px; text-decoration:underline;
+    text-underline-offset:3px; visibility:hidden; }
+  .tapreset.on { visibility:visible; }
+
+  /* Continuez : timeline a gauche (largeurs en px — les % se resolvent
+     sur le viewBox, pas sur la piste), notifications DANS le cadran de
+     l'Apple Watch a droite : pre-alerte a T-5, puis fin. */
+  .t-fill { animation:tfill 12s linear infinite; }
+  @keyframes tfill { from{width:16px} to{width:172px} }
+  .t-pre { opacity:.25; animation:tpre 12s infinite; }
+  @keyframes tpre { 0%,62%{opacity:.25} 66%,100%{opacity:1} }
+  .t-end { opacity:.25; animation:tend 12s infinite; }
+  @keyframes tend { 0%,90%{opacity:.25} 94%,100%{opacity:1} }
+  .t-preban { transform:translateY(-72px); animation:tpban 12s ease-out infinite; }
+  @keyframes tpban { 0%,62%{transform:translateY(-72px)} 66%,80%{transform:translateY(0)}
+    84%,100%{transform:translateY(-72px)} }
+  .t-endban { transform:translateY(-72px); animation:tban 12s ease-out infinite; }
+  @keyframes tban { 0%,90%{transform:translateY(-72px)} 95%,99%{transform:translateY(0)}
+    100%{transform:translateY(-72px)} }
+  /* L'onde bat le rythme (42/min) dans le cadran, en continu */
+  .wpring { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:wpring 1.43s ease-out infinite; }
+  .wpring.p2 { animation-delay:.7s; }
+  @keyframes wpring { 0%{transform:scale(.55); opacity:.7} 80%{transform:scale(1.15); opacity:0} 100%{opacity:0} }
+
+  /* Watch heroique */
+  .v4-crown line { animation:v4c 1.6s linear infinite; }
+  @keyframes v4c { from{transform:translateY(0)} to{transform:translateY(9px)} }
+  .v4-num { opacity:0; animation:v4n 4.8s infinite; }
+  .v4-num.s1{animation-delay:0s} .v4-num.s2{animation-delay:1.6s} .v4-num.s3{animation-delay:3.2s}
+  @keyframes v4n { 0%{opacity:0} 4%,29%{opacity:1} 33%,100%{opacity:0} }
+  .wbody { transform-box:fill-box; transform-origin:center; animation:wbody 1.7s ease-out infinite; }
+  @keyframes wbody { 0%,54%{transform:scale(1)} 58%{transform:scale(.985)} 68%,100%{transform:scale(1)} }
+
+  /* Double Tap : le cadran bascule pause<->reprise sous une double onde
+     (deux pincements), cycle 4 s. */
+  .dt-cap { text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--soft); font-weight:600; margin:12px 0 0; }
+  /* Bulle geste : deux pads (pouce + index) se rejoignent deux fois
+     (double tap) sous une onde de contact, synchro avec le cadran. */
+  .dt-pad-t, .dt-pad-b { transform-box:fill-box; transform-origin:center; }
+  .dt-pad-t { animation:dtPadT 4s ease-in-out infinite; }
+  .dt-pad-b { animation:dtPadB 4s ease-in-out infinite; }
+  @keyframes dtPadT { 0%,6%{transform:translateY(0)} 10%,18%{transform:translateY(5px)}
+    14%{transform:translateY(0)} 22%,56%{transform:translateY(0)}
+    60%,68%{transform:translateY(5px)} 64%{transform:translateY(0)} 72%,100%{transform:translateY(0)} }
+  @keyframes dtPadB { 0%,6%{transform:translateY(0)} 10%,18%{transform:translateY(-5px)}
+    14%{transform:translateY(0)} 22%,56%{transform:translateY(0)}
+    60%,68%{transform:translateY(-5px)} 64%{transform:translateY(0)} 72%,100%{transform:translateY(0)} }
+  .dt-ring2 { transform-box:fill-box; transform-origin:center; opacity:0;
+    animation:dtRing2 4s ease-out infinite; }
+  @keyframes dtRing2 { 0%,9%{opacity:0; transform:scale(.35)}
+    11%{opacity:.75; transform:scale(.5)} 17%{opacity:0; transform:scale(1.3)}
+    18%{opacity:0; transform:scale(.35)} 20%{opacity:.75; transform:scale(.5)} 26%{opacity:0; transform:scale(1.3)}
+    59%{opacity:0; transform:scale(.35)} 61%{opacity:.75; transform:scale(.5)} 67%{opacity:0; transform:scale(1.3)}
+    68%{opacity:0; transform:scale(.35)} 70%{opacity:.75; transform:scale(.5)} 76%,100%{opacity:0; transform:scale(1.3)} }
+  .dt-run { animation:dtrun 4s infinite; }
+  @keyframes dtrun { 0%,21%{opacity:1} 25%,72%{opacity:0} 76%,100%{opacity:1} }
+  .dt-pause { opacity:0; animation:dtpause 4s infinite; }
+  @keyframes dtpause { 0%,21%{opacity:0} 25%,72%{opacity:1} 76%,100%{opacity:0} }
+
+  /* Multi-perfusions */
+  .mrow { display:grid; grid-template-columns:92px 1fr 74px; gap:12px; align-items:center;
+    padding:13px 0; border-bottom:1px solid var(--rule); font-size:13.5px; }
+  .mrow .name { font-weight:600; }
+  .mbar { height:5px; border-radius:3px; background:var(--rule); overflow:hidden; }
+  .mbar i { display:block; height:100%; background:var(--faint); border-radius:3px; }
+  .m1 i { width:38%; animation:m1 40s linear infinite; }
+  .m2 i { width:72%; animation:m2 40s linear infinite; }
+  .m3 i { width:55%; animation:m3 40s linear infinite; }
+  @keyframes m1 { from{width:34%} to{width:52%} }
+  @keyframes m2 { from{width:68%} to{width:88%} }
+  @keyframes m3 { from{width:51%} to{width:69%} }
+  .mrow .left { text-align:end; color:var(--soft); font-size:12px; font-variant-numeric:tabular-nums; }
+  .mdot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--amber);
+    margin-inline-start:6px; animation:mdot 2.4s ease-in-out infinite; vertical-align:1px; }
+  @keyframes mdot { 0%,100%{opacity:.35} 50%{opacity:1} }
+
+  /* ============ APERCU PRO EN GRAPHITE ============ */
+  /* Panneau fidele aux tokens sombres de l'app : bg #0F0F10, surface
+     #1A1A1C, ink #E9E2D6, inkSoft #A69F92 — la section EST la demo du
+     theme Graphite. */
+  /* Bande pleine largeur : le Graphite sort du gabarit de la page */
+  .dark { background:#141415; color:#E9E2D6;
+    margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
+    padding:34px 0 28px; margin-top:22px; }
+  .darkin { max-width:920px; margin:0 auto; padding:0 22px; }
+  .dmark { font-size:11px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; color:#E9E2D6; margin:0 0 20px; }
+  .dgrid { display:grid; grid-template-columns:1fr 1fr; gap:24px 26px; }
+  @media (max-width:700px){ .dgrid { grid-template-columns:1fr; } }
+  .dcell h4 { font-size:14.5px; font-weight:600; margin:12px 0 4px; color:#E9E2D6; }
+  .dcell p { font-size:12.5px; color:#8F897D; margin:0; max-width:none; }
+  .dcell svg { width:100%; height:auto; display:block; background:#1A1A1C; border-radius:16px; }
+  .dnote { font-size:11.5px; color:#8F897D; margin:20px 0 0; }
+  /* Scene 3D : la vraie nappe de l'app, en Graphite (repli : strates SVG) */
+  .d3wrap { position:relative; background:#1A1A1C; border-radius:16px; overflow:hidden; }
+  .d3wrap::before { content:""; display:block; padding-top:40%; }
+  .d3wrap canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .d3wrap svg { position:absolute; inset:0; }
+  .d3wrap.live svg { display:none; }
+  /* Jalons : les reperes s'allument tour a tour, en texte, sans couleur */
+  .dj { animation:dj 9s infinite; }
+  .dj.j2 { animation-delay:1.1s; } .dj.j3 { animation-delay:2.2s; }
+  .dj.j4 { animation-delay:3.3s; }
+  @keyframes dj { 0%,8%{fill:#3A3A3C} 16%,78%{fill:#E9E2D6} 88%,100%{fill:#3A3A3C} }
+  /* Alarme poignet : les vraies notifications de l'app tombent dans le
+     cadran — pre-alerte puis fin, en alternance */
+  .dwb { transform:translateY(-70px); animation:dwb 10s ease-out infinite; }
+  .dwb.b2 { animation-name:dwb2; }
+  @keyframes dwb { 0%,4%{transform:translateY(-70px)} 8%,38%{transform:translateY(0)}
+    42%,100%{transform:translateY(-70px)} }
+  @keyframes dwb2 { 0%,48%{transform:translateY(-70px)} 52%,88%{transform:translateY(0)}
+    92%,100%{transform:translateY(-70px)} }
+  /* Historique : les lignes se posent une a une */
+  /* Plancher a .45 : la liste reste lisible a tout instant du cycle */
+  .dh { opacity:.45; animation:dh 9s infinite; }
+  .dh.h2 { animation-delay:1s; } .dh.h3 { animation-delay:2s; }
+  @keyframes dh { 0%,4%{opacity:.45; transform:translateY(3px)} 12%,90%{opacity:1; transform:none} 98%,100%{opacity:.45} }
+  /* Scene 3D : la profondeur suggeree par strates, la goutte la traverse */
+  .d3f { transform-box:fill-box; transform-origin:center; animation:d3f 5s ease-in-out infinite; }
+  @keyframes d3f { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-2.5px)} }
+  .d3drop { opacity:0; animation:d3d 2s cubic-bezier(.5,0,.9,.5) infinite; }
+  @keyframes d3d { 0%,6%{opacity:0; transform:translateY(-30px)} 8%{opacity:1}
+    24%{opacity:1; transform:translateY(0)} 28%,100%{opacity:0; transform:translateY(0)} }
+
+  /* Pricing */
+  .tiers { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px; }
+  @media (max-width:700px){ .tiers{ grid-template-columns:1fr; } }
+  .tier { background:var(--surface); border-radius:22px; padding:24px; }
+  .tier.pro { border:1.5px solid var(--amber); }
+  .tier .name { font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--soft); margin-bottom:12px; }
+  .tier ol, .tier ul { margin:0; padding:0; padding-inline-start:20px; font-size:14px; line-height:1.75; }
+  .tier .prices { margin-top:16px; font-size:14.5px; }
+  .tier .prices b { font-weight:650; font-size:16.5px; }
+  .tier .note { font-size:12px; color:var(--body); margin-top:10px; }
+
+  /* Confiance */
+  .dna { display:grid; gap:14px; margin-top:22px; max-width:640px; }
+  .tenet { display:grid; grid-template-columns:24px 1fr; gap:14px; font-size:15px; align-items:baseline; }
+  .tenet .dot { width:9px; height:9px; border-radius:50%; border:1.5px solid var(--soft);
+    position:relative; top:1px; justify-self:center; }
+  .tenet b { font-weight:600; }
+  .tenet span { color:var(--body); }
+  .clinic { font-size:12px; color:var(--body); border-inline-start:2px solid var(--rule);
+    padding-inline-start:14px; margin-top:24px; max-width:56ch; }
+
+  /* FAQ */
+  details { border-bottom:1px solid var(--rule); padding:4px 0; max-width:680px; }
+  summary { cursor:pointer; font-size:15px; font-weight:500; padding:12px 0; list-style:none; display:flex; justify-content:space-between; gap:14px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:"+"; color:var(--soft); font-weight:300; font-size:19px; }
+  details[open] summary::after { content:"–"; }
+  details p { font-size:14px; color:var(--body); margin:0 0 14px; }
+
+  /* Closing / footer */
+  .closing { text-align:center; padding-bottom:20px; }
+  .closing h2 { margin-bottom:8px; }
+  .appicon { display:block; margin:0 auto 18px; width:88px; height:88px;
+    border-radius:22.5%; box-shadow:0 12px 32px rgba(58,56,52,.16); }
+  /* Pastille App Store : gris doux, contour fin, discrète — signale la
+     plateforme SANS concurrencer le logo DROPP (encre, prominent). */
+  .asbadge { display:inline-flex; align-items:center; gap:8px; margin:2px 0 20px;
+    padding:7px 15px; border:1.5px solid var(--rule); border-radius:999px; color:var(--soft); }
+  .asbadge svg { width:14px; height:auto; fill:currentColor; display:block; }
+  .asbadge span { font-size:12.5px; font-weight:600; letter-spacing:.01em; }
+  footer { margin-top:56px; padding:26px 0 42px; border-top:1px solid var(--rule);
+    font-size:12px; color:var(--faint); text-align:center; line-height:1.8; }
+  footer a { color:var(--body); margin:0 4px; display:inline-block; padding:12px 8px; }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after { animation:none !important; }
+    .step { opacity:0; } .step.s2 { opacity:1; }
+    .cdrop { display:none; }
+    .d3drop { display:none; }
+    .dj { fill:#E9E2D6; }
+    .dh { opacity:1; }
+    .dwb.b2 { transform:translateY(0); }
+    .dt-ring2 { display:none; } .dt-run { opacity:1; } .dt-pause { opacity:0; }
+    html { scroll-behavior:auto; }
+    .v4-num.s1{opacity:1}
+    .t-fill{width:120px} .t-pre{opacity:1} .t-end{opacity:1} .t-endban{transform:translateY(0)}
+    .demo-dots i:nth-child(2){background:var(--ink)}
+  }
+  #film .eyebrow, #film h2 { text-align:center; max-width:none; }
+  .film { position:relative; max-width:840px; margin:26px auto 0; border-radius:22px; overflow:hidden; background:var(--surface); box-shadow:0 12px 44px rgba(58,56,52,.16); }
+  .film-v { display:block; width:100%; height:auto; }
+  .film-snd { position:absolute; inset-inline-end:14px; bottom:14px; z-index:2; font:600 12px/1 inherit; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); background:rgba(255,253,248,.82); border:1px solid rgba(58,56,52,.14); border-radius:999px; padding:9px 16px; cursor:pointer; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .2s, color .2s; }
+  .film-snd:hover { background:rgba(255,253,248,.96); }
+  .film-snd[aria-pressed="true"] { color:var(--bg); background:var(--ink); border-color:var(--ink); }
+  .film-snd.muted { animation:filmpulse 2.4s ease-in-out infinite; }
+  @keyframes filmpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(58,56,52,0); } 50%{ box-shadow:0 0 0 5px rgba(58,56,52,.10); } }
+  @media (prefers-reduced-motion:reduce){ .film-snd.muted { animation:none; } }
+
+/* ============ I18N — sélecteur de langue, RTL, CJK ============ */
+/* Pastille fixe en haut, côté inline-end : <details> natif (fonctionne
+   sans JS), habillé comme les pastilles du site (asbadge / film-snd). */
+.lsw { position:fixed; top:calc(14px + env(safe-area-inset-top));
+  inset-inline-end:calc(16px + env(safe-area-inset-right)); z-index:60; }
+.lsw summary { display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  list-style:none; padding:8px 13px; border-radius:999px; color:var(--ink, #3A3834);
+  background:rgba(255,253,248,.78); border:1px solid rgba(58,56,52,.14);
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  font-size:11.5px; font-weight:600; letter-spacing:.08em;
+  transition:background .2s; -webkit-tap-highlight-color:transparent;
+  user-select:none; -webkit-user-select:none; }
+.lsw summary:hover { background:rgba(255,253,248,.96); }
+.lsw summary::-webkit-details-marker { display:none; }
+.lsw summary::marker { content:""; }
+.lsw summary::after { content:none; }
+.lsw summary svg { width:14px; height:14px; display:block; opacity:.75; }
+.lsw summary i { width:7px; height:7px; border-inline-end:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor; transform:rotate(45deg) translateY(-2px);
+  opacity:.55; transition:transform .2s; }
+.lsw[open] summary i { transform:rotate(-135deg) translateY(-1px); }
+.lsw .lsw-pop { position:absolute; inset-inline-end:0; top:calc(100% + 8px);
+  min-width:208px; max-height:min(64svh, 480px); overflow:auto; padding:10px;
+  background:rgba(252,249,242,.97); border:1px solid rgba(58,56,52,.12);
+  border-radius:16px; box-shadow:0 18px 44px rgba(58,56,52,.18);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+.lsw .lsw-title { margin:2px 8px 8px; font-size:10px; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--soft, #A59F92); max-width:none; }
+.lsw ul { list-style:none; margin:0; padding:0; }
+.lsw ul a { display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:9px 12px; border-radius:10px; text-decoration:none; color:var(--ink, #3A3834);
+  font-size:13.5px; letter-spacing:0; font-weight:400; }
+.lsw ul a:hover { background:rgba(58,56,52,.06); }
+.lsw ul a[aria-current="true"] { font-weight:600; }
+.lsw ul a[aria-current="true"]::after { content:""; width:6px; height:6px; flex:none;
+  border-radius:50%; background:var(--amber, #D9A44A); }
+
+/* Nav de langues du footer : liens crawlables, discrets */
+.flangs { margin-top:14px; font-size:11.5px; line-height:2.1; color:var(--faint, #C6BFB2); }
+.flangs a { color:var(--body, #6F695E); text-decoration:none; margin:0; padding:6px 5px; display:inline-block; }
+.flangs a:hover { color:var(--ink, #3A3834); text-decoration:underline; text-underline-offset:3px; }
+.flangs a[aria-current="true"] { color:var(--ink, #3A3834); font-weight:600; }
+.flangs span { padding:0 1px; }
+
+/* ---- RTL (arabe) ----
+   La mise en page suit dir="rtl" ; on isole les valeurs numériques
+   (chiffres latins + unités) pour une lecture médicale sans ambiguïté. */
+[dir="rtl"] .hs-title { direction:ltr; }
+[dir="rtl"] :is(.cval, .crate, .cres .big, .cres .sec, .tapdemo .tv, .mrow .left) {
+  direction:ltr; unicode-bidi:isolate; }
+[dir="rtl"] .roller { direction:ltr; }
+html[lang="ar"] :is(.eyebrow, .hs-soon, .hs-sign, .lbl, .try, .colhead, .mlab span,
+  .tier .name, .dt-cap, .film-snd, .lsw-title, .cu, .hs-hint) {
+  letter-spacing:0; text-indent:0; }
+html[lang="ar"] .hs-tag, html[lang="ar"] h2 { line-height:1.5; }
+html[lang="ar"] body { font-family:-apple-system, BlinkMacSystemFont, "SF Arabic",
+  "Segoe UI", "Noto Sans Arabic", system-ui, sans-serif; }
+
+/* ---- CJK : piles système dédiées, interlignage et approche adaptés ---- */
+html[lang="ja"] body { font-family:-apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  "Yu Gothic UI", "Meiryo", sans-serif; }
+html[lang="ko"] body { font-family:-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+  "Malgun Gothic", sans-serif; }
+html[lang="zh-Hans"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+html[lang="zh-Hant"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang TC",
+  "Microsoft JhengHei", sans-serif; }
+html[lang="ja"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang="ko"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang^="zh"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint) {
+  letter-spacing:.14em; }
+html[lang="ja"] .hs-sign, html[lang="ko"] .hs-sign, html[lang^="zh"] .hs-sign {
+  letter-spacing:.22em; text-indent:.22em; }
+html[lang="ja"] body, html[lang="ko"] body, html[lang^="zh"] body { line-height:1.75; }
+html[lang="ja"] h2, html[lang="ko"] h2, html[lang^="zh"] h2 { font-weight:350; }
+
+/* ---- Langues à mots longs : césure douce des titres ---- */
+html[lang="de"] :is(h2, h3, .hs-tag), html[lang="nl"] :is(h2, h3, .hs-tag),
+html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }
+
+</style>
+</head>
+<body>
+<details class="lsw" id="lsw">
+  <summary aria-label="Changer de langue — Français">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.7"/><ellipse cx="12" cy="12" rx="4.2" ry="9.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 8.9h17.2M3.4 15.1h17.2" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span class="lsw-cur">FR</span><i aria-hidden="true"></i>
+  </summary>
+  <div class="lsw-pop" role="group" aria-label="Langue">
+    <p class="lsw-title" aria-hidden="true">Langue</p>
+    <ul>
+      <li><a href="/fr/" lang="fr" hreflang="fr" data-lang="fr" aria-current="true">Français</a></li>
+      <li><a href="/en/" lang="en" hreflang="en" data-lang="en">English</a></li>
+      <li><a href="/es/" lang="es" hreflang="es" data-lang="es">Español</a></li>
+      <li><a href="/de/" lang="de" hreflang="de" data-lang="de">Deutsch</a></li>
+      <li><a href="/it/" lang="it" hreflang="it" data-lang="it">Italiano</a></li>
+      <li><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li>
+      <li><a href="/pt-pt/" lang="pt-PT" hreflang="pt-PT" data-lang="pt-pt">Português (Portugal)</a></li>
+      <li><a href="/nl/" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a></li>
+      <li><a href="/ru/" lang="ru" hreflang="ru" data-lang="ru">Русский</a></li>
+      <li><a href="/ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li>
+      <li><a href="/ja/" lang="ja" hreflang="ja" data-lang="ja">日本語</a></li>
+      <li><a href="/ko/" lang="ko" hreflang="ko" data-lang="ko">한국어</a></li>
+      <li><a href="/zh-cn/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-cn">简体中文</a></li>
+      <li><a href="/zh-tw/" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-tw">繁體中文</a></li>
+    </ul>
+  </div>
+</details>
+<script>
+/* ============ I18N — runtime de page ============ */
+/* Chaînes dynamiques de CETTE locale uniquement (inlinées au build),
+   formatage des nombres via Intl, pluriels via Intl.PluralRules. */
+window.I18N = (function(){
+  var L = {"lang":"fr","num":"fr","s":{"ml":"{v} mL","mlLong":{"one":"{v} millilitre","other":"{v} millilitres"},"durH":"{h} h","durHM":"{h} h {mm}","durM":"{m} min","durHLong":{"one":"{h} heure","other":"{h} heures"},"durMLong":{"one":"{m} minute","other":"{m} minutes"},"durJoin":"{hPart} {mPart}","rate":"{v} gtt/min","unison":"à l’unisson — vous y êtes","tooSlow":"la perfusion goutte trop lentement — ouvrez la molette","tooFast":"la perfusion goutte trop vite — fermez la molette","tapStart":"tapez au rythme observé","tapContinue":"continuez au même rythme","tapTightening":"par minute · la valeur se resserre","tapStable":"par minute · stabilisée","tapTooFast":"trop rapide — reprenez","soundOn":"Activer le son","soundOff":"Couper le son"}};
+  var pr; try { pr = new Intl.PluralRules(L.lang); } catch(e){ pr = null; }
+  var nfCache = {};
+  function num(v, min, max){
+    var k = min + '-' + max;
+    if (!(k in nfCache)) {
+      try { nfCache[k] = new Intl.NumberFormat(L.num, { minimumFractionDigits: min, maximumFractionDigits: max }); }
+      catch(e){ nfCache[k] = null; }
+    }
+    return nfCache[k] ? nfCache[k].format(v) : String(Math.round(v * 100) / 100);
+  }
+  function t(key, params){
+    var v = L.s[key];
+    if (v === undefined) return key;
+    if (typeof v === 'object') {
+      var n = params && typeof params.n === 'number' ? params.n : 0;
+      var form = pr ? pr.select(n) : (n === 1 ? 'one' : 'other');
+      v = v[form] !== undefined ? v[form] : v.other;
+    }
+    return String(v).replace(/\{(\w+)\}/g, function(m, p){
+      return params && params[p] !== undefined ? String(params[p]) : m;
+    });
+  }
+  return { lang: L.lang, t: t, num: num };
+})();
+
+/* ============ Sélecteur de langue ============ */
+(function(){
+  var d = document.getElementById('lsw');
+
+  /* Choix manuel : mémorisé localement, prioritaire sur la langue du
+     navigateur aux prochaines visites ; les paramètres (UTM…) et
+     l'ancre suivent vers la page cible. */
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[data-lang]') : null;
+    if (!a) return;
+    try { localStorage.setItem('dropp-lang', a.getAttribute('data-lang')); } catch(err){}
+    if (location.search || location.hash) {
+      e.preventDefault();
+      location.href = a.getAttribute('href') + location.search + location.hash;
+    }
+  });
+
+  if (!d) return;
+  document.addEventListener('click', function(e){
+    if (d.open && !d.contains(e.target)) d.open = false;
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && d.open) {
+      d.open = false;
+      var s = d.querySelector('summary'); if (s) s.focus();
+    }
+    if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && d.open && d.contains(document.activeElement)) {
+      var links = Array.prototype.slice.call(d.querySelectorAll('.lsw-pop a'));
+      if (!links.length) return;
+      e.preventDefault();
+      var i = links.indexOf(document.activeElement);
+      var next = e.key === 'ArrowDown' ? Math.min(i + 1, links.length - 1) : Math.max(i - 1, 0);
+      if (i === -1) next = e.key === 'ArrowDown' ? 0 : links.length - 1;
+      links[next].focus();
+    }
+  });
+  d.addEventListener('toggle', function(){
+    if (d.open) { var f = d.querySelector('.lsw-pop a[aria-current="true"]') || d.querySelector('.lsw-pop a'); if (f) f.focus(); }
+  });
+})();
+
+</script>
+<header class="hero-story" id="heroStory">
+  <div class="hs-sticky">
+    <canvas id="liquid" aria-hidden="true"></canvas>
+    <div class="hero-fallback" id="fallback" aria-hidden="true" hidden></div>
+    <div class="hs-stage" id="hsStage">
+      <p class="hs-el hs-soon">Bientôt sur l'App Store</p>
+      <h1 class="hs-el hs-title">Dropp</h1>
+      <p class="hs-el hs-sign">Rythme · Précision · Soin</p>
+      <p class="hs-el hs-tag">Le rythme au poignet.<br>La tête au soin.</p>
+      <p class="hs-el hs-sub">Volume, durée : DROPP calcule le débit, donne la cadence et vous prévient à la fin.</p>
+      <div class="hs-devices" aria-hidden="true">
+        <div class="hs-phone"><svg viewBox="-18 0 136 200">
+          <path d="M -5 84 q -7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+          <path d="M -13 76 q -11 24 0 48" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+          <path d="M 105 84 q 7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+          <path d="M 113 76 q 11 24 0 48" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+          <rect x="4" y="3" width="92" height="194" rx="22" fill="#1A1A1C" stroke="var(--soft)" stroke-width="1.8"/>
+          <rect x="34" y="12" width="32" height="7" rx="3.5" fill="#0F0F10"/>
+          <text x="50" y="34" text-anchor="middle" fill="#8F897D" font-size="6.5" letter-spacing="2.5">DROPP</text>
+          <text x="50" y="92" text-anchor="middle" class="num" fill="#E9E2D6" font-size="26">42</text>
+          <text x="50" y="110" text-anchor="middle" fill="#8F897D" font-size="8">gtt / min</text>
+          <ellipse cx="50" cy="150" rx="27" ry="9" fill="none" stroke="#5A564E" stroke-width="2" class="pring"/>
+          <ellipse cx="50" cy="150" rx="38" ry="13" fill="none" stroke="#3E3E40" stroke-width="1.4" class="pring p2"/>
+        </svg></div>
+        <div class="hs-watch"><svg viewBox="-18 0 156 140">
+          <path d="M -5 55 q -7 15 0 30" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+          <path d="M -13 47 q -11 23 0 46" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+          <path d="M 125 55 q 7 15 0 30" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
+          <path d="M 133 47 q 11 23 0 46" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-linecap="round" class="hap h2"/>
+          <rect x="44" y="2" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
+          <rect x="44" y="124" width="32" height="14" rx="5" class="surf" stroke="var(--faint)"/>
+          <rect x="10" y="14" width="100" height="112" rx="26" class="surf" stroke="var(--soft)" stroke-width="1.8"/>
+          <rect x="110" y="54" width="6" height="18" rx="3" class="surf" stroke="var(--soft)"/>
+          <text x="60" y="36" text-anchor="middle" class="soft" font-size="6" letter-spacing="2.2">DROPP</text>
+          <text x="60" y="72" text-anchor="middle" class="num ink" font-size="27">42</text>
+          <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
+        </svg></div>
+      </div>
+      <div class="hs-el hs-cap hs-cap-phone"><b>Le tempo, sous les yeux.</b><span>Calculez. Calez. Lancez le suivi.</span></div>
+      <div class="hs-el hs-cap hs-cap-watch"><b>La cadence, au poignet.</b><span>Une vibration discrète à chaque goutte.</span></div>
+      <div class="hs-el hs-final"><b>Continuez le soin.</b><span>DROPP garde le rythme et suit le temps.</span></div>
+      <p class="hs-el hs-trust">Sans compte · Sans publicité · Données locales</p>
+      <p class="hs-el hs-hint">Découvrir DROPP<i></i></p>
+    </div>
+  </div>
+</header>
+<div class="page">
+  <section id="demo">
+    <p class="eyebrow">En quinze secondes</p>
+    <h2>Tout le geste, d'un regard.</h2>
+    <div class="demo-stage" role="img" aria-label="Démonstration : saisir, calculer, caler, suivre, être prévenu">
+      <div class="step s1"><svg viewBox="0 0 320 150">
+        <g class="kf kfa">
+          <rect x="10" y="20" width="300" height="46" rx="15" class="surf"/>
+          <text x="30" y="48" class="soft" font-size="13">Volume</text><text x="290" y="48" text-anchor="end" class="ink" font-size="15" font-weight="600">500 mL</text>
+        </g>
+        <g class="kf kfb">
+          <rect x="10" y="78" width="300" height="46" rx="15" class="surf"/>
+          <text x="30" y="106" class="soft" font-size="13">Durée</text><text x="290" y="106" text-anchor="end" class="ink" font-size="15" font-weight="600">4 h</text>
+        </g>
+      </svg><p class="cap">1 · Saisissez volume et durée</p></div>
+      <div class="step s2"><svg viewBox="0 0 320 150">
+        <g class="kf knum tb">
+          <text x="160" y="76" text-anchor="middle" class="num ink" font-size="54">42</text>
+          <text x="160" y="98" text-anchor="middle" class="soft" font-size="12">gtt / min</text>
+        </g>
+        <text x="160" y="122" text-anchor="middle" class="faint kf kfb" font-size="11">1,43 s / goutte — 125 mL/h</text>
+      </svg><p class="cap">2 · DROPP calcule le débit</p></div>
+      <div class="step s3"><svg viewBox="0 0 320 150">
+        <circle cx="160" cy="96" r="5" fill="var(--opal-lo)" class="kf kdrop"/>
+        <ellipse cx="160" cy="100" rx="60" ry="22" fill="none" stroke="var(--opal-lo)" stroke-width="2" class="kf kr1 tb"/>
+        <ellipse cx="160" cy="100" rx="96" ry="35" fill="none" stroke="var(--opal-lo)" stroke-width="1.5" opacity=".5" class="kf kr2 tb"/>
+      </svg><p class="cap">3 · L'écran et l'Apple Watch battent le rythme</p></div>
+      <div class="step s4"><svg viewBox="0 0 320 150">
+        <circle cx="120" cy="104" r="5" fill="var(--opal-lo)" class="kf kdA"/>
+        <circle cx="200" cy="104" r="5" fill="var(--opal-lo)" class="kf kdB"/>
+        <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
+        <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
+        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">calez la molette sur le tempo</text>
+      </svg><p class="cap">4 · Calez, puis lancez le suivi</p></div>
+      <div class="step s5"><svg viewBox="0 0 320 150">
+        <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
+        <rect x="30" y="66" width="150" height="6" rx="3" fill="var(--faint)" class="kf kbar"/>
+        <text x="160" y="108" text-anchor="middle" class="soft kf kfb" font-size="12">reste 1 h 52 · fin 22:12</text>
+      </svg><p class="cap">5 · Le temps restant se suit tout seul</p></div>
+      <div class="step s6"><svg viewBox="0 0 320 150">
+        <rect x="86" y="30" width="148" height="96" rx="22" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <g class="kf kban">
+          <rect x="100" y="46" width="120" height="34" rx="10" fill="var(--bg)"/>
+          <text x="160" y="67" text-anchor="middle" class="ink" font-size="10.5" font-weight="600">Perfusion terminée</text>
+        </g>
+        <text x="160" y="106" text-anchor="middle" class="soft kf kfb" font-size="10">au poignet aussi</text>
+      </svg><p class="cap">6 · La fin vous prévient — où que vous soyez</p></div>
+    </div>
+    <div class="demo-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
+  <section>
+    <p class="eyebrow">Vous connaissez ce moment</p>
+    <ul class="plist">
+      <li>La formule, connue par cœur — à refaire entre deux sonnettes.</li>
+      <li>La molette réglée à l'œil, recomptée au moindre doute.</li>
+      <li>Plusieurs heures de fin à garder en tête, toute la garde.</li>
+    </ul>
+    <p class="muted" style="font-size:14px; margin-top:20px;">Ce n'est pas une question de compétence. C'est une charge — et DROPP la porte.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Trois gestes</p>
+
+    <div class="feature">
+      <div class="txt">
+        <h3>Calculez</h3>
+        <p>Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL — la démo est calée sur 20. Rien à retenir, rien à refaire.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="calc" id="calc">
+          <div class="crow"><span class="clab">Volume</span><span class="cval" id="cVol">500 mL</span></div>
+          <div class="roller" id="rVol" tabindex="0" role="slider" aria-label="Volume"
+            aria-valuemin="50" aria-valuemax="1500" aria-valuenow="500" aria-valuetext="500 mL"><div class="ticks"></div></div>
+          <div class="crow"><span class="clab">Durée</span><span class="cval" id="cDur">4 h</span></div>
+          <div class="roller" id="rDur" tabindex="0" role="slider" aria-label="Durée"
+            aria-valuemin="15" aria-valuemax="720" aria-valuenow="240" aria-valuetext="4 h"><div class="ticks"></div></div>
+          <div class="cres" aria-live="polite">
+            <div><span class="big num" id="cRate">42</span><span class="cu">gtt / min</span></div>
+            <div><span class="sec" id="cInt">1,43</span><span class="cu">s / goutte</span></div>
+            <div><span class="sec" id="cMlh">125</span><span class="cu">mL / h</span></div>
+          </div>
+          <p class="cwarn">Hors plage plausible — l'app refuse de battre un tempo absurde.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="txt">
+        <h3>Calez</h3>
+        <p>La scène bat la cadence calculée — visible, perceptible au poignet, audible si vous l'activez (un tick discret, pas plus fort qu'un cliquetis, qui respecte le mode silencieux). Réglez la molette jusqu'à l'unisson : quand la goutte du perfuseur tombe avec celle de DROPP, vous y êtes.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="cal">
+          <div class="calcols">
+            <div><p class="colhead">La perfusion</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
+            <div><p class="colhead">Le tempo Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate" id="calTarget">42 gtt/min</span></div>
+          </div>
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Molette de la perfusion — réglez jusqu'à l'unisson">
+          <div class="mlab"><span>la molette</span></div>
+          <p class="calmsg" id="calMsg" aria-live="polite">réglez la molette jusqu'à l'unisson</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="txt">
+        <h3>Continuez</h3>
+        <p>Le temps restant se suit tout seul. Une pré-alerte prévient cinq minutes avant la fin, des rappels s'adaptent à la durée — un point à mi-parcours pour une perf d'une heure, des repères réguliers pour celle qui court sur la nuit. La fin ne repose plus seulement sur votre mémoire.</p>
+      </div>
+      <div class="viz" aria-hidden="true"><svg viewBox="0 0 340 190">
+        <rect x="252" y="14" width="26" height="10" rx="4" class="surf" stroke="var(--faint)"/>
+        <rect x="252" y="136" width="26" height="10" rx="4" class="surf" stroke="var(--faint)"/>
+        <rect x="222" y="23" width="86" height="114" rx="20" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <rect x="308" y="56" width="5" height="16" rx="2.5" class="surf" stroke="var(--soft)"/>
+        <clipPath id="wclip"><rect x="228" y="29" width="74" height="102" rx="15"/></clipPath>
+        <text x="265" y="42" text-anchor="middle" class="soft" font-size="6" letter-spacing="2">DROPP</text>
+        <ellipse cx="265" cy="88" rx="24" ry="8" fill="none" stroke="var(--opal-lo)" stroke-width="1.5" class="wpring"/>
+        <ellipse cx="265" cy="88" rx="24" ry="8" fill="none" stroke="var(--opal-lo)" stroke-width="1.2" class="wpring p2"/>
+        <text x="265" y="122" text-anchor="middle" class="soft" font-size="8">fin 22:12</text>
+        <g clip-path="url(#wclip)">
+          <g class="t-preban">
+            <rect x="232" y="36" width="66" height="36" rx="9" fill="var(--bg)" stroke="var(--rule)"/>
+            <circle cx="241" cy="48" r="3" fill="var(--amber)"/>
+            <text x="248" y="51" class="ink" font-size="8" font-weight="600">Pré-alerte</text>
+            <text x="238" y="64" class="soft" font-size="7.5">Box 3 · fin 5 min</text>
+          </g>
+          <g class="t-endban">
+            <rect x="232" y="36" width="66" height="36" rx="9" fill="var(--bg)" stroke="var(--rule)"/>
+            <text x="238" y="50" class="ink" font-size="8" font-weight="600">Box 3</text>
+            <text x="238" y="61" class="ink" font-size="8" font-weight="600">terminée</text>
+          </g>
+        </g>
+        <rect x="20" y="86" width="180" height="6" rx="3" fill="var(--rule)"/>
+        <rect x="20" y="86" width="16" height="6" rx="3" fill="var(--faint)" class="t-fill"/>
+        <circle cx="152" cy="89" r="5" class="ink t-pre"/>
+        <text x="140" y="112" text-anchor="middle" class="soft" font-size="10">pré-alerte −5 min</text>
+        <circle cx="194" cy="89" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
+        <text x="194" y="70" text-anchor="middle" class="soft" font-size="10">fin</text>
+      </svg></div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow"><b class="probdg">Dropp Pro</b> · Apple Watch</p>
+    <h2>Tout, sans sortir l'iPhone.</h2>
+    <div class="feature flip" style="border:none;">
+      <div class="txt">
+        <p>Lancez une perfusion à la couronne. Suivez-la, mettez-la en pause, retrouvez son repère — Box 3, Fauteuil 5, Perfusion A — sans jamais taper de texte. Le poignet bat la cadence pendant le calage, et ses alarmes sonnent même si l'iPhone est resté au vestiaire.</p>
+      </div>
+      <div class="viz" style="max-width:250px;margin:0 auto;" aria-hidden="true"><svg viewBox="0 0 240 280">
+        <rect x="88" y="4" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="88" y="250" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <g class="wbody">
+          <rect x="20" y="26" width="200" height="228" rx="52" class="surf" stroke="var(--soft)" stroke-width="2"/>
+        </g>
+        <clipPath id="v4crown"><rect x="221" y="106" width="12" height="34" rx="5"/></clipPath>
+        <rect x="221" y="106" width="12" height="34" rx="5" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <g clip-path="url(#v4crown)" class="v4-crown" stroke="var(--soft)" stroke-width="1.4">
+          <line x1="223" y1="104" x2="231" y2="104"/><line x1="223" y1="113" x2="231" y2="113"/>
+          <line x1="223" y1="122" x2="231" y2="122"/><line x1="223" y1="131" x2="231" y2="131"/>
+          <line x1="223" y1="95" x2="231" y2="95"/>
+        </g>
+        <text x="120" y="96" text-anchor="middle" class="lbl soft">Repère optionnel</text>
+        <g font-size="28" class="num">
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s1">Chambre 12</text>
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s2">Box 3</text>
+          <text x="120" y="150" text-anchor="middle" class="ink v4-num s3">Fauteuil 5</text>
+        </g>
+        <text x="120" y="182" text-anchor="middle" class="soft" font-size="11">réglé à la couronne</text>
+        <rect x="76" y="204" width="88" height="30" rx="15" fill="var(--bg)"/>
+        <text x="120" y="223" text-anchor="middle" class="ink" font-size="12" font-weight="600">Lancer</text>
+      </svg></div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow"><b class="probdg">Dropp Pro</b> · Double Tap</p>
+    <h2>Un geste, sans toucher l'écran.</h2>
+    <div class="feature flip" style="border:none;">
+      <div class="txt">
+        <p>Pincez deux fois le pouce et l'index : selon l'écran, DROPP lance la perfusion, la met en pause, la reprend, ou acquitte une alerte. Mains prises, mains gantées — le geste natif de l'Apple Watch répond au poignet, sans contact.</p>
+        <p class="muted" style="font-size:12.5px; margin-top:12px;">Apple Watch Series 9 et ultérieures.</p>
+      </div>
+      <div class="viz" style="max-width:230px;margin:0 auto;" aria-hidden="true"><svg viewBox="0 0 240 262">
+        <rect x="88" y="4" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="88" y="232" width="64" height="26" rx="8" class="surf" stroke="var(--faint)"/>
+        <rect x="20" y="26" width="200" height="210" rx="50" class="surf" stroke="var(--soft)" stroke-width="2"/>
+        <rect x="221" y="98" width="12" height="30" rx="5" class="surf" stroke="var(--soft)" stroke-width="1.5"/>
+        <clipPath id="dtclip"><rect x="34" y="40" width="172" height="182" rx="40"/></clipPath>
+        <g clip-path="url(#dtclip)">
+          <g class="dt-run">
+            <text x="120" y="128" text-anchor="middle" class="num ink" font-size="48">42</text>
+            <text x="120" y="152" text-anchor="middle" class="soft" font-size="11">gtt / min</text>
+          </g>
+          <g class="dt-pause">
+            <path d="M 110 114 v 34 l 26 -17 z" class="ink"/>
+            <text x="120" y="172" text-anchor="middle" class="soft" font-size="11">en pause</text>
+          </g>
+        </g>
+        <!-- Bulle « geste » en haut a droite : main de profil qui pince -->
+        <circle cx="197" cy="43" r="30" fill="var(--bg)" stroke="var(--soft)" stroke-width="1.5"/>
+        <circle class="dt-ring2" cx="197" cy="43" r="13" fill="none" stroke="var(--faint)" stroke-width="1.6"/>
+        <g class="dt-pad-t"><rect x="190.5" y="25" width="13" height="14" rx="6.5" class="surf" stroke="var(--soft)" stroke-width="1.7"/></g>
+        <g class="dt-pad-b"><rect x="190.5" y="47" width="13" height="14" rx="6.5" class="surf" stroke="var(--soft)" stroke-width="1.7"/></g>
+      </svg>
+      <p class="dt-cap">Lancer · Pause · Reprendre · Acquitter</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow"><b class="probdg">Dropp Pro</b> · Mode Tap</p>
+    <div class="feature">
+      <div class="txt">
+        <h3>Observez une cadence. Tapez-la. Lisez-la.</h3>
+        <p>Reproduisez une cadence observée en touchant l'écran : DROPP affiche sa fréquence par minute — sans chronomètre ni calcul mental. Pour un débit de perfusion, la lecture donne aussi les mL/h, de quoi recaler la molette en confiance. Sur iPhone et au poignet.</p>
+      </div>
+      <div class="viz">
+        <p class="try">Essayez</p>
+        <div class="tapdemo">
+          <div aria-live="polite">
+            <div class="tv num" id="tapN">—</div>
+            <div class="tu" id="tapU">tapez au rythme observé</div>
+          </div>
+          <button type="button" class="tappad" id="tapPad" aria-label="Zone de tap — touchez au rythme observé">Taper<span class="tring" id="tapRing"></span></button>
+          <button type="button" class="tapreset" id="tapReset">recommencer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow"><b class="probdg">Dropp Pro</b> · Perfusions simultanées</p>
+    <h2>Chaque perfusion : son repère, son temps, son alarme.</h2>
+    <div style="max-width:560px; margin-top:10px;">
+      <div class="mrow"><span class="name">Box 3</span><span class="mbar m1"><i></i></span><span class="left">2 h 41</span></div>
+      <div class="mrow"><span class="name">Fauteuil 5</span><span class="mbar m2"><i></i></span><span class="left">0 h 12<span class="mdot" title="pré-alerte"></span></span></div>
+      <div class="mrow" style="border-bottom:none;"><span class="name">Perfusion A</span><span class="mbar m3"><i></i></span><span class="left">1 h 05</span></div>
+    </div>
+    <p class="muted" style="font-size:13px; margin-top:16px;">Des repères de lieux, jamais de noms — Box 3, Fauteuil 5, Passage 2. Le repère est optionnel.</p>
+  </section>
+  <section>
+    <p class="eyebrow">Aperçu Pro</p>
+    <h2>Le thème Graphite — et tout ce qui veille avec.</h2>
+    <div class="dark" role="img" aria-label="Fonctions Pro présentées dans le thème sombre Graphite : pré-alerte et jalons, alarmes au poignet, historique local, scène 3D Premium">
+      <div class="darkin">
+      <p class="dmark">Dropp Pro</p>
+      <div class="dgrid">
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <rect x="20" y="50" width="260" height="5" rx="2.5" fill="#2A2A2C"/>
+            <circle cx="80" cy="52.5" r="5" fill="#3A3A3C" class="dj"/>
+            <circle cx="143" cy="52.5" r="5" fill="#3A3A3C" class="dj j2"/>
+            <circle cx="206" cy="52.5" r="5" fill="#3A3A3C" class="dj j3"/>
+            <circle cx="258" cy="52.5" r="5" fill="#3A3A3C" class="dj j4"/>
+            <text x="80" y="78" text-anchor="middle" fill="#8F897D" font-size="9">¼</text>
+            <text x="143" y="78" text-anchor="middle" fill="#8F897D" font-size="9">mi-parcours</text>
+            <text x="206" y="78" text-anchor="middle" fill="#8F897D" font-size="9">¾</text>
+            <text x="258" y="78" text-anchor="middle" fill="#8F897D" font-size="9">pré-alerte</text>
+          </svg>
+          <h4>Pré-alerte et jalons</h4>
+          <p>Un signal cinq minutes avant la fin, des repères adaptés à la durée.</p>
+        </div>
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <rect x="134" y="8" width="32" height="9" rx="4" fill="#242426"/>
+            <rect x="134" y="103" width="32" height="9" rx="4" fill="#242426"/>
+            <rect x="110" y="15" width="80" height="90" rx="17" fill="#242426" stroke="#3E3E40" stroke-width="1.5"/>
+            <clipPath id="dwclip"><rect x="115" y="20" width="70" height="80" rx="13"/></clipPath>
+            <text x="150" y="34" text-anchor="middle" fill="#8F897D" font-size="8">22:07</text>
+            <g clip-path="url(#dwclip)">
+              <g class="dwb">
+                <rect x="119" y="42" width="62" height="42" rx="9" fill="#1A1A1C" stroke="#3E3E40"/>
+                <text x="150" y="58" text-anchor="middle" fill="#E9E2D6" font-size="8" font-weight="600">Box 3</text>
+                <text x="150" y="72" text-anchor="middle" fill="#8F897D" font-size="6.8">fin dans 5 minutes</text>
+              </g>
+              <g class="dwb b2">
+                <rect x="119" y="42" width="62" height="42" rx="9" fill="#1A1A1C" stroke="#3E3E40"/>
+                <text x="150" y="58" text-anchor="middle" fill="#E9E2D6" font-size="8" font-weight="600">Chambre 12</text>
+                <text x="150" y="72" text-anchor="middle" fill="#8F897D" font-size="6.8">terminée à 22:12</text>
+              </g>
+            </g>
+          </svg>
+          <h4>Alarmes au poignet</h4>
+          <p>L'Apple Watch prévient, même si l'iPhone est resté au vestiaire.</p>
+        </div>
+        <div class="dcell">
+          <svg viewBox="0 0 300 120" aria-hidden="true">
+            <g class="dh">
+              <rect x="20" y="12" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="29" fill="#E9E2D6" font-size="10" font-weight="600">Box 3</text>
+              <text x="266" y="29" text-anchor="end" fill="#8F897D" font-size="9.5">42 gtt/min · 4 h</text>
+            </g>
+            <g class="dh h2">
+              <rect x="20" y="47" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="64" fill="#E9E2D6" font-size="10" font-weight="600">Fauteuil 5</text>
+              <text x="266" y="64" text-anchor="end" fill="#8F897D" font-size="9.5">28 gtt/min · 1 h 30</text>
+            </g>
+            <g class="dh h3">
+              <rect x="20" y="82" width="260" height="26" rx="9" fill="#242426"/>
+              <text x="34" y="99" fill="#E9E2D6" font-size="10" font-weight="600">Relevé tempo</text>
+              <text x="266" y="99" text-anchor="end" fill="#8F897D" font-size="9.5">58 / min</text>
+            </g>
+          </svg>
+          <h4>Historique local</h4>
+          <p>Perfusions et relevés restent sur votre appareil — nulle part ailleurs.</p>
+        </div>
+        <div class="dcell">
+          <div class="d3wrap" id="d3wrap">
+            <canvas id="liquid2" aria-hidden="true"></canvas>
+            <svg viewBox="0 0 300 120" aria-hidden="true">
+              <g class="d3f">
+                <ellipse cx="150" cy="82" rx="95" ry="24" fill="none" stroke="#3E3E40" stroke-width="1.5"/>
+                <ellipse cx="150" cy="74" rx="68" ry="17" fill="none" stroke="#5A564E" stroke-width="1.5"/>
+                <ellipse cx="150" cy="66" rx="42" ry="10.5" fill="none" stroke="#8F897D" stroke-width="1.5"/>
+              </g>
+              <circle cx="150" cy="62" r="4.5" fill="#CFC6B7" class="d3drop"/>
+            </svg>
+          </div>
+          <h4>Scène 3D Premium</h4>
+          <p>La même goutte, avec de la profondeur — la nappe que vous voyez ici est celle de l'app, en Graphite.</p>
+        </div>
+      </div>
+      <p class="dnote">Ce panneau reprend le thème Graphite de l'app, inclus avec Dropp Pro.</p>
+      </div>
+    </div>
+  </section>
+  <section id="film">
+    <p class="eyebrow">Le film</p>
+    <h2>Le rythme, en mouvement.</h2>
+    <div class="film">
+      <video id="filmVid" class="film-v" loop playsinline preload="metadata" poster="/dropp-film-poster.jpg" aria-label="Film de présentation DROPP">
+        <source src="/dropp-film.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="film-snd" id="filmSnd" aria-pressed="false" aria-label="Activer le son">Son</button>
+    </div>
+    <script>
+    (function(){
+      var v=document.getElementById('filmVid'), b=document.getElementById('filmSnd'), userSet=false;
+      if(!v||!b){return;}
+      function sync(){
+        var on=!v.muted;
+        b.setAttribute('aria-pressed',String(on));
+        b.setAttribute('aria-label',on?I18N.t('soundOff'):I18N.t('soundOn'));
+        b.classList.toggle('muted', v.muted);
+      }
+      function enter(){
+        if(userSet){ v.play().catch(function(){}); sync(); return; }
+        // On tente le son d'office ; si le navigateur bloque (aucune
+        // interaction encore), repli en muet, le bouton Son reste offert.
+        v.muted=false;
+        var p=v.play();
+        if(p&&p.catch){ p.catch(function(){ v.muted=true; v.play().catch(function(){}); sync(); }); }
+        sync();
+      }
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){es.forEach(function(e){
+          if(e.isIntersecting){enter();}else{v.pause();}
+        });},{threshold:.4}).observe(v);
+      }else{enter();}
+      b.addEventListener('click',function(){
+        userSet=true;
+        v.muted=!v.muted;
+        if(!v.muted){v.play().catch(function(){});}
+        sync();
+      });
+      sync();
+    })();
+    </script>
+  </section>
+  <section id="pro">
+    <p class="eyebrow">Gratuit et Pro</p>
+    <h2>L'essentiel est gratuit. Le Pro suit votre garde.</h2>
+    <div class="tiers">
+      <div class="tier pro">
+        <div class="name">Dropp Pro</div>
+        <ol>
+          <li>L'app Apple Watch complète</li>
+          <li>Plusieurs perfusions simultanées</li>
+          <li>Pré-alerte 5 min avant la fin</li>
+          <li>Rappels adaptés à la durée</li>
+          <li>Mode Tap</li>
+          <li>Historique local</li>
+          <li>Thèmes et scènes premium</li>
+        </ol>
+        <div class="prices"><b>19,99 €/an</b> — prix de lancement, 7 jours d'essai · 2,99 €/mois · <b>49,99 € à vie</b></div>
+        <div class="note">L'achat à vie : tout, pour toujours, sans abonnement.</div>
+      </div>
+      <div class="tier">
+        <div class="name">Gratuit — un vrai outil</div>
+        <ul>
+          <li>Calculs illimités</li>
+          <li>Le tempo visuel</li>
+          <li>Une perfusion suivie</li>
+          <li>L'alarme de fin — pour toujours</li>
+          <li>Aucune publicité, aucun compte</li>
+        </ul>
+        <div class="note">L'alarme de fin est un signal de sécurité : elle ne sera jamais payante.</div>
+      </div>
+    </div>
+    <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
+      <a class="btn primary" href="#fin">Être prévenu du lancement</a>
+    </div>
+  </section>
+  <section>
+    <p class="eyebrow">Confiance</p>
+    <div class="dna">
+      <div class="tenet"><span class="dot"></span><div><b>Aucune donnée transmise.</b> <span>Ce que vous saisissez reste sur vos appareils. DROPP n'a aucun moyen technique d'y accéder.</span></div></div>
+      <div class="tenet"><span class="dot"></span><div><b>Aucun compte, aucun serveur.</b> <span>Rien à créer, rien à héberger, rien à pirater.</span></div></div>
+      <div class="tenet"><span class="dot"></span><div><b>Local et hors ligne.</b> <span>Sous-sol, chambre blindée, tournée à domicile : DROPP fonctionne sans réseau.</span></div></div>
+    </div>
+    <p class="clinic">Outil d'aide au calcul, au rythme et au suivi. Ne remplace ni le jugement clinique, ni les protocoles locaux, ni les dispositifs de contrôle.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Questions directes</p>
+    <details><summary>Qu'est-ce qui reste gratuit ?</summary><p>Les calculs illimités, le tempo visuel, le suivi d'une perfusion et l'alarme de fin — sans publicité, sans compte, sans limite de temps.</p></details>
+    <details><summary>DROPP fonctionne-t-il hors ligne ?</summary><p>Oui, entièrement. Tout est calculé et stocké sur l'appareil ; aucune connexion n'est nécessaire, jamais.</p></details>
+    <details><summary>L'iPhone est-il nécessaire avec l'Apple Watch ?</summary><p>Oui — l'app Watch accompagne l'app iPhone et s'installe par elle. Ensuite, les alarmes du poignet sonnent même si l'iPhone est éteint ou hors de portée.</p></details>
+    <details><summary>Quels facteurs de goutte sont disponibles ?</summary><p>10, 15, 20 et 60 gouttes par millilitre — le facteur se change à tout moment dans les réglages.</p></details>
+    <details><summary>À quoi sert le mode Tap ?</summary><p>À reproduire une cadence observée en touchant l'écran pour lire sa fréquence par minute — et, pour un débit de perfusion, ses mL/h. Sans chronomètre ni calcul mental.</p></details>
+    <details><summary>DROPP remplace-t-il une pompe ou un dispositif de contrôle ?</summary><p>Non. DROPP est un outil d'aide au calcul, au rythme et au suivi. Il ne mesure rien, ne décide rien, et ne se substitue à aucun dispositif ni protocole.</p></details>
+    <details><summary>Quelles versions sont compatibles ?</summary><p>iOS 17 ou ultérieur, watchOS 10 ou ultérieur.</p></details>
+  </section>
+
+  <section class="closing" id="fin">
+    <img class="appicon" src="/icon.png" alt="Icône de l'app Dropp" width="88" height="88">
+    <p class="eyebrow">Été 2026</p>
+    <h2>Bientôt sur l'App Store.</h2>
+    <div class="asbadge" role="img" aria-label="Apple App Store">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span>App Store</span>
+    </div>
+    <p class="muted" style="margin:0 auto 18px; max-width:44ch;">Conçu par un soignant, éprouvé sur le terrain — pour garder l'attention là où elle compte.</p>
+    <a class="btn primary" href="#demo" style="pointer-events:auto;">Revoir DROPP en action</a>
+  </section>
+
+  <footer>
+    <p class="fbrand">Dropp</p>
+    <nav>
+      <a href="/fr/privacy.html">Confidentialité</a>
+      <a href="/fr/support.html">Assistance</a>
+      <a href="/fr/legal.html">Mentions légales</a>
+    </nav>
+    <p>Outil d'aide au rythme. Ne remplace ni le jugement clinique, ni les dispositifs de contrôle de perfusion.<br>
+    © 2026 Dropp</p>
+    <nav class="flangs" aria-label="Langue"><a href="/fr/" lang="fr" hreflang="fr" data-lang="fr" aria-current="true">Français</a><span aria-hidden="true"> · </span><a href="/en/" lang="en" hreflang="en" data-lang="en">English</a><span aria-hidden="true"> · </span><a href="/es/" lang="es" hreflang="es" data-lang="es">Español</a><span aria-hidden="true"> · </span><a href="/de/" lang="de" hreflang="de" data-lang="de">Deutsch</a><span aria-hidden="true"> · </span><a href="/it/" lang="it" hreflang="it" data-lang="it">Italiano</a><span aria-hidden="true"> · </span><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR" data-lang="pt-br">Português (Brasil)</a><span aria-hidden="true"> · </span><a href="/pt-pt/" lang="pt-PT" hreflang="pt-PT" data-lang="pt-pt">Português (Portugal)</a><span aria-hidden="true"> · </span><a href="/nl/" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a><span aria-hidden="true"> · </span><a href="/ru/" lang="ru" hreflang="ru" data-lang="ru">Русский</a><span aria-hidden="true"> · </span><a href="/ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a><span aria-hidden="true"> · </span><a href="/ja/" lang="ja" hreflang="ja" data-lang="ja">日本語</a><span aria-hidden="true"> · </span><a href="/ko/" lang="ko" hreflang="ko" data-lang="ko">한국어</a><span aria-hidden="true"> · </span><a href="/zh-cn/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-cn">简体中文</a><span aria-hidden="true"> · </span><a href="/zh-tw/" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-tw">繁體中文</a></nav>
+  </footer>
+</div>
+<script>
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SQ = 0.42, CY = 0.56;
+  var VSH = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+  var FSH =
+    'precision highp float;' +
+    'uniform vec2 u_res;uniform float u_time;uniform float u_dark;uniform vec3 u_bg;' +
+    'uniform float u_imp[6];' +
+    'const float SQ=' + SQ + ';' +
+    'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}' +
+    'float height(vec2 p){' +
+    '  float r=length(p);' +
+    '  float h=0.14*exp(-r*r*130.0)*(1.0+0.05*sin(u_time*1.1));' +
+    '  for(int i=0;i<6;i++){' +
+    '    float t=u_time-u_imp[i];' +
+    '    if(t<0.0||t>3.6)continue;' +
+    '    if(t<0.45){h-=0.085*exp(-r*r*240.0)*sin(3.14159*t/0.45);}' +
+    '    float nt=t/3.6;' +
+    '    float R=0.74*(1.0-pow(1.0-nt,3.0));' +
+    '    float d=r-R;' +
+    '    float dec=1.0-nt;' +
+    '    h+=0.05*exp(-d*d*700.0)*cos(d*70.0)*dec;' +
+    '    h+=0.024*exp(-d*d*150.0)*cos(d*22.0)*dec;' +
+    '  }' +
+    '  return h;' +
+    '}' +
+    'void main(){' +
+    '  vec2 uv=gl_FragCoord.xy/u_res;' +
+    '  vec2 c=vec2(0.5,' + (1-CY) + ');' +
+    '  vec2 p=uv-c;p.x*=u_res.x/u_res.y;p.y/=SQ;' +
+    '  float e=0.004;' +
+    '  float h0=height(p);' +
+    '  float hx=height(p+vec2(e,0.0));' +
+    '  float hy=height(p+vec2(0.0,e));' +
+    '  vec3 n=normalize(vec3(-(hx-h0)/e,-(hy-h0)/e,2.2));' +
+    '  vec3 l=normalize(vec3(-0.28,0.55,0.78));' +
+    '  float dif=clamp(dot(n,l),0.0,1.0);' +
+    '  vec3 hv=normalize(l+vec3(0.0,0.0,1.0));' +
+    '  float spec=pow(clamp(dot(n,hv),0.0,1.0),70.0);' +
+    '  vec3 bl=mix(vec3(0.815,0.775,0.705),vec3(0.985,0.975,0.945),dif);' +
+    '  vec3 bd=mix(vec3(0.050,0.050,0.055),vec3(0.170,0.168,0.175),dif);' +
+    '  vec3 col=mix(bl,bd,u_dark);' +
+    '  col+=spec*mix(0.30,0.28,u_dark)*mix(vec3(1.0),vec3(1.0,0.94,0.82),u_dark);' +
+    '  float vg=smoothstep(1.35,0.35,length((uv-vec2(0.5,0.55))*vec2(1.3,1.5)));' +
+    '  col*=mix(mix(0.93,0.72,u_dark),1.0,vg);' +
+    '  col+=(hash(gl_FragCoord.xy)-0.5)*0.018;' +
+    '  col=mix(u_bg,col,smoothstep(1.0,0.90,uv.y));' +
+    '  gl_FragColor=vec4(col,1.0);' +
+    '}';
+
+  /* Deux nappes partagent le même shader : le hero (ivoire, 30 bpm
+     d'accueil) et la vignette Scène 3D du panneau Graphite (sombre,
+     tempo produit 42/min). */
+  var FALL=0.42, scenes=[];
+  function attach(cv, opts){
+    if(!cv) return false;
+    var gl = cv.getContext('webgl', {antialias:false, alpha:false});
+    if(!gl) return false;
+    function sh(t,s){var x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);
+      if(!gl.getShaderParameter(x,gl.COMPILE_STATUS)){return null;}return x;}
+    var vs=sh(gl.VERTEX_SHADER,VSH), fs=sh(gl.FRAGMENT_SHADER,FSH);
+    if(!vs||!fs) return false;
+    var pr=gl.createProgram();gl.attachShader(pr,vs);gl.attachShader(pr,fs);gl.linkProgram(pr);gl.useProgram(pr);
+    var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+    var loc=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+    var st={
+      cv:cv, gl:gl, opts:opts, visible:true, dead:false, idx:0, lastBeat:-10,
+      imp:new Float32Array([-1000,-1000,-1000,-1000,-1000,-1000]),
+      U:{res:gl.getUniformLocation(pr,'u_res'),time:gl.getUniformLocation(pr,'u_time'),
+        dark:gl.getUniformLocation(pr,'u_dark'),bg:gl.getUniformLocation(pr,'u_bg'),
+        imp:gl.getUniformLocation(pr,'u_imp')}
+    };
+    cv.addEventListener('webglcontextlost',function(ev){
+      ev.preventDefault(); st.dead=true; if(opts.onfail) opts.onfail();
+    });
+    new IntersectionObserver(function(e){st.visible=e[e.length-1].isIntersecting;},{threshold:0}).observe(cv);
+    scenes.push(st);
+    return true;
+  }
+
+  var heroCv=document.getElementById('liquid'), fb=document.getElementById('fallback');
+  var heroFail=function(){ heroCv.hidden=true; fb.hidden=false; };
+  // 2 s = 30 bpm : accueil apaisé (< 33 bpm), le vrai tempo produit bat
+  // dans les démonstrations plus bas.
+  if(rm || !attach(heroCv,{dark:0, period:2.0, bg:[0.957,0.937,0.902], onfail:heroFail})) heroFail();
+
+  var proCv=document.getElementById('liquid2'), proWrap=document.getElementById('d3wrap');
+  if(proCv){
+    if(!rm && attach(proCv,{dark:1, period:60/42, bg:[0.102,0.102,0.109],
+      onfail:function(){ proWrap.classList.remove('live'); }})){
+      proWrap.classList.add('live');
+    } else { proCv.remove(); }
+  }
+
+  if(!scenes.length) return;
+  var t0=performance.now();
+  function frame(now){
+    requestAnimationFrame(frame);
+    if(document.hidden) return;
+    var t=(now-t0)/1000;
+    for(var i=0;i<scenes.length;i++){
+      var s=scenes[i];
+      if(s.dead||!s.visible) continue;
+      var d=Math.min(devicePixelRatio||1,1.5);
+      // Arrondi obligatoire : cv.width est entier, une cible fractionnaire
+      // (ex. 375 x 1.5 = 562,5) forcerait une réallocation à chaque frame.
+      var w=Math.round(s.cv.clientWidth*d), h=Math.round(s.cv.clientHeight*d);
+      if(!w||!h) continue;
+      if(s.cv.width!==w||s.cv.height!==h){s.cv.width=w;s.cv.height=h;}
+      var gl=s.gl;
+      gl.viewport(0,0,w,h);
+      var P=s.opts.period;
+      if(t-s.lastBeat>=P){s.lastBeat=Math.floor(t/P)*P; s.imp[s.idx%6]=s.lastBeat+FALL; s.idx++;}
+      gl.uniform2f(s.U.res,w,h);
+      gl.uniform1f(s.U.time,t);
+      gl.uniform1f(s.U.dark,s.opts.dark);
+      gl.uniform3f(s.U.bg,s.opts.bg[0],s.opts.bg[1],s.opts.bg[2]);
+      gl.uniform1fv(s.U.imp,s.imp);
+      gl.drawArrays(gl.TRIANGLES,0,3);
+    }
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ============ HERO — pilote de scrollytelling ============ */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var story = document.getElementById('heroStory');
+  var stage = document.getElementById('hsStage');
+  // Sans JS ou mouvement réduit : la composition « poster » (défaut CSS)
+  // reste affichée, lisible, statique. On n'active rien.
+  if(!story || !stage || rm) return;
+
+  function q(s){ return story.querySelector(s); }
+  var el = {
+    soon:q('.hs-soon'), title:q('.hs-title'), sign:q('.hs-sign'),
+    tag:q('.hs-tag'), sub:q('.hs-sub'),
+    phone:q('.hs-phone'), watch:q('.hs-watch'),
+    capP:q('.hs-cap-phone'), capW:q('.hs-cap-watch'),
+    fin:q('.hs-final'), trust:q('.hs-trust'), hint:q('.hs-hint')
+  };
+
+  story.classList.add('on');
+
+  var vh=innerHeight, vw=innerWidth, track=1, hapOn=false, ticking=false;
+  function measure(){ vh=innerHeight; vw=innerWidth; track=Math.max(1, story.offsetHeight - vh); }
+  function cl(x){ return x<0?0:x>1?1:x; }
+  function inv(p,a,b){ return cl((p-a)/(b-a)); }
+  function E(t){ return t*t*(3-2*t); }              // smoothstep (feutré, façon Apple)
+  function R(p,a,b){ return E(inv(p,a,b)); }
+  function band(p,a,b,c,d){ var u=R(p,a,b), dn=R(p,c,d); return u<(1-dn)?u:(1-dn); }
+  function L(a,b,t){ return a+(b-a)*t; }
+  function setT(e,o,ty){ e.style.opacity=o.toFixed(3);
+    e.style.transform='translate(-50%,-50%) translateY('+ty.toFixed(1)+'px)'; }
+
+  function apply(p){
+    var H=vh, spread=Math.min(vw*0.30, 210);
+
+    // Scène 1 — « Bientôt sur l'App Store » : s'éclipse dès le premier scroll
+    setT(el.soon, band(p,0,0.02,0.05,0.11), -H*0.20);
+
+    // Titre DROPP : centré grand (sc.1) ; remonte un premier cran dès que
+    // la promesse arrive (sc.2, évite toute collision), puis finit en
+    // ancre de marque discrète (sc.3→). Entrée par espacement des lettres.
+    var d1=R(p,0.13,0.24), d2=R(p,0.32,0.48);
+    // Le gris doux suffit : DROPP garde sa pleine présence, sans fondu
+    el.title.style.opacity='1';
+    el.title.style.letterSpacing=(0.72-0.17*R(p,0,0.06)).toFixed(3)+'em';
+    el.title.style.transform='translate(-50%,-50%) translateY('+
+      L(L(-H*0.02,-H*0.27,d1),-H*0.42,d2).toFixed(1)+'px) scale('+
+      L(L(1,0.72,d1),0.46,d2).toFixed(3)+')';
+
+    // Signature — apparaît sc.1, disparaît en sc.2
+    setT(el.sign, band(p,0.02,0.06,0.13,0.20), H*0.14 - 6*R(p,0.02,0.06));
+
+    // Scène 2 — promesse
+    setT(el.tag, band(p,0.16,0.22,0.30,0.37), -H*0.03 + 18*(1-R(p,0.16,0.24)) - 12*R(p,0.30,0.37));
+    setT(el.sub, band(p,0.22,0.28,0.31,0.37),  H*0.10 + 16*(1-R(p,0.22,0.30)) - 10*R(p,0.31,0.37));
+
+    // iPhone — entre par le bas (sc.3), dégage le centre avant l'arrivée
+    // de la Watch (sc.4), puis tient sa place à gauche (sc.5)
+    var pIn=R(p,0.34,0.46);
+    var pScale=L(0.82,1,pIn)*L(1,0.86,R(p,0.54,0.72));
+    var pX=L(0,-spread,R(p,0.54,0.74));
+    var pY=L(H*0.16,0,pIn), pRot=L(4,0,pIn);
+    el.phone.style.opacity=R(p,0.34,0.44).toFixed(3);
+    el.phone.style.transform='translate(-50%,-50%) translate('+pX.toFixed(1)+'px,'+pY.toFixed(1)+
+      'px) scale('+pScale.toFixed(3)+') rotate('+pRot.toFixed(2)+'deg)';
+
+    // Apple Watch — entre par la droite au centre (sc.4), puis à droite (sc.5)
+    var wIn=R(p,0.58,0.74);
+    var wScale=L(0.86,1,wIn)*L(1,0.90,R(p,0.74,1));
+    var wX=L(spread*1.6,0,wIn)+L(0,spread,R(p,0.74,1));
+    var wY=L(H*0.08,0,R(p,0.58,0.72));
+    el.watch.style.opacity=R(p,0.58,0.70).toFixed(3);
+    el.watch.style.transform='translate(-50%,-50%) translate('+wX.toFixed(1)+'px,'+wY.toFixed(1)+
+      'px) scale('+wScale.toFixed(3)+')';
+
+    // Ondes haptiques : seulement scènes 4-5
+    var hap=p>0.60 && p<0.999;
+    if(hap!==hapOn){ stage.classList.toggle('hs-hap-on', hap); hapOn=hap; }
+
+    // Légendes sous les appareils + composition finale
+    setT(el.capP, band(p,0.42,0.48,0.53,0.59), H*0.30 + 12*(1-R(p,0.42,0.49)));
+    setT(el.capW, band(p,0.64,0.70,0.76,0.82), H*0.31 + 12*(1-R(p,0.64,0.71)));
+    setT(el.fin,  band(p,0.80,0.86,0.99,1),   -H*0.30 + 12*(1-R(p,0.80,0.87)));
+    setT(el.trust,band(p,0.86,0.92,0.995,1),   H*0.31 + 10*(1-R(p,0.86,0.93)));
+    setT(el.hint, band(p,0.82,0.90,0.985,1),   H*0.43);
+  }
+
+  function upd(){
+    ticking=false;
+    var top=story.getBoundingClientRect().top;   // UNE seule lecture layout / frame
+    apply(cl(-top/track));                        // puis uniquement des écritures
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(upd); } }
+  addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('resize', function(){ measure(); onScroll(); });
+  addEventListener('orientationchange', function(){ setTimeout(function(){ measure(); onScroll(); }, 120); });
+  measure(); apply(0);   // état initial = scène 1
+})();
+
+/* Démos interactives : calcul, calage, tap */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){ return document.getElementById(id); }
+
+  /* Calculez — le calcul exact de l'app, réglé aux molettes-rouleaux
+     (parité app : glisser pour ajuster, un cran = un pas).
+     Facteur fixé à 20 gtt/mL pour la démo (note affichée dans la carte). */
+  var vol=500, dur=240, FACTOR=20, calc=$('calc'), onCalcChange=null;
+  /* Formats localisés : motifs et pluriels viennent de la locale de la
+     page (window.I18N), les nombres passent par Intl.NumberFormat. */
+  function fmtDur(m){ var h=Math.floor(m/60), r=m%60;
+    return h ? (r ? I18N.t('durHM',{h:h, mm:(r<10?'0':'')+r}) : I18N.t('durH',{h:h}))
+             : I18N.t('durM',{m:r}); }
+  function fmtDurLong(m){ var h=Math.floor(m/60), r=m%60;
+    var hp = I18N.t('durHLong',{h:h, n:h}), mp = I18N.t('durMLong',{m:r, n:r});
+    return h ? (r ? I18N.t('durJoin',{hPart:hp, mPart:mp}) : hp) : mp; }
+  function render(){
+    $('cVol').textContent = I18N.t('ml',{v:I18N.num(vol,0,0)});
+    $('cDur').textContent = fmtDur(dur);
+    $('rVol').setAttribute('aria-valuenow', vol);
+    $('rVol').setAttribute('aria-valuetext', I18N.t('mlLong',{v:I18N.num(vol,0,0), n:vol}));
+    $('rDur').setAttribute('aria-valuenow', dur);
+    $('rDur').setAttribute('aria-valuetext', fmtDurLong(dur));
+    var rate = Math.max(1, Math.round(vol*FACTOR/dur));
+    var ok = rate <= 400;
+    calc.classList.toggle('oob', !ok);
+    $('cRate').textContent = ok ? rate : '—';
+    $('cInt').textContent  = ok ? I18N.num(60/rate,2,2) : '—';
+    $('cMlh').textContent  = ok ? I18N.num(Math.round(vol/dur*60),0,0) : '—';
+    if(onCalcChange && ok) onCalcChange(rate);
+  }
+  function roller(el, cfg){
+    var PX=16, ticks=el.querySelector('.ticks'), sx=0, sv=0, drag=false;
+    function clamp(v){ return Math.min(cfg.max, Math.max(cfg.min, v)); }
+    function paint(){ ticks.style.backgroundPositionX = (-(cfg.get()/cfg.step)*PX)+'px'; }
+    el.addEventListener('pointerdown', function(e){
+      drag=true; sx=e.clientX; sv=cfg.get();
+      if(el.setPointerCapture) el.setPointerCapture(e.pointerId);
+    });
+    el.addEventListener('pointermove', function(e){
+      if(!drag) return;
+      var v = clamp(sv + Math.round((sx-e.clientX)/PX)*cfg.step);
+      if(v!==cfg.get()){ cfg.set(v); paint(); render(); }
+    });
+    ['pointerup','pointercancel'].forEach(function(t){
+      el.addEventListener(t, function(){ drag=false; }); });
+    el.addEventListener('keydown', function(e){
+      var d = (e.key==='ArrowRight'||e.key==='ArrowUp') ? 1
+            : (e.key==='ArrowLeft'||e.key==='ArrowDown') ? -1 : 0;
+      if(!d) return; e.preventDefault();
+      cfg.set(clamp(cfg.get()+d*cfg.step)); paint(); render();
+    });
+    el.addEventListener('wheel', function(e){
+      // Seul un geste horizontal délibéré actionne le rouleau — le
+      // défilement vertical de la page passe sans détourner la valeur.
+      if(Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      var d = e.deltaX > 0 ? 1 : -1;
+      cfg.set(clamp(cfg.get()+d*cfg.step)); paint(); render();
+    }, {passive:false});
+    paint();
+  }
+  roller($('rVol'), {get:function(){return vol;}, set:function(v){vol=v;}, step:10, min:50, max:1500});
+  roller($('rDur'), {get:function(){return dur;}, set:function(v){dur=v;}, step:5,  min:15, max:720});
+  render();
+
+  /* Calez — la molette jusqu'à l'unisson (tempo Dropp fixe : 42).
+     À l'unisson, les DEUX gouttes repartent en phase et tombent ensemble
+     battement après battement ; les anneaux marquent 4 impacts communs. */
+  var TARGET=42, dropA=$('dropA'), dropB=$('dropB'), mol=$('molette'), msg=$('calMsg');
+  var animA=null, animB=null, ringAnims=[], synced=false, lastV=null;
+  function fall(el, rate){
+    if(rm || !el.animate) return null;
+    var period = 60000/rate, f = Math.min(.55, 420/period);
+    return el.animate(
+      [{transform:'translateY(0)',    opacity:1, offset:0},
+       {transform:'translateY(58px)', opacity:1, offset:f},
+       {transform:'translateY(58px)', opacity:0, offset:Math.min(.62, f+.06)},
+       {transform:'translateY(58px)', opacity:0, offset:1}],
+      {duration:period, iterations:Infinity});
+  }
+  function ringFlash(el, period, f){
+    if(rm || !el.animate) return null;
+    return el.animate(
+      [{opacity:.85, transform:'scale(.4)', offset:0},
+       {opacity:0,   transform:'scale(2)',  offset:.55},
+       {opacity:0,   transform:'scale(2)',  offset:1}],
+      {duration:period, iterations:4, delay:f*period});
+  }
+  function setRate(v){
+    $('rateA').textContent = I18N.t('rate',{v:v});
+    var on = v === TARGET;
+    if(animA) animA.cancel();
+    if(animB) animB.cancel();
+    ringAnims.forEach(function(a){ a.cancel(); }); ringAnims=[];
+    // Les deux gouttes repartent ensemble : en phase à l'unisson, elles
+    // tombent ensemble battement après battement ; sinon la divergence
+    // se voit d'elle-même.
+    animA = fall(dropA, v);
+    animB = fall(dropB, TARGET);
+    // Sujet explicite : c'est LA PERFUSION qui est lente ou rapide par
+    // rapport au tempo Dropp.
+    msg.textContent = on ? I18N.t('unison')
+      : (v < TARGET ? I18N.t('tooSlow') : I18N.t('tooFast'));
+    msg.classList.toggle('on', on);
+    if(on && !synced){
+      var period = 60000/TARGET, f = Math.min(.55, 420/period);
+      var ra = ringFlash($('ringA'), period, f), rb = ringFlash($('ringB'), period, f);
+      if(ra) ringAnims.push(ra); if(rb) ringAnims.push(rb);
+    }
+    synced = on;
+  }
+  mol.addEventListener('input', function(){
+    var v = +mol.value;
+    // Zone aimantée : à 1 cran de l'unisson, la molette s'y cale — le
+    // « clic » du bon réglage, sans rendre le geste trivial.
+    if(Math.abs(v - TARGET) <= 1){ v = TARGET; mol.value = TARGET; }
+    if(v === lastV) return;
+    lastV = v;
+    setRate(v);
+  });
+  lastV = +mol.value;
+  setRate(lastV);
+
+  /* Lien immersif : le tempo Dropp de « Calez » = le débit calculé dans
+     « Calculez ». Ajuster Volume/Durée déplace la cible du comparateur et
+     son battement ; la molette s'adapte pour rester atteignable. */
+  var calTarget = $('calTarget');
+  onCalcChange = function(rate){
+    TARGET = rate;
+    if(calTarget) calTarget.textContent = I18N.t('rate',{v:rate});
+    var lo = Math.max(1, rate-18), hi = rate+18;
+    mol.min = lo; mol.max = hi;
+    var start = Math.max(lo, rate-8);
+    mol.value = start; lastV = start;
+    setRate(start);
+  };
+  onCalcChange(Math.max(1, Math.round(vol*FACTOR/dur)));
+
+  /* Tap — cadence observée, en fréquence par minute */
+  var taps=[], pad=$('tapPad'), ring=$('tapRing');
+  function tap(){
+    var now = performance.now();
+    if(taps.length && now-taps[taps.length-1] > 4000) taps=[];
+    taps.push(now); if(taps.length>7) taps.shift();
+    ring.classList.remove('go'); void ring.offsetWidth; ring.classList.add('go');
+    if(taps.length < 2){
+      $('tapN').textContent='·'; $('tapU').textContent=I18N.t('tapContinue');
+    } else {
+      var iv = (taps[taps.length-1]-taps[0]) / (taps.length-1);
+      var freq = iv > 0 ? Math.round(60000/iv) : Infinity;
+      // Garde de plausibilité (parité app) : pas de cadence absurde.
+      if(!isFinite(freq) || freq > 400){
+        $('tapN').textContent='—'; $('tapU').textContent=I18N.t('tapTooFast');
+        taps=[taps[taps.length-1]];
+        return;
+      }
+      $('tapN').textContent = freq;
+      $('tapU').textContent = taps.length<4 ? I18N.t('tapTightening') : I18N.t('tapStable');
+      $('tapReset').classList.add('on');
+    }
+  }
+  var lastPtr=0;
+  pad.addEventListener('pointerdown', function(e){
+    e.preventDefault(); lastPtr=performance.now(); tap(); });
+  // Filet pour les activations sans événement pointeur (VoiceOver et
+  // autres technologies d'assistance).
+  pad.addEventListener('click', function(){
+    if(performance.now()-lastPtr > 400) tap(); });
+  pad.addEventListener('keydown', function(e){
+    if(e.repeat) return;
+    if(e.key===' '||e.key==='Enter'){ e.preventDefault(); tap(); } });
+  $('tapReset').addEventListener('click', function(){
+    taps=[]; $('tapN').textContent='—'; $('tapU').textContent=I18N.t('tapStart');
+    this.classList.remove('on');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "DROPP — Het ritme om je pols. Je aandacht bij de zorg.",
+    "description": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan — voor je ogen en om je pols — en waarschuwt je aan het eind. Zonder account, zonder gegevensverzameling. Binnenkort in de App Store.",
+    "ogDescription": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan en waarschuwt je aan het eind. Op iPhone en Apple Watch. Binnenkort in de App Store.",
+    "jsonLdDescription": "Volume, duur: Dropp berekent de druppelsnelheid van het infuus, geeft het tempo aan op iPhone en Apple Watch en waarschuwt je aan het eind. Zonder account, zonder gegevensverzameling."
+  },
+  "hero": {
+    "soon": "Binnenkort in de App Store",
+    "sign": "Ritme · Precisie · Zorg",
+    "tagline": "Het ritme om je pols.<br>Je aandacht bij de zorg.",
+    "sub": "Volume, duur: DROPP berekent de druppelsnelheid, geeft het tempo aan en waarschuwt je aan het eind.",
+    "capPhoneTitle": "Het tempo, in beeld.",
+    "capPhoneSub": "Berekenen. Afstellen. Volgen.",
+    "capWatchTitle": "Het ritme, om je pols.",
+    "capWatchSub": "Een subtiele tik bij elke druppel.",
+    "finalTitle": "Ga door met de zorg.",
+    "finalSub": "DROPP houdt het ritme aan en bewaakt de tijd.",
+    "trust": "Zonder account · Zonder advertenties · Gegevens lokaal",
+    "hint": "Ontdek DROPP"
+  },
+  "units": {
+    "gttMin": "gtt / min",
+    "sPerDrop": "s / druppel",
+    "mlH": "mL / h"
+  },
+  "labels": {
+    "volume": "Volume",
+    "duration": "Duur"
+  },
+  "try": "Probeer het",
+  "demo": {
+    "eyebrow": "In vijftien seconden",
+    "title": "De hele handeling, in één oogopslag.",
+    "ariaLabel": "Demonstratie: invoeren, berekenen, afstellen, volgen, gewaarschuwd worden",
+    "vol500": "500 mL",
+    "dur4h": "4 h",
+    "step1": "1 · Voer volume en duur in",
+    "step2": "2 · DROPP berekent de snelheid",
+    "step2Detail": "1,43 s / druppel — 125 mL/h",
+    "step3": "3 · Scherm en Apple Watch geven het ritme",
+    "step4": "4 · Stel af en begin met volgen",
+    "step4Hint": "stel de rolklem af op het tempo",
+    "step5": "5 · De resterende tijd volgt zichzelf",
+    "step5Detail": "nog 1 h 52 · einde 22:12",
+    "step6": "6 · Het einde waarschuwt je — waar je ook bent",
+    "step6Banner": "Infuus voltooid",
+    "step6Wrist": "ook om je pols"
+  },
+  "moment": {
+    "eyebrow": "Je kent dit moment",
+    "item1": "De formule, uit je hoofd — opnieuw tussen twee belletjes door.",
+    "item2": "De klem op het oog afgesteld, bij de minste twijfel opnieuw geteld.",
+    "item3": "Meerdere eindtijden om te onthouden, de hele dienst lang.",
+    "conclusion": "Het is geen kwestie van kunde. Het is een last — en DROPP draagt die."
+  },
+  "gestures": {
+    "eyebrow": "Drie handelingen"
+  },
+  "calc": {
+    "title": "Berekenen",
+    "body": "Volume en duur worden meteen druppels per minuut, seconden per druppel en mL/h. Druppelfactoren 10, 15, 20 en 60 gtt/mL — de demo staat op 20. Niets te onthouden, niets opnieuw te doen.",
+    "warn": "Buiten het plausibele bereik — de app weigert een onzinnig tempo te slaan.",
+    "initialInterval": "1,43"
+  },
+  "cal": {
+    "title": "Afstellen",
+    "body": "De scène slaat het berekende tempo — zichtbaar, voelbaar om je pols, hoorbaar als je het aanzet (een subtiele tik, niet luider dan een klik, die de stille modus respecteert). Stel de klem af tot ze gelijklopen: als de druppel van het infuus samenvalt met die van DROPP, zit je goed.",
+    "colInfusion": "Het infuus",
+    "colTempo": "Het Dropp-tempo",
+    "moletteAria": "Rolklem van het infuus — stel af tot ze gelijklopen",
+    "moletteLabel": "de klem",
+    "msgInitial": "stel de klem af tot ze gelijklopen",
+    "rateInitialA": "34 gtt/min",
+    "rateInitialB": "42 gtt/min"
+  },
+  "cont": {
+    "title": "Doorgaan",
+    "body": "De resterende tijd volgt zichzelf. Een vooraankondiging waarschuwt vijf minuten voor het eind, en de herinneringen passen zich aan de duur aan — een punt halverwege bij een infuus van een uur, regelmatige markeringen bij een die de nacht doorloopt. Het eind hangt niet langer alleen van je geheugen af.",
+    "svgEndTime": "einde 22:12",
+    "svgPreAlert": "Vooraankondiging",
+    "svgPreAlertDetail": "Box 3 · einde over 5 min",
+    "svgEndBannerName": "Box 3",
+    "svgEndBannerState": "voltooid",
+    "svgPreAlertMark": "vooraankondiging −5 min",
+    "svgEndMark": "einde"
+  },
+  "watch": {
+    "title": "Alles, zonder je iPhone te pakken.",
+    "body": "Start een infuus met de Digital Crown. Volg het, pauzeer het, vind het terug aan zijn label — Box 3, Stoel 5, Infuus A — zonder ooit te typen. Je pols slaat het tempo tijdens het afstellen, en de alarmen gaan af, ook als je iPhone in je kluisje ligt.",
+    "svgLabelOptional": "Label optioneel",
+    "svgCrownHint": "ingesteld met de Crown",
+    "svgStart": "Starten"
+  },
+  "places": {
+    "room12": "Kamer 12",
+    "box3": "Box 3",
+    "chair5": "Stoel 5"
+  },
+  "dt": {
+    "title": "Eén gebaar, zonder het scherm aan te raken.",
+    "body": "Tik twee keer je duim en wijsvinger tegen elkaar: afhankelijk van het scherm start DROPP het infuus, pauzeert het, hervat het of bevestigt een melding. Handen vol, handen met handschoenen — het native gebaar van de Apple Watch antwoordt om je pols, zonder aanraking.",
+    "requirement": "Apple Watch Series 9 en nieuwer.",
+    "svgPaused": "gepauzeerd",
+    "caption": "Starten · Pauzeren · Hervatten · Bevestigen"
+  },
+  "tap": {
+    "name": "Tap-modus",
+    "title": "Bekijk een ritme. Tik het. Lees het af.",
+    "body": "Geef een waargenomen ritme weer door op het scherm te tikken: DROPP toont de frequentie per minuut — zonder stopwatch, zonder hoofdrekenen. Bij een druppelsnelheid geeft de aflezing ook de mL/h, genoeg om de klem met vertrouwen bij te stellen. Op de iPhone en om je pols.",
+    "hintStart": "tik mee op het waargenomen ritme",
+    "padAria": "Tikvlak — tik mee op het waargenomen ritme",
+    "padLabel": "Tikken",
+    "reset": "opnieuw beginnen"
+  },
+  "multi": {
+    "name": "Gelijktijdige infusen",
+    "title": "Elk infuus: zijn label, zijn tijd, zijn alarm.",
+    "time1": "2 h 41",
+    "time2": "0 h 12",
+    "time3": "1 h 05",
+    "preAlertTitle": "vooraankondiging",
+    "rowInfusionA": "Infuus A",
+    "note": "Locatielabels, nooit namen — Box 3, Stoel 5, Gang 2. Het label is optioneel."
+  },
+  "pro": {
+    "eyebrow": "Pro-voorproefje",
+    "title": "Het Grafiet-thema — en alles wat mee waakt.",
+    "ariaLabel": "Pro-functies getoond in het donkere Grafiet-thema: vooraankondiging en mijlpalen, alarmen om de pols, lokale geschiedenis, Premium 3D-scène",
+    "svgMidway": "halverwege",
+    "svgPreAlert": "vooraankondiging",
+    "card1Title": "Vooraankondiging en mijlpalen",
+    "card1Body": "Een signaal vijf minuten voor het eind, markeringen afgestemd op de duur.",
+    "svgEndsIn5": "einde over 5 minuten",
+    "svgDoneAt": "voltooid om 22:12",
+    "card2Title": "Alarmen om je pols",
+    "card2Body": "De Apple Watch waarschuwt, ook als je iPhone in je kluisje ligt.",
+    "svgHist1": "42 gtt/min · 4 h",
+    "svgHist2": "28 gtt/min · 1 h 30",
+    "svgHist3Name": "Tempometing",
+    "svgHist3Value": "58 / min",
+    "card3Title": "Lokale geschiedenis",
+    "card3Body": "Infusen en metingen blijven op je apparaat — nergens anders.",
+    "card4Title": "Premium 3D-scène",
+    "card4Body": "Dezelfde druppel, met diepte — het oppervlak dat je hier ziet, is dat van de app, in Grafiet.",
+    "note": "Dit paneel toont het Grafiet-thema van de app, inbegrepen bij Dropp Pro."
+  },
+  "film": {
+    "eyebrow": "De film",
+    "title": "Het ritme, in beweging.",
+    "ariaLabel": "DROPP-presentatiefilm",
+    "sound": "Geluid",
+    "soundOn": "Geluid inschakelen"
+  },
+  "pricing": {
+    "eyebrow": "Gratis en Pro",
+    "title": "Het essentiële is gratis. Pro houdt je dienst bij.",
+    "proItem1": "De volledige Apple Watch-app",
+    "proItem2": "Meerdere gelijktijdige infusen",
+    "proItem3": "Vooraankondiging 5 min voor het eind",
+    "proItem4": "Herinneringen afgestemd op de duur",
+    "proItem5": "Tap-modus",
+    "proItem6": "Lokale geschiedenis",
+    "proItem7": "Premium-thema's en -scènes",
+    "priceYear": "€ 19,99/jaar",
+    "priceYearNote": "introductieprijs, 7 dagen proberen",
+    "priceMonth": "€ 2,99/maand",
+    "priceLifetime": "€ 49,99 eenmalig",
+    "lifetimeNote": "De eenmalige aankoop: alles, voor altijd, zonder abonnement.",
+    "freeName": "Gratis — een echt hulpmiddel",
+    "freeItem1": "Onbeperkt berekenen",
+    "freeItem2": "Het visuele tempo",
+    "freeItem3": "Eén gevolgd infuus",
+    "freeItem4": "Het eindalarm — voor altijd",
+    "freeItem5": "Geen advertenties, geen account",
+    "freeNote": "Het eindalarm is een veiligheidssignaal: het wordt nooit betaald.",
+    "cta": "Waarschuw me bij de lancering"
+  },
+  "trust": {
+    "eyebrow": "Vertrouwen",
+    "t1Title": "Geen gegevens verzonden.",
+    "t1Body": "Wat je invoert, blijft op je apparaten. DROPP heeft geen technische manier om erbij te komen.",
+    "t2Title": "Geen account, geen server.",
+    "t2Body": "Niets aan te maken, niets te hosten, niets te hacken.",
+    "t3Title": "Lokaal en offline.",
+    "t3Body": "Kelder, afgeschermde ruimte, huisbezoek: DROPP werkt zonder netwerk.",
+    "clinical": "Een hulpmiddel voor berekening, ritme en opvolging. Het vervangt geen klinisch oordeel, geen lokale protocollen en geen bewakingsapparatuur."
+  },
+  "faq": {
+    "eyebrow": "Directe antwoorden",
+    "q1": "Wat blijft gratis?",
+    "a1": "Onbeperkt berekenen, het visuele tempo, het volgen van één infuus en het eindalarm — zonder advertenties, zonder account, zonder tijdslimiet.",
+    "q2": "Werkt DROPP offline?",
+    "a2": "Ja, volledig. Alles wordt op het apparaat berekend en bewaard; een verbinding is nooit nodig.",
+    "q3": "Is de iPhone nodig bij de Apple Watch?",
+    "a3": "Ja — de Watch-app hoort bij de iPhone-app en wordt er via geïnstalleerd. Daarna gaan de alarmen om je pols af, ook als de iPhone uit staat of buiten bereik is.",
+    "q4": "Welke druppelfactoren zijn beschikbaar?",
+    "a4": "10, 15, 20 en 60 druppels per milliliter — de factor wijzig je op elk moment in de instellingen.",
+    "q5": "Waarvoor dient de Tap-modus?",
+    "a5": "Om een waargenomen ritme weer te geven door op het scherm te tikken en de frequentie per minuut af te lezen — en bij een druppelsnelheid de mL/h. Zonder stopwatch, zonder hoofdrekenen.",
+    "q6": "Vervangt DROPP een pomp of bewakingsapparaat?",
+    "a6": "Nee. DROPP is een hulpmiddel voor berekening, ritme en opvolging. Het meet niets, beslist niets en vervangt geen enkel apparaat of protocol.",
+    "q7": "Welke versies zijn compatibel?",
+    "a7": "iOS 17 of nieuwer, watchOS 10 of nieuwer."
+  },
+  "closing": {
+    "iconAlt": "Pictogram van de Dropp-app",
+    "eyebrow": "Zomer 2026",
+    "title": "Binnenkort in de App Store.",
+    "byline": "Ontworpen door een zorgverlener, beproefd in de praktijk — om de aandacht te houden waar die telt.",
+    "cta": "Bekijk DROPP opnieuw in actie"
+  },
+  "js": {
+    "ml": "{v} mL",
+    "mlLong": { "one": "{v} milliliter", "other": "{v} milliliter" },
+    "durH": "{h} h",
+    "durHM": "{h} h {mm}",
+    "durM": "{m} min",
+    "durHLong": { "one": "{h} uur", "other": "{h} uur" },
+    "durMLong": { "one": "{m} minuut", "other": "{m} minuten" },
+    "durJoin": "{hPart} {mPart}",
+    "rate": "{v} gtt/min",
+    "unison": "gelijk — je zit goed",
+    "tooSlow": "het infuus druppelt te traag — open de klem",
+    "tooFast": "het infuus druppelt te snel — sluit de klem",
+    "tapStart": "tik mee op het waargenomen ritme",
+    "tapContinue": "tik door op hetzelfde ritme",
+    "tapTightening": "per minuut · de waarde stabiliseert",
+    "tapStable": "per minuut · stabiel",
+    "tapTooFast": "te snel — begin opnieuw",
+    "soundOn": "Geluid inschakelen",
+    "soundOff": "Geluid uitschakelen"
+  }
+}

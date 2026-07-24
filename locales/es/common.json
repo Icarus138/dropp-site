@@ -1,0 +1,12 @@
+{
+  "lang": {
+    "label": "Idioma",
+    "change": "Cambiar idioma"
+  },
+  "footer": {
+    "privacy": "Privacidad",
+    "support": "Soporte",
+    "legal": "Aviso legal",
+    "disclaimer": "Ayuda para el ritmo. No sustituye el juicio clínico ni los dispositivos de control de perfusión."
+  }
+}

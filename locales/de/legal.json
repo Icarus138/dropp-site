@@ -1,0 +1,18 @@
+{
+  "title": "Impressum",
+  "metaDescription": "Impressum der Website dropp.care: Herausgeber, verantwortlich für den Inhalt, Hosting, geistiges Eigentum und Art des Dienstes.",
+  "lastUpdated": "Zuletzt aktualisiert: Juli 2026",
+  "s1Title": "Herausgeber der Website",
+  "s1P1": "Diese Website wird herausgegeben von <b>Dropp</b>, Einzelunternehmen (entreprise individuelle, Frankreich).<br>Einzelunternehmer · SIREN 852 769 579 · SIRET 852 769 579 00032 · APE-Code 62.01Z (Programmierung) · mit Sitz in Collonges-sous-Salève (Haute-Savoie), Frankreich.<br>Kontakt: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>.",
+  "s2Title": "Verantwortlich für den Inhalt",
+  "s2P1": "Der gesetzliche Vertreter des herausgebenden Unternehmens, erreichbar unter der oben genannten Kontaktadresse.",
+  "s3Title": "Hosting",
+  "s3P1": "Die Website wird gehostet von <b>GitHub, Inc.</b> (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA — <a href=\"https://github.com\">github.com</a>.",
+  "s4Title": "Geistiges Eigentum",
+  "s4P1": "Alle Inhalte dieser Website (Texte, Grafiken, Code sowie die Marke „Dropp“) sind Eigentum des Herausgebers, sofern nicht anders angegeben. Jede Vervielfältigung oder Weiterverwendung ohne vorherige Genehmigung ist untersagt.",
+  "s5Title": "Personenbezogene Daten",
+  "s5P1": "Diese Website setzt keine Cookies und erfasst keine personenbezogenen Daten. Die Dropp App ebenfalls nicht: siehe <a href=\"{{path.privacy}}\">Datenschutzerklärung</a>.",
+  "s6Title": "Art des Dienstes",
+  "s6P1": "Dropp ist eine Hilfe für Berechnung, Rhythmus und Verfolgung. Es ersetzt weder das klinische Urteil noch lokale Protokolle noch Infusionskontrollgeräte.",
+  "footerNote": "Bei Fragen zu diesem Impressum: <a href=\"{{path.support}}\">Support</a>."
+}

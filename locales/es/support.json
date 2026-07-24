@@ -1,0 +1,14 @@
+{
+  "title": "Soporte",
+  "metaDescription": "Ayuda y preguntas frecuentes sobre Dropp: alarmas en el Apple Watch, sonidos de notificación, restaurar una compra, datos locales y contacto.",
+  "q1Title": "¿La alarma no suena en el Apple Watch?",
+  "q1Body": "Un reloj bloqueado, o que no llevas puesto, nunca avisa: es una norma de Apple, y entonces la alerta pasa al iPhone. Lleva el reloj desbloqueado (con la detección de muñeca activada) para recibir las alertas en la muñeca.",
+  "q2Title": "¿El sonido de la alerta es el del sistema en el reloj?",
+  "q2Body": "También es una limitación de Apple: los sonidos personalizados no se permiten en las notificaciones de watchOS. Las melodías de Dropp suenan en el iPhone y dentro de la app.",
+  "q3Title": "Restaurar una compra",
+  "q3Body": "Ajustes de Dropp → Pasar a Dropp Pro → «Restaurar compra». La suscripción se gestiona y se cancela en los ajustes de tu cuenta del App Store.",
+  "q4Title": "Tus datos",
+  "q4Body": "Dropp no recopila nada: todo se queda en tus dispositivos. Más detalles en la <a href=\"{{path.privacy}}\">política de privacidad</a>. Eliminar la app lo elimina todo.",
+  "contactTitle": "Contacto",
+  "contactBody": "Una pregunta, un problema, una idea: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Politique de confidentialité",
+  "metaDescription": "Dropp ne collecte aucune donnée : tout reste sur votre iPhone et votre Apple Watch. Pas de compte, pas de serveur, pas d'outil d'analyse.",
+  "lastUpdated": "Dernière mise à jour : juillet 2026",
+  "lead": "Dropp ne collecte aucune donnée. Aucune. Tout ce que vous saisissez reste sur votre appareil, et nous n'avons aucun moyen technique d'y accéder.",
+  "s1Title": "Ce que l'application enregistre — localement",
+  "s1P1": "Les perfusions que vous suivez (volume, durée, débit calculé, repère de lieu optionnel, relevés du mode tap) sont stockées uniquement sur votre iPhone et votre Apple Watch, dans l'espace privé de l'application. Ces données ne quittent jamais vos appareils : Dropp n'a aucun serveur, ne demande aucun compte, n'intègre aucun outil d'analyse ni de publicité.",
+  "s1P2": "La synchronisation entre votre iPhone et votre Apple Watch passe exclusivement par le canal chiffré d'Apple entre vos deux appareils appairés (WatchConnectivity). Personne d'autre n'y participe.",
+  "s2Title": "Ce que nous vous demandons de ne pas saisir",
+  "s2P1": "Le champ « Repère » sert à identifier un lieu (Box 3, Fauteuil 5…). N'y saisissez jamais de nom de patient ni aucune information permettant d'identifier une personne : l'application est conçue pour fonctionner sans aucune donnée de santé ni donnée personnelle.",
+  "s3Title": "Notifications",
+  "s3P1": "Les alertes (fin de perfusion, progression) sont des notifications locales, programmées et déclenchées sur vos appareils. Elles ne transitent par aucun serveur.",
+  "s4Title": "Achats",
+  "s4P1": "Les abonnements et l'achat à vie Dropp Pro sont gérés intégralement par l'App Store via votre identifiant Apple. Dropp ne voit ni ne stocke aucune information de paiement ni d'identité — l'application reçoit uniquement d'Apple la confirmation que l'achat est actif.",
+  "s5Title": "Suppression de vos données",
+  "s5P1": "Supprimer l'application supprime l'intégralité des données. Vous pouvez aussi effacer l'historique à tout moment depuis l'application. Il n'existe aucune copie ailleurs.",
+  "s6Title": "Modifications",
+  "s6P1": "Si cette politique évolue, la nouvelle version sera publiée à cette adresse avec sa date de mise à jour. Le principe fondateur — aucune collecte — ne changera pas.",
+  "s7Title": "Contact",
+  "s7P1": "Pour toute question : <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

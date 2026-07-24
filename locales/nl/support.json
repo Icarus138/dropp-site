@@ -1,0 +1,14 @@
+{
+  "title": "Support",
+  "metaDescription": "Hulp en veelgestelde vragen over Dropp: alarmen op de Apple Watch, meldingsgeluiden, een aankoop herstellen, lokale gegevens en contact.",
+  "q1Title": "Het alarm gaat niet af op de Apple Watch?",
+  "q1Body": "Een vergrendelde of afgelegde watch waarschuwt nooit — dat is een regel van Apple: de melding gaat dan naar de iPhone. Draag de watch ontgrendeld (met polsdetectie aan) om de meldingen om je pols te ontvangen.",
+  "q2Title": "Is het alarmgeluid het systeemgeluid op de watch?",
+  "q2Body": "Ook dit is een beperking van Apple: eigen geluiden zijn niet toegestaan in watchOS-meldingen. De melodieën van Dropp spelen op de iPhone en in de app.",
+  "q3Title": "Een aankoop herstellen",
+  "q3Body": "Instellingen van Dropp → Overstappen op Dropp Pro → «Aankoop herstellen». Het abonnement beheer en annuleer je in de instellingen van je App Store-account.",
+  "q4Title": "Je gegevens",
+  "q4Body": "Dropp verzamelt niets — alles blijft op je apparaten. Details in het <a href=\"{{path.privacy}}\">privacybeleid</a>. De app verwijderen verwijdert alles.",
+  "contactTitle": "Contact",
+  "contactBody": "Een vraag, een probleem, een idee: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

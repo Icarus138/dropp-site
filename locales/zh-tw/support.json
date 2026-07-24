@@ -1,0 +1,14 @@
+{
+  "title": "支援",
+  "metaDescription": "Dropp 說明與常見問題：Apple Watch 鬧鈴、通知聲音、回復購買、本機資料與聯絡方式。",
+  "q1Title": "Apple Watch 上鬧鈴不響？",
+  "q1Body": "鎖定或未配戴的手錶從不提醒 — 這是 Apple 的規則：提醒會轉到 iPhone。請解鎖配戴手錶（開啟手腕偵測），以便在腕上收到提醒。",
+  "q2Title": "手錶上的提醒聲是系統聲音？",
+  "q2Body": "這也是 Apple 的限制：watchOS 通知中不允許自訂聲音。Dropp 的旋律在 iPhone 和應用程式內播放。",
+  "q3Title": "回復購買",
+  "q3Body": "Dropp 設定 → 升級到 Dropp Pro → 「回復購買」。訂閱在你的 App Store 帳號設定中管理和取消。",
+  "q4Title": "你的資料",
+  "q4Body": "Dropp 什麼都不收集 — 一切都留在你的裝置上。詳見<a href=\"{{path.privacy}}\">隱私政策</a>。刪除應用程式即刪除一切。",
+  "contactTitle": "聯絡",
+  "contactBody": "有疑問、有問題、有想法：<a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>。"
+}

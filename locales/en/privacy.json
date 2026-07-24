@@ -1,0 +1,21 @@
+{
+  "title": "Privacy Policy",
+  "metaDescription": "Dropp collects no data: everything stays on your iPhone and Apple Watch. No account, no server, no analytics.",
+  "lastUpdated": "Last updated: July 2026",
+  "lead": "Dropp collects no data. None. Everything you enter stays on your device, and we have no technical means of accessing it.",
+  "s1Title": "What the app records — locally",
+  "s1P1": "The infusions you track (volume, duration, computed rate, optional place label, tap-mode readings) are stored only on your iPhone and your Apple Watch, in the app's private space. This data never leaves your devices: Dropp has no server, requires no account, and includes no analytics or advertising tools.",
+  "s1P2": "Syncing between your iPhone and your Apple Watch happens exclusively over Apple's encrypted channel between your two paired devices (WatchConnectivity). No one else is involved.",
+  "s2Title": "What we ask you not to enter",
+  "s2P1": "The \"Label\" field identifies a place (Bay 3, Chair 5…). Never enter a patient's name or any information that could identify a person: the app is designed to work without any health or personal data.",
+  "s3Title": "Notifications",
+  "s3P1": "Alerts (end of infusion, progress) are local notifications, scheduled and triggered on your devices. They pass through no server.",
+  "s4Title": "Purchases",
+  "s4P1": "Dropp Pro subscriptions and the lifetime purchase are handled entirely by the App Store through your Apple Account. Dropp neither sees nor stores any payment or identity information — the app only receives confirmation from Apple that the purchase is active.",
+  "s5Title": "Deleting your data",
+  "s5P1": "Deleting the app deletes all of its data. You can also clear the history at any time from within the app. No copy exists anywhere else.",
+  "s6Title": "Changes",
+  "s6P1": "If this policy evolves, the new version will be published at this address with its update date. The founding principle — no collection — will not change.",
+  "s7Title": "Contact",
+  "s7P1": "For any question: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

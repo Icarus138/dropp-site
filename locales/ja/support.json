@@ -1,0 +1,14 @@
+{
+  "title": "サポート",
+  "metaDescription": "Droppのヘルプとよくある質問：Apple Watchのアラーム、通知音、購入の復元、ローカルデータ、お問い合わせ。",
+  "q1Title": "Apple Watchでアラームが鳴りませんか？",
+  "q1Body": "ロックされた、または外した時計は決して通知しません — これはAppleの仕様で、通知はiPhoneに切り替わります。手首で通知を受け取るには、時計のロックを解除して（手首検出をオンにして）着用してください。",
+  "q2Title": "時計のアラーム音がシステム音になりますか？",
+  "q2Body": "これもAppleの制限です：watchOSの通知ではカスタム音が許可されていません。Droppのメロディーは、iPhoneとアプリ内で再生されます。",
+  "q3Title": "購入を復元する",
+  "q3Body": "Droppの設定 → Dropp Proにアップグレード →「購入を復元」。サブスクリプションは、App Storeアカウントの設定で管理・解約します。",
+  "q4Title": "あなたのデータ",
+  "q4Body": "Droppは何も収集しません — すべてはあなたの端末に残ります。詳細は<a href=\"{{path.privacy}}\">プライバシーポリシー</a>で。アプリを削除すると、すべてが削除されます。",
+  "contactTitle": "お問い合わせ",
+  "contactBody": "ご質問、不具合、ご提案は：<a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>。"
+}

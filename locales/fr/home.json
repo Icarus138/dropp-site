@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "DROPP — Le rythme au poignet. La tête au soin.",
+    "description": "Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Bientôt sur l'App Store.",
+    "ogDescription": "Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch. Bientôt sur l'App Store.",
+    "jsonLdDescription": "Volume, durée : Dropp calcule le débit de perfusion, bat la cadence sur iPhone et Apple Watch et vous prévient à la fin. Sans compte, sans donnée collectée."
+  },
+  "hero": {
+    "soon": "Bientôt sur l'App Store",
+    "sign": "Rythme · Précision · Soin",
+    "tagline": "Le rythme au poignet.<br>La tête au soin.",
+    "sub": "Volume, durée : DROPP calcule le débit, donne la cadence et vous prévient à la fin.",
+    "capPhoneTitle": "Le tempo, sous les yeux.",
+    "capPhoneSub": "Calculez. Calez. Lancez le suivi.",
+    "capWatchTitle": "La cadence, au poignet.",
+    "capWatchSub": "Une vibration discrète à chaque goutte.",
+    "finalTitle": "Continuez le soin.",
+    "finalSub": "DROPP garde le rythme et suit le temps.",
+    "trust": "Sans compte · Sans publicité · Données locales",
+    "hint": "Découvrir DROPP"
+  },
+  "units": {
+    "gttMin": "gtt / min",
+    "sPerDrop": "s / goutte",
+    "mlH": "mL / h"
+  },
+  "labels": {
+    "volume": "Volume",
+    "duration": "Durée"
+  },
+  "try": "Essayez",
+  "demo": {
+    "eyebrow": "En quinze secondes",
+    "title": "Tout le geste, d'un regard.",
+    "ariaLabel": "Démonstration : saisir, calculer, caler, suivre, être prévenu",
+    "vol500": "500 mL",
+    "dur4h": "4 h",
+    "step1": "1 · Saisissez volume et durée",
+    "step2": "2 · DROPP calcule le débit",
+    "step2Detail": "1,43 s / goutte — 125 mL/h",
+    "step3": "3 · L'écran et l'Apple Watch battent le rythme",
+    "step4": "4 · Calez, puis lancez le suivi",
+    "step4Hint": "calez la molette sur le tempo",
+    "step5": "5 · Le temps restant se suit tout seul",
+    "step5Detail": "reste 1 h 52 · fin 22:12",
+    "step6": "6 · La fin vous prévient — où que vous soyez",
+    "step6Banner": "Perfusion terminée",
+    "step6Wrist": "au poignet aussi"
+  },
+  "moment": {
+    "eyebrow": "Vous connaissez ce moment",
+    "item1": "La formule, connue par cœur — à refaire entre deux sonnettes.",
+    "item2": "La molette réglée à l'œil, recomptée au moindre doute.",
+    "item3": "Plusieurs heures de fin à garder en tête, toute la garde.",
+    "conclusion": "Ce n'est pas une question de compétence. C'est une charge — et DROPP la porte."
+  },
+  "gestures": {
+    "eyebrow": "Trois gestes"
+  },
+  "calc": {
+    "title": "Calculez",
+    "body": "Volume et durée deviennent immédiatement gouttes par minute, secondes par goutte et mL/h. Facteurs 10, 15, 20 et 60 gtt/mL — la démo est calée sur 20. Rien à retenir, rien à refaire.",
+    "warn": "Hors plage plausible — l'app refuse de battre un tempo absurde.",
+    "initialInterval": "1,43"
+  },
+  "cal": {
+    "title": "Calez",
+    "body": "La scène bat la cadence calculée — visible, perceptible au poignet, audible si vous l'activez (un tick discret, pas plus fort qu'un cliquetis, qui respecte le mode silencieux). Réglez la molette jusqu'à l'unisson : quand la goutte du perfuseur tombe avec celle de DROPP, vous y êtes.",
+    "colInfusion": "La perfusion",
+    "colTempo": "Le tempo Dropp",
+    "moletteAria": "Molette de la perfusion — réglez jusqu'à l'unisson",
+    "moletteLabel": "la molette",
+    "msgInitial": "réglez la molette jusqu'à l'unisson",
+    "rateInitialA": "34 gtt/min",
+    "rateInitialB": "42 gtt/min"
+  },
+  "cont": {
+    "title": "Continuez",
+    "body": "Le temps restant se suit tout seul. Une pré-alerte prévient cinq minutes avant la fin, des rappels s'adaptent à la durée — un point à mi-parcours pour une perf d'une heure, des repères réguliers pour celle qui court sur la nuit. La fin ne repose plus seulement sur votre mémoire.",
+    "svgEndTime": "fin 22:12",
+    "svgPreAlert": "Pré-alerte",
+    "svgPreAlertDetail": "Box 3 · fin 5 min",
+    "svgEndBannerName": "Box 3",
+    "svgEndBannerState": "terminée",
+    "svgPreAlertMark": "pré-alerte −5 min",
+    "svgEndMark": "fin"
+  },
+  "watch": {
+    "title": "Tout, sans sortir l'iPhone.",
+    "body": "Lancez une perfusion à la couronne. Suivez-la, mettez-la en pause, retrouvez son repère — Box 3, Fauteuil 5, Perfusion A — sans jamais taper de texte. Le poignet bat la cadence pendant le calage, et ses alarmes sonnent même si l'iPhone est resté au vestiaire.",
+    "svgLabelOptional": "Repère optionnel",
+    "svgCrownHint": "réglé à la couronne",
+    "svgStart": "Lancer"
+  },
+  "places": {
+    "room12": "Chambre 12",
+    "box3": "Box 3",
+    "chair5": "Fauteuil 5"
+  },
+  "dt": {
+    "title": "Un geste, sans toucher l'écran.",
+    "body": "Pincez deux fois le pouce et l'index : selon l'écran, DROPP lance la perfusion, la met en pause, la reprend, ou acquitte une alerte. Mains prises, mains gantées — le geste natif de l'Apple Watch répond au poignet, sans contact.",
+    "requirement": "Apple Watch Series 9 et ultérieures.",
+    "svgPaused": "en pause",
+    "caption": "Lancer · Pause · Reprendre · Acquitter"
+  },
+  "tap": {
+    "name": "Mode Tap",
+    "title": "Observez une cadence. Tapez-la. Lisez-la.",
+    "body": "Reproduisez une cadence observée en touchant l'écran : DROPP affiche sa fréquence par minute — sans chronomètre ni calcul mental. Pour un débit de perfusion, la lecture donne aussi les mL/h, de quoi recaler la molette en confiance. Sur iPhone et au poignet.",
+    "hintStart": "tapez au rythme observé",
+    "padAria": "Zone de tap — touchez au rythme observé",
+    "padLabel": "Taper",
+    "reset": "recommencer"
+  },
+  "multi": {
+    "name": "Perfusions simultanées",
+    "title": "Chaque perfusion : son repère, son temps, son alarme.",
+    "time1": "2 h 41",
+    "time2": "0 h 12",
+    "time3": "1 h 05",
+    "preAlertTitle": "pré-alerte",
+    "rowInfusionA": "Perfusion A",
+    "note": "Des repères de lieux, jamais de noms — Box 3, Fauteuil 5, Passage 2. Le repère est optionnel."
+  },
+  "pro": {
+    "eyebrow": "Aperçu Pro",
+    "title": "Le thème Graphite — et tout ce qui veille avec.",
+    "ariaLabel": "Fonctions Pro présentées dans le thème sombre Graphite : pré-alerte et jalons, alarmes au poignet, historique local, scène 3D Premium",
+    "svgMidway": "mi-parcours",
+    "svgPreAlert": "pré-alerte",
+    "card1Title": "Pré-alerte et jalons",
+    "card1Body": "Un signal cinq minutes avant la fin, des repères adaptés à la durée.",
+    "svgEndsIn5": "fin dans 5 minutes",
+    "svgDoneAt": "terminée à 22:12",
+    "card2Title": "Alarmes au poignet",
+    "card2Body": "L'Apple Watch prévient, même si l'iPhone est resté au vestiaire.",
+    "svgHist1": "42 gtt/min · 4 h",
+    "svgHist2": "28 gtt/min · 1 h 30",
+    "svgHist3Name": "Relevé tempo",
+    "svgHist3Value": "58 / min",
+    "card3Title": "Historique local",
+    "card3Body": "Perfusions et relevés restent sur votre appareil — nulle part ailleurs.",
+    "card4Title": "Scène 3D Premium",
+    "card4Body": "La même goutte, avec de la profondeur — la nappe que vous voyez ici est celle de l'app, en Graphite.",
+    "note": "Ce panneau reprend le thème Graphite de l'app, inclus avec Dropp Pro."
+  },
+  "film": {
+    "eyebrow": "Le film",
+    "title": "Le rythme, en mouvement.",
+    "ariaLabel": "Film de présentation DROPP",
+    "sound": "Son",
+    "soundOn": "Activer le son"
+  },
+  "pricing": {
+    "eyebrow": "Gratuit et Pro",
+    "title": "L'essentiel est gratuit. Le Pro suit votre garde.",
+    "proItem1": "L'app Apple Watch complète",
+    "proItem2": "Plusieurs perfusions simultanées",
+    "proItem3": "Pré-alerte 5 min avant la fin",
+    "proItem4": "Rappels adaptés à la durée",
+    "proItem5": "Mode Tap",
+    "proItem6": "Historique local",
+    "proItem7": "Thèmes et scènes premium",
+    "priceYear": "19,99 €/an",
+    "priceYearNote": "prix de lancement, 7 jours d'essai",
+    "priceMonth": "2,99 €/mois",
+    "priceLifetime": "49,99 € à vie",
+    "lifetimeNote": "L'achat à vie : tout, pour toujours, sans abonnement.",
+    "freeName": "Gratuit — un vrai outil",
+    "freeItem1": "Calculs illimités",
+    "freeItem2": "Le tempo visuel",
+    "freeItem3": "Une perfusion suivie",
+    "freeItem4": "L'alarme de fin — pour toujours",
+    "freeItem5": "Aucune publicité, aucun compte",
+    "freeNote": "L'alarme de fin est un signal de sécurité : elle ne sera jamais payante.",
+    "cta": "Être prévenu du lancement"
+  },
+  "trust": {
+    "eyebrow": "Confiance",
+    "t1Title": "Aucune donnée transmise.",
+    "t1Body": "Ce que vous saisissez reste sur vos appareils. DROPP n'a aucun moyen technique d'y accéder.",
+    "t2Title": "Aucun compte, aucun serveur.",
+    "t2Body": "Rien à créer, rien à héberger, rien à pirater.",
+    "t3Title": "Local et hors ligne.",
+    "t3Body": "Sous-sol, chambre blindée, tournée à domicile : DROPP fonctionne sans réseau.",
+    "clinical": "Outil d'aide au calcul, au rythme et au suivi. Ne remplace ni le jugement clinique, ni les protocoles locaux, ni les dispositifs de contrôle."
+  },
+  "faq": {
+    "eyebrow": "Questions directes",
+    "q1": "Qu'est-ce qui reste gratuit ?",
+    "a1": "Les calculs illimités, le tempo visuel, le suivi d'une perfusion et l'alarme de fin — sans publicité, sans compte, sans limite de temps.",
+    "q2": "DROPP fonctionne-t-il hors ligne ?",
+    "a2": "Oui, entièrement. Tout est calculé et stocké sur l'appareil ; aucune connexion n'est nécessaire, jamais.",
+    "q3": "L'iPhone est-il nécessaire avec l'Apple Watch ?",
+    "a3": "Oui — l'app Watch accompagne l'app iPhone et s'installe par elle. Ensuite, les alarmes du poignet sonnent même si l'iPhone est éteint ou hors de portée.",
+    "q4": "Quels facteurs de goutte sont disponibles ?",
+    "a4": "10, 15, 20 et 60 gouttes par millilitre — le facteur se change à tout moment dans les réglages.",
+    "q5": "À quoi sert le mode Tap ?",
+    "a5": "À reproduire une cadence observée en touchant l'écran pour lire sa fréquence par minute — et, pour un débit de perfusion, ses mL/h. Sans chronomètre ni calcul mental.",
+    "q6": "DROPP remplace-t-il une pompe ou un dispositif de contrôle ?",
+    "a6": "Non. DROPP est un outil d'aide au calcul, au rythme et au suivi. Il ne mesure rien, ne décide rien, et ne se substitue à aucun dispositif ni protocole.",
+    "q7": "Quelles versions sont compatibles ?",
+    "a7": "iOS 17 ou ultérieur, watchOS 10 ou ultérieur."
+  },
+  "closing": {
+    "iconAlt": "Icône de l'app Dropp",
+    "eyebrow": "Été 2026",
+    "title": "Bientôt sur l'App Store.",
+    "byline": "Conçu par un soignant, éprouvé sur le terrain — pour garder l'attention là où elle compte.",
+    "cta": "Revoir DROPP en action"
+  },
+  "js": {
+    "ml": "{v} mL",
+    "mlLong": { "one": "{v} millilitre", "other": "{v} millilitres" },
+    "durH": "{h} h",
+    "durHM": "{h} h {mm}",
+    "durM": "{m} min",
+    "durHLong": { "one": "{h} heure", "other": "{h} heures" },
+    "durMLong": { "one": "{m} minute", "other": "{m} minutes" },
+    "durJoin": "{hPart} {mPart}",
+    "rate": "{v} gtt/min",
+    "unison": "à l’unisson — vous y êtes",
+    "tooSlow": "la perfusion goutte trop lentement — ouvrez la molette",
+    "tooFast": "la perfusion goutte trop vite — fermez la molette",
+    "tapStart": "tapez au rythme observé",
+    "tapContinue": "continuez au même rythme",
+    "tapTightening": "par minute · la valeur se resserre",
+    "tapStable": "par minute · stabilisée",
+    "tapTooFast": "trop rapide — reprenez",
+    "soundOn": "Activer le son",
+    "soundOff": "Couper le son"
+  }
+}

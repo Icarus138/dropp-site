@@ -1,0 +1,14 @@
+{
+  "title": "Assistance",
+  "metaDescription": "Aide et questions fréquentes sur Dropp : alarmes sur l'Apple Watch, sons de notification, restauration d'un achat, données locales et contact.",
+  "q1Title": "L'alarme ne sonne pas sur l'Apple Watch ?",
+  "q1Body": "Une montre verrouillée ou posée n'alerte jamais — c'est une règle d'Apple : l'alerte bascule alors sur l'iPhone. Portez la montre déverrouillée (détection du poignet activée) pour recevoir les alertes au poignet.",
+  "q2Title": "Le son de l'alerte est celui du système sur la montre ?",
+  "q2Body": "C'est également une limite d'Apple : les sons personnalisés ne sont pas permis dans les notifications watchOS. Les mélodies Dropp jouent sur l'iPhone et dans l'app.",
+  "q3Title": "Restaurer un achat",
+  "q3Body": "Réglages de Dropp → Passer à Dropp Pro → « Restaurer un achat ». L'abonnement se gère et se résilie dans les réglages de votre compte App Store.",
+  "q4Title": "Vos données",
+  "q4Body": "Dropp ne collecte rien — tout reste sur vos appareils. Détails dans la <a href=\"{{path.privacy}}\">politique de confidentialité</a>. Supprimer l'app supprime tout.",
+  "contactTitle": "Contact",
+  "contactBody": "Une question, un problème, une idée : <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

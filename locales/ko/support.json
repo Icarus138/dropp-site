@@ -1,0 +1,14 @@
+{
+  "title": "지원",
+  "metaDescription": "Dropp 도움말과 자주 묻는 질문: Apple Watch 알람, 알림음, 구매 복원, 로컬 데이터, 문의.",
+  "q1Title": "Apple Watch에서 알람이 울리지 않나요?",
+  "q1Body": "잠긴 시계나 착용하지 않은 시계는 결코 알리지 않습니다 — Apple의 규칙으로, 이때 알림은 iPhone으로 넘어갑니다. 손목에서 알림을 받으려면 시계의 잠금을 풀고(손목 감지를 켜고) 착용하세요.",
+  "q2Title": "시계의 알람 소리가 시스템 소리인가요?",
+  "q2Body": "이 또한 Apple의 제한입니다: watchOS 알림에서는 사용자 지정 소리가 허용되지 않습니다. Dropp의 멜로디는 iPhone과 앱 안에서 재생됩니다.",
+  "q3Title": "구매 복원하기",
+  "q3Body": "Dropp 설정 → Dropp Pro로 업그레이드 → 「구매 복원」. 구독은 App Store 계정 설정에서 관리·해지합니다.",
+  "q4Title": "당신의 데이터",
+  "q4Body": "Dropp은 아무것도 수집하지 않습니다 — 모두 당신의 기기에 남습니다. 자세한 내용은 <a href=\"{{path.privacy}}\">개인정보 처리방침</a>에서. 앱을 삭제하면 모든 것이 삭제됩니다.",
+  "contactTitle": "문의",
+  "contactBody": "질문, 문제, 아이디어: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

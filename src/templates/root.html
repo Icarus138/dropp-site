@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+{{builtin.generatedNote}}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>DROPP — Infusion rhythm on iPhone &amp; Apple Watch</title>
+<meta name="description" content="Volume, duration: DROPP computes the drip rate, beats the tempo on iPhone and Apple Watch, and alerts you at the end. No account, no data collected.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="canonical" href="https://dropp.care/">
+{{builtin.hreflangs}}
+<meta name="theme-color" content="#F4EFE6">
+<script>
+/* Détection de langue — préférence mémorisée puis langues du navigateur,
+   repli anglais. Jamais de géolocalisation IP. Les paramètres (UTM…) et
+   l'ancre sont préservés. */
+(function(){
+  var DIRS = {{builtin.localeDirsJson}};
+  function pick(){
+    try {
+      var saved = localStorage.getItem('{{builtin.storageKey}}');
+      if (saved && DIRS[saved]) return saved;
+    } catch(e){}
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || '{{builtin.fallbackLocale}}'];
+    for (var i = 0; i < langs.length; i++) {
+      var l = String(langs[i]).toLowerCase();
+      if (DIRS[l]) return l;
+      if (l.indexOf('zh') === 0) return /hant|tw|hk|mo/.test(l) ? 'zh-tw' : 'zh-cn';
+      if (l.indexOf('pt') === 0) return l === 'pt-pt' ? 'pt-pt' : 'pt-br';
+      var base = l.split('-')[0];
+      if (DIRS[base]) return base;
+    }
+    return '{{builtin.fallbackLocale}}';
+  }
+  location.replace('/' + pick() + '/' + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/{{builtin.fallbackLocale}}/"></noscript>
+<style>
+  body { margin:0; background:#F4EFE6; color:#3A3834;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    min-height:100svh; display:grid; place-items:center; text-align:center; line-height:1.6; }
+  .mark { font-size:15px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; color:#6F695E; margin:0 0 22px; }
+  ul { list-style:none; margin:0; padding:0; column-count:2; column-gap:34px; }
+  li { padding:4px 0; break-inside:avoid; }
+  a { color:#3A3834; text-decoration:none; font-size:14.5px; padding:6px 8px; display:inline-block; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="mark">Dropp</p>
+  <nav aria-label="Languages">
+    <ul>
+      {{builtin.linkList}}
+    </ul>
+  </nav>
+</main>
+</body>
+</html>

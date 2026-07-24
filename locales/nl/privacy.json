@@ -1,0 +1,21 @@
+{
+  "title": "Privacybeleid",
+  "metaDescription": "Dropp verzamelt geen gegevens: alles blijft op je iPhone en je Apple Watch. Geen account, geen server, geen analysetools.",
+  "lastUpdated": "Laatst bijgewerkt: juli 2026",
+  "lead": "Dropp verzamelt geen gegevens. Geen enkele. Alles wat je invoert, blijft op je apparaat, en wij hebben geen technische manier om erbij te komen.",
+  "s1Title": "Wat de app opslaat — lokaal",
+  "s1P1": "De infusen die je volgt (volume, duur, berekende snelheid, optioneel locatielabel, metingen van de tap-modus) worden alleen op je iPhone en je Apple Watch bewaard, in de privéruimte van de app. Deze gegevens verlaten je apparaten nooit: Dropp heeft geen server, vraagt geen account en bevat geen analyse- of advertentietools.",
+  "s1P2": "De synchronisatie tussen je iPhone en je Apple Watch verloopt uitsluitend via het versleutelde kanaal van Apple tussen je twee gekoppelde apparaten (WatchConnectivity). Niemand anders is erbij betrokken.",
+  "s2Title": "Wat we je vragen niet in te voeren",
+  "s2P1": "Het veld «Label» dient om een plaats aan te duiden (Box 3, Stoel 5…). Voer er nooit een patiëntnaam in of enige informatie waarmee een persoon te identificeren is: de app is gemaakt om te werken zonder enige gezondheids- of persoonsgegevens.",
+  "s3Title": "Meldingen",
+  "s3P1": "De meldingen (einde infuus, voortgang) zijn lokale meldingen, gepland en geactiveerd op je apparaten. Ze lopen via geen enkele server.",
+  "s4Title": "Aankopen",
+  "s4P1": "De abonnementen en de eenmalige aankoop van Dropp Pro worden volledig door de App Store afgehandeld via je Apple-account. Dropp ziet of bewaart geen betaal- of identiteitsgegevens — de app ontvangt van Apple alleen de bevestiging dat de aankoop actief is.",
+  "s5Title": "Je gegevens verwijderen",
+  "s5P1": "De app verwijderen verwijdert al zijn gegevens. Je kunt de geschiedenis ook op elk moment in de app wissen. Er bestaat nergens anders een kopie.",
+  "s6Title": "Wijzigingen",
+  "s6P1": "Als dit beleid verandert, wordt de nieuwe versie op dit adres gepubliceerd met de datum van bijwerking. Het uitgangspunt — geen verzameling — verandert niet.",
+  "s7Title": "Contact",
+  "s7P1": "Voor elke vraag: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

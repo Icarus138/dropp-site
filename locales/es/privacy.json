@@ -1,0 +1,21 @@
+{
+  "title": "Política de privacidad",
+  "metaDescription": "Dropp no recopila ningún dato: todo se queda en tu iPhone y tu Apple Watch. Sin cuenta, sin servidor, sin herramientas de análisis.",
+  "lastUpdated": "Última actualización: julio de 2026",
+  "lead": "Dropp no recopila ningún dato. Ninguno. Todo lo que introduces se queda en tu dispositivo, y no tenemos ninguna forma técnica de acceder a ello.",
+  "s1Title": "Lo que la aplicación guarda — en local",
+  "s1P1": "Las perfusiones que sigues (volumen, duración, goteo calculado, referencia de lugar opcional, lecturas del modo tap) se guardan únicamente en tu iPhone y tu Apple Watch, en el espacio privado de la aplicación. Estos datos nunca salen de tus dispositivos: Dropp no tiene ningún servidor, no pide ninguna cuenta y no incluye ninguna herramienta de análisis ni de publicidad.",
+  "s1P2": "La sincronización entre tu iPhone y tu Apple Watch se realiza exclusivamente por el canal cifrado de Apple entre tus dos dispositivos emparejados (WatchConnectivity). Nadie más participa.",
+  "s2Title": "Lo que te pedimos que no introduzcas",
+  "s2P1": "El campo «Referencia» sirve para identificar un lugar (Box 3, Sillón 5…). No introduzcas nunca el nombre de un paciente ni ninguna información que permita identificar a una persona: la aplicación está diseñada para funcionar sin ningún dato de salud ni dato personal.",
+  "s3Title": "Notificaciones",
+  "s3P1": "Las alertas (fin de perfusión, progreso) son notificaciones locales, programadas y activadas en tus dispositivos. No pasan por ningún servidor.",
+  "s4Title": "Compras",
+  "s4P1": "Las suscripciones y la compra de por vida de Dropp Pro las gestiona íntegramente el App Store con tu cuenta de Apple. Dropp no ve ni guarda ninguna información de pago ni de identidad: la aplicación solo recibe de Apple la confirmación de que la compra está activa.",
+  "s5Title": "Eliminación de tus datos",
+  "s5P1": "Eliminar la aplicación elimina todos sus datos. También puedes borrar el historial en cualquier momento desde la aplicación. No existe ninguna copia en ningún otro sitio.",
+  "s6Title": "Cambios",
+  "s6P1": "Si esta política evoluciona, la nueva versión se publicará en esta dirección con su fecha de actualización. El principio fundacional —ninguna recopilación— no cambiará.",
+  "s7Title": "Contacto",
+  "s7P1": "Para cualquier pregunta: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

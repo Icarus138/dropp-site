@@ -1,0 +1,21 @@
+{
+  "title": "Datenschutzerklärung",
+  "metaDescription": "Dropp erfasst keine Daten: Alles bleibt auf Ihrem iPhone und Ihrer Apple Watch. Kein Konto, kein Server, keine Analyse-Tools.",
+  "lastUpdated": "Zuletzt aktualisiert: Juli 2026",
+  "lead": "Dropp erfasst keine Daten. Keine. Alles, was Sie eingeben, bleibt auf Ihrem Gerät, und wir haben keinen technischen Zugriff darauf.",
+  "s1Title": "Was die App speichert — lokal",
+  "s1P1": "Die Infusionen, die Sie verfolgen (Volumen, Dauer, berechnete Tropfrate, optionale Ortskennung, Messungen des Tap-Modus), werden nur auf Ihrem iPhone und Ihrer Apple Watch im privaten Bereich der App gespeichert. Diese Daten verlassen Ihre Geräte nie: Dropp hat keinen Server, verlangt kein Konto und enthält keine Analyse- oder Werbe-Tools.",
+  "s1P2": "Die Synchronisierung zwischen Ihrem iPhone und Ihrer Apple Watch läuft ausschließlich über Apples verschlüsselten Kanal zwischen Ihren beiden gekoppelten Geräten (WatchConnectivity). Niemand sonst ist beteiligt.",
+  "s2Title": "Was Sie bitte nicht eingeben",
+  "s2P1": "Das Feld „Kennung“ dient dazu, einen Ort zu benennen (Platz 3, Sessel 5 …). Geben Sie dort nie einen Patientennamen oder eine Information ein, die eine Person identifizieren könnte: Die App ist so gebaut, dass sie ohne jede Gesundheits- oder Personendaten funktioniert.",
+  "s3Title": "Mitteilungen",
+  "s3P1": "Die Alarme (Infusionsende, Fortschritt) sind lokale Mitteilungen, auf Ihren Geräten geplant und ausgelöst. Sie laufen über keinen Server.",
+  "s4Title": "Käufe",
+  "s4P1": "Die Abonnements und der einmalige Kauf von Dropp Pro werden vollständig vom App Store über Ihren Apple-Account abgewickelt. Dropp sieht und speichert keine Zahlungs- oder Identitätsdaten – die App erhält von Apple nur die Bestätigung, dass der Kauf aktiv ist.",
+  "s5Title": "Löschen Ihrer Daten",
+  "s5P1": "Das Löschen der App löscht alle ihre Daten. Sie können den Verlauf auch jederzeit in der App löschen. Es gibt keine Kopie an einem anderen Ort.",
+  "s6Title": "Änderungen",
+  "s6P1": "Sollte sich diese Erklärung ändern, wird die neue Fassung mit Datum an dieser Adresse veröffentlicht. Der Grundsatz – keine Erfassung – wird sich nicht ändern.",
+  "s7Title": "Kontakt",
+  "s7P1": "Bei Fragen: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

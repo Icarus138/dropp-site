@@ -1,0 +1,18 @@
+{
+  "title": "法律声明",
+  "metaDescription": "dropp.care 的法律声明：发布者、出版负责人、托管、知识产权与服务性质。",
+  "lastUpdated": "最后更新：2026 年 7 月",
+  "s1Title": "网站发布者",
+  "s1P1": "本网站由 <b>Dropp</b>（个体经营者 / entreprise individuelle，法国）发布。<br>个体经营者 · SIREN 852 769 579 · SIRET 852 769 579 00032 · APE 代码 62.01Z（计算机编程）· 注册地为法国上萨瓦省科隆日苏萨莱夫。<br>联系：<a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>。",
+  "s2Title": "出版负责人",
+  "s2P1": "发布公司的法定代表人，可通过上述联系地址联系。",
+  "s3Title": "托管",
+  "s3P1": "本网站由 <b>GitHub, Inc.</b>（GitHub Pages）托管，地址 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, 美国 — <a href=\"https://github.com\">github.com</a>。",
+  "s4Title": "知识产权",
+  "s4P1": "本网站的全部内容（文本、视觉素材、代码，以及「Dropp」商标）均为发布者所有，另有说明者除外。未经事先授权，禁止任何复制或再利用。",
+  "s5Title": "个人数据",
+  "s5P1": "本网站不设置任何 Cookie，也不收集任何个人数据。Dropp 应用同样如此：见<a href=\"{{path.privacy}}\">隐私政策</a>。",
+  "s6Title": "服务性质",
+  "s6P1": "Dropp 是一款辅助计算、把握节奏与跟踪的工具。它不能替代临床判断、本地流程或输液控制设备。",
+  "footerNote": "如对本声明有任何疑问：<a href=\"{{path.support}}\">支持</a>。"
+}

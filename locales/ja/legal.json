@@ -1,0 +1,18 @@
+{
+  "title": "法的事項",
+  "metaDescription": "dropp.careの法的事項：発行者、掲載責任者、ホスティング、知的財産、サービスの性質。",
+  "lastUpdated": "最終更新：2026年7月",
+  "s1Title": "サイトの発行者",
+  "s1P1": "本サイトは<b>Dropp</b>（個人事業主／entreprise individuelle、フランス）が発行しています。<br>個人事業主 · SIREN 852 769 579 · SIRET 852 769 579 00032 · APEコード 62.01Z（コンピュータプログラミング）· 所在地はコロンジュ・スー・サレーヴ（オート＝サヴォワ県）、フランス。<br>お問い合わせ：<a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>。",
+  "s2Title": "掲載責任者",
+  "s2P1": "発行会社の法定代理人。上記のお問い合わせ先で連絡できます。",
+  "s3Title": "ホスティング",
+  "s3P1": "本サイトは<b>GitHub, Inc.</b>（GitHub Pages）、88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, アメリカ合衆国 — <a href=\"https://github.com\">github.com</a> によりホストされています。",
+  "s4Title": "知的財産",
+  "s4P1": "本サイトのすべてのコンテンツ（テキスト、ビジュアル、コード、および「Dropp」の商標）は、特に記載のない限り発行者に帰属します。事前の許可なき複製または再利用を禁じます。",
+  "s5Title": "個人データ",
+  "s5P1": "本サイトはCookieを一切設置せず、個人データを一切収集しません。Droppアプリも同様です：<a href=\"{{path.privacy}}\">プライバシーポリシー</a>をご覧ください。",
+  "s6Title": "サービスの性質",
+  "s6P1": "Droppは計算・リズム・追跡を支援するツールです。臨床判断、施設のプロトコル、輸液制御機器に代わるものではありません。",
+  "footerNote": "本事項に関するご質問は：<a href=\"{{path.support}}\">サポート</a>。"
+}

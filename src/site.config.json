@@ -1,0 +1,39 @@
+{
+  "domain": "https://dropp.care",
+  "sourceLocale": "fr",
+  "fallbackLocale": "en",
+  "storageKey": "dropp-lang",
+  "pages": [
+    { "id": "home",    "template": "home.html",    "out": "index.html",   "jsStrings": "home.js", "jsonLd": true },
+    { "id": "privacy", "template": "privacy.html", "out": "privacy.html" },
+    { "id": "support", "template": "support.html", "out": "support.html" },
+    { "id": "legal",   "template": "legal.html",   "out": "legal.html" }
+  ],
+  "legacyRedirects": [
+    { "from": "confidentialite.html", "toPage": "privacy", "toLocale": "fr" },
+    { "from": "assistance.html",      "toPage": "support", "toLocale": "fr" },
+    { "from": "mentions-legales.html", "toPage": "legal",  "toLocale": "fr" }
+  ],
+  "media": {
+    "film":   { "byLocale": { "fr": "/dropp-film.mp4" },        "default": "/dropp-film-en.mp4",        "fallback": "/dropp-film.mp4" },
+    "poster": { "byLocale": { "fr": "/dropp-film-poster.jpg" }, "default": "/dropp-film-poster-en.jpg", "fallback": "/dropp-film-poster.jpg" },
+    "ogImagePattern": "/og-image-{code}.png",
+    "ogImageDefault": "/og-image.png"
+  },
+  "locales": [
+    { "code": "fr",    "hreflang": "fr",    "htmlLang": "fr",      "dir": "ltr", "name": "Français",             "ogLocale": "fr_FR", "numberLocale": "fr" },
+    { "code": "en",    "hreflang": "en",    "htmlLang": "en",      "dir": "ltr", "name": "English",              "ogLocale": "en_US", "numberLocale": "en" },
+    { "code": "es",    "hreflang": "es",    "htmlLang": "es",      "dir": "ltr", "name": "Español",              "ogLocale": "es_ES", "numberLocale": "es" },
+    { "code": "de",    "hreflang": "de",    "htmlLang": "de",      "dir": "ltr", "name": "Deutsch",              "ogLocale": "de_DE", "numberLocale": "de" },
+    { "code": "it",    "hreflang": "it",    "htmlLang": "it",      "dir": "ltr", "name": "Italiano",             "ogLocale": "it_IT", "numberLocale": "it" },
+    { "code": "pt-br", "hreflang": "pt-BR", "htmlLang": "pt-BR",   "dir": "ltr", "name": "Português (Brasil)",   "ogLocale": "pt_BR", "numberLocale": "pt-BR" },
+    { "code": "pt-pt", "hreflang": "pt-PT", "htmlLang": "pt-PT",   "dir": "ltr", "name": "Português (Portugal)", "ogLocale": "pt_PT", "numberLocale": "pt-PT" },
+    { "code": "nl",    "hreflang": "nl",    "htmlLang": "nl",      "dir": "ltr", "name": "Nederlands",           "ogLocale": "nl_NL", "numberLocale": "nl" },
+    { "code": "ru",    "hreflang": "ru",    "htmlLang": "ru",      "dir": "ltr", "name": "Русский",              "ogLocale": "ru_RU", "numberLocale": "ru" },
+    { "code": "ar",    "hreflang": "ar",    "htmlLang": "ar",      "dir": "rtl", "name": "العربية",              "ogLocale": "ar_AR", "numberLocale": "ar-u-nu-latn" },
+    { "code": "ja",    "hreflang": "ja",    "htmlLang": "ja",      "dir": "ltr", "name": "日本語",                "ogLocale": "ja_JP", "numberLocale": "ja" },
+    { "code": "ko",    "hreflang": "ko",    "htmlLang": "ko",      "dir": "ltr", "name": "한국어",                "ogLocale": "ko_KR", "numberLocale": "ko" },
+    { "code": "zh-cn", "hreflang": "zh-Hans", "htmlLang": "zh-Hans", "dir": "ltr", "name": "简体中文",            "ogLocale": "zh_CN", "numberLocale": "zh-Hans" },
+    { "code": "zh-tw", "hreflang": "zh-Hant", "htmlLang": "zh-Hant", "dir": "ltr", "name": "繁體中文",            "ogLocale": "zh_TW", "numberLocale": "zh-Hant" }
+  ]
+}

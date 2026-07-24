@@ -1,0 +1,12 @@
+{
+  "lang": {
+    "label": "Lingua",
+    "change": "Cambia lingua"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "support": "Assistenza",
+    "legal": "Note legali",
+    "disclaimer": "Uno strumento di supporto al ritmo. Non sostituisce il giudizio clinico né i dispositivi di controllo dell'infusione."
+  }
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="utf-8">
+<!-- Page générée — ne pas éditer à la main. Sources : src/templates + locales/. Build : npm run build -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Dropp — Поддержка</title>
+<meta name="description" content="Помощь и частые вопросы о Dropp: сигналы на Apple Watch, звуки уведомлений, восстановление покупки, локальные данные и контакт.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="canonical" href="https://dropp.care/ru/support.html">
+<link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html">
+<link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html">
+<link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html">
+<link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html">
+<link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html">
+<link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html">
+<link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html">
+<link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html">
+<link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html">
+<link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html">
+<link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html">
+<link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html">
+<style>
+  :root { --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92; --body:#6F695E;
+    --faint:#C6BFB2; --amber:#D9A44A; --rule:rgba(58,56,52,.12); }
+  * { box-sizing:border-box; }
+  a:focus-visible, summary:focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; }
+  .page { max-width:640px; margin:0 auto; padding:56px 24px 80px; }
+  .mark { font-size:14px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; text-align:center; margin:0 0 34px; }
+  .mark a { color:inherit; text-decoration:none; }
+  h1 { font-size:26px; font-weight:300; margin:0 0 26px; }
+  h2 { font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--soft); margin:32px 0 10px; }
+  html[lang="ar"] h2, html[lang="ar"] .mark { letter-spacing:0; text-indent:0; }
+  p { margin:0 0 12px; }
+  a { color:var(--ink); }
+  footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--rule);
+    font-size:12px; color:var(--soft); }
+/* ============ I18N — sélecteur de langue, RTL, CJK ============ */
+/* Pastille fixe en haut, côté inline-end : <details> natif (fonctionne
+   sans JS), habillé comme les pastilles du site (asbadge / film-snd). */
+.lsw { position:fixed; top:calc(14px + env(safe-area-inset-top));
+  inset-inline-end:calc(16px + env(safe-area-inset-right)); z-index:60; }
+.lsw summary { display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  list-style:none; padding:8px 13px; border-radius:999px; color:var(--ink, #3A3834);
+  background:rgba(255,253,248,.78); border:1px solid rgba(58,56,52,.14);
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  font-size:11.5px; font-weight:600; letter-spacing:.08em;
+  transition:background .2s; -webkit-tap-highlight-color:transparent;
+  user-select:none; -webkit-user-select:none; }
+.lsw summary:hover { background:rgba(255,253,248,.96); }
+.lsw summary::-webkit-details-marker { display:none; }
+.lsw summary::marker { content:""; }
+.lsw summary::after { content:none; }
+.lsw summary svg { width:14px; height:14px; display:block; opacity:.75; }
+.lsw summary i { width:7px; height:7px; border-inline-end:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor; transform:rotate(45deg) translateY(-2px);
+  opacity:.55; transition:transform .2s; }
+.lsw[open] summary i { transform:rotate(-135deg) translateY(-1px); }
+.lsw .lsw-pop { position:absolute; inset-inline-end:0; top:calc(100% + 8px);
+  min-width:208px; max-height:min(64svh, 480px); overflow:auto; padding:10px;
+  background:rgba(252,249,242,.97); border:1px solid rgba(58,56,52,.12);
+  border-radius:16px; box-shadow:0 18px 44px rgba(58,56,52,.18);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+.lsw .lsw-title { margin:2px 8px 8px; font-size:10px; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--soft, #A59F92); max-width:none; }
+.lsw ul { list-style:none; margin:0; padding:0; }
+.lsw ul a { display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:9px 12px; border-radius:10px; text-decoration:none; color:var(--ink, #3A3834);
+  font-size:13.5px; letter-spacing:0; font-weight:400; }
+.lsw ul a:hover { background:rgba(58,56,52,.06); }
+.lsw ul a[aria-current="true"] { font-weight:600; }
+.lsw ul a[aria-current="true"]::after { content:""; width:6px; height:6px; flex:none;
+  border-radius:50%; background:var(--amber, #D9A44A); }
+
+/* Nav de langues du footer : liens crawlables, discrets */
+.flangs { margin-top:14px; font-size:11.5px; line-height:2.1; color:var(--faint, #C6BFB2); }
+.flangs a { color:var(--body, #6F695E); text-decoration:none; margin:0; padding:6px 5px; display:inline-block; }
+.flangs a:hover { color:var(--ink, #3A3834); text-decoration:underline; text-underline-offset:3px; }
+.flangs a[aria-current="true"] { color:var(--ink, #3A3834); font-weight:600; }
+.flangs span { padding:0 1px; }
+
+/* ---- RTL (arabe) ----
+   La mise en page suit dir="rtl" ; on isole les valeurs numériques
+   (chiffres latins + unités) pour une lecture médicale sans ambiguïté. */
+[dir="rtl"] .hs-title { direction:ltr; }
+[dir="rtl"] :is(.cval, .crate, .cres .big, .cres .sec, .tapdemo .tv, .mrow .left) {
+  direction:ltr; unicode-bidi:isolate; }
+[dir="rtl"] .roller { direction:ltr; }
+html[lang="ar"] :is(.eyebrow, .hs-soon, .hs-sign, .lbl, .try, .colhead, .mlab span,
+  .tier .name, .dt-cap, .film-snd, .lsw-title, .cu, .hs-hint) {
+  letter-spacing:0; text-indent:0; }
+html[lang="ar"] .hs-tag, html[lang="ar"] h2 { line-height:1.5; }
+html[lang="ar"] body { font-family:-apple-system, BlinkMacSystemFont, "SF Arabic",
+  "Segoe UI", "Noto Sans Arabic", system-ui, sans-serif; }
+
+/* ---- CJK : piles système dédiées, interlignage et approche adaptés ---- */
+html[lang="ja"] body { font-family:-apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  "Yu Gothic UI", "Meiryo", sans-serif; }
+html[lang="ko"] body { font-family:-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+  "Malgun Gothic", sans-serif; }
+html[lang="zh-Hans"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+html[lang="zh-Hant"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang TC",
+  "Microsoft JhengHei", sans-serif; }
+html[lang="ja"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang="ko"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang^="zh"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint) {
+  letter-spacing:.14em; }
+html[lang="ja"] .hs-sign, html[lang="ko"] .hs-sign, html[lang^="zh"] .hs-sign {
+  letter-spacing:.22em; text-indent:.22em; }
+html[lang="ja"] body, html[lang="ko"] body, html[lang^="zh"] body { line-height:1.75; }
+html[lang="ja"] h2, html[lang="ko"] h2, html[lang^="zh"] h2 { font-weight:350; }
+
+/* ---- Langues à mots longs : césure douce des titres ---- */
+html[lang="de"] :is(h2, h3, .hs-tag), html[lang="nl"] :is(h2, h3, .hs-tag),
+html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }
+
+</style>
+</head>
+<body>
+<details class="lsw" id="lsw">
+  <summary aria-label="Сменить язык — Русский">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.7"/><ellipse cx="12" cy="12" rx="4.2" ry="9.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 8.9h17.2M3.4 15.1h17.2" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span class="lsw-cur">RU</span><i aria-hidden="true"></i>
+  </summary>
+  <div class="lsw-pop" role="group" aria-label="Язык">
+    <p class="lsw-title" aria-hidden="true">Язык</p>
+    <ul>
+      <li><a href="/fr/support.html" lang="fr" hreflang="fr" data-lang="fr">Français</a></li>
+      <li><a href="/en/support.html" lang="en" hreflang="en" data-lang="en">English</a></li>
+      <li><a href="/es/support.html" lang="es" hreflang="es" data-lang="es">Español</a></li>
+      <li><a href="/de/support.html" lang="de" hreflang="de" data-lang="de">Deutsch</a></li>
+      <li><a href="/it/support.html" lang="it" hreflang="it" data-lang="it">Italiano</a></li>
+      <li><a href="/pt-br/support.html" lang="pt-BR" hreflang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li>
+      <li><a href="/pt-pt/support.html" lang="pt-PT" hreflang="pt-PT" data-lang="pt-pt">Português (Portugal)</a></li>
+      <li><a href="/nl/support.html" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a></li>
+      <li><a href="/ru/support.html" lang="ru" hreflang="ru" data-lang="ru" aria-current="true">Русский</a></li>
+      <li><a href="/ar/support.html" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li>
+      <li><a href="/ja/support.html" lang="ja" hreflang="ja" data-lang="ja">日本語</a></li>
+      <li><a href="/ko/support.html" lang="ko" hreflang="ko" data-lang="ko">한국어</a></li>
+      <li><a href="/zh-cn/support.html" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-cn">简体中文</a></li>
+      <li><a href="/zh-tw/support.html" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-tw">繁體中文</a></li>
+    </ul>
+  </div>
+</details>
+<div class="page">
+  <p class="mark"><a href="/ru/">Dropp</a></p>
+  <h1>Поддержка</h1>
+
+  <h2>Сигнал не звучит на Apple Watch?</h2>
+  <p>Заблокированные или снятые часы никогда не оповещают — это правило Apple: оповещение тогда переходит на iPhone. Носите часы разблокированными (с включённым определением запястья), чтобы получать сигналы на запястье.</p>
+
+  <h2>Звук сигнала на часах — системный?</h2>
+  <p>Это тоже ограничение Apple: свои звуки не разрешены в уведомлениях watchOS. Мелодии Dropp звучат на iPhone и внутри приложения.</p>
+
+  <h2>Восстановить покупку</h2>
+  <p>Настройки Dropp → Перейти на Dropp Pro → «Восстановить покупку». Подписка управляется и отменяется в настройках вашего аккаунта App Store.</p>
+
+  <h2>Ваши данные</h2>
+  <p>Dropp ничего не собирает — всё остаётся на ваших устройствах. Подробности в <a href="/ru/privacy.html">политике конфиденциальности</a>. Удаление приложения удаляет всё.</p>
+
+  <h2>Контакт</h2>
+  <p>Вопрос, проблема, идея: <a href="mailto:contact@dropp.care">contact@dropp.care</a>.</p>
+
+  <footer>
+    Помощник для ритма. Не заменяет клиническое суждение и устройства контроля инфузии.
+    <nav class="flangs" aria-label="Язык"><a href="/fr/support.html" lang="fr" hreflang="fr" data-lang="fr">Français</a><span aria-hidden="true"> · </span><a href="/en/support.html" lang="en" hreflang="en" data-lang="en">English</a><span aria-hidden="true"> · </span><a href="/es/support.html" lang="es" hreflang="es" data-lang="es">Español</a><span aria-hidden="true"> · </span><a href="/de/support.html" lang="de" hreflang="de" data-lang="de">Deutsch</a><span aria-hidden="true"> · </span><a href="/it/support.html" lang="it" hreflang="it" data-lang="it">Italiano</a><span aria-hidden="true"> · </span><a href="/pt-br/support.html" lang="pt-BR" hreflang="pt-BR" data-lang="pt-br">Português (Brasil)</a><span aria-hidden="true"> · </span><a href="/pt-pt/support.html" lang="pt-PT" hreflang="pt-PT" data-lang="pt-pt">Português (Portugal)</a><span aria-hidden="true"> · </span><a href="/nl/support.html" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a><span aria-hidden="true"> · </span><a href="/ru/support.html" lang="ru" hreflang="ru" data-lang="ru" aria-current="true">Русский</a><span aria-hidden="true"> · </span><a href="/ar/support.html" lang="ar" hreflang="ar" data-lang="ar">العربية</a><span aria-hidden="true"> · </span><a href="/ja/support.html" lang="ja" hreflang="ja" data-lang="ja">日本語</a><span aria-hidden="true"> · </span><a href="/ko/support.html" lang="ko" hreflang="ko" data-lang="ko">한국어</a><span aria-hidden="true"> · </span><a href="/zh-cn/support.html" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-cn">简体中文</a><span aria-hidden="true"> · </span><a href="/zh-tw/support.html" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-tw">繁體中文</a></nav>
+  </footer>
+</div>
+<script>
+/* ============ I18N — runtime de page ============ */
+/* Chaînes dynamiques de CETTE locale uniquement (inlinées au build),
+   formatage des nombres via Intl, pluriels via Intl.PluralRules. */
+window.I18N = (function(){
+  var L = {"lang":"ru","num":"ru","s":{}};
+  var pr; try { pr = new Intl.PluralRules(L.lang); } catch(e){ pr = null; }
+  var nfCache = {};
+  function num(v, min, max){
+    var k = min + '-' + max;
+    if (!(k in nfCache)) {
+      try { nfCache[k] = new Intl.NumberFormat(L.num, { minimumFractionDigits: min, maximumFractionDigits: max }); }
+      catch(e){ nfCache[k] = null; }
+    }
+    return nfCache[k] ? nfCache[k].format(v) : String(Math.round(v * 100) / 100);
+  }
+  function t(key, params){
+    var v = L.s[key];
+    if (v === undefined) return key;
+    if (typeof v === 'object') {
+      var n = params && typeof params.n === 'number' ? params.n : 0;
+      var form = pr ? pr.select(n) : (n === 1 ? 'one' : 'other');
+      v = v[form] !== undefined ? v[form] : v.other;
+    }
+    return String(v).replace(/\{(\w+)\}/g, function(m, p){
+      return params && params[p] !== undefined ? String(params[p]) : m;
+    });
+  }
+  return { lang: L.lang, t: t, num: num };
+})();
+
+/* ============ Sélecteur de langue ============ */
+(function(){
+  var d = document.getElementById('lsw');
+
+  /* Choix manuel : mémorisé localement, prioritaire sur la langue du
+     navigateur aux prochaines visites ; les paramètres (UTM…) et
+     l'ancre suivent vers la page cible. */
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[data-lang]') : null;
+    if (!a) return;
+    try { localStorage.setItem('dropp-lang', a.getAttribute('data-lang')); } catch(err){}
+    if (location.search || location.hash) {
+      e.preventDefault();
+      location.href = a.getAttribute('href') + location.search + location.hash;
+    }
+  });
+
+  if (!d) return;
+  document.addEventListener('click', function(e){
+    if (d.open && !d.contains(e.target)) d.open = false;
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && d.open) {
+      d.open = false;
+      var s = d.querySelector('summary'); if (s) s.focus();
+    }
+    if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && d.open && d.contains(document.activeElement)) {
+      var links = Array.prototype.slice.call(d.querySelectorAll('.lsw-pop a'));
+      if (!links.length) return;
+      e.preventDefault();
+      var i = links.indexOf(document.activeElement);
+      var next = e.key === 'ArrowDown' ? Math.min(i + 1, links.length - 1) : Math.max(i - 1, 0);
+      if (i === -1) next = e.key === 'ArrowDown' ? 0 : links.length - 1;
+      links[next].focus();
+    }
+  });
+  d.addEventListener('toggle', function(){
+    if (d.open) { var f = d.querySelector('.lsw-pop a[aria-current="true"]') || d.querySelector('.lsw-pop a'); if (f) f.focus(); }
+  });
+})();
+
+</script>
+</body>
+</html>

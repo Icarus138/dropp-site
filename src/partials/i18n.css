@@ -1,0 +1,79 @@
+/* ============ I18N — sélecteur de langue, RTL, CJK ============ */
+/* Pastille fixe en haut, côté inline-end : <details> natif (fonctionne
+   sans JS), habillé comme les pastilles du site (asbadge / film-snd). */
+.lsw { position:fixed; top:calc(14px + env(safe-area-inset-top));
+  inset-inline-end:calc(16px + env(safe-area-inset-right)); z-index:60; }
+.lsw summary { display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  list-style:none; padding:8px 13px; border-radius:999px; color:var(--ink, #3A3834);
+  background:rgba(255,253,248,.78); border:1px solid rgba(58,56,52,.14);
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  font-size:11.5px; font-weight:600; letter-spacing:.08em;
+  transition:background .2s; -webkit-tap-highlight-color:transparent;
+  user-select:none; -webkit-user-select:none; }
+.lsw summary:hover { background:rgba(255,253,248,.96); }
+.lsw summary::-webkit-details-marker { display:none; }
+.lsw summary::marker { content:""; }
+.lsw summary::after { content:none; }
+.lsw summary svg { width:14px; height:14px; display:block; opacity:.75; }
+.lsw summary i { width:7px; height:7px; border-inline-end:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor; transform:rotate(45deg) translateY(-2px);
+  opacity:.55; transition:transform .2s; }
+.lsw[open] summary i { transform:rotate(-135deg) translateY(-1px); }
+.lsw .lsw-pop { position:absolute; inset-inline-end:0; top:calc(100% + 8px);
+  min-width:208px; max-height:min(64svh, 480px); overflow:auto; padding:10px;
+  background:rgba(252,249,242,.97); border:1px solid rgba(58,56,52,.12);
+  border-radius:16px; box-shadow:0 18px 44px rgba(58,56,52,.18);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+.lsw .lsw-title { margin:2px 8px 8px; font-size:10px; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--soft, #A59F92); max-width:none; }
+.lsw ul { list-style:none; margin:0; padding:0; }
+.lsw ul a { display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:9px 12px; border-radius:10px; text-decoration:none; color:var(--ink, #3A3834);
+  font-size:13.5px; letter-spacing:0; font-weight:400; }
+.lsw ul a:hover { background:rgba(58,56,52,.06); }
+.lsw ul a[aria-current="true"] { font-weight:600; }
+.lsw ul a[aria-current="true"]::after { content:""; width:6px; height:6px; flex:none;
+  border-radius:50%; background:var(--amber, #D9A44A); }
+
+/* Nav de langues du footer : liens crawlables, discrets */
+.flangs { margin-top:14px; font-size:11.5px; line-height:2.1; color:var(--faint, #C6BFB2); }
+.flangs a { color:var(--body, #6F695E); text-decoration:none; margin:0; padding:6px 5px; display:inline-block; }
+.flangs a:hover { color:var(--ink, #3A3834); text-decoration:underline; text-underline-offset:3px; }
+.flangs a[aria-current="true"] { color:var(--ink, #3A3834); font-weight:600; }
+.flangs span { padding:0 1px; }
+
+/* ---- RTL (arabe) ----
+   La mise en page suit dir="rtl" ; on isole les valeurs numériques
+   (chiffres latins + unités) pour une lecture médicale sans ambiguïté. */
+[dir="rtl"] .hs-title { direction:ltr; }
+[dir="rtl"] :is(.cval, .crate, .cres .big, .cres .sec, .tapdemo .tv, .mrow .left) {
+  direction:ltr; unicode-bidi:isolate; }
+[dir="rtl"] .roller { direction:ltr; }
+html[lang="ar"] :is(.eyebrow, .hs-soon, .hs-sign, .lbl, .try, .colhead, .mlab span,
+  .tier .name, .dt-cap, .film-snd, .lsw-title, .cu, .hs-hint) {
+  letter-spacing:0; text-indent:0; }
+html[lang="ar"] .hs-tag, html[lang="ar"] h2 { line-height:1.5; }
+html[lang="ar"] body { font-family:-apple-system, BlinkMacSystemFont, "SF Arabic",
+  "Segoe UI", "Noto Sans Arabic", system-ui, sans-serif; }
+
+/* ---- CJK : piles système dédiées, interlignage et approche adaptés ---- */
+html[lang="ja"] body { font-family:-apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  "Yu Gothic UI", "Meiryo", sans-serif; }
+html[lang="ko"] body { font-family:-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+  "Malgun Gothic", sans-serif; }
+html[lang="zh-Hans"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+html[lang="zh-Hant"] body { font-family:-apple-system, BlinkMacSystemFont, "PingFang TC",
+  "Microsoft JhengHei", sans-serif; }
+html[lang="ja"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang="ko"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint),
+html[lang^="zh"] :is(.eyebrow, .hs-soon, .lbl, .try, .colhead, .tier .name, .dt-cap, .hs-hint) {
+  letter-spacing:.14em; }
+html[lang="ja"] .hs-sign, html[lang="ko"] .hs-sign, html[lang^="zh"] .hs-sign {
+  letter-spacing:.22em; text-indent:.22em; }
+html[lang="ja"] body, html[lang="ko"] body, html[lang^="zh"] body { line-height:1.75; }
+html[lang="ja"] h2, html[lang="ko"] h2, html[lang^="zh"] h2 { font-weight:350; }
+
+/* ---- Langues à mots longs : césure douce des titres ---- */
+html[lang="de"] :is(h2, h3, .hs-tag), html[lang="nl"] :is(h2, h3, .hs-tag),
+html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }

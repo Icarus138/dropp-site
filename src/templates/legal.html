@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{builtin.htmlLang}}" dir="{{builtin.dir}}">
+<head>
+<meta charset="utf-8">
+{{builtin.generatedNote}}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Dropp — {{legal.title}}</title>
+<meta name="description" content="{{legal.metaDescription}}">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="canonical" href="{{builtin.canonical}}">
+{{builtin.hreflangs}}
+<style>
+  :root { --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92; --body:#6F695E;
+    --faint:#C6BFB2; --amber:#D9A44A; --rule:rgba(58,56,52,.12); }
+  * { box-sizing:border-box; }
+  a:focus-visible, summary:focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; }
+  .page { max-width:640px; margin:0 auto; padding:56px 24px 80px; }
+  .mark { font-size:14px; font-weight:600; letter-spacing:.5em; text-indent:.5em;
+    text-transform:uppercase; text-align:center; margin:0 0 34px; }
+  .mark a { color:inherit; text-decoration:none; }
+  h1 { font-size:26px; font-weight:300; margin:0 0 6px; }
+  .date { font-size:12px; color:var(--soft); margin-bottom:34px; }
+  h2 { font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--soft); margin:36px 0 10px; }
+  html[lang="ar"] h2, html[lang="ar"] .mark { letter-spacing:0; text-indent:0; }
+  p { margin:0 0 12px; }
+  a { color:var(--ink); }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--rule);
+    font-size:12px; color:var(--soft); }
+{{> i18n.css}}
+</style>
+</head>
+<body>
+{{builtin.langSwitcher}}
+<div class="page">
+  <p class="mark"><a href="{{path.home}}">Dropp</a></p>
+  <h1>{{legal.title}}</h1>
+  <p class="date">{{legal.lastUpdated}}</p>
+
+  <h2>{{legal.s1Title}}</h2>
+  <p>{{legal.s1P1}}</p>
+
+  <h2>{{legal.s2Title}}</h2>
+  <p>{{legal.s2P1}}</p>
+
+  <h2>{{legal.s3Title}}</h2>
+  <p>{{legal.s3P1}}</p>
+
+  <h2>{{legal.s4Title}}</h2>
+  <p>{{legal.s4P1}}</p>
+
+  <h2>{{legal.s5Title}}</h2>
+  <p>{{legal.s5P1}}</p>
+
+  <h2>{{legal.s6Title}}</h2>
+  <p>{{legal.s6P1}}</p>
+
+  <footer>
+    {{legal.footerNote}}
+    {{builtin.footerLangNav}}
+  </footer>
+</div>
+<script>
+{{> i18n.js}}
+</script>
+</body>
+</html>

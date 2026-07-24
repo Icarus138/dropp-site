@@ -1,0 +1,14 @@
+{
+  "title": "Support",
+  "metaDescription": "Help and frequently asked questions about Dropp: Apple Watch alarms, notification sounds, restoring a purchase, local data, and contact.",
+  "q1Title": "The alarm doesn't ring on the Apple Watch?",
+  "q1Body": "A locked watch, or one you're not wearing, never alerts — that's an Apple rule: the alert falls back to the iPhone. Wear the watch unlocked (wrist detection on) to receive alerts on your wrist.",
+  "q2Title": "The alert sound is the system sound on the watch?",
+  "q2Body": "This is also an Apple limitation: custom sounds are not allowed in watchOS notifications. Dropp's melodies play on the iPhone and inside the app.",
+  "q3Title": "Restore a purchase",
+  "q3Body": "Dropp Settings → Upgrade to Dropp Pro → \"Restore purchase\". The subscription is managed and cancelled in your App Store account settings.",
+  "q4Title": "Your data",
+  "q4Body": "Dropp collects nothing — everything stays on your devices. Details in the <a href=\"{{path.privacy}}\">privacy policy</a>. Deleting the app deletes everything.",
+  "contactTitle": "Contact",
+  "contactBody": "A question, a problem, an idea: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

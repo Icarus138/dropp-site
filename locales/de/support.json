@@ -1,0 +1,14 @@
+{
+  "title": "Support",
+  "metaDescription": "Hilfe und häufige Fragen zu Dropp: Alarme auf der Apple Watch, Mitteilungstöne, Kauf wiederherstellen, lokale Daten und Kontakt.",
+  "q1Title": "Der Alarm läutet nicht auf der Apple Watch?",
+  "q1Body": "Eine gesperrte oder abgelegte Uhr warnt nie – das ist eine Regel von Apple: Der Alarm wechselt dann auf das iPhone. Tragen Sie die Uhr entsperrt (mit aktivierter Handgelenkerkennung), um die Alarme am Handgelenk zu erhalten.",
+  "q2Title": "Der Alarmton ist der Systemton auf der Uhr?",
+  "q2Body": "Auch das ist eine Einschränkung von Apple: Eigene Töne sind in watchOS-Mitteilungen nicht erlaubt. Die Dropp-Melodien spielen auf dem iPhone und in der App.",
+  "q3Title": "Einen Kauf wiederherstellen",
+  "q3Body": "Dropp-Einstellungen → Auf Dropp Pro wechseln → „Kauf wiederherstellen“. Das Abonnement wird in den Einstellungen Ihres App-Store-Accounts verwaltet und gekündigt.",
+  "q4Title": "Ihre Daten",
+  "q4Body": "Dropp erfasst nichts – alles bleibt auf Ihren Geräten. Einzelheiten in der <a href=\"{{path.privacy}}\">Datenschutzerklärung</a>. Das Löschen der App löscht alles.",
+  "contactTitle": "Kontakt",
+  "contactBody": "Eine Frage, ein Problem, eine Idee: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

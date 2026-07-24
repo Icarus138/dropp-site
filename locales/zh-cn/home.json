@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "DROPP — 节奏在腕间，专注在护理。",
+    "description": "输入容量和时长，DROPP 便算出滴速，在眼前和腕上打出节拍，并在结束时提醒你。无需账户，不收集数据。即将登陆 App Store。",
+    "ogDescription": "输入容量和时长，DROPP 便算出滴速，打出节拍，并在结束时提醒你。支持 iPhone 和 Apple Watch。即将登陆 App Store。",
+    "jsonLdDescription": "输入容量和时长，Dropp 便算出输液滴速，在 iPhone 和 Apple Watch 上打出节拍，并在结束时提醒你。无需账户，不收集数据。"
+  },
+  "hero": {
+    "soon": "即将登陆 App Store",
+    "sign": "节奏 · 精准 · 护理",
+    "tagline": "节奏在腕间，<br>专注在护理。",
+    "sub": "输入容量和时长，DROPP 便算出滴速，打出节拍，并在结束时提醒你。",
+    "capPhoneTitle": "节拍，就在眼前。",
+    "capPhoneSub": "计算、对齐、开始跟踪。",
+    "capWatchTitle": "节拍，就在腕上。",
+    "capWatchSub": "每一滴，一次轻柔的震动。",
+    "finalTitle": "继续护理。",
+    "finalSub": "DROPP 稳住节奏，替你看着时间。",
+    "trust": "无需账户 · 无广告 · 数据留在本机",
+    "hint": "了解 DROPP"
+  },
+  "units": {
+    "gttMin": "滴 / 分",
+    "sPerDrop": "s / 滴",
+    "mlH": "mL / h"
+  },
+  "labels": {
+    "volume": "容量",
+    "duration": "时长"
+  },
+  "try": "试一试",
+  "demo": {
+    "eyebrow": "十五秒内",
+    "title": "整套动作，一眼看清。",
+    "ariaLabel": "演示：输入、计算、对齐、跟踪、收到提醒",
+    "vol500": "500 mL",
+    "dur4h": "4 h",
+    "step1": "1 · 输入容量和时长",
+    "step2": "2 · DROPP 算出滴速",
+    "step2Detail": "1.43 s / 滴 — 125 mL/h",
+    "step3": "3 · 屏幕和 Apple Watch 打出节拍",
+    "step4": "4 · 对齐，然后开始跟踪",
+    "step4Hint": "把滚轮调节器对准节拍",
+    "step5": "5 · 剩余时间自动跟着走",
+    "step5Detail": "还剩 1 h 52 · 结束 22:12",
+    "step6": "6 · 结束时提醒你 — 无论你在哪里",
+    "step6Banner": "输液完成",
+    "step6Wrist": "腕上也会提醒"
+  },
+  "moment": {
+    "eyebrow": "你熟悉这一刻",
+    "item1": "早已烂熟的公式 — 在两声呼叫铃之间又算一遍。",
+    "item2": "凭眼力调好的调节器，稍有疑虑便重新数一遍。",
+    "item3": "好几个结束时刻记在心里，整个班次都放不下。",
+    "conclusion": "这无关能力，而是一份负担 — DROPP 替你担着。"
+  },
+  "gestures": {
+    "eyebrow": "三个动作"
+  },
+  "calc": {
+    "title": "计算",
+    "body": "容量和时长立刻化为每分钟滴数、每滴秒数和 mL/h。滴系数 10、15、20 和 60 滴/mL — 演示设为 20。无需记忆，无需重算。",
+    "warn": "超出合理范围 — 应用不会打出荒唐的节拍。",
+    "initialInterval": "1.43"
+  },
+  "cal": {
+    "title": "对齐",
+    "body": "画面打出算好的节拍 — 看得见、腕上感觉得到、开启后还听得到（轻如一声咔哒，尊重静音模式）。把调节器调到合拍：当输液器的水滴与 DROPP 的水滴一同落下，就对了。",
+    "colInfusion": "输液",
+    "colTempo": "Dropp 节拍",
+    "moletteAria": "输液调节器 — 调到合拍",
+    "moletteLabel": "调节器",
+    "msgInitial": "把调节器调到合拍",
+    "rateInitialA": "34 滴/分",
+    "rateInitialB": "42 滴/分"
+  },
+  "cont": {
+    "title": "继续",
+    "body": "剩余时间自动跟着走。结束前五分钟先预警，提醒会随时长调整 — 一小时的输液在中点标一下，跨夜的输液则有规律的标记。结束不再只靠你的记性。",
+    "svgEndTime": "结束 22:12",
+    "svgPreAlert": "预警",
+    "svgPreAlertDetail": "隔间 3 · 5 分钟后结束",
+    "svgEndBannerName": "隔间 3",
+    "svgEndBannerState": "已完成",
+    "svgPreAlertMark": "预警 −5 分钟",
+    "svgEndMark": "结束"
+  },
+  "watch": {
+    "title": "一切，都不必掏出 iPhone。",
+    "body": "用数码表冠启动一次输液。跟踪、暂停、凭标记找回它 — 隔间 3、座椅 5、输液 A — 全程无需打字。对齐时腕上打着节拍，即便 iPhone 还留在储物柜，闹铃照样响起。",
+    "svgLabelOptional": "标记可选",
+    "svgCrownHint": "用表冠设置",
+    "svgStart": "启动"
+  },
+  "places": {
+    "room12": "12 号房",
+    "box3": "隔间 3",
+    "chair5": "座椅 5"
+  },
+  "dt": {
+    "title": "一个动作，不必触碰屏幕。",
+    "body": "拇指与食指轻点两下：视屏幕而定，DROPP 会启动输液、暂停、继续，或确认提醒。双手忙碌、戴着手套 — Apple Watch 的原生手势在腕上回应，无需触碰。",
+    "requirement": "Apple Watch Series 9 及更新机型。",
+    "svgPaused": "已暂停",
+    "caption": "启动 · 暂停 · 继续 · 确认"
+  },
+  "tap": {
+    "name": "Tap 模式",
+    "title": "看一段节奏，点出来，读出来。",
+    "body": "轻点屏幕，把看到的节奏还原出来：DROPP 显示每分钟的频率 — 无需秒表，也无需心算。若是滴速，读数还给出 mL/h，让你放心地重新调好调节器。iPhone 和腕上皆可。",
+    "hintStart": "按看到的节奏轻点",
+    "padAria": "轻点区 — 按看到的节奏轻点",
+    "padLabel": "轻点",
+    "reset": "重新开始"
+  },
+  "multi": {
+    "name": "同时输液",
+    "title": "每一路输液：各有标记、时间与闹铃。",
+    "time1": "2 h 41",
+    "time2": "0 h 12",
+    "time3": "1 h 05",
+    "preAlertTitle": "预警",
+    "rowInfusionA": "输液 A",
+    "note": "只用地点标记，绝不用姓名 — 隔间 3、座椅 5、走廊 2。标记是可选的。"
+  },
+  "pro": {
+    "eyebrow": "Pro 预览",
+    "title": "石墨主题 — 以及随之一同守望的一切。",
+    "ariaLabel": "在深色石墨主题中呈现的 Pro 功能：预警与节点、腕上闹铃、本地记录、Premium 3D 场景",
+    "svgMidway": "中点",
+    "svgPreAlert": "预警",
+    "card1Title": "预警与节点",
+    "card1Body": "结束前五分钟一个信号，标记随时长而定。",
+    "svgEndsIn5": "5 分钟后结束",
+    "svgDoneAt": "22:12 完成",
+    "card2Title": "腕上闹铃",
+    "card2Body": "即便 iPhone 留在储物柜，Apple Watch 也会提醒。",
+    "svgHist1": "42 滴/分 · 4 h",
+    "svgHist2": "28 滴/分 · 1 h 30",
+    "svgHist3Name": "节拍测量",
+    "svgHist3Value": "58 / min",
+    "card3Title": "本地记录",
+    "card3Body": "输液和测量都留在你的设备上 — 别无他处。",
+    "card4Title": "Premium 3D 场景",
+    "card4Body": "同一滴水，多了深度 — 你在这里看到的水面，正是应用里的，以石墨呈现。",
+    "note": "此面板呈现应用的石墨主题，包含在 Dropp Pro 中。"
+  },
+  "film": {
+    "eyebrow": "短片",
+    "title": "节奏，动起来。",
+    "ariaLabel": "DROPP 介绍短片",
+    "sound": "声音",
+    "soundOn": "打开声音"
+  },
+  "pricing": {
+    "eyebrow": "免费与 Pro",
+    "title": "核心免费。Pro 陪你值好每一班。",
+    "proItem1": "完整的 Apple Watch 应用",
+    "proItem2": "多路同时输液",
+    "proItem3": "结束前 5 分钟预警",
+    "proItem4": "随时长调整的提醒",
+    "proItem5": "Tap 模式",
+    "proItem6": "本地记录",
+    "proItem7": "高级主题与场景",
+    "priceYear": "€19.99/年",
+    "priceYearNote": "首发价，7 天试用",
+    "priceMonth": "€2.99/月",
+    "priceLifetime": "€49.99 买断",
+    "lifetimeNote": "买断：一切，永久，免订阅。",
+    "freeName": "免费 — 一件真正的工具",
+    "freeItem1": "无限次计算",
+    "freeItem2": "可视化节拍",
+    "freeItem3": "跟踪一路输液",
+    "freeItem4": "结束闹铃 — 永久保留",
+    "freeItem5": "无广告，无账户",
+    "freeNote": "结束闹铃是一道安全信号：永远不会收费。",
+    "cta": "上线时通知我"
+  },
+  "trust": {
+    "eyebrow": "信任",
+    "t1Title": "不传输任何数据。",
+    "t1Body": "你输入的内容留在你的设备上。DROPP 没有任何技术手段去访问它。",
+    "t2Title": "无账户，无服务器。",
+    "t2Body": "无需创建，无需托管，无从被攻破。",
+    "t3Title": "本地、离线。",
+    "t3Body": "地下室、屏蔽病房、上门护理：DROPP 无网也能运行。",
+    "clinical": "一款辅助计算、把握节奏与跟踪的工具。它不能替代临床判断、本地流程或控制设备。"
+  },
+  "faq": {
+    "eyebrow": "直接的回答",
+    "q1": "哪些一直免费？",
+    "a1": "无限次计算、可视化节拍、跟踪一路输液，以及结束闹铃 — 无广告、无账户、无时间限制。",
+    "q2": "DROPP 能离线使用吗？",
+    "a2": "能，完全可以。一切都在设备上计算和保存，从不需要联网。",
+    "q3": "用 Apple Watch 需要 iPhone 吗？",
+    "a3": "需要 — Watch 应用随 iPhone 应用一同提供，并由它安装。此后，即使 iPhone 关机或不在身边，腕上的闹铃照样响起。",
+    "q4": "有哪些滴系数可选？",
+    "a4": "每毫升 10、15、20 和 60 滴 — 系数可随时在设置中更改。",
+    "q5": "Tap 模式有什么用？",
+    "a5": "用来轻点屏幕还原看到的节奏，读出每分钟的频率 — 若是滴速，还给出 mL/h。无需秒表，也无需心算。",
+    "q6": "DROPP 能替代输液泵或控制设备吗？",
+    "a6": "不能。DROPP 是一款辅助计算、把握节奏与跟踪的工具。它不测量、不判断，也不替代任何设备或流程。",
+    "q7": "支持哪些版本？",
+    "a7": "iOS 17 或更新版本，watchOS 10 或更新版本。"
+  },
+  "closing": {
+    "iconAlt": "Dropp 应用图标",
+    "eyebrow": "2026 年夏",
+    "title": "即将登陆 App Store。",
+    "byline": "由一线护理者设计，在实践中检验 — 让注意力留在真正要紧的地方。",
+    "cta": "再看一遍 DROPP 的运作"
+  },
+  "js": {
+    "ml": "{v} mL",
+    "mlLong": { "other": "{v} 毫升" },
+    "durH": "{h} 小时",
+    "durHM": "{h} 小时 {mm} 分",
+    "durM": "{m} 分钟",
+    "durHLong": { "other": "{h} 小时" },
+    "durMLong": { "other": "{m} 分钟" },
+    "durJoin": "{hPart} {mPart}",
+    "rate": "{v} 滴/分",
+    "unison": "合拍了 — 就对了",
+    "tooSlow": "输液太慢 — 打开调节器",
+    "tooFast": "输液太快 — 关小调节器",
+    "tapStart": "按看到的节奏轻点",
+    "tapContinue": "保持同样的节奏",
+    "tapTightening": "每分钟 · 数值正在收敛",
+    "tapStable": "每分钟 · 已稳定",
+    "tapTooFast": "太快了 — 重来",
+    "soundOn": "打开声音",
+    "soundOff": "关闭声音"
+  }
+}

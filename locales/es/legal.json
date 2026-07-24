@@ -1,0 +1,18 @@
+{
+  "title": "Aviso legal",
+  "metaDescription": "Aviso legal del sitio dropp.care: editor, director de publicación, alojamiento, propiedad intelectual y naturaleza del servicio.",
+  "lastUpdated": "Última actualización: julio de 2026",
+  "s1Title": "Editor del sitio",
+  "s1P1": "Este sitio está editado por <b>Dropp</b>, empresario individual (entreprise individuelle, Francia).<br>Empresario individual · SIREN 852 769 579 · SIRET 852 769 579 00032 · código APE 62.01Z (programación informática) · con domicilio en Collonges-sous-Salève (Alta Saboya), Francia.<br>Contacto: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>.",
+  "s2Title": "Director de publicación",
+  "s2P1": "El representante legal de la empresa editora, localizable en la dirección de contacto indicada arriba.",
+  "s3Title": "Alojamiento",
+  "s3P1": "El sitio está alojado por <b>GitHub, Inc.</b> (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Estados Unidos — <a href=\"https://github.com\">github.com</a>.",
+  "s4Title": "Propiedad intelectual",
+  "s4P1": "Todo el contenido de este sitio (textos, elementos visuales, código, así como la marca «Dropp») es propiedad del editor, salvo indicación en contra. Queda prohibida toda reproducción o reutilización sin autorización previa.",
+  "s5Title": "Datos personales",
+  "s5P1": "Este sitio no instala ninguna cookie y no recopila ningún dato personal. La app Dropp tampoco: consulta la <a href=\"{{path.privacy}}\">política de privacidad</a>.",
+  "s6Title": "Naturaleza del servicio",
+  "s6P1": "Dropp es una herramienta de ayuda al cálculo, al ritmo y al seguimiento. No sustituye el juicio clínico, los protocolos locales ni los dispositivos de control de perfusión.",
+  "footerNote": "Para cualquier pregunta sobre este aviso: <a href=\"{{path.support}}\">soporte</a>."
+}

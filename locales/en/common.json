@@ -1,0 +1,12 @@
+{
+  "lang": {
+    "label": "Language",
+    "change": "Change language"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "support": "Support",
+    "legal": "Legal notice",
+    "disclaimer": "A rhythm aid. It does not replace clinical judgment or infusion control devices."
+  }
+}

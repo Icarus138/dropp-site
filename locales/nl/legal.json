@@ -1,0 +1,18 @@
+{
+  "title": "Juridische informatie",
+  "metaDescription": "Juridische informatie van de site dropp.care: uitgever, verantwoordelijke uitgever, hosting, intellectueel eigendom en aard van de dienst.",
+  "lastUpdated": "Laatst bijgewerkt: juli 2026",
+  "s1Title": "Uitgever van de site",
+  "s1P1": "Deze site wordt uitgegeven door <b>Dropp</b>, eenmanszaak (entreprise individuelle, Frankrijk).<br>Zelfstandig ondernemer · SIREN 852 769 579 · SIRET 852 769 579 00032 · APE-code 62.01Z (computerprogrammering) · gevestigd in Collonges-sous-Salève (Haute-Savoie), Frankrijk.<br>Contact: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>.",
+  "s2Title": "Verantwoordelijke uitgever",
+  "s2P1": "De wettelijke vertegenwoordiger van de uitgevende onderneming, bereikbaar op het bovenstaande contactadres.",
+  "s3Title": "Hosting",
+  "s3P1": "De site wordt gehost door <b>GitHub, Inc.</b> (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Verenigde Staten — <a href=\"https://github.com\">github.com</a>.",
+  "s4Title": "Intellectueel eigendom",
+  "s4P1": "Alle inhoud van deze site (teksten, beeldmateriaal, code en het merk «Dropp») is eigendom van de uitgever, tenzij anders vermeld. Elke reproductie of hergebruik zonder voorafgaande toestemming is verboden.",
+  "s5Title": "Persoonsgegevens",
+  "s5P1": "Deze site plaatst geen cookies en verzamelt geen persoonsgegevens. De Dropp-app evenmin: zie het <a href=\"{{path.privacy}}\">privacybeleid</a>.",
+  "s6Title": "Aard van de dienst",
+  "s6P1": "Dropp is een hulpmiddel voor berekening, ritme en opvolging. Het vervangt geen klinisch oordeel, geen lokale protocollen en geen infuusbewakingsapparatuur.",
+  "footerNote": "Voor elke vraag over deze informatie: <a href=\"{{path.support}}\">support</a>."
+}

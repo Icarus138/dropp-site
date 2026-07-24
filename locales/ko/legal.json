@@ -1,0 +1,18 @@
+{
+  "title": "법적 고지",
+  "metaDescription": "dropp.care의 법적 고지: 발행자, 발행 책임자, 호스팅, 지식재산권, 서비스의 성격.",
+  "lastUpdated": "최종 업데이트: 2026년 7월",
+  "s1Title": "사이트 발행자",
+  "s1P1": "이 사이트는 <b>Dropp</b>(개인 사업자 / entreprise individuelle, 프랑스)가 발행합니다.<br>개인 사업자 · SIREN 852 769 579 · SIRET 852 769 579 00032 · APE 코드 62.01Z(컴퓨터 프로그래밍) · 소재지는 콜롱주수살레브(오트사부아주), 프랑스.<br>문의: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>.",
+  "s2Title": "발행 책임자",
+  "s2P1": "발행 회사의 법정 대리인으로, 위의 문의 주소로 연락할 수 있습니다.",
+  "s3Title": "호스팅",
+  "s3P1": "이 사이트는 <b>GitHub, Inc.</b>(GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, 미국 — <a href=\"https://github.com\">github.com</a> 에서 호스팅됩니다.",
+  "s4Title": "지식재산권",
+  "s4P1": "이 사이트의 모든 콘텐츠(텍스트, 비주얼, 코드 및 「Dropp」 상표)는 별도의 표시가 없는 한 발행자의 자산입니다. 사전 허가 없는 복제 또는 재사용을 금합니다.",
+  "s5Title": "개인정보",
+  "s5P1": "이 사이트는 어떤 쿠키도 설치하지 않으며 어떤 개인정보도 수집하지 않습니다. Dropp 앱도 마찬가지입니다: <a href=\"{{path.privacy}}\">개인정보 처리방침</a>을 참고하세요.",
+  "s6Title": "서비스의 성격",
+  "s6P1": "Dropp은 계산·리듬·추적을 돕는 도구입니다. 임상적 판단, 기관의 프로토콜, 수액 제어 장치를 대신하지 않습니다.",
+  "footerNote": "이 고지에 관한 문의는: <a href=\"{{path.support}}\">지원</a>."
+}

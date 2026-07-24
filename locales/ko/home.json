@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "DROPP — 리듬은 손목에. 마음은 케어에.",
+    "description": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 눈앞과 손목에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이. 곧 App Store에.",
+    "ogDescription": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 템포를 짚어 주며, 끝날 때 알려 줍니다. iPhone과 Apple Watch에서. 곧 App Store에.",
+    "jsonLdDescription": "용량과 시간만 입력하면 Dropp이 수액의 방울 속도를 계산하고, iPhone과 Apple Watch에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이."
+  },
+  "hero": {
+    "soon": "곧 App Store에",
+    "sign": "리듬 · 정밀 · 케어",
+    "tagline": "리듬은 손목에.<br>마음은 케어에.",
+    "sub": "용량과 시간만 입력하면 DROPP이 방울 속도를 계산하고, 템포를 짚어 주며, 끝날 때 알려 줍니다.",
+    "capPhoneTitle": "템포를, 눈앞에.",
+    "capPhoneSub": "계산하고, 맞추고, 추적을 시작하세요.",
+    "capWatchTitle": "박자를, 손목에.",
+    "capWatchSub": "방울마다 은은한 진동으로.",
+    "finalTitle": "케어를 이어 가세요.",
+    "finalSub": "DROPP이 리듬을 지키고 시간을 살핍니다.",
+    "trust": "계정 없음 · 광고 없음 · 데이터는 기기에",
+    "hint": "DROPP 살펴보기"
+  },
+  "units": {
+    "gttMin": "gtt / min",
+    "sPerDrop": "s / 방울",
+    "mlH": "mL / h"
+  },
+  "labels": {
+    "volume": "용량",
+    "duration": "시간"
+  },
+  "try": "체험하기",
+  "demo": {
+    "eyebrow": "15초 만에",
+    "title": "전 과정을, 한눈에.",
+    "ariaLabel": "데모: 입력, 계산, 맞춤, 추적, 알림 수신",
+    "vol500": "500 mL",
+    "dur4h": "4 h",
+    "step1": "1 · 용량과 시간을 입력",
+    "step2": "2 · DROPP이 방울 속도를 계산",
+    "step2Detail": "1.43 s / 방울 — 125 mL/h",
+    "step3": "3 · 화면과 Apple Watch가 리듬을 짚음",
+    "step4": "4 · 맞춘 뒤, 추적을 시작",
+    "step4Hint": "클램프를 템포에 맞추세요",
+    "step5": "5 · 남은 시간은 저절로 이어짐",
+    "step5Detail": "1 h 52 남음 · 종료 22:12",
+    "step6": "6 · 종료를 알려 줌 — 어디에 있든",
+    "step6Banner": "수액 완료",
+    "step6Wrist": "손목에서도"
+  },
+  "moment": {
+    "eyebrow": "그 순간을 아실 겁니다",
+    "item1": "외우고 있는 공식을, 호출벨 사이에 다시 계산합니다.",
+    "item2": "눈대중으로 맞춘 클램프를, 조금만 의심되어도 다시 셉니다.",
+    "item3": "여러 종료 시각을, 근무 내내 머릿속에 담아 둡니다.",
+    "conclusion": "실력의 문제가 아닙니다. 부담입니다 — 그것을 DROPP이 짊어집니다."
+  },
+  "gestures": {
+    "eyebrow": "세 가지 동작"
+  },
+  "calc": {
+    "title": "계산하기",
+    "body": "용량과 시간은 곧바로 분당 방울 수, 방울당 초, mL/h가 됩니다. 방울 계수 10·15·20·60 gtt/mL — 데모는 20으로 설정. 외울 것도, 다시 할 것도 없습니다.",
+    "warn": "타당한 범위를 벗어났습니다 — 앱은 말이 안 되는 템포를 짚지 않습니다.",
+    "initialInterval": "1.43"
+  },
+  "cal": {
+    "title": "맞추기",
+    "body": "장면이 계산된 템포를 짚습니다 — 눈으로 보이고, 손목으로 느껴지고, 켜면 소리로도(클릭보다 크지 않은 은은한 틱, 무음 모드를 존중). 클램프를 하나가 될 때까지 맞추세요. 수액 세트의 방울이 DROPP의 방울과 함께 떨어지면, 바로 그곳입니다.",
+    "colInfusion": "수액",
+    "colTempo": "Dropp 템포",
+    "moletteAria": "수액 클램프 — 하나가 될 때까지 맞춤",
+    "moletteLabel": "클램프",
+    "msgInitial": "클램프를 하나가 될 때까지 맞추세요",
+    "rateInitialA": "34 gtt/min",
+    "rateInitialB": "42 gtt/min"
+  },
+  "cont": {
+    "title": "이어 가기",
+    "body": "남은 시간은 저절로 이어집니다. 종료 5분 전에 사전 알림이 알려 주고, 리마인더는 시간에 맞춰 조정됩니다 — 1시간 수액이면 중간에 한 점, 밤새 이어지는 수액이면 규칙적인 표시로. 종료는 더 이상 기억에만 기대지 않습니다.",
+    "svgEndTime": "종료 22:12",
+    "svgPreAlert": "사전 알림",
+    "svgPreAlertDetail": "부스 3 · 종료 5분 전",
+    "svgEndBannerName": "부스 3",
+    "svgEndBannerState": "완료",
+    "svgPreAlertMark": "사전 알림 −5분",
+    "svgEndMark": "종료"
+  },
+  "watch": {
+    "title": "iPhone을 꺼내지 않고, 모두.",
+    "body": "Digital Crown으로 수액을 시작하세요. 추적하고, 일시정지하고, 표식으로 다시 찾으세요 — 부스 3, 의자 5, 수액 A — 글자 입력은 전혀 없이. 맞추는 동안 손목이 템포를 짚고, iPhone을 사물함에 두어도 알람이 울립니다.",
+    "svgLabelOptional": "표식은 선택",
+    "svgCrownHint": "Crown으로 설정",
+    "svgStart": "시작"
+  },
+  "places": {
+    "room12": "12호실",
+    "box3": "부스 3",
+    "chair5": "의자 5"
+  },
+  "dt": {
+    "title": "화면을 건드리지 않고, 한 동작으로.",
+    "body": "엄지와 검지를 두 번 맞대세요. 화면에 따라 DROPP이 수액을 시작·일시정지·재개하거나 알림을 확인합니다. 손이 바빠도, 장갑을 껴도 — Apple Watch의 기본 제스처가 손목에서, 닿지 않고 응답합니다.",
+    "requirement": "Apple Watch Series 9 이상.",
+    "svgPaused": "일시정지됨",
+    "caption": "시작 · 일시정지 · 재개 · 확인"
+  },
+  "tap": {
+    "name": "Tap 모드",
+    "title": "리듬을 보고, 두드리고, 읽으세요.",
+    "body": "본 리듬을 화면을 두드려 재현하면 DROPP이 분당 빈도를 보여 줍니다 — 스톱워치도 암산도 없이. 방울 속도라면 판독이 mL/h도 함께 주어, 클램프를 자신 있게 다시 맞출 수 있습니다. iPhone에서도 손목에서도.",
+    "hintStart": "본 리듬에 맞춰 두드리세요",
+    "padAria": "탭 영역 — 본 리듬에 맞춰 두드리세요",
+    "padLabel": "두드리기",
+    "reset": "다시 시작"
+  },
+  "multi": {
+    "name": "동시 수액",
+    "title": "수액마다: 표식, 시간, 알람을.",
+    "time1": "2 h 41",
+    "time2": "0 h 12",
+    "time3": "1 h 05",
+    "preAlertTitle": "사전 알림",
+    "rowInfusionA": "수액 A",
+    "note": "장소 표식만, 이름은 절대 안 됨 — 부스 3, 의자 5, 복도 2. 표식은 선택입니다."
+  },
+  "pro": {
+    "eyebrow": "Pro 미리보기",
+    "title": "그래파이트 테마 — 그리고 함께 지키는 모든 것.",
+    "ariaLabel": "어두운 그래파이트 테마로 보여 주는 Pro 기능: 사전 알림과 이정표, 손목 알람, 로컬 기록, Premium 3D 장면",
+    "svgMidway": "중간",
+    "svgPreAlert": "사전 알림",
+    "card1Title": "사전 알림과 이정표",
+    "card1Body": "종료 5분 전 신호, 시간에 맞춘 표시.",
+    "svgEndsIn5": "5분 후 종료",
+    "svgDoneAt": "22:12에 완료",
+    "card2Title": "손목 알람",
+    "card2Body": "iPhone을 사물함에 두어도 Apple Watch가 알려 줍니다.",
+    "svgHist1": "42 gtt/min · 4 h",
+    "svgHist2": "28 gtt/min · 1 h 30",
+    "svgHist3Name": "템포 측정",
+    "svgHist3Value": "58 / min",
+    "card3Title": "로컬 기록",
+    "card3Body": "수액과 측정은 당신의 기기에 남습니다 — 다른 어디에도 아닙니다.",
+    "card4Title": "Premium 3D 장면",
+    "card4Body": "같은 방울에, 깊이를 — 여기 보이는 표면이 바로 앱의 것, 그래파이트로.",
+    "note": "이 패널은 앱의 그래파이트 테마로, Dropp Pro에 포함됩니다."
+  },
+  "film": {
+    "eyebrow": "영상",
+    "title": "리듬을, 움직임으로.",
+    "ariaLabel": "DROPP 소개 영상",
+    "sound": "사운드",
+    "soundOn": "사운드 켜기"
+  },
+  "pricing": {
+    "eyebrow": "무료와 Pro",
+    "title": "핵심은 무료. Pro는 당신의 근무를 따라갑니다.",
+    "proItem1": "완전한 Apple Watch 앱",
+    "proItem2": "여러 건의 동시 수액",
+    "proItem3": "종료 5분 전 사전 알림",
+    "proItem4": "시간에 맞춘 리마인더",
+    "proItem5": "Tap 모드",
+    "proItem6": "로컬 기록",
+    "proItem7": "프리미엄 테마와 장면",
+    "priceYear": "€19.99/년",
+    "priceYearNote": "출시 가격, 7일 체험",
+    "priceMonth": "€2.99/월",
+    "priceLifetime": "€49.99 평생",
+    "lifetimeNote": "평생 구매: 모든 것을, 영원히, 구독 없이.",
+    "freeName": "무료 — 진짜 도구",
+    "freeItem1": "무제한 계산",
+    "freeItem2": "시각적 템포",
+    "freeItem3": "수액 한 건 추적",
+    "freeItem4": "종료 알람 — 영원히",
+    "freeItem5": "광고 없음, 계정 없음",
+    "freeNote": "종료 알람은 안전 신호입니다: 결코 유료가 되지 않습니다.",
+    "cta": "출시 소식 받기"
+  },
+  "trust": {
+    "eyebrow": "신뢰",
+    "t1Title": "전송되는 데이터가 없습니다.",
+    "t1Body": "입력한 내용은 당신의 기기에 남습니다. DROPP에는 그것에 접근할 기술적 수단이 없습니다.",
+    "t2Title": "계정도, 서버도 없습니다.",
+    "t2Body": "만들 것도, 호스팅할 것도, 해킹당할 것도 없습니다.",
+    "t3Title": "로컬로, 오프라인으로.",
+    "t3Body": "지하실, 차폐된 병실, 가정 방문: DROPP은 네트워크 없이 작동합니다.",
+    "clinical": "계산·리듬·추적을 돕는 도구입니다. 임상적 판단, 기관의 프로토콜, 제어 장치를 대신하지 않습니다."
+  },
+  "faq": {
+    "eyebrow": "솔직한 답변",
+    "q1": "무료로 남는 것은?",
+    "a1": "무제한 계산, 시각적 템포, 수액 한 건 추적, 종료 알람 — 광고 없이, 계정 없이, 기간 제한 없이.",
+    "q2": "DROPP은 오프라인에서 작동하나요?",
+    "a2": "네, 완전히. 모두 기기에서 계산·저장되며, 연결은 결코 필요하지 않습니다.",
+    "q3": "Apple Watch에 iPhone이 필요한가요?",
+    "a3": "네 — Watch 앱은 iPhone 앱과 함께 오며 그것을 통해 설치됩니다. 이후에는 iPhone이 꺼져 있거나 범위를 벗어나도 손목 알람이 울립니다.",
+    "q4": "어떤 방울 계수를 쓸 수 있나요?",
+    "a4": "밀리리터당 10·15·20·60방울 — 계수는 설정에서 언제든 바꿀 수 있습니다.",
+    "q5": "Tap 모드는 무엇에 쓰나요?",
+    "a5": "본 리듬을 화면을 두드려 재현해 분당 빈도를 읽기 위함입니다 — 방울 속도라면 mL/h도. 스톱워치도 암산도 없이.",
+    "q6": "DROPP이 펌프나 제어 장치를 대신하나요?",
+    "a6": "아니요. DROPP은 계산·리듬·추적을 돕는 도구입니다. 아무것도 측정하지 않고, 아무것도 결정하지 않으며, 어떤 장치나 프로토콜도 대신하지 않습니다.",
+    "q7": "호환 버전은?",
+    "a7": "iOS 17 이상, watchOS 10 이상."
+  },
+  "closing": {
+    "iconAlt": "Dropp 앱 아이콘",
+    "eyebrow": "2026년 여름",
+    "title": "곧 App Store에.",
+    "byline": "의료인이 설계하고 현장에서 검증했습니다 — 주의를 중요한 곳에 두기 위해.",
+    "cta": "DROPP의 작동을 다시 보기"
+  },
+  "js": {
+    "ml": "{v} mL",
+    "mlLong": { "other": "{v}밀리리터" },
+    "durH": "{h}시간",
+    "durHM": "{h}시간 {mm}분",
+    "durM": "{m}분",
+    "durHLong": { "other": "{h}시간" },
+    "durMLong": { "other": "{m}분" },
+    "durJoin": "{hPart} {mPart}",
+    "rate": "{v} gtt/min",
+    "unison": "하나가 됨 — 바로 그곳",
+    "tooSlow": "수액이 너무 느립니다 — 클램프를 여세요",
+    "tooFast": "수액이 너무 빠릅니다 — 클램프를 잠그세요",
+    "tapStart": "본 리듬에 맞춰 두드리세요",
+    "tapContinue": "같은 리듬으로 계속하세요",
+    "tapTightening": "분당 · 값이 안정되어 갑니다",
+    "tapStable": "분당 · 안정",
+    "tapTooFast": "너무 빠릅니다 — 다시",
+    "soundOn": "사운드 켜기",
+    "soundOff": "사운드 끄기"
+  }
+}

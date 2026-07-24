@@ -1,0 +1,18 @@
+{
+  "title": "法律聲明",
+  "metaDescription": "dropp.care 的法律聲明：發布者、出版負責人、託管、智慧財產權與服務性質。",
+  "lastUpdated": "最後更新：2026 年 7 月",
+  "s1Title": "網站發布者",
+  "s1P1": "本網站由 <b>Dropp</b>（獨資業者 / entreprise individuelle，法國）發布。<br>獨資業者 · SIREN 852 769 579 · SIRET 852 769 579 00032 · APE 代碼 62.01Z（電腦程式設計）· 註冊地為法國上薩瓦省科隆日蘇薩萊夫。<br>聯絡：<a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>。",
+  "s2Title": "出版負責人",
+  "s2P1": "發布公司的法定代表人，可透過上述聯絡地址聯絡。",
+  "s3Title": "託管",
+  "s3P1": "本網站由 <b>GitHub, Inc.</b>（GitHub Pages）託管，地址 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, 美國 — <a href=\"https://github.com\">github.com</a>。",
+  "s4Title": "智慧財產權",
+  "s4P1": "本網站的全部內容（文字、視覺素材、程式碼，以及「Dropp」商標）均為發布者所有，另有說明者除外。未經事先授權，禁止任何複製或再利用。",
+  "s5Title": "個人資料",
+  "s5P1": "本網站不設定任何 Cookie，也不收集任何個人資料。Dropp 應用程式同樣如此：見<a href=\"{{path.privacy}}\">隱私政策</a>。",
+  "s6Title": "服務性質",
+  "s6P1": "Dropp 是一款輔助計算、掌握節奏與追蹤的工具。它無法取代臨床判斷、在地流程或輸液控制裝置。",
+  "footerNote": "如對本聲明有任何疑問：<a href=\"{{path.support}}\">支援</a>。"
+}

@@ -1,0 +1,12 @@
+{
+  "lang": {
+    "label": "Sprache",
+    "change": "Sprache ändern"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "support": "Support",
+    "legal": "Impressum",
+    "disclaimer": "Eine Hilfe für den Rhythmus. Sie ersetzt weder das klinische Urteil noch Infusionskontrollgeräte."
+  }
+}

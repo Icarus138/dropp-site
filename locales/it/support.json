@@ -1,0 +1,14 @@
+{
+  "title": "Assistenza",
+  "metaDescription": "Aiuto e domande frequenti su Dropp: sveglie sull'Apple Watch, suoni delle notifiche, ripristino di un acquisto, dati locali e contatto.",
+  "q1Title": "La sveglia non suona sull'Apple Watch?",
+  "q1Body": "Un orologio bloccato o non indossato non avvisa mai — è una regola di Apple: l'avviso passa allora all'iPhone. Indossa l'orologio sbloccato (con il rilevamento del polso attivo) per ricevere gli avvisi al polso.",
+  "q2Title": "Il suono dell'avviso è quello di sistema sull'orologio?",
+  "q2Body": "Anche questo è un limite di Apple: i suoni personalizzati non sono ammessi nelle notifiche watchOS. Le melodie Dropp suonano sull'iPhone e nell'app.",
+  "q3Title": "Ripristinare un acquisto",
+  "q3Body": "Impostazioni di Dropp → Passa a Dropp Pro → «Ripristina acquisto». L'abbonamento si gestisce e si annulla nelle impostazioni del tuo account App Store.",
+  "q4Title": "I tuoi dati",
+  "q4Body": "Dropp non raccoglie nulla — tutto resta sui tuoi dispositivi. Dettagli nell'<a href=\"{{path.privacy}}\">informativa sulla privacy</a>. Eliminare l'app elimina tutto.",
+  "contactTitle": "Contatto",
+  "contactBody": "Una domanda, un problema, un'idea: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>."
+}

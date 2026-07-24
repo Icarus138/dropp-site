@@ -1,7 +1,1185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dropp.care/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dropp.care/confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://dropp.care/assistance.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://dropp.care/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://dropp.care/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dropp.care/fr/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/fr/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/fr/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/fr/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/en/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/en/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/en/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/en/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/es/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/es/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/es/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/es/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/de/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/de/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/de/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/de/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/it/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/it/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/it/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/it/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-br/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-br/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-br/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-br/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-pt/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-pt/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-pt/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/pt-pt/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/nl/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/nl/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/nl/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/nl/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ru/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ru/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ru/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ru/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ar/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ar/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ar/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ar/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ja/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ja/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ja/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ja/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ko/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ko/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ko/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/ko/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-cn/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-cn/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-cn/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-cn/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-tw/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-tw/privacy.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-tw/support.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/support.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://dropp.care/zh-tw/legal.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dropp.care/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dropp.care/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dropp.care/es/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dropp.care/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://dropp.care/it/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dropp.care/pt-br/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://dropp.care/pt-pt/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dropp.care/nl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dropp.care/ru/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dropp.care/ar/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dropp.care/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://dropp.care/ko/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://dropp.care/zh-cn/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dropp.care/en/legal.html"/>
+  </url>
 </urlset>

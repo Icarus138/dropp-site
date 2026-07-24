@@ -1,0 +1,18 @@
+{
+  "title": "Note legali",
+  "metaDescription": "Note legali del sito dropp.care: editore, direttore della pubblicazione, hosting, proprietà intellettuale e natura del servizio.",
+  "lastUpdated": "Ultimo aggiornamento: luglio 2026",
+  "s1Title": "Editore del sito",
+  "s1P1": "Questo sito è pubblicato da <b>Dropp</b>, impresa individuale (entreprise individuelle, Francia).<br>Imprenditore individuale · SIREN 852 769 579 · SIRET 852 769 579 00032 · codice APE 62.01Z (programmazione informatica) · con sede a Collonges-sous-Salève (Alta Savoia), Francia.<br>Contatto: <a href=\"mailto:contact@dropp.care\">contact@dropp.care</a>.",
+  "s2Title": "Direttore della pubblicazione",
+  "s2P1": "Il rappresentante legale dell'impresa editrice, raggiungibile all'indirizzo di contatto sopra indicato.",
+  "s3Title": "Hosting",
+  "s3P1": "Il sito è ospitato da <b>GitHub, Inc.</b> (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Stati Uniti — <a href=\"https://github.com\">github.com</a>.",
+  "s4Title": "Proprietà intellettuale",
+  "s4P1": "Tutti i contenuti di questo sito (testi, elementi visivi, codice, nonché il marchio «Dropp») sono di proprietà dell'editore, salvo diversa indicazione. Qualsiasi riproduzione o riutilizzo senza autorizzazione preventiva è vietato.",
+  "s5Title": "Dati personali",
+  "s5P1": "Questo sito non deposita alcun cookie e non raccoglie alcun dato personale. Nemmeno l'app Dropp: vedi l'<a href=\"{{path.privacy}}\">informativa sulla privacy</a>.",
+  "s6Title": "Natura del servizio",
+  "s6P1": "Dropp è uno strumento di supporto al calcolo, al ritmo e al monitoraggio. Non sostituisce il giudizio clinico, i protocolli locali o i dispositivi di controllo dell'infusione.",
+  "footerNote": "Per qualsiasi domanda su queste note: <a href=\"{{path.support}}\">assistenza</a>."
+}
