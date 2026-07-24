@@ -224,6 +224,7 @@ for (const locale of config.locales) {
       'builtin.ogImage': `${DOMAIN}${media.ogImage}`,
       'builtin.generatedNote': GENERATED_NOTE,
       'builtin.storageKey': config.storageKey,
+      'builtin.appStoreUrl': config.appStoreUrl,
       'path.home': pagePath(locale.code, config.pages[0]),
       'path.privacy': pagePath(locale.code, config.pages[1]),
       'path.support': pagePath(locale.code, config.pages[2]),

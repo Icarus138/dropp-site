@@ -1,5 +1,7 @@
 {
   "domain": "https://dropp.care",
+  "appStoreId": "6792277373",
+  "appStoreUrl": "https://apps.apple.com/app/id6792277373",
   "sourceLocale": "fr",
   "fallbackLocale": "en",
   "storageKey": "dropp-lang",
