@@ -39,8 +39,9 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/">
 <link rel="alternate" hreflang="x-default" href="https://dropp.care/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"Volume, durée : Dropp calcule le débit de perfusion, bat la cadence sur iPhone et Apple Watch et vous prévient à la fin. Sans compte, sans donnée collectée.","url":"https://dropp.care/fr/","image":"https://dropp.care/og-image.png","inLanguage":"fr","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"Volume, durée : Dropp calcule le débit de perfusion, bat la cadence sur iPhone et Apple Watch et vous prévient à la fin. Sans compte, sans donnée collectée.","url":"https://dropp.care/fr/","image":"https://dropp.care/og-image.png","inLanguage":"fr","featureList":["Calcul du débit de perfusion (gouttes/min)","Tempo visuel et haptique","Alarme de fin","Application Apple Watch","Mode Tap","Historique local"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Qu'est-ce qui reste gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Les calculs illimités, le tempo visuel, le suivi d'une perfusion et l'alarme de fin — sans publicité, sans compte, sans limite de temps."}},{"@type":"Question","name":"DROPP fonctionne-t-il hors ligne ?","acceptedAnswer":{"@type":"Answer","text":"Oui, entièrement. Tout est calculé et stocké sur l'appareil ; aucune connexion n'est nécessaire, jamais."}},{"@type":"Question","name":"L'iPhone est-il nécessaire avec l'Apple Watch ?","acceptedAnswer":{"@type":"Answer","text":"Oui — l'app Watch accompagne l'app iPhone et s'installe par elle. Ensuite, les alarmes du poignet sonnent même si l'iPhone est éteint ou hors de portée."}},{"@type":"Question","name":"Quels facteurs de goutte sont disponibles ?","acceptedAnswer":{"@type":"Answer","text":"10, 15, 20 et 60 gouttes par millilitre — le facteur se change à tout moment dans les réglages."}},{"@type":"Question","name":"À quoi sert le mode Tap ?","acceptedAnswer":{"@type":"Answer","text":"À reproduire une cadence observée en touchant l'écran pour lire sa fréquence par minute — et, pour un débit de perfusion, ses mL/h. Sans chronomètre ni calcul mental."}},{"@type":"Question","name":"DROPP remplace-t-il une pompe ou un dispositif de contrôle ?","acceptedAnswer":{"@type":"Answer","text":"Non. DROPP est un outil d'aide au calcul, au rythme et au suivi. Il ne mesure rien, ne décide rien, et ne se substitue à aucun dispositif ni protocole."}},{"@type":"Question","name":"Quelles versions sont compatibles ?","acceptedAnswer":{"@type":"Answer","text":"iOS 17 ou ultérieur, watchOS 10 ou ultérieur."}}]}</script>
 <style>
   :root {
     --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
@@ -524,13 +525,25 @@
   }
   #film .eyebrow, #film h2 { text-align:center; max-width:none; }
   .film { position:relative; max-width:840px; margin:26px auto 0; border-radius:22px; overflow:hidden; background:var(--surface); box-shadow:0 12px 44px rgba(58,56,52,.16); }
-  .film-v { display:block; width:100%; height:auto; }
+  .film-v { display:block; width:100%; height:auto; aspect-ratio:16/9; background:var(--surface); }
   .film-snd { position:absolute; inset-inline-end:14px; bottom:14px; z-index:2; font:600 12px/1 inherit; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); background:rgba(255,253,248,.82); border:1px solid rgba(58,56,52,.14); border-radius:999px; padding:9px 16px; cursor:pointer; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .2s, color .2s; }
   .film-snd:hover { background:rgba(255,253,248,.96); }
   .film-snd[aria-pressed="true"] { color:var(--bg); background:var(--ink); border-color:var(--ink); }
   .film-snd.muted { animation:filmpulse 2.4s ease-in-out infinite; }
   @keyframes filmpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(58,56,52,0); } 50%{ box-shadow:0 0 0 5px rgba(58,56,52,.10); } }
   @media (prefers-reduced-motion:reduce){ .film-snd.muted { animation:none; } }
+
+  /* ===== Accessibilité AA (audit) ===== */
+  /* Libellés porteurs de sens hors du gris décoratif --soft (2.30:1) → --body (4.75:1). */
+  .eyebrow, .try, .colhead, .clab, .tier .name, .lbl, .mlab span, .dt-cap, .hs-soon, .hs-sign { color:var(--body); }
+  /* Footer : disclaimer clinique + © passaient à --faint (1.59:1). */
+  footer { color:var(--body); }
+  footer .fbrand { color:var(--soft); }
+  /* Petits textes sur --surface : un cran plus foncé (~6:1). */
+  .clinic, .tier .note, .cwarn, .calmsg { color:#5A554C; }
+  /* Focus clavier visible sur les contrôles custom du calculateur/tap. */
+  .roller:focus-visible, [role="slider"]:focus-visible, .molette:focus-visible, .tappad:focus-visible {
+    outline:2px solid var(--ink); outline-offset:3px; }
 
 /* ============ I18N — sélecteur de langue, RTL, CJK ============ */
 /* Pastille fixe en haut, côté inline-end : <details> natif (fonctionne
@@ -721,7 +734,7 @@ window.I18N = (function(){
       <h1 class="hs-el hs-title">Dropp</h1>
       <p class="hs-el hs-sign">Rythme · Précision · Soin</p>
       <p class="hs-el hs-tag">Le rythme au poignet.<br>La tête au soin.</p>
-      <p class="hs-el hs-sub">Volume, durée : DROPP calcule le débit, donne la cadence et vous prévient à la fin.</p>
+      <p class="hs-el hs-sub">Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin.</p>
       <div class="hs-devices" aria-hidden="true">
         <div class="hs-phone"><svg viewBox="-18 0 136 200">
           <path d="M -5 84 q -7 16 0 32" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" class="hap"/>
@@ -756,7 +769,7 @@ window.I18N = (function(){
       <p class="hs-el hs-trust">Sans compte · Sans publicité · Données locales</p>
       <p class="hs-el hs-hint">Découvrir DROPP<i></i></p>
     </div>
-    <a class="hs-get" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener" aria-label="Télécharger gratuitement — App Store">
+    <a class="hs-get" href="https://apps.apple.com/app/id6792277373?ct=site_hero" target="_blank" rel="noopener" aria-label="Télécharger gratuitement — App Store">
       <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
       <span>Télécharger gratuitement</span>
     </a>
@@ -902,6 +915,9 @@ window.I18N = (function(){
         <circle cx="194" cy="89" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
         <text x="194" y="70" text-anchor="middle" class="soft" font-size="10">fin</text>
       </svg></div>
+    </div>
+    <div class="ctas" style="margin-top:34px; justify-content:center;">
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_calc" target="_blank" rel="noopener">Télécharger gratuitement</a>
     </div>
   </section>
   <section>
@@ -1099,6 +1115,7 @@ window.I18N = (function(){
     (function(){
       var v=document.getElementById('filmVid'), b=document.getElementById('filmSnd'), userSet=false;
       if(!v||!b){return;}
+      var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
       function sync(){
         var on=!v.muted;
         b.setAttribute('aria-pressed',String(on));
@@ -1106,19 +1123,18 @@ window.I18N = (function(){
         b.classList.toggle('muted', v.muted);
       }
       function enter(){
-        if(userSet){ v.play().catch(function(){}); sync(); return; }
-        // On tente le son d'office ; si le navigateur bloque (aucune
-        // interaction encore), repli en muet, le bouton Son reste offert.
-        v.muted=false;
-        var p=v.play();
-        if(p&&p.catch){ p.catch(function(){ v.muted=true; v.play().catch(function(){}); sync(); }); }
+        // Toujours muet par défaut (le son ne s'active QUE via le bouton Son) ;
+        // pas d'auto-play si l'utilisateur a réduit les animations.
+        if(rm){ sync(); return; }
+        if(!userSet){ v.muted=true; }
+        v.play().catch(function(){});
         sync();
       }
-      if('IntersectionObserver' in window){
+      if(!rm && 'IntersectionObserver' in window){
         new IntersectionObserver(function(es){es.forEach(function(e){
           if(e.isIntersecting){enter();}else{v.pause();}
         });},{threshold:.4}).observe(v);
-      }else{enter();}
+      }
       b.addEventListener('click',function(){
         userSet=true;
         v.muted=!v.muted;
@@ -1160,7 +1176,7 @@ window.I18N = (function(){
       </div>
     </div>
     <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
-      <a class="btn primary" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener">Télécharger sur l'App Store</a>
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_pricing" target="_blank" rel="noopener">Télécharger sur l'App Store</a>
     </div>
   </section>
   <section>
@@ -1185,15 +1201,18 @@ window.I18N = (function(){
   </section>
 
   <section class="closing" id="fin">
-    <img class="appicon" src="/icon.png" alt="Icône de l'app Dropp" width="88" height="88">
-    <p class="eyebrow">Été 2026</p>
+    <img class="appicon" src="/icon.png" alt="Icône de l'app Dropp" width="88" height="88" loading="lazy">
+    <p class="eyebrow">Maintenant disponible</p>
     <h2>Disponible sur l'App Store.</h2>
-    <a class="asbadge" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener" aria-label="Télécharger sur l'App Store">
+    <a class="asbadge" href="https://apps.apple.com/app/id6792277373?ct=site_badge" target="_blank" rel="noopener" aria-label="Télécharger sur l'App Store">
       <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
       <span>App Store</span>
     </a>
     <p class="muted" style="margin:0 auto 18px; max-width:44ch;">Conçu par un soignant, éprouvé sur le terrain — pour garder l'attention là où elle compte.</p>
-    <a class="btn primary" href="#demo" style="pointer-events:auto;">Revoir DROPP en action</a>
+    <div class="ctas" style="justify-content:center;">
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_badge" target="_blank" rel="noopener">Télécharger gratuitement</a>
+    </div>
+    <a href="#demo" style="display:inline-block; margin-top:16px; font-size:12.5px; color:var(--body); text-decoration:underline; text-underline-offset:3px;">Revoir DROPP en action</a>
   </section>
 
   <footer>

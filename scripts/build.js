@@ -180,6 +180,19 @@ function i18nBootJSON(locale, page) {
   return JSON.stringify({ lang: locale.htmlLang, num: locale.numberLocale, s });
 }
 
+/** FAQPage JSON-LD (rich result) construit depuis les clés home.faq de la locale. */
+function faqJsonLd(locale) {
+  const qa = [];
+  for (let i = 1; i <= 7; i++) {
+    const q = lookup(locale.code, `home.faq.q${i}`);
+    const a = lookup(locale.code, `home.faq.a${i}`);
+    if (q && a) qa.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
+  }
+  if (!qa.length) return '';
+  const data = { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: locale.htmlLang, mainEntity: qa };
+  return '<script type="application/ld+json">' + JSON.stringify(data) + '<\/script>';
+}
+
 function mediaFor(locale) {
   const m = config.media;
   const pick = (spec) => {
@@ -225,6 +238,14 @@ for (const locale of config.locales) {
       'builtin.generatedNote': GENERATED_NOTE,
       'builtin.storageKey': config.storageKey,
       'builtin.appStoreUrl': config.appStoreUrl,
+      // Attribution sans cookie ni JS : Apple lit le token `ct` dans
+      // App Store Connect > App Analytics > Campagnes. La promesse
+      // « aucun cookie, aucune donnée collectée » reste littéralement vraie.
+      'builtin.appStoreUrlHero': config.appStoreUrl + '?ct=site_hero',
+      'builtin.appStoreUrlCalc': config.appStoreUrl + '?ct=site_calc',
+      'builtin.appStoreUrlPricing': config.appStoreUrl + '?ct=site_pricing',
+      'builtin.appStoreUrlBadge': config.appStoreUrl + '?ct=site_badge',
+      'builtin.faqJsonLd': page.id === 'home' ? faqJsonLd(locale) : '',
       'path.home': pagePath(locale.code, config.pages[0]),
       'path.privacy': pagePath(locale.code, config.pages[1]),
       'path.support': pagePath(locale.code, config.pages[2]),

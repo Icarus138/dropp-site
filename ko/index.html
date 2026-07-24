@@ -39,8 +39,9 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://dropp.care/zh-tw/">
 <link rel="alternate" hreflang="x-default" href="https://dropp.care/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"용량과 시간만 입력하면 Dropp이 수액의 방울 속도를 계산하고, iPhone과 Apple Watch에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이.","url":"https://dropp.care/ko/","image":"https://dropp.care/og-image.png","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"용량과 시간만 입력하면 Dropp이 수액의 방울 속도를 계산하고, iPhone과 Apple Watch에서 템포를 짚어 주며, 끝날 때 알려 줍니다. 계정 없이, 데이터 수집 없이.","url":"https://dropp.care/ko/","image":"https://dropp.care/og-image.png","inLanguage":"ko","featureList":["Calcul du débit de perfusion (gouttes/min)","Tempo visuel et haptique","Alarme de fin","Application Apple Watch","Mode Tap","Historique local"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ko","mainEntity":[{"@type":"Question","name":"무료로 남는 것은?","acceptedAnswer":{"@type":"Answer","text":"무제한 계산, 시각적 템포, 수액 한 건 추적, 종료 알람 — 광고 없이, 계정 없이, 기간 제한 없이."}},{"@type":"Question","name":"DROPP은 오프라인에서 작동하나요?","acceptedAnswer":{"@type":"Answer","text":"네, 완전히. 모두 기기에서 계산·저장되며, 연결은 결코 필요하지 않습니다."}},{"@type":"Question","name":"Apple Watch에 iPhone이 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"네 — Watch 앱은 iPhone 앱과 함께 오며 그것을 통해 설치됩니다. 이후에는 iPhone이 꺼져 있거나 범위를 벗어나도 손목 알람이 울립니다."}},{"@type":"Question","name":"어떤 방울 계수를 쓸 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"밀리리터당 10·15·20·60방울 — 계수는 설정에서 언제든 바꿀 수 있습니다."}},{"@type":"Question","name":"Tap 모드는 무엇에 쓰나요?","acceptedAnswer":{"@type":"Answer","text":"본 리듬을 화면을 두드려 재현해 분당 빈도를 읽기 위함입니다 — 방울 속도라면 mL/h도. 스톱워치도 암산도 없이."}},{"@type":"Question","name":"DROPP이 펌프나 제어 장치를 대신하나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. DROPP은 계산·리듬·추적을 돕는 도구입니다. 아무것도 측정하지 않고, 아무것도 결정하지 않으며, 어떤 장치나 프로토콜도 대신하지 않습니다."}},{"@type":"Question","name":"호환 버전은?","acceptedAnswer":{"@type":"Answer","text":"iOS 17 이상, watchOS 10 이상."}}]}</script>
 <style>
   :root {
     --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
@@ -524,13 +525,25 @@
   }
   #film .eyebrow, #film h2 { text-align:center; max-width:none; }
   .film { position:relative; max-width:840px; margin:26px auto 0; border-radius:22px; overflow:hidden; background:var(--surface); box-shadow:0 12px 44px rgba(58,56,52,.16); }
-  .film-v { display:block; width:100%; height:auto; }
+  .film-v { display:block; width:100%; height:auto; aspect-ratio:16/9; background:var(--surface); }
   .film-snd { position:absolute; inset-inline-end:14px; bottom:14px; z-index:2; font:600 12px/1 inherit; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); background:rgba(255,253,248,.82); border:1px solid rgba(58,56,52,.14); border-radius:999px; padding:9px 16px; cursor:pointer; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); transition:background .2s, color .2s; }
   .film-snd:hover { background:rgba(255,253,248,.96); }
   .film-snd[aria-pressed="true"] { color:var(--bg); background:var(--ink); border-color:var(--ink); }
   .film-snd.muted { animation:filmpulse 2.4s ease-in-out infinite; }
   @keyframes filmpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(58,56,52,0); } 50%{ box-shadow:0 0 0 5px rgba(58,56,52,.10); } }
   @media (prefers-reduced-motion:reduce){ .film-snd.muted { animation:none; } }
+
+  /* ===== Accessibilité AA (audit) ===== */
+  /* Libellés porteurs de sens hors du gris décoratif --soft (2.30:1) → --body (4.75:1). */
+  .eyebrow, .try, .colhead, .clab, .tier .name, .lbl, .mlab span, .dt-cap, .hs-soon, .hs-sign { color:var(--body); }
+  /* Footer : disclaimer clinique + © passaient à --faint (1.59:1). */
+  footer { color:var(--body); }
+  footer .fbrand { color:var(--soft); }
+  /* Petits textes sur --surface : un cran plus foncé (~6:1). */
+  .clinic, .tier .note, .cwarn, .calmsg { color:#5A554C; }
+  /* Focus clavier visible sur les contrôles custom du calculateur/tap. */
+  .roller:focus-visible, [role="slider"]:focus-visible, .molette:focus-visible, .tappad:focus-visible {
+    outline:2px solid var(--ink); outline-offset:3px; }
 
 /* ============ I18N — sélecteur de langue, RTL, CJK ============ */
 /* Pastille fixe en haut, côté inline-end : <details> natif (fonctionne
@@ -756,7 +769,7 @@ window.I18N = (function(){
       <p class="hs-el hs-trust">계정 없음 · 광고 없음 · 데이터는 기기에</p>
       <p class="hs-el hs-hint">DROPP 살펴보기<i></i></p>
     </div>
-    <a class="hs-get" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener" aria-label="무료로 다운로드 — App Store">
+    <a class="hs-get" href="https://apps.apple.com/app/id6792277373?ct=site_hero" target="_blank" rel="noopener" aria-label="무료로 다운로드 — App Store">
       <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
       <span>무료로 다운로드</span>
     </a>
@@ -902,6 +915,9 @@ window.I18N = (function(){
         <circle cx="194" cy="89" r="6" fill="none" stroke="var(--ink)" stroke-width="1.8" class="t-end"/>
         <text x="194" y="70" text-anchor="middle" class="soft" font-size="10">종료</text>
       </svg></div>
+    </div>
+    <div class="ctas" style="margin-top:34px; justify-content:center;">
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_calc" target="_blank" rel="noopener">무료로 다운로드</a>
     </div>
   </section>
   <section>
@@ -1099,6 +1115,7 @@ window.I18N = (function(){
     (function(){
       var v=document.getElementById('filmVid'), b=document.getElementById('filmSnd'), userSet=false;
       if(!v||!b){return;}
+      var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
       function sync(){
         var on=!v.muted;
         b.setAttribute('aria-pressed',String(on));
@@ -1106,19 +1123,18 @@ window.I18N = (function(){
         b.classList.toggle('muted', v.muted);
       }
       function enter(){
-        if(userSet){ v.play().catch(function(){}); sync(); return; }
-        // On tente le son d'office ; si le navigateur bloque (aucune
-        // interaction encore), repli en muet, le bouton Son reste offert.
-        v.muted=false;
-        var p=v.play();
-        if(p&&p.catch){ p.catch(function(){ v.muted=true; v.play().catch(function(){}); sync(); }); }
+        // Toujours muet par défaut (le son ne s'active QUE via le bouton Son) ;
+        // pas d'auto-play si l'utilisateur a réduit les animations.
+        if(rm){ sync(); return; }
+        if(!userSet){ v.muted=true; }
+        v.play().catch(function(){});
         sync();
       }
-      if('IntersectionObserver' in window){
+      if(!rm && 'IntersectionObserver' in window){
         new IntersectionObserver(function(es){es.forEach(function(e){
           if(e.isIntersecting){enter();}else{v.pause();}
         });},{threshold:.4}).observe(v);
-      }else{enter();}
+      }
       b.addEventListener('click',function(){
         userSet=true;
         v.muted=!v.muted;
@@ -1160,7 +1176,7 @@ window.I18N = (function(){
       </div>
     </div>
     <div class="ctas" style="margin-top:26px; justify-content:flex-start;">
-      <a class="btn primary" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener">App Store에서 다운로드</a>
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_pricing" target="_blank" rel="noopener">App Store에서 다운로드</a>
     </div>
   </section>
   <section>
@@ -1185,15 +1201,18 @@ window.I18N = (function(){
   </section>
 
   <section class="closing" id="fin">
-    <img class="appicon" src="/icon.png" alt="Dropp 앱 아이콘" width="88" height="88">
-    <p class="eyebrow">2026년 여름</p>
+    <img class="appicon" src="/icon.png" alt="Dropp 앱 아이콘" width="88" height="88" loading="lazy">
+    <p class="eyebrow">지금 이용 가능</p>
     <h2>App Store에서 이용 가능.</h2>
-    <a class="asbadge" href="https://apps.apple.com/app/id6792277373" target="_blank" rel="noopener" aria-label="App Store에서 다운로드">
+    <a class="asbadge" href="https://apps.apple.com/app/id6792277373?ct=site_badge" target="_blank" rel="noopener" aria-label="App Store에서 다운로드">
       <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
       <span>App Store</span>
     </a>
     <p class="muted" style="margin:0 auto 18px; max-width:44ch;">의료인이 설계하고 현장에서 검증했습니다 — 주의를 중요한 곳에 두기 위해.</p>
-    <a class="btn primary" href="#demo" style="pointer-events:auto;">DROPP의 작동을 다시 보기</a>
+    <div class="ctas" style="justify-content:center;">
+      <a class="btn primary" href="https://apps.apple.com/app/id6792277373?ct=site_badge" target="_blank" rel="noopener">무료로 다운로드</a>
+    </div>
+    <a href="#demo" style="display:inline-block; margin-top:16px; font-size:12.5px; color:var(--body); text-decoration:underline; text-underline-offset:3px;">DROPP의 작동을 다시 보기</a>
   </section>
 
   <footer>
