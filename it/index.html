@@ -41,7 +41,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"Dropp","operatingSystem":"iOS, watchOS","applicationCategory":"HealthApplication","description":"Volume, durata: Dropp calcola il flusso dell'infusione, scandisce il ritmo su iPhone e Apple Watch e ti avvisa alla fine. Senza account, senza dati raccolti.","url":"https://dropp.care/it/","image":"https://dropp.care/og-image.png","inLanguage":"it","featureList":["Calcul du débit de perfusion (gouttes/min)","Tempo visuel et haptique","Alarme de fin","Application Apple Watch","Mode Tap","Historique local"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Dropp"}}
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[{"@type":"Question","name":"Che cosa resta gratis?","acceptedAnswer":{"@type":"Answer","text":"I calcoli illimitati, il ritmo visivo, il monitoraggio di un'infusione e la sveglia di fine — senza pubblicità, senza account, senza limiti di tempo."}},{"@type":"Question","name":"DROPP funziona offline?","acceptedAnswer":{"@type":"Answer","text":"Sì, del tutto. Tutto viene calcolato e salvato sul dispositivo; non serve mai una connessione."}},{"@type":"Question","name":"Serve l'iPhone con l'Apple Watch?","acceptedAnswer":{"@type":"Answer","text":"Sì — l'app Watch accompagna l'app iPhone e si installa tramite essa. Poi le sveglie al polso suonano anche se l'iPhone è spento o fuori portata."}},{"@type":"Question","name":"Quali fattori di gocciolamento sono disponibili?","acceptedAnswer":{"@type":"Answer","text":"10, 15, 20 e 60 gocce per millilitro — il fattore si cambia in qualsiasi momento nelle impostazioni."}},{"@type":"Question","name":"A cosa serve la modalità Tap?","acceptedAnswer":{"@type":"Answer","text":"A riprodurre un ritmo osservato toccando lo schermo per leggerne la frequenza al minuto — e, per un flusso, i mL/h. Senza cronometro né calcolo a mente."}},{"@type":"Question","name":"DROPP sostituisce una pompa o un dispositivo di controllo?","acceptedAnswer":{"@type":"Answer","text":"No. DROPP è uno strumento di supporto al calcolo, al ritmo e al monitoraggio. Non misura nulla, non decide nulla e non sostituisce alcun dispositivo o protocollo."}},{"@type":"Question","name":"Quali versioni sono compatibili?","acceptedAnswer":{"@type":"Answer","text":"iOS 17 o successivo, watchOS 10 o successivo."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[{"@type":"Question","name":"Che cosa resta gratis?","acceptedAnswer":{"@type":"Answer","text":"I calcoli illimitati, il ritmo visivo, un'infusione seguita e la sveglia di fine — senza pubblicità, senza account, senza limiti di tempo."}},{"@type":"Question","name":"DROPP funziona offline?","acceptedAnswer":{"@type":"Answer","text":"Sì, del tutto. Tutto viene calcolato e salvato sul dispositivo; non serve mai una connessione."}},{"@type":"Question","name":"Serve l'iPhone con l'Apple Watch?","acceptedAnswer":{"@type":"Answer","text":"Sì — l'app Watch accompagna l'app iPhone e si installa tramite essa. Poi le sveglie al polso suonano anche se l'iPhone è spento o fuori portata."}},{"@type":"Question","name":"Quali fattori di gocciolamento sono disponibili?","acceptedAnswer":{"@type":"Answer","text":"10, 15, 20 e 60 gocce per millilitro — il fattore si cambia in qualsiasi momento nelle impostazioni."}},{"@type":"Question","name":"A cosa serve la modalità Tap?","acceptedAnswer":{"@type":"Answer","text":"A riprodurre un ritmo osservato toccando lo schermo per leggerne la frequenza al minuto — e, per un flusso, i mL/h. Senza cronometro né calcolo a mente."}},{"@type":"Question","name":"DROPP sostituisce una pompa o un dispositivo di controllo?","acceptedAnswer":{"@type":"Answer","text":"No. DROPP è uno strumento di supporto al calcolo, al ritmo e al conteggio del tempo. Non misura nulla, non decide nulla e non sostituisce alcun dispositivo o protocollo."}},{"@type":"Question","name":"Quali versioni sono compatibili?","acceptedAnswer":{"@type":"Answer","text":"iOS 17 o successivo, watchOS 10 o successivo."}}]}</script>
 <style>
   :root {
     --bg:#F4EFE6; --surface:#EFE9DE; --ink:#3A3834; --soft:#A59F92;
@@ -766,7 +766,7 @@ window.I18N = (function(){
           <text x="60" y="90" text-anchor="middle" class="soft" font-size="8">gtt / min</text>
         </svg></div>
       </div>
-      <div class="hs-el hs-cap hs-cap-phone"><b>Il ritmo, sotto gli occhi.</b><span>Calcola. Regola. Avvia il monitoraggio.</span></div>
+      <div class="hs-el hs-cap hs-cap-phone"><b>Il ritmo, sotto gli occhi.</b><span>Calcola. Regola. Avvia il conteggio.</span></div>
       <div class="hs-el hs-cap hs-cap-watch"><b>Il tempo, al polso.</b><span>Una vibrazione discreta a ogni goccia.</span></div>
       <div class="hs-el hs-final"><b>Continua la cura.</b><span>DROPP mantiene il ritmo e segue il tempo.</span></div>
       <p class="hs-el hs-trust">Senza account · Senza pubblicità · Dati locali</p>
@@ -782,7 +782,7 @@ window.I18N = (function(){
   <section id="demo">
     <p class="eyebrow">In quindici secondi</p>
     <h2>Tutto il gesto, in un colpo d'occhio.</h2>
-    <div class="demo-stage" role="img" aria-label="Dimostrazione: inserisci, calcola, regola, monitora, ricevi l'avviso">
+    <div class="demo-stage" role="img" aria-label="Dimostrazione: inserisci, calcola, regola, segui, ricevi l'avviso">
       <div class="step s1"><svg viewBox="0 0 320 150">
         <g class="kf kfa">
           <rect x="10" y="20" width="300" height="46" rx="15" class="surf"/>
@@ -811,7 +811,7 @@ window.I18N = (function(){
         <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
         <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
         <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">regola il morsetto sul ritmo</text>
-      </svg><p class="cap">4 · Regola, poi avvia il monitoraggio</p></div>
+      </svg><p class="cap">4 · Regola, poi avvia il conteggio</p></div>
       <div class="step s5"><svg viewBox="0 0 320 150">
         <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
         <rect x="30" y="66" width="150" height="6" rx="3" fill="var(--faint)" class="kf kbar"/>
@@ -1176,7 +1176,7 @@ window.I18N = (function(){
         <ul>
           <li>Calcoli illimitati</li>
           <li>Il ritmo visivo</li>
-          <li>Un'infusione monitorata</li>
+          <li>Un'infusione seguita</li>
           <li>La sveglia di fine — per sempre</li>
           <li>Nessuna pubblicità, nessun account</li>
         </ul>
@@ -1200,17 +1200,17 @@ window.I18N = (function(){
       <div class="tenet"><span class="dot"></span><div><b>Nessun account, nessun server.</b> <span>Niente da creare, niente da ospitare, niente da violare.</span></div></div>
       <div class="tenet"><span class="dot"></span><div><b>Locale e offline.</b> <span>Seminterrato, stanza schermata, visite a domicilio: DROPP funziona senza rete.</span></div></div>
     </div>
-    <p class="clinic">Uno strumento di supporto al calcolo, al ritmo e al monitoraggio. Non sostituisce il giudizio clinico, i protocolli locali o i dispositivi di controllo.</p>
+    <p class="clinic">Uno strumento di supporto al calcolo, al ritmo e al conteggio del tempo. Non sostituisce il giudizio clinico, i protocolli locali o i dispositivi di controllo.</p>
   </section>
 
   <section>
     <p class="eyebrow">Risposte dirette</p>
-    <details><summary>Che cosa resta gratis?</summary><p>I calcoli illimitati, il ritmo visivo, il monitoraggio di un'infusione e la sveglia di fine — senza pubblicità, senza account, senza limiti di tempo.</p></details>
+    <details><summary>Che cosa resta gratis?</summary><p>I calcoli illimitati, il ritmo visivo, un'infusione seguita e la sveglia di fine — senza pubblicità, senza account, senza limiti di tempo.</p></details>
     <details><summary>DROPP funziona offline?</summary><p>Sì, del tutto. Tutto viene calcolato e salvato sul dispositivo; non serve mai una connessione.</p></details>
     <details><summary>Serve l'iPhone con l'Apple Watch?</summary><p>Sì — l'app Watch accompagna l'app iPhone e si installa tramite essa. Poi le sveglie al polso suonano anche se l'iPhone è spento o fuori portata.</p></details>
     <details><summary>Quali fattori di gocciolamento sono disponibili?</summary><p>10, 15, 20 e 60 gocce per millilitro — il fattore si cambia in qualsiasi momento nelle impostazioni.</p></details>
     <details><summary>A cosa serve la modalità Tap?</summary><p>A riprodurre un ritmo osservato toccando lo schermo per leggerne la frequenza al minuto — e, per un flusso, i mL/h. Senza cronometro né calcolo a mente.</p></details>
-    <details><summary>DROPP sostituisce una pompa o un dispositivo di controllo?</summary><p>No. DROPP è uno strumento di supporto al calcolo, al ritmo e al monitoraggio. Non misura nulla, non decide nulla e non sostituisce alcun dispositivo o protocollo.</p></details>
+    <details><summary>DROPP sostituisce una pompa o un dispositivo di controllo?</summary><p>No. DROPP è uno strumento di supporto al calcolo, al ritmo e al conteggio del tempo. Non misura nulla, non decide nulla e non sostituisce alcun dispositivo o protocollo.</p></details>
     <details><summary>Quali versioni sono compatibili?</summary><p>iOS 17 o successivo, watchOS 10 o successivo.</p></details>
   </section>
 
