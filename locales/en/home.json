@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DROPP — The rhythm on your wrist. Your mind on care.",
-    "description": "Volume, duration: DROPP computes the drip rate, beats the tempo — before your eyes and on your wrist — and alerts you at the end. No account, no data collected. Available on the App Store.",
+    "description": "The pacing assistant for gravity infusions: DROPP calculates the rate in gtt/min, beats the tempo — on screen and at the wrist — and alerts you at the end. No account, no data collected.",
     "ogDescription": "Volume, duration: DROPP computes the drip rate, beats the tempo, and alerts you at the end. On iPhone and Apple Watch. Available on the App Store.",
     "jsonLdDescription": "Volume, duration: Dropp computes the infusion drip rate, beats the tempo on iPhone and Apple Watch, and alerts you at the end. No account, no data collected."
   },
@@ -9,7 +9,7 @@
     "soon": "Available on the App Store",
     "sign": "Rhythm · Precision · Care",
     "tagline": "The rhythm on your wrist.<br>Your mind on care.",
-    "sub": "Volume, duration: DROPP computes the drip rate, beats the tempo, and alerts you at the end.",
+    "sub": "The pacing assistant for gravity infusions, built for nurses: the rate in gtt/min, the tempo in view, the alarm at the end.",
     "capPhoneTitle": "The tempo, in plain sight.",
     "capPhoneSub": "Calculate. Match. Start tracking.",
     "capWatchTitle": "The beat, on your wrist.",

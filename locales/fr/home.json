@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DROPP — Le rythme au poignet. La tête au soin.",
-    "description": "Volume, durée : DROPP calcule le débit, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée. Disponible sur l'App Store.",
+    "description": "L'assistant de rythme des perfusions par gravité : DROPP calcule le débit en gouttes/min, bat la cadence — sous vos yeux et au poignet — et vous prévient à la fin. Sans compte, sans donnée collectée.",
     "ogDescription": "Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin. Sur iPhone et Apple Watch. Disponible sur l'App Store.",
     "jsonLdDescription": "Volume, durée : Dropp calcule le débit de perfusion, bat la cadence sur iPhone et Apple Watch et vous prévient à la fin. Sans compte, sans donnée collectée."
   },
@@ -9,7 +9,7 @@
     "soon": "Disponible sur l'App Store",
     "sign": "Rythme · Précision · Soin",
     "tagline": "Le rythme au poignet.<br>La tête au soin.",
-    "sub": "Volume, durée : DROPP calcule le débit, bat la cadence et vous prévient à la fin.",
+    "sub": "L'assistant de rythme des perfusions par gravité, pensé pour les soignants : le débit en gouttes/min, le tempo sous les yeux, l'alarme à la fin.",
     "capPhoneTitle": "Le tempo, sous les yeux.",
     "capPhoneSub": "Calculez. Calez. Lancez le suivi.",
     "capWatchTitle": "La cadence, au poignet.",
