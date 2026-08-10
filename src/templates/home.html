@@ -1051,7 +1051,7 @@
       <a href="{{path.legal}}">{{common.footer.legal}}</a>
     </nav>
     <p>{{common.footer.disclaimer}}<br>
-    © 2026 Dropp · v10.3</p>
+    © 2026 Dropp · v10.4</p>
     {{builtin.footerLangNav}}
   </footer>
 </div>
@@ -1456,6 +1456,25 @@
     taps=[]; $('tapN').textContent='—'; $('tapU').textContent=I18N.t('tapStart');
     this.classList.remove('on');
   });
+})();
+</script>
+<script>
+// Filet navigateurs integres (Instagram, Facebook, TikTok, LinkedIn) :
+// certaines versions BLOQUENT les navigations App Store au tap (meme un
+// lien nu), tout en laissant passer l'appui long. On ne peut rien y
+// changer cote page — on AFFICHE donc le geste qui fonctionne, sous le
+// bouton du heros, uniquement dans ces navigateurs. Zero interception.
+(function(){
+  var ua = navigator.userAgent || '';
+  if(!/Instagram|FBAN|FBAV|TikTok|musical_ly|LinkedInApp|Line\//i.test(ua)) return;
+  var hero = document.querySelector('a[href*="ct=site_hero"]');
+  if(!hero || !hero.parentNode) return;
+  var note = document.createElement('p');
+  note.textContent = document.documentElement.lang === 'fr'
+    ? 'Depuis Instagram : appui long sur le bouton, puis \u00ab Ouvrir le lien \u00bb.'
+    : 'In Instagram: press and hold the button, then choose \u201cOpen link\u201d.';
+  note.style.cssText = 'font-size:12px;opacity:.75;margin:10px auto 0;text-align:center;max-width:300px;';
+  hero.parentNode.insertBefore(note, hero.nextSibling);
 })();
 </script>
 </body>

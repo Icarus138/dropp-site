@@ -1237,7 +1237,7 @@ window.I18N = (function(){
       <a href="/fr/legal.html">Mentions légales</a>
     </nav>
     <p>Outil d'aide au rythme. Ne remplace ni le jugement clinique, ni les dispositifs de contrôle de perfusion.<br>
-    © 2026 Dropp · v10.3</p>
+    © 2026 Dropp · v10.4</p>
     <nav class="flangs" aria-label="Langue"><a href="/fr/" lang="fr" hreflang="fr" data-lang="fr" aria-current="true">Français</a><span aria-hidden="true"> · </span><a href="/en/" lang="en" hreflang="en" data-lang="en">English</a><span aria-hidden="true"> · </span><a href="/es/" lang="es" hreflang="es" data-lang="es">Español</a><span aria-hidden="true"> · </span><a href="/de/" lang="de" hreflang="de" data-lang="de">Deutsch</a><span aria-hidden="true"> · </span><a href="/it/" lang="it" hreflang="it" data-lang="it">Italiano</a><span aria-hidden="true"> · </span><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR" data-lang="pt-br">Português (Brasil)</a><span aria-hidden="true"> · </span><a href="/pt-pt/" lang="pt-PT" hreflang="pt-PT" data-lang="pt-pt">Português (Portugal)</a><span aria-hidden="true"> · </span><a href="/nl/" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a><span aria-hidden="true"> · </span><a href="/ru/" lang="ru" hreflang="ru" data-lang="ru">Русский</a><span aria-hidden="true"> · </span><a href="/ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a><span aria-hidden="true"> · </span><a href="/ja/" lang="ja" hreflang="ja" data-lang="ja">日本語</a><span aria-hidden="true"> · </span><a href="/ko/" lang="ko" hreflang="ko" data-lang="ko">한국어</a><span aria-hidden="true"> · </span><a href="/zh-cn/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-cn">简体中文</a><span aria-hidden="true"> · </span><a href="/zh-tw/" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-tw">繁體中文</a></nav>
   </footer>
 </div>
@@ -1642,6 +1642,25 @@ window.I18N = (function(){
     taps=[]; $('tapN').textContent='—'; $('tapU').textContent=I18N.t('tapStart');
     this.classList.remove('on');
   });
+})();
+</script>
+<script>
+// Filet navigateurs integres (Instagram, Facebook, TikTok, LinkedIn) :
+// certaines versions BLOQUENT les navigations App Store au tap (meme un
+// lien nu), tout en laissant passer l'appui long. On ne peut rien y
+// changer cote page — on AFFICHE donc le geste qui fonctionne, sous le
+// bouton du heros, uniquement dans ces navigateurs. Zero interception.
+(function(){
+  var ua = navigator.userAgent || '';
+  if(!/Instagram|FBAN|FBAV|TikTok|musical_ly|LinkedInApp|Line\//i.test(ua)) return;
+  var hero = document.querySelector('a[href*="ct=site_hero"]');
+  if(!hero || !hero.parentNode) return;
+  var note = document.createElement('p');
+  note.textContent = document.documentElement.lang === 'fr'
+    ? 'Depuis Instagram : appui long sur le bouton, puis \u00ab Ouvrir le lien \u00bb.'
+    : 'In Instagram: press and hold the button, then choose \u201cOpen link\u201d.';
+  note.style.cssText = 'font-size:12px;opacity:.75;margin:10px auto 0;text-align:center;max-width:300px;';
+  hero.parentNode.insertBefore(note, hero.nextSibling);
 })();
 </script>
 </body>
