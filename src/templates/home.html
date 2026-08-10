@@ -1458,5 +1458,24 @@
   });
 })();
 </script>
+<script>
+// Navigateurs integres (Instagram, TikTok, LinkedIn) : la WebView avale
+// aussi bien les nouveaux onglets que, sur certaines versions, la
+// navigation pleine page vers apps.apple.com. Le schema itms-apps://
+// force la main : une WebView ne sait pas le rendre, iOS ouvre l'App
+// Store. Filet : si rien ne s'est ouvert en 1,6 s (schema bloque), on
+// retombe sur l'URL web classique. Hors iOS : lien inchange.
+(function(){
+  if(!/iP(hone|ad|od)/.test(navigator.userAgent)) return;
+  document.querySelectorAll('a[href^="https://apps.apple.com"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var web = a.href;
+      location.href = web.replace('https://apps.apple.com','itms-apps://apps.apple.com');
+      setTimeout(function(){ if(!document.hidden) location.href = web; }, 1600);
+    });
+  });
+})();
+</script>
 </body>
 </html>
