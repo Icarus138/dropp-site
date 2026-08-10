@@ -660,7 +660,7 @@ html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }
 /* Chaînes dynamiques de CETTE locale uniquement (inlinées au build),
    formatage des nombres via Intl, pluriels via Intl.PluralRules. */
 window.I18N = (function(){
-  var L = {"lang":"it","num":"it","s":{"ml":"{v} mL","mlLong":{"one":"{v} millilitro","other":"{v} millilitri"},"durH":"{h} h","durHM":"{h} h {mm}","durM":"{m} min","durHLong":{"one":"{h} ora","other":"{h} ore"},"durMLong":{"one":"{m} minuto","other":"{m} minuti"},"durJoin":"{hPart} {mPart}","rate":"{v} gtt/min","unison":"all'unisono — ci sei","tooSlow":"l'infusione gocciola troppo lenta — apri il morsetto","tooFast":"l'infusione gocciola troppo veloce — chiudi il morsetto","tapStart":"tocca al ritmo osservato","tapContinue":"continua allo stesso ritmo","tapTightening":"al minuto · il valore si assesta","tapStable":"al minuto · stabile","tapTooFast":"troppo veloce — riprova","soundOn":"Attiva l'audio","soundOff":"Disattiva l'audio"}};
+  var L = {"lang":"it","num":"it","s":{"ml":"{v} mL","mlLong":{"one":"{v} millilitro","other":"{v} millilitri"},"durH":"{h} h","durHM":"{h} h {mm}","durM":"{m} min","durHLong":{"one":"{h} ora","other":"{h} ore"},"durMLong":{"one":"{m} minuto","other":"{m} minuti"},"durJoin":"{hPart} {mPart}","rate":"{v} gtt/min","unison":"all'unisono — ci sei","tooSlow":"cadenza più lenta dell'obiettivo","tooFast":"cadenza più rapida dell'obiettivo","tapStart":"tocca al ritmo osservato","tapContinue":"continua allo stesso ritmo","tapTightening":"al minuto · il valore si assesta","tapStable":"al minuto · stabile","tapTooFast":"troppo veloce — riprova","soundOn":"Attiva l'audio","soundOff":"Disattiva l'audio"}};
   var pr; try { pr = new Intl.PluralRules(L.lang); } catch(e){ pr = null; }
   var nfCache = {};
   function num(v, min, max){
@@ -810,7 +810,7 @@ window.I18N = (function(){
         <circle cx="200" cy="104" r="5" fill="var(--opal-lo)" class="kf kdB"/>
         <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
         <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
-        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">regola il morsetto sul ritmo</text>
+        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">la scena batte la cadenza calcolata</text>
       </svg><p class="cap">4 · Regola, poi avvia il conteggio</p></div>
       <div class="step s5"><svg viewBox="0 0 320 150">
         <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
@@ -876,9 +876,9 @@ window.I18N = (function(){
             <div><p class="colhead">L'infusione</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
             <div><p class="colhead">Il ritmo di Dropp</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate" id="calTarget">42 gtt/min</span></div>
           </div>
-          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Morsetto dell'infusione — regola fino all'unisono">
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Rotella dimostrativa">
           <div class="mlab"><span>il morsetto</span></div>
-          <p class="calmsg" id="calMsg" aria-live="polite">regola il morsetto fino all'unisono</p>
+          <p class="calmsg" id="calMsg" aria-live="polite">rotella dimostrativa — la scena segue la regolazione</p>
         </div>
       </div>
     </div>

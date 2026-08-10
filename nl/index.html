@@ -660,7 +660,7 @@ html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }
 /* Chaînes dynamiques de CETTE locale uniquement (inlinées au build),
    formatage des nombres via Intl, pluriels via Intl.PluralRules. */
 window.I18N = (function(){
-  var L = {"lang":"nl","num":"nl","s":{"ml":"{v} mL","mlLong":{"one":"{v} milliliter","other":"{v} milliliter"},"durH":"{h} h","durHM":"{h} h {mm}","durM":"{m} min","durHLong":{"one":"{h} uur","other":"{h} uur"},"durMLong":{"one":"{m} minuut","other":"{m} minuten"},"durJoin":"{hPart} {mPart}","rate":"{v} gtt/min","unison":"gelijk — je zit goed","tooSlow":"het infuus druppelt te traag — open de klem","tooFast":"het infuus druppelt te snel — sluit de klem","tapStart":"tik mee op het waargenomen ritme","tapContinue":"tik door op hetzelfde ritme","tapTightening":"per minuut · de waarde stabiliseert","tapStable":"per minuut · stabiel","tapTooFast":"te snel — begin opnieuw","soundOn":"Geluid inschakelen","soundOff":"Geluid uitschakelen"}};
+  var L = {"lang":"nl","num":"nl","s":{"ml":"{v} mL","mlLong":{"one":"{v} milliliter","other":"{v} milliliter"},"durH":"{h} h","durHM":"{h} h {mm}","durM":"{m} min","durHLong":{"one":"{h} uur","other":"{h} uur"},"durMLong":{"one":"{m} minuut","other":"{m} minuten"},"durJoin":"{hPart} {mPart}","rate":"{v} gtt/min","unison":"gelijk — je zit goed","tooSlow":"trager dan het doeltempo","tooFast":"sneller dan het doeltempo","tapStart":"tik mee op het waargenomen ritme","tapContinue":"tik door op hetzelfde ritme","tapTightening":"per minuut · de waarde stabiliseert","tapStable":"per minuut · stabiel","tapTooFast":"te snel — begin opnieuw","soundOn":"Geluid inschakelen","soundOff":"Geluid uitschakelen"}};
   var pr; try { pr = new Intl.PluralRules(L.lang); } catch(e){ pr = null; }
   var nfCache = {};
   function num(v, min, max){
@@ -810,7 +810,7 @@ window.I18N = (function(){
         <circle cx="200" cy="104" r="5" fill="var(--opal-lo)" class="kf kdB"/>
         <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
         <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
-        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">stel de rolklem af op het tempo</text>
+        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">de scène klopt op het berekende tempo</text>
       </svg><p class="cap">4 · Stel af en begin met volgen</p></div>
       <div class="step s5"><svg viewBox="0 0 320 150">
         <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
@@ -876,9 +876,9 @@ window.I18N = (function(){
             <div><p class="colhead">Het infuus</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 gtt/min</span></div>
             <div><p class="colhead">Het Dropp-tempo</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate" id="calTarget">42 gtt/min</span></div>
           </div>
-          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Rolklem van het infuus — stel af tot ze gelijklopen">
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="Demo-rolklem">
           <div class="mlab"><span>de klem</span></div>
-          <p class="calmsg" id="calMsg" aria-live="polite">stel de klem af tot ze gelijklopen</p>
+          <p class="calmsg" id="calMsg" aria-live="polite">demo-rolklem — de scène volgt uw instelling</p>
         </div>
       </div>
     </div>

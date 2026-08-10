@@ -660,7 +660,7 @@ html[lang="ru"] :is(h2, h3, .hs-tag) { hyphens:auto; overflow-wrap:break-word; }
 /* Chaînes dynamiques de CETTE locale uniquement (inlinées au build),
    formatage des nombres via Intl, pluriels via Intl.PluralRules. */
 window.I18N = (function(){
-  var L = {"lang":"zh-Hant","num":"zh-Hant","s":{"ml":"{v} mL","mlLong":{"other":"{v} 毫升"},"durH":"{h} 小時","durHM":"{h} 小時 {mm} 分","durM":"{m} 分鐘","durHLong":{"other":"{h} 小時"},"durMLong":{"other":"{m} 分鐘"},"durJoin":"{hPart} {mPart}","rate":"{v} 滴/分","unison":"合拍了 — 就對了","tooSlow":"輸液太慢 — 打開調節器","tooFast":"輸液太快 — 關小調節器","tapStart":"按看到的節奏輕點","tapContinue":"保持同樣的節奏","tapTightening":"每分鐘 · 數值正在收斂","tapStable":"每分鐘 · 已穩定","tapTooFast":"太快了 — 重來","soundOn":"開啟聲音","soundOff":"關閉聲音"}};
+  var L = {"lang":"zh-Hant","num":"zh-Hant","s":{"ml":"{v} mL","mlLong":{"other":"{v} 毫升"},"durH":"{h} 小時","durHM":"{h} 小時 {mm} 分","durM":"{m} 分鐘","durHLong":{"other":"{h} 小時"},"durMLong":{"other":"{m} 分鐘"},"durJoin":"{hPart} {mPart}","rate":"{v} 滴/分","unison":"合拍了 — 就對了","tooSlow":"低於目標節奏","tooFast":"高於目標節奏","tapStart":"按看到的節奏輕點","tapContinue":"保持同樣的節奏","tapTightening":"每分鐘 · 數值正在收斂","tapStable":"每分鐘 · 已穩定","tapTooFast":"太快了 — 重來","soundOn":"開啟聲音","soundOff":"關閉聲音"}};
   var pr; try { pr = new Intl.PluralRules(L.lang); } catch(e){ pr = null; }
   var nfCache = {};
   function num(v, min, max){
@@ -810,7 +810,7 @@ window.I18N = (function(){
         <circle cx="200" cy="104" r="5" fill="var(--opal-lo)" class="kf kdB"/>
         <path d="M 96 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
         <path d="M 176 112 h 48" stroke="var(--faint)" stroke-width="1.5"/>
-        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">把調節器對準節拍</text>
+        <text x="160" y="134" text-anchor="middle" class="soft" font-size="11">畫面按計算節奏跳動</text>
       </svg><p class="cap">4 · 對齊，然後開始追蹤</p></div>
       <div class="step s5"><svg viewBox="0 0 320 150">
         <rect x="30" y="66" width="260" height="6" rx="3" fill="var(--rule)"/>
@@ -876,9 +876,9 @@ window.I18N = (function(){
             <div><p class="colhead">輸液</p><div class="ctrack"><i class="cdrop" id="dropA"></i><span class="cring" id="ringA"></span></div><span class="crate" id="rateA">34 滴/分</span></div>
             <div><p class="colhead">Dropp 節拍</p><div class="ctrack"><i class="cdrop" id="dropB"></i><span class="cring" id="ringB"></span></div><span class="crate" id="calTarget">42 滴/分</span></div>
           </div>
-          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="輸液調節器 — 調到合拍">
+          <input type="range" class="molette" id="molette" min="24" max="60" step="1" value="34" aria-label="示範滾輪">
           <div class="mlab"><span>調節器</span></div>
-          <p class="calmsg" id="calMsg" aria-live="polite">把調節器調到合拍</p>
+          <p class="calmsg" id="calMsg" aria-live="polite">示範滾輪 — 畫面跟隨您的調節</p>
         </div>
       </div>
     </div>
