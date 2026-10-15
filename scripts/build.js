@@ -29,6 +29,15 @@ const DOMAIN = config.domain;
 const LOCALE_FILES = ['common', 'home', 'privacy', 'support', 'legal'];
 const PLURAL_KEYS = new Set(['zero', 'one', 'two', 'few', 'many', 'other']);
 
+
+/** URL App Store attribuable (App Analytics → Campagnes) : pt + ct + mt=8. */
+function campaignUrl(config, ct) {
+  const base = config.appStoreUrl.replace('/app/id', '/app/apple-store/id');
+  return config.appStoreProviderToken
+    ? `${base}?pt=${config.appStoreProviderToken}&ct=${ct}&mt=8`
+    : `${config.appStoreUrl}?ct=${ct}`;
+}
+
 function isPluralObject(v) {
   if (!v || typeof v !== 'object' || Array.isArray(v)) return false;
   const keys = Object.keys(v);
@@ -241,10 +250,13 @@ for (const locale of config.locales) {
       // Attribution sans cookie ni JS : Apple lit le token `ct` dans
       // App Store Connect > App Analytics > Campagnes. La promesse
       // « aucun cookie, aucune donnée collectée » reste littéralement vraie.
-      'builtin.appStoreUrlHero': config.appStoreUrl + '?ct=site_hero',
-      'builtin.appStoreUrlCalc': config.appStoreUrl + '?ct=site_calc',
-      'builtin.appStoreUrlPricing': config.appStoreUrl + '?ct=site_pricing',
-      'builtin.appStoreUrlBadge': config.appStoreUrl + '?ct=site_badge',
+      // Liens de campagne App Analytics : pt (provider token du compte) + ct
+      // (campagne) + mt=8 sont TOUS requis pour l'attribution ; sans pt, le
+      // ct est ignoré (constat bilan 2026-10-12).
+      'builtin.appStoreUrlHero': campaignUrl(config, 'site_hero'),
+      'builtin.appStoreUrlCalc': campaignUrl(config, 'site_calc'),
+      'builtin.appStoreUrlPricing': campaignUrl(config, 'site_pricing'),
+      'builtin.appStoreUrlBadge': campaignUrl(config, 'site_badge'),
       'builtin.faqJsonLd': page.id === 'home' ? faqJsonLd(locale) : '',
       'path.home': pagePath(locale.code, config.pages[0]),
       'path.privacy': pagePath(locale.code, config.pages[1]),
